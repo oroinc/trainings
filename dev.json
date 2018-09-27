@@ -1,0 +1,140 @@
+{
+  "name": "oro/commerce-crm-application",
+  "description": "OroCommerce - an open-source Business to Business Commerce application.\\This package contains a sample application.",
+  "license": "OSL-3.0",
+  "authors": [
+    {
+      "name": "Oro, Inc",
+      "homepage": "https://www.orocommerce.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {"": "src/"},
+    "classmap": [
+      "vendor/oro/platform/src/Oro/Component/Testing/DeprecationErrorHandler.php",
+      "src/AppKernel.php",
+      "src/AppCache.php"
+    ],
+    "exclude-from-classmap": [
+      "/vendor/symfony/phpunit-bridge/DeprecationErrorHandler.php",
+      "**/Tests/"
+    ]
+  },
+  "require": {
+    "oro/commerce": "3.0.*",
+    "oro/commerce-authorizenet": "3.0.*",
+    "oro/platform": "3.0.*",
+    "oro/platform-serialised-fields": "3.0.*",
+    "oro/calendar-bundle": "3.0.*",
+    "oro/marketing": "3.0.*",
+    "oro/customer-portal": "3.0.*",
+    "oro/commerce-wirecard": "3.0.*",
+    "oro/crm": "3.0.*",
+    "oro/crm-task-bundle": "3.0.*",
+    "oro/crm-call-bundle": "3.0.*",
+    "oro/commerce-crm": "3.0.*",
+    "oro/crm-hangouts-call-bundle": "3.0.*",
+    "oro/crm-abandoned-cart": "3.0.*",
+    "oro/crm-magento-embedded-contact-us": "3.0.*",
+    "oro/crm-mail-chimp": "3.0.*",
+    "oro/crm-dotmailer": "3.0.*",
+    "oro/crm-zendesk": "3.0.*",
+    "oro/commerce-infinitepay": "3.0.*",
+    "oro/redis-config": "3.0.*"
+  },
+  "require-dev": {
+    "sensio/generator-bundle": "3.1.*",
+    "behat/behat": "3.4.*",
+    "behat/mink-extension": "2.3.*",
+    "behat/mink-selenium2-driver": "1.*",
+    "behat/symfony2-extension": "2.1.*",
+    "nelmio/alice": "2.3.*",
+    "phpunit/phpunit": "5.7.*",
+    "johnkary/phpunit-speedtrap": "1.1.*",
+    "mybuilder/phpunit-accelerator": "1.2.*",
+    "squizlabs/php_codesniffer": "3.3.*",
+    "phpmd/phpmd": "2.6.*",
+    "sebastian/phpcpd": "3.0.*",
+    "phpunit/phpcov": "3.1.*",
+    "symfony/phpunit-bridge": "3.4.*",
+    "friendsofphp/php-cs-fixer": "2.12.*"
+  },
+  "config": {
+    "component-dir": "public/bundles/components",
+    "bin-dir": "bin",
+    "fxp-asset": {
+      "enabled": false
+    }
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+      "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+      "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+      "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::setPermissions",
+      "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::installAssets",
+      "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::setAssetsVersion"
+    ],
+    "post-update-cmd": [
+      "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+      "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+      "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+      "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::setPermissions",
+      "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::installAssets",
+      "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::setAssetsVersion"
+    ]
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "extra": {
+    "symfony-web-dir": "public",
+    "symfony-var-dir": "var",
+    "symfony-bin-dir": "bin",
+    "symfony-tests-dir": "tests",
+    "incenteev-parameters": {
+      "file": "config/parameters.yml",
+      "env-map": {
+        "database_driver": "ORO_DB_DRIVER",
+        "database_host": "ORO_DB_HOST",
+        "database_port": "ORO_DB_PORT",
+        "database_name": "ORO_DB_NAME",
+        "database_user": "ORO_DB_USER",
+        "database_password": "ORO_DB_PASSWORD",
+        "mailer_transport": "ORO_MAILER_TRANSPORT",
+        "mailer_host": "ORO_MAILER_HOST",
+        "mailer_port": "ORO_MAILER_PORT",
+        "mailer_encryption": "ORO_MAILER_ENCRYPTION",
+        "mailer_user": "ORO_MAILER_USER",
+        "mailer_password": "ORO_MAILER_PASSWORD",
+        "websocket_bind_address": "ORO_WS_BIND_ADDRESS",
+        "websocket_bind_port": "ORO_WS_BIND_PORT",
+        "websocket_frontend_host": "ORO_WS_FRONTEND_HOST",
+        "websocket_frontend_port": "ORO_WS_FRONTEND_PORT",
+        "websocket_backend_host": "ORO_WS_BACKEND_HOST",
+        "websocket_backend_port": "ORO_WS_BACKEND_PORT",
+        "web_backend_prefix": "ORO_WEB_BACKEND_PREFIX",
+        "session_handler": "ORO_SESSION_HANDLER",
+        "locale": "ORO_LOCALE",
+        "secret": "ORO_SECRET",
+        "installed": "ORO_INSTALLED",
+        "message_queue_transport": "ORO_MQ_TRANSPORT",
+        "message_queue_transport_config": "ORO_MQ_TRANSPORT_CONFIG",
+        "enable_price_sharding": "ORO_ENABLE_PRICE_SHARDING"
+      }
+    }
+  },
+  "repositories": [
+    {
+      "type": "path",
+      "url": "../../package/*"
+    },
+    {
+      "type": "composer",
+      "url": "https://packagist.orocrm.com"
+    },
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.orocrm.com"
+    }
+  ]
+}
