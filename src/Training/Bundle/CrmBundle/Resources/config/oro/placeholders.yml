@@ -1,0 +1,9 @@
+placeholders:
+    placeholders:
+        oro_account_channel_info_b2b:
+            items:
+                oro_sales_account_channel_info_opportunity:
+                    order: -1
+    items:
+        oro_sales_account_channel_info_opportunity:
+            template: TrainingCrmBundle:B2bCustomer:opportunity.html.twig

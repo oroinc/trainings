@@ -1,0 +1,2 @@
+bundles:
+    - { name: Training\Bundle\CrmBundle\TrainingCrmBundle, priority: 1000 }

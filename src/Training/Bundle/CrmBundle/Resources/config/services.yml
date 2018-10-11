@@ -1,0 +1,8 @@
+services:
+    training_crm.twig.opportunity_extension:
+        class: Training\Bundle\CrmBundle\Twig\OpportunityExtension
+        public: false
+        arguments:
+            - '@doctrine'
+        tags:
+            - { name: twig.extension }
