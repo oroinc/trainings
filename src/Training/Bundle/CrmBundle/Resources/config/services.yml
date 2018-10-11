@@ -6,3 +6,8 @@ services:
             - '@doctrine'
         tags:
             - { name: twig.extension }
+
+    training_crm.form.type.extension.lead_call_activity:
+        class: Training\Bundle\CrmBundle\EventListener\LeadCallActivityFormExtension
+        tags:
+            - { name: form.type_extension, extended_type: 'Oro\Bundle\CallBundle\Form\Type\CallType' }
