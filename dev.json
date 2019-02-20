@@ -21,26 +21,24 @@
     ]
   },
   "require": {
-    "oro/commerce": "3.0.*",
-    "oro/commerce-authorizenet": "3.0.*",
-    "oro/platform": "3.0.*",
-    "oro/platform-serialised-fields": "3.0.*",
-    "oro/calendar-bundle": "3.0.*",
-    "oro/marketing": "3.0.*",
-    "oro/customer-portal": "3.0.*",
-    "oro/commerce-wirecard": "3.0.*",
-    "oro/crm": "3.0.*",
-    "oro/crm-task-bundle": "3.0.*",
-    "oro/crm-call-bundle": "3.0.*",
-    "oro/commerce-crm": "3.0.*",
-    "oro/crm-hangouts-call-bundle": "3.0.*",
-    "oro/crm-abandoned-cart": "3.0.*",
-    "oro/crm-magento-embedded-contact-us": "3.0.*",
-    "oro/crm-mail-chimp": "3.0.*",
-    "oro/crm-dotmailer": "3.0.*",
-    "oro/crm-zendesk": "3.0.*",
-    "oro/commerce-infinitepay": "3.0.*",
-    "oro/redis-config": "3.0.*"
+    "oro/commerce": "~3.1.1",
+    "oro/commerce-authorizenet": "~3.1.1",
+    "oro/platform": "~3.1.1",
+    "oro/platform-serialised-fields": "~3.1.1",
+    "oro/calendar-bundle": "~3.1.1",
+    "oro/marketing": "~3.1.1",
+    "oro/customer-portal": "~3.1.1",
+    "oro/commerce-wirecard": "~3.1.1",
+    "oro/crm": "~3.1.1",
+    "oro/crm-task-bundle": "~3.1.1",
+    "oro/crm-call-bundle": "~3.1.1",
+    "oro/commerce-crm": "~3.1.1",
+    "oro/crm-hangouts-call-bundle": "~3.1.1",
+    "oro/crm-magento-embedded-contact-us": "~3.1.1",
+    "oro/crm-dotmailer": "~3.1.1",
+    "oro/crm-zendesk": "~3.1.1",
+    "oro/commerce-infinitepay": "~3.1.1",
+    "oro/redis-config": "~3.1.1"
   },
   "require-dev": {
     "sensio/generator-bundle": "3.1.*",
@@ -49,15 +47,16 @@
     "behat/mink-selenium2-driver": "1.*",
     "behat/symfony2-extension": "2.1.*",
     "nelmio/alice": "2.3.*",
-    "phpunit/phpunit": "5.7.*",
-    "johnkary/phpunit-speedtrap": "1.1.*",
-    "mybuilder/phpunit-accelerator": "1.2.*",
+    "phpunit/phpunit": "6.5.*",
+    "johnkary/phpunit-speedtrap": "2.0.*",
+    "mybuilder/phpunit-accelerator": "2.0.*",
     "squizlabs/php_codesniffer": "3.3.*",
     "phpmd/phpmd": "2.6.*",
     "sebastian/phpcpd": "3.0.*",
-    "phpunit/phpcov": "3.1.*",
+    "phpunit/phpcov": "4.0.*",
     "symfony/phpunit-bridge": "3.4.*",
-    "friendsofphp/php-cs-fixer": "2.12.*"
+    "friendsofphp/php-cs-fixer": "2.12.*",
+    "oro/twig-inspector": "1.0.*"
   },
   "config": {
     "component-dir": "public/bundles/components",
@@ -68,19 +67,37 @@
   },
   "scripts": {
     "post-install-cmd": [
-      "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
-      "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
-      "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
-      "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::setPermissions",
-      "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::installAssets",
-      "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::setAssetsVersion"
+      "@build-parameters",
+      "@build-bootstrap",
+      "@install-requirements-file",
+      "@set-permissions",
+      "@install-assets",
+      "@set-assets-version"
     ],
     "post-update-cmd": [
-      "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
-      "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
-      "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
-      "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::setPermissions",
-      "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::installAssets",
+      "@build-parameters",
+      "@build-bootstrap",
+      "@install-requirements-file",
+      "@set-permissions",
+      "@install-assets",
+      "@set-assets-version"
+    ],
+    "build-parameters": [
+      "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+    ],
+    "build-bootstrap": [
+      "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap"
+    ],
+    "install-requirements-file": [
+      "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
+    ],
+    "set-permissions": [
+      "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::setPermissions"
+    ],
+    "install-assets": [
+      "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::installAssets"
+    ],
+    "set-assets-version": [
       "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::setAssetsVersion"
     ]
   },

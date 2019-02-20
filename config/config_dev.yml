@@ -4,9 +4,11 @@ imports:
 framework:
     router:   { resource: "%kernel.project_dir%/config/routing_dev.yml" }
     profiler: { only_exceptions: false }
+    ide: phpstorm
 
 web_profiler:
     toolbar: true
+    excluded_ajax_paths: '^/((index(_[\w]+)|app(_[\w]+)?)\.php/)?(_wdt|bundles)'
     intercept_redirects: false
 
 monolog:
@@ -15,10 +17,6 @@ monolog:
             type:  stream
             path:  "%kernel.logs_dir%/%kernel.environment%.log"
             level: debug
-
-oro_assetic:
-    css_debug:      ~
-    css_debug_all:  false
 
 oro_message_queue:
     client:

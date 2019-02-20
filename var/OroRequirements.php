@@ -6,9 +6,8 @@ if (is_file(__DIR__.'/../vendor/autoload.php')) {
 }
 require_once __DIR__ . '/../var/SymfonyRequirements.php';
 
-use Oro\Bundle\InstallerBundle\Process\PhpExecutableFinder;
-use Oro\Bundle\RequireJSBundle\DependencyInjection\Configuration as RequireJSConfiguration;
-
+use Oro\Bundle\AssetBundle\NodeJsExecutableFinder;
+use Oro\Bundle\AssetBundle\NodeJsVersionChecker;
 use Oro\Component\PhpUtils\ArrayUtil;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\Intl\Intl;
@@ -20,10 +19,11 @@ use Symfony\Component\Yaml\Yaml;
  */
 class OroRequirements extends SymfonyRequirements
 {
-    const REQUIRED_PHP_VERSION  = '7.1.17';
+    const REQUIRED_PHP_VERSION  = '7.1.26';
     const REQUIRED_GD_VERSION   = '2.0';
     const REQUIRED_CURL_VERSION = '7.0';
     const REQUIRED_ICU_VERSION  = '3.8';
+    const REQUIRED_NODEJS_VERSION  = '>=6.6';
 
     const EXCLUDE_REQUIREMENTS_MASK = '/5\.[0-6]|7\.0/';
 
@@ -32,9 +32,26 @@ class OroRequirements extends SymfonyRequirements
      */
     public function __construct($env = 'prod')
     {
+        $phpVersion  = phpversion();
+
+        /**
+         * We should hide the deprecation varnings for php >= 7.2 because SymfonyRequirements class uses
+         * 'create_function' function that was deprecated in php 7.2.
+         *
+         * @see http://php.net/manual/en/migration72.deprecated.php#migration72.deprecated.create_function-function
+         * @see https://github.com/sensiolabs/SensioDistributionBundle/pull/336
+         */
+        if (version_compare($phpVersion, '7.2', '>=')) {
+            $oldLevel = error_reporting(E_ALL & ~E_DEPRECATED);
+        }
+
         parent::__construct();
 
-        $phpVersion  = phpversion();
+        // restore the previous report level in casse of php > 7.2.
+        if (version_compare($phpVersion, '7.2', '>=')) {
+            error_reporting($oldLevel);
+        }
+
         $gdVersion   = defined('GD_VERSION') ? GD_VERSION : null;
         $curlVersion = function_exists('curl_version') ? curl_version() : null;
         $icuVersion  = Intl::getIcuVersion();
@@ -64,9 +81,9 @@ class OroRequirements extends SymfonyRequirements
         );
 
         $this->addOroRequirement(
-            function_exists('mcrypt_encrypt'),
-            'mcrypt_encrypt() should be available',
-            'Install and enable the <strong>Mcrypt</strong> extension.'
+            function_exists('openssl_encrypt'),
+            'openssl_encrypt() should be available',
+            'Install and enable the <strong>openssl</strong> extension.'
         );
 
         if (function_exists('iconv')) {
@@ -109,6 +126,18 @@ class OroRequirements extends SymfonyRequirements
             'Install and enable the <strong>Tidy</strong> extension.'
         );
 
+        $this->addRecommendation(
+            !extension_loaded('phar'),
+            'Phar extension is disabled',
+            'Disable <strong>Phar</strong> extension to reduce the risk of PHP unserialization vulnerability.'
+        );
+
+        $this->addRecommendation(
+            extension_loaded('imap'),
+            'IMAP extension should be installed for valid email processing on IMAP sync.',
+            'Install and enable the <strong>IMAP</strong> extension.'
+        );
+
         $tmpDir = sys_get_temp_dir();
         $this->addRequirement(
             is_writable($tmpDir),
@@ -149,21 +178,6 @@ class OroRequirements extends SymfonyRequirements
             );
         }
 
-        // Web installer specific checks
-        if ('cli' !== PHP_SAPI) {
-            $output = $this->checkCliRequirements();
-
-            $requirement = new CliRequirement(
-                !$output,
-                'Requirements validation for PHP CLI',
-                'If you have multiple PHP versions installed, you need to configure ORO_PHP_PATH variable with PHP binary path used by web server'
-            );
-
-            $requirement->setOutput($output);
-
-            $this->add($requirement);
-        }
-
         $baseDir = realpath(__DIR__ . '/..');
         $mem     = $this->getBytes(ini_get('memory_limit'));
 
@@ -177,12 +191,26 @@ class OroRequirements extends SymfonyRequirements
             'Set the "<strong>memory_limit</strong>" setting in php.ini<a href="#phpini">*</a> to at least "512M".'
         );
 
-        $jsEngine = RequireJSConfiguration::getDefaultJsEngine();
+        $nodeJsExecutableFinder = new NodeJsExecutableFinder();
+        $nodeJsExecutable = $nodeJsExecutableFinder->findNodeJs();
+        $nodeJsExists = null !== $nodeJsExecutable;
+        $this->addOroRequirement(
+            $nodeJsExists,
+            $nodeJsExists ? 'NodeJS is installed' : 'NodeJS must be installed',
+            'Install <strong>NodeJS</strong>.'
+        );
 
-        $this->addRecommendation(
-            $jsEngine ? true : false,
-            $jsEngine ? "A JS Engine ($jsEngine) is installed" : 'JSEngine such as NodeJS should be installed',
-            'Install <strong>JSEngine</strong>.'
+        $this->addOroRequirement(
+            NodeJsVersionChecker::satisfies($nodeJsExecutable, self::REQUIRED_NODEJS_VERSION),
+            sprintf('NodeJS "%s" version must be installed.', self::REQUIRED_NODEJS_VERSION),
+            sprintf('Upgrade <strong>NodeJS</strong> to "%s" version.', self::REQUIRED_NODEJS_VERSION)
+        );
+
+        $npmExists = null !== $nodeJsExecutableFinder->findNpm();
+        $this->addOroRequirement(
+            $npmExists,
+            $npmExists ? 'NPM is installed' : 'NPM must be installed',
+            'Install <strong>NPM</strong>.'
         );
 
         $this->addOroRequirement(
@@ -281,8 +309,7 @@ class OroRequirements extends SymfonyRequirements
             $this->getRequirements(),
             function ($requirement) {
                 return !($requirement instanceof PhpIniRequirement)
-                    && !($requirement instanceof OroRequirement)
-                    && !($requirement instanceof CliRequirement);
+                    && !($requirement instanceof OroRequirement);
             }
         );
     }
@@ -313,19 +340,6 @@ class OroRequirements extends SymfonyRequirements
             $this->getRequirements(),
             function ($requirement) {
                 return $requirement instanceof OroRequirement;
-            }
-        );
-    }
-
-    /**
-     * @return array
-     */
-    public function getCliRequirements()
-    {
-        return array_filter(
-            $this->getRequirements(),
-            function ($requirement) {
-                return $requirement instanceof CliRequirement;
             }
         );
     }
@@ -424,21 +438,6 @@ class OroRequirements extends SymfonyRequirements
     }
 
     /**
-     * @return null|string
-     */
-    protected function checkCliRequirements()
-    {
-        $finder  = new PhpExecutableFinder();
-        $command = sprintf(
-            '%s %soro-check.php',
-            $finder->find(),
-            __DIR__ . DIRECTORY_SEPARATOR
-        );
-
-        return shell_exec($command);
-    }
-
-    /**
      * @param PDO $pdo
      * @return bool
      */
@@ -511,30 +510,6 @@ class OroRequirements extends SymfonyRequirements
 
 class OroRequirement extends Requirement
 {
-}
-
-class CliRequirement extends Requirement
-{
-    /**
-     * @var string
-     */
-    protected $output;
-
-    /**
-     * @return string
-     */
-    public function getOutput()
-    {
-        return $this->output;
-    }
-
-    /**
-     * @param string $output
-     */
-    public function setOutput($output)
-    {
-        $this->output = $output;
-    }
 }
 
 class YamlFileLoader extends Symfony\Component\Config\Loader\FileLoader
