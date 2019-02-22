@@ -9,17 +9,6 @@ use Oro\Bundle\UserBundle\Entity\User;
 
 class UserViewNamingListener
 {
-    /** @var ManagerRegistry */
-    private $registry;
-
-    /**
-     * @param ManagerRegistry $registry
-     */
-    public function __construct(ManagerRegistry $registry)
-    {
-        $this->registry = $registry;
-    }
-
     /**
      * @param BeforeListRenderEvent $event
      */
