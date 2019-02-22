@@ -6,11 +6,6 @@ services:
     Training\Bundle\UserNamingBundle\:
         resource: '../../*'
 
-    # In fact it's not needed, as we don't use any services dependencies in controllers. Added as an example.
-    Training\Bundle\UserNamingBundle\Controller\:
-        resource: '../../Controller'
-        tags: ['controller.service_arguments']
-
     Training\Bundle\UserNamingBundle\Provider\EntityNameProviderDecorator:
         decorates: Oro\Bundle\LocaleBundle\Provider\EntityNameProvider
         arguments:
