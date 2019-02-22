@@ -15,6 +15,9 @@
     {{ parent() }}
 {% endblock pageHeader %}
 
+{% block stats %}
+{% endblock stats %}
+
 {% block content_data %}
     {% set generalIinformation %}
         <div class="widget-content">
@@ -43,14 +46,17 @@
             'subblocks': [
                 {'data' : [generalIinformation]}
             ]
-        },
-        {
+        }
+    ] %}
+
+    {% if resource_granted('oro_user_user_view') %}
+        {% set dataBlocks = dataBlocks|merge([{
             'title': 'training.usernaming.sections.related_users'|trans,
             'subblocks': [
                 {'data' : [relatedUsers]}
             ]
-        }
-    ] %}
+        }] ) %}
+    {% endif %}
 
     {% set id = 'user-naming-type' %}
     {% set data = { 'dataBlocks': dataBlocks } %}

@@ -1,6 +1,7 @@
 datagrids:
     training-user-naming-types-grid:
         extended_entity_name: 'Training\Bundle\UserNamingBundle\Entity\UserNamingType'
+        acl_resource: training_user_naming_view
         source:
             type: orm
             query:
@@ -36,12 +37,14 @@ datagrids:
         actions:
             view:
                 type:          navigate
+                acl_resource:  training_user_naming_view
                 label:         'oro.grid.action.view'
                 icon:          eye
                 link:          view_link
                 rowAction:     true
 
     training-related-users-by-naming-type:
+        acl_resource: oro_user_user_view
         source:
             type: orm
             query:
