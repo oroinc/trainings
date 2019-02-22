@@ -1,11 +1,21 @@
 services:
     _defaults:
         autowire: true
+        autoconfigure: true
+
+    Training\Bundle\UserNamingBundle\:
+        resource: '../../*'
+
+    # In fact it's not needed, as we don't use any services dependencies in controllers. Added as an example.
+    Training\Bundle\UserNamingBundle\Controller\:
+        resource: '../../Controller'
+        tags: ['controller.service_arguments']
 
     Training\Bundle\UserNamingBundle\Provider\EntityNameProviderDecorator:
         decorates: Oro\Bundle\LocaleBundle\Provider\EntityNameProvider
         arguments:
-            - '@Training\Bundle\UserNamingBundle\Provider\EntityNameProviderDecorator.inner' # `decoration_inner_name`
+            # `decoration_inner_name` can be also used
+            $originalProvider: '@Training\Bundle\UserNamingBundle\Provider\EntityNameProviderDecorator.inner'
         tags:
             - { name: oro_entity.name_provider, priority: -60 }
 

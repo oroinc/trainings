@@ -1,0 +1,66 @@
+datagrids:
+    training-user-naming-types-grid:
+        extended_entity_name: 'Training\Bundle\UserNamingBundle\Entity\UserNamingType'
+        source:
+            type: orm
+            query:
+                select:
+                    - type.id
+                    - type.title
+                    - type.format
+                from:
+                  - { table: 'Training\Bundle\UserNamingBundle\Entity\UserNamingType', alias: type }
+        columns:
+            title:
+                label: 'training.usernaming.usernamingtype.title.label'
+            format:
+                label: 'training.usernaming.usernamingtype.format.label'
+                type: twig
+                frontend_type: html
+                template: 'TrainingUserNamingBundle:UserNaming:Datagrid/formatColumn.html.twig'
+        properties:
+            id: ~
+            view_link:
+                type:       url
+                route:      training_user_naming_view
+                params:     [ id ]
+        sorters:
+            columns:
+                title:
+                    data_name: type.title
+        filters:
+            columns:
+                title:
+                    type:      string
+                    data_name: type.title
+        actions:
+            view:
+                type:          navigate
+                label:         'oro.grid.action.view'
+                icon:          eye
+                link:          view_link
+                rowAction:     true
+
+    training-related-users-by-naming-type:
+        source:
+            type: orm
+            query:
+                select:
+                    - user.username
+                    - user.firstName
+                    - user.lastName
+                from:
+                  - { table: 'Oro\Bundle\UserBundle\Entity\User', alias: user }
+                where:
+                    and:
+                      - IDENTITY(user.namingType) = :namingTypeId
+            bind_parameters:
+                -
+                    name: namingTypeId
+        columns:
+            username:
+                label: 'oro.user.username.label'
+            firstName:
+                label: 'oro.user.first_name.label'
+            lastName:
+                label: 'oro.user.last_name.label'

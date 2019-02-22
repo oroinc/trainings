@@ -1,0 +1,10 @@
+{% set typeId = record.getValue('id') %}
+
+<div>
+    <strong>ID={{ typeId }}:</strong>
+    {{ value }}
+</div>
+<div>
+    <strong>Example:</strong>
+    {% include '@TrainingUserNaming/UserNaming/fullNameExample.html.twig' with {'format': value} %}
+</div>

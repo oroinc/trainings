@@ -1,0 +1,20 @@
+navigation:
+    menu_config:
+        items:
+            user_namings_list:
+                label: 'training.usernaming.usernamingtype.entity_plural_label'
+                route: 'training_user_naming_index'
+                position: 20
+                extras:
+                    routes: ['training_user_naming_index', 'training_user_naming_view']
+        tree:
+            application_menu:
+                children:
+                    system_tab:
+                        children:
+                            users_management:
+                                children:
+                                    user_namings_list: ~
+    titles:
+        training_user_naming_index: ~
+        training_user_naming_view: '%title% - oro.ui.view'

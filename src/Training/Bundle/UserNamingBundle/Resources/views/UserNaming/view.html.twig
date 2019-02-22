@@ -1,0 +1,58 @@
+{% extends 'OroUIBundle:actions:view.html.twig' %}
+
+{% import 'OroUIBundle::macros.html.twig' as UI %}
+{% import 'OroDataGridBundle::macros.html.twig' as DataGrid %}
+
+{% oro_title_set({params : {"%title%": entity.title }}) %}
+
+{% block pageHeader %}
+    {% set breadcrumbs = {
+        'entity':      entity,
+        'indexPath':   path('training_user_naming_index'),
+        'indexLabel':  'training.usernaming.usernamingtype.entity_plural_label'|trans,
+        'entityTitle': entity.title,
+    } %}
+    {{ parent() }}
+{% endblock pageHeader %}
+
+{% block content_data %}
+    {% set generalIinformation %}
+        <div class="widget-content">
+            <div class="row-fluid form-horizontal">
+                <div class="responsive-block">
+                    {{ UI.renderProperty('training.usernaming.usernamingtype.title.label'|trans, entity.title) }}
+                    {{ UI.renderProperty('training.usernaming.usernamingtype.format.label'|trans, entity.format) }}
+
+                    {% set formattedNameExample %}
+                        {% include '@TrainingUserNaming/UserNaming/fullNameExample.html.twig' with {'format': entity.format} %}
+                    {% endset %}
+                    {{ UI.renderHtmlProperty('training.usernaming.full_formatted_name_example'|trans, formattedNameExample) }}
+                </div>
+            </div>
+        </div>
+    {% endset %}
+
+    {% set relatedUsers %}
+        {{ DataGrid.renderGrid('training-related-users-by-naming-type', {namingTypeId: entity.id}) }}
+    {% endset %}
+
+    {% set dataBlocks = [
+        {
+            'title': 'training.usernaming.sections.general'|trans,
+            'class': 'active',
+            'subblocks': [
+                {'data' : [generalIinformation]}
+            ]
+        },
+        {
+            'title': 'training.usernaming.sections.related_users'|trans,
+            'subblocks': [
+                {'data' : [relatedUsers]}
+            ]
+        }
+    ] %}
+
+    {% set id = 'user-naming-type' %}
+    {% set data = { 'dataBlocks': dataBlocks } %}
+    {{ parent() }}
+{% endblock content_data %}
