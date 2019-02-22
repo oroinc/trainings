@@ -1,0 +1,17 @@
+services:
+    _defaults:
+        autowire: true
+
+    Training\Bundle\UserNamingBundle\Provider\EntityNameProviderDecorator:
+        decorates: Oro\Bundle\LocaleBundle\Provider\EntityNameProvider
+        arguments:
+            - '@Training\Bundle\UserNamingBundle\Provider\EntityNameProviderDecorator.inner' # `decoration_inner_name`
+        tags:
+            - { name: oro_entity.name_provider, priority: -60 }
+
+    Training\Bundle\UserNamingBundle\EventListener\UserViewNamingListener:
+        tags:
+            - { name: kernel.event_listener, event: oro_ui.scroll_data.before.userView, method: onUserView }
+
+    # ORO services. We need to alias them in order to properly autowire dependencies for our new services
+    Oro\Bundle\LocaleBundle\Provider\EntityNameProvider: '@oro_locale.entity_name_provider'
