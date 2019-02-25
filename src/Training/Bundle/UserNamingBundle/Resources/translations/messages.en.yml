@@ -26,5 +26,9 @@ training.usernaming:
             url:
                 label: 'Source URL'
 
+    name_example:
+        show_hide_button:
+            tooltip: 'Show name example'
+
 oro.user:
     naming_type.label: 'User Naming Type'

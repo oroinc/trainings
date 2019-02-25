@@ -1,10 +1,18 @@
 {% set typeId = record.getValue('id') %}
 
-<div>
-    <strong>ID={{ typeId }}:</strong>
-    {{ value }}
-</div>
-<div>
-    <strong>Example:</strong>
-    {% include '@TrainingUserNaming/UserNaming/fullNameExample.html.twig' with {'format': value} %}
+<div
+    data-page-component-module="trainingusernaming/js/app/components/show-hide-component"
+    data-page-component-options="{{ { triggerClass: 'show-hide-trigger', blockClass: 'show-hide-block'}|json_encode }}"
+>
+    <div>
+        <strong>ID={{ typeId }}:</strong>
+        {{ value }}
+        <a href="#" class="show-hide-trigger" title="{{ 'training.usernaming.name_example.show_hide_button.tooltip'|trans }}">
+            <i class="fa-eye"></i>
+        </a>
+    </div>
+    <div class="hide show-hide-block">
+        <strong>Example:</strong>
+        {% include '@TrainingUserNaming/UserNaming/fullNameExample.html.twig' with {'format': value} %}
+    </div>
 </div>
