@@ -1,0 +1,11 @@
+services:
+    _defaults:
+        autowire: true
+
+    Training\Bundle\UserNamingBundle\Integration\NamingTypeChannel:
+        tags:
+            - { name: oro_integration.channel, type: naming_type }
+
+    Training\Bundle\UserNamingBundle\Integration\NamingTypeTransport:
+        tags:
+            - { name: oro_integration.transport, type: naming_type, channel_type: naming_type }

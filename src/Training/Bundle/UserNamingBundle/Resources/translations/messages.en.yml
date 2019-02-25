@@ -19,5 +19,12 @@ training.usernaming:
         general: 'General Information'
         related_users: 'Related Users'
 
+    integration:
+        label: 'User Naming Integration'
+        settings:
+            label: 'User Naming Integration Settings'
+            url:
+                label: 'Source URL'
+
 oro.user:
     naming_type.label: 'User Naming Type'

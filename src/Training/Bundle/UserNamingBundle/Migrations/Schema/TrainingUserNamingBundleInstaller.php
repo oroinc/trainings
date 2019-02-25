@@ -20,7 +20,7 @@ class TrainingUserNamingBundleInstaller implements Installation, ExtendExtension
      */
     public function getMigrationVersion()
     {
-        return 'v1_1';
+        return 'v1_2';
     }
 
     /**
@@ -30,6 +30,9 @@ class TrainingUserNamingBundleInstaller implements Installation, ExtendExtension
     {
         /** Tables generation **/
         $this->createTrainingUserNamingTypeTable($schema);
+
+        /** Update integration table */
+        $this->updateIntegrationTable($schema);
 
         /** Additional relations */
         $this->addRelationFromUser($schema);
@@ -47,6 +50,17 @@ class TrainingUserNamingBundleInstaller implements Installation, ExtendExtension
         $table->addColumn('title', 'string', ['length' => 64]);
         $table->addColumn('format', 'string', ['length' => 255]);
         $table->setPrimaryKey(['id']);
+    }
+
+    /**
+     * Add required fields to integration table
+     *
+     * @param Schema $schema
+     */
+    protected function updateIntegrationTable(Schema $schema)
+    {
+        $table = $schema->getTable('oro_integration_transport');
+        $table->addColumn('user_naming_url', 'string', ['notnull' => false, 'length' => 255]);
     }
 
     /**
