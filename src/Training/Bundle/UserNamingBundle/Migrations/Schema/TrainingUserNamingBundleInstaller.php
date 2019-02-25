@@ -20,7 +20,7 @@ class TrainingUserNamingBundleInstaller implements Installation, ExtendExtension
      */
     public function getMigrationVersion()
     {
-        return 'v1_2';
+        return 'v1_3';
     }
 
     /**
@@ -49,6 +49,7 @@ class TrainingUserNamingBundleInstaller implements Installation, ExtendExtension
         $table->addColumn('id', 'integer', ['autoincrement' => true]);
         $table->addColumn('title', 'string', ['length' => 64]);
         $table->addColumn('format', 'string', ['length' => 255]);
+        $table->addColumn('example', 'string', ['length' => 255, 'notnull' => false]);
         $table->setPrimaryKey(['id']);
     }
 

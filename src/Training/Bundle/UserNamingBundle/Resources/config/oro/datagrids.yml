@@ -9,6 +9,7 @@ datagrids:
                     - type.id
                     - type.title
                     - type.format
+                    - type.example
                 from:
                   - { table: 'Training\Bundle\UserNamingBundle\Entity\UserNamingType', alias: type }
         columns:
@@ -21,6 +22,7 @@ datagrids:
                 template: 'TrainingUserNamingBundle:UserNaming:Datagrid/formatColumn.html.twig'
         properties:
             id: ~
+            example: ~
             view_link:
                 type:       url
                 route:      training_user_naming_view

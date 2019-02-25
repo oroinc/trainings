@@ -3,6 +3,11 @@ services:
         autowire: true
         autoconfigure: true
 
+    _instanceof:
+        Oro\Component\MessageQueue\Consumption\MessageProcessorInterface:
+            tags:
+                - { name: 'oro_message_queue.client.message_processor' }
+
     Training\Bundle\UserNamingBundle\:
         resource: '../../*'
         exclude: '../../{Entity,Migrations,Tests}'
@@ -15,10 +20,19 @@ services:
         tags:
             - { name: oro_entity.name_provider, priority: -60 }
 
+    Training\Bundle\UserNamingBundle\Provider\UserFullNameProvider:
+        public: true
+
     Training\Bundle\UserNamingBundle\EventListener\UserViewNamingListener:
         tags:
             - { name: kernel.event_listener, event: oro_ui.scroll_data.before.userView, method: onUserView }
 
+    Training\Bundle\UserNamingBundle\EventListener\NamingFormatModificationListener:
+        tags:
+            - { name: doctrine.orm.entity_listener, entity: 'Training\Bundle\UserNamingBundle\Entity\UserNamingType', event: postPersist }
+            - { name: doctrine.orm.entity_listener, entity: 'Training\Bundle\UserNamingBundle\Entity\UserNamingType', event: preUpdate }
+
     # ORO services. We need to alias them in order to properly autowire dependencies for our new services
     Oro\Bundle\LocaleBundle\Provider\EntityNameProvider: '@oro_locale.entity_name_provider'
     Oro\Bundle\EntityBundle\ORM\DoctrineHelper: '@oro_entity.doctrine_helper'
+    Oro\Component\MessageQueue\Client\MessageProducerInterface: '@oro_message_queue.message_producer'

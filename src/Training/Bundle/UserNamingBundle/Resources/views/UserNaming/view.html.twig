@@ -27,7 +27,7 @@
                     {{ UI.renderProperty('training.usernaming.usernamingtype.format.label'|trans, entity.format) }}
 
                     {% set formattedNameExample %}
-                        {% include '@TrainingUserNaming/UserNaming/fullNameExample.html.twig' with {'format': entity.format} %}
+                        {% include '@TrainingUserNaming/UserNaming/fullNameExample.html.twig' with {'example': entity.example} %}
                     {% endset %}
                     {{ UI.renderHtmlProperty('training.usernaming.full_formatted_name_example'|trans, formattedNameExample) }}
                 </div>

@@ -32,10 +32,10 @@ class NameExampleGetListProcessor implements ProcessorInterface
 
         if (is_array($result)) {
             foreach ($result as $key => $entityData) {
-                if (array_key_exists('format', $entityData) &&
+                if (array_key_exists('example', $entityData) &&
                     !array_key_exists('nameExample', $entityData)
                 ) {
-                    $result[$key]['nameExample'] = $this->fullNameProvider->getFullNameExample($entityData['format']);
+                    $result[$key]['nameExample'] = $entityData['example'];
                 }
             }
         }

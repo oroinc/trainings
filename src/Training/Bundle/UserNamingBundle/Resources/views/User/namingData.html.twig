@@ -4,7 +4,7 @@
 
 {% if entity.namingType %}
     {% set formattedNameExample %}
-        {% include '@TrainingUserNaming/UserNaming/fullNameExample.html.twig' with {'format': entity.namingType.format} %}
+        {% include '@TrainingUserNaming/UserNaming/fullNameExample.html.twig' with {'example': entity.namingType.example} %}
     {% endset %}
     {{ UI.renderHtmlProperty('training.usernaming.full_formatted_name_example'|trans, formattedNameExample) }}
 {% endif %}
