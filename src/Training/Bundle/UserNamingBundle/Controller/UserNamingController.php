@@ -44,4 +44,15 @@ class UserNamingController extends Controller
             'entity' => $type,
         ];
     }
+
+    /**
+     * @Route("/dashboard/user-information", name="training_user_dashboard_user_information", options={"expose"=true})
+     * @Template
+     */
+    public function dashboardUserInformationAction()
+    {
+        $data = $this->get('oro_dashboard.widget_configs')->getWidgetAttributesForTwig('current_user_information');
+        $data['currentUser'] = $this->getUser();
+        return $data;
+    }
 }

@@ -30,5 +30,12 @@ training.usernaming:
         show_hide_button:
             tooltip: 'Show name example'
 
+    dashboard:
+        user_information:
+            label: 'Current User Naming Information'
+            description: 'Render full naming information of a current logged in user'
+            configuration:
+                show_name_parts: 'Show name parts'
+
 oro.user:
     naming_type.label: 'User Naming Type'

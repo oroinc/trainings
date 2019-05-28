@@ -1,0 +1,12 @@
+dashboards:
+    widgets:
+        current_user_information:
+            label:       training.usernaming.dashboard.user_information.label
+            route:       training_user_dashboard_user_information
+            description: training.usernaming.dashboard.user_information.description
+            configuration:
+                showNameParts:
+                    type: Symfony\Component\Form\Extension\Core\Type\CheckboxType
+                    options:
+                        label: training.usernaming.dashboard.user_information.configuration.show_name_parts
+                        required: false

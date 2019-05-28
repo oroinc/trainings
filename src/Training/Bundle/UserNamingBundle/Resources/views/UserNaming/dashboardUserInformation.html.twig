@@ -1,0 +1,25 @@
+{% extends 'OroDashboardBundle:Dashboard:widget.html.twig' %}
+{% import 'OroUIBundle::macros.html.twig' as UI %}
+
+{% block content %}
+    <div class="widget-content">
+        <div class="form-horizontal">
+            {{ UI.renderProperty('training.usernaming.full_formatted_name'|trans, currentUser|oro_format_name) }}
+
+            {% if currentUser.namingType %}
+                {% set formattedNameExample %}
+                    {% include '@TrainingUserNaming/UserNaming/fullNameExample.html.twig' with {'example': currentUser.namingType.example} %}
+                {% endset %}
+                {{ UI.renderHtmlProperty('training.usernaming.full_formatted_name_example'|trans, formattedNameExample) }}
+            {% endif %}
+
+            {% if widgetConfiguration.showNameParts.value %}
+                {{ UI.renderProperty('oro.user.name_prefix.label'|trans, currentUser.namePrefix) }}
+                {{ UI.renderProperty('oro.user.first_name.label'|trans, currentUser.firstName) }}
+                {{ UI.renderProperty('oro.user.middle_name.label'|trans, currentUser.middleName) }}
+                {{ UI.renderProperty('oro.user.last_name.label'|trans, currentUser.lastName) }}
+                {{ UI.renderProperty('oro.user.name_suffix.label'|trans, currentUser.nameSuffix) }}
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
