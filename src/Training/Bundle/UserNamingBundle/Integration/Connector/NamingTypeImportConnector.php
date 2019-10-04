@@ -7,6 +7,7 @@ use Oro\Bundle\EntityBundle\ORM\DoctrineHelper;
 use Training\Bundle\UserNamingBundle\Entity\Repository\UserNamingIntegrationSettingsRepository;
 use Training\Bundle\UserNamingBundle\Entity\UserNamingIntegrationSettings;
 use Training\Bundle\UserNamingBundle\Entity\UserNamingType;
+use Training\Bundle\UserNamingBundle\Integration\NamingTypeTransport;
 
 /**
  * IMPORTANT!!! This class is added just to demonstrate how to use integration data - please, don't follow this approach
@@ -18,17 +19,25 @@ class NamingTypeImportConnector
     /** @var DoctrineHelper */
     private $doctrineHelper;
 
-    /** @var   */
+    /** @var LoggerInterface */
     private $logger;
+
+    /** @var NamingTypeTransport */
+    private $transport;
 
     /**
      * @param DoctrineHelper  $doctrineHelper
      * @param LoggerInterface $logger
+     * @param NamingTypeTransport $transport
      */
-    public function __construct(DoctrineHelper $doctrineHelper, LoggerInterface $logger)
-    {
+    public function __construct(
+        DoctrineHelper $doctrineHelper,
+        LoggerInterface $logger,
+        NamingTypeTransport $transport
+    ) {
         $this->doctrineHelper = $doctrineHelper;
         $this->logger = $logger;
+        $this->transport = $transport;
     }
 
     /**
@@ -45,18 +54,8 @@ class NamingTypeImportConnector
         $settingsEntities = $settingsRepository->findByEnabledChannel();
 
         foreach ($settingsEntities as $settings) {
-            $url = $settings->getUrl();
-            $data = file_get_contents($url);
-            if (!$data) {
-                $this->logger->warning('Can\'t get user naming types from URL', ['url' => $url]);
-                continue;
-            }
-
-            $jsonData = json_decode($data, true);
-            if (!$jsonData) {
-                $this->logger->notice('No naming types received from URL', ['url' => $url]);
-                continue;
-            }
+            $channelId = $settings->getId();
+            $jsonData = $this->transport->getNamingTypeData($channelId);
 
             $invalidCount = 0;
             $skippedCount = 0;
@@ -90,7 +89,7 @@ class NamingTypeImportConnector
             }
 
             $this->logger->info('Naming types were processed', [
-                'url' => $url,
+                'channelId' => $channelId,
                 'invalid' => $invalidCount,
                 'skipped' => $skippedCount,
                 'added' => $addedCount,
