@@ -19,6 +19,7 @@ behat.yml
 /var/import_export/*
 !var/import_export/.gitkeep
 !var/oro-check.php
+!var/SymfonyRequirements.php
 !var/OroRequirements.php
 /build/logs/*
 /vendor
@@ -28,6 +29,8 @@ node_modules/
 /public/css
 /public/images
 /public/js
+/public/build
+/public/layout-build
 /public/uploads/users/*
 /public/media/cache
 /public/media/js
@@ -39,11 +42,11 @@ phpunit.xml
 bin/*
 !bin/console
 !bin/dist
-/var/SymfonyRequirements.php
 /public/sitemaps
 /public/uploads/behat
 /.web-server-pid
 /.vagrant
+/package.json
 
 # DO NOT DO THIS FOR REAL PROJECTS. IT'S HERE JUST FOR TRAINING PURPOSE !!
 !var/oauth_private.key
