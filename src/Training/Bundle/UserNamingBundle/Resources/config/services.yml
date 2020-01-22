@@ -34,5 +34,4 @@ services:
 
     # ORO services. We need to alias them in order to properly autowire dependencies for our new services
     Oro\Bundle\LocaleBundle\Provider\EntityNameProvider: '@oro_locale.entity_name_provider'
-    Oro\Bundle\EntityBundle\ORM\DoctrineHelper: '@oro_entity.doctrine_helper'
     Oro\Component\MessageQueue\Client\MessageProducerInterface: '@oro_message_queue.message_producer'

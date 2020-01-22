@@ -1,0 +1,3 @@
+dynamic-imports:
+    trainingusernaming:
+        - trainingusernaming/js/app/components/show-hide-component

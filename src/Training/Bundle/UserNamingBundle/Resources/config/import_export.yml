@@ -21,7 +21,7 @@ services:
             -
                 name: oro_importexport.processor
                 type: export
-                entity: 'Training\Bundle\UserNamingBundle\Entity\UserNamingType'
+                entity: Training\Bundle\UserNamingBundle\Entity\UserNamingType
                 alias: training_user_naming_type
 
     training_user_naming.importexport.processor.export_template.user_naming_type:
@@ -32,7 +32,7 @@ services:
             -
                 name: oro_importexport.processor
                 type: export_template
-                entity: 'Training\Bundle\UserNamingBundle\Entity\UserNamingType'
+                entity: Training\Bundle\UserNamingBundle\Entity\UserNamingType
                 alias: training_user_naming_type
 
     # Import processor
@@ -45,24 +45,21 @@ services:
             -
                 name: oro_importexport.processor
                 type: import
-                entity: 'Training\Bundle\UserNamingBundle\Entity\UserNamingType'
+                entity: Training\Bundle\UserNamingBundle\Entity\UserNamingType
                 alias: training_user_naming_type_add_or_replace
             -
                 name: oro_importexport.processor
                 type: import_validation
-                entity: 'Training\Bundle\UserNamingBundle\Entity\UserNamingType'
+                entity: Training\Bundle\UserNamingBundle\Entity\UserNamingType
                 alias: training_user_naming_type_add_or_replace
 
     # Template fixture
     # Autowiring + _instanceof configuration could be used here
-    training_user_naming.importexport.template_fixture.user_naming_type:
-        class: Training\Bundle\UserNamingBundle\ImportExport\TemplateFixture\UserNamingTypeFixture
-        tags:
-            - { name: oro_importexport.template_fixture }
+    Training\Bundle\UserNamingBundle\ImportExport\TemplateFixture\UserNamingTypeFixture:
+        tags: [oro_importexport.template_fixture]
 
     # Configuration
     # Autowiring could be used here
-    training_user_naming.importexport.configuration_provider.training_user_naming:
-        class: Training\Bundle\UserNamingBundle\ImportExport\Configuration\UserNamingImportExportConfigurationProvider
+    Training\Bundle\UserNamingBundle\ImportExport\Configuration\UserNamingImportExportConfigurationProvider:
         tags:
             - { name: oro_importexport.configuration, alias: training_user_naming }

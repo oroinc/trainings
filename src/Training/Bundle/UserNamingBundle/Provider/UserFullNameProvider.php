@@ -3,8 +3,9 @@
 namespace Training\Bundle\UserNamingBundle\Provider;
 
 use Oro\Bundle\UserBundle\Entity\User;
+use Twig\Extension\RuntimeExtensionInterface;
 
-class UserFullNameProvider
+class UserFullNameProvider implements RuntimeExtensionInterface
 {
     /**
      * @param User $user
