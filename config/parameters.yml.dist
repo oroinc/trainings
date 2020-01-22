@@ -7,7 +7,7 @@ parameters:
     database_password:      ~
     database_driver_options: []
 
-    mailer_transport:       mail
+    mailer_transport:       sendmail
     mailer_host:            127.0.0.1
     mailer_port:            ~
     mailer_encryption:      ~
@@ -31,7 +31,6 @@ parameters:
 
     session_handler:        session.handler.native_file
 
-    locale:                 en
     secret:                 ThisTokenIsNotSoSecretChangeIt
     installed:              ~
     assets_version:         ~
@@ -43,3 +42,5 @@ parameters:
     message_queue_transport: 'dbal'
     message_queue_transport_config: ~
     enable_price_sharding: false
+
+    deployment_type: ~
