@@ -1,4 +1,4 @@
-{% import 'OroUIBundle::macros.html.twig' as UI %}
+{% import '@OroUI/macros.html.twig' as UI %}
 
 {{ UI.renderProperty('training.user_naming.full_formatted_name'|trans, entity|oro_format_name) }}
 {{ UI.renderProperty('oro.user.name_prefix.label'|trans, entity.namePrefix) }}
