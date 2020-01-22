@@ -2,7 +2,7 @@ search:
     Training\Bundle\UserNamingBundle\Entity\UserNamingType:
         alias:                          training_user_naming_type
         title_fields:                   [title]
-        search_template:                'TrainingUserNamingBundle:UserNaming:Search\resultRow.html.twig'
+        search_template:                '@TrainingUserNaming/UserNaming/Search/resultRow.html.twig'
         route:
             name:                       training_user_naming_view
             parameters:

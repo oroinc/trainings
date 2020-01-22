@@ -3,7 +3,7 @@
     * entity       - entity Training\Bundle\UserNamingBundle\Entity\UserNamingType or null
     * indexer_item - indexer item Oro\Bundle\SearchBundle\Query\Result\Item
 #}
-{% extends 'OroSearchBundle:Search:searchResultItem.html.twig' %}
+{% extends '@OroSearch/Search/searchResultItem.html.twig' %}
 
 {% if entity %}
     {% set recordUrl = indexer_item.recordUrl %}
