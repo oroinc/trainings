@@ -49,7 +49,7 @@
         }
     ] %}
 
-    {% if resource_granted('oro_user_user_view') %}
+    {% if is_granted('oro_user_user_view') %}
         {% set dataBlocks = dataBlocks|merge([{
             'title': 'training.usernaming.sections.related_users'|trans,
             'subblocks': [
