@@ -35,7 +35,7 @@ class UserViewNamingListener
         }
 
         $template = $event->getEnvironment()->render(
-            'TrainingUserNamingBundle:User:namingData.html.twig',
+            '@TrainingUserNaming/User/namingData.html.twig',
             ['entity' => $user]
         );
         $subBlockId = $event->getScrollData()->addSubBlock(0);

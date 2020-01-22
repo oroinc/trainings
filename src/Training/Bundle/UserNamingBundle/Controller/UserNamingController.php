@@ -2,14 +2,13 @@
 
 namespace Training\Bundle\UserNamingBundle\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Oro\Bundle\SecurityBundle\Annotation\AclAncestor;
 use Oro\Bundle\SecurityBundle\Annotation\Acl;
 use Training\Bundle\UserNamingBundle\Entity\UserNamingType;
 
-class UserNamingController extends Controller
+class UserNamingController
 {
     /**
      * @Route("/", name="training_user_naming_index")

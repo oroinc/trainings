@@ -31,7 +31,6 @@ parameters:
 
     session_handler:        ~
 
-    locale:                 en
     secret:                 ThisTokenIsNotSoSecretChangeIt
     installed:              ~
     assets_version:         ~
@@ -39,3 +38,5 @@ parameters:
     message_queue_transport: 'null'
     message_queue_transport_config: {}
     enable_price_sharding: false
+
+    deployment_type: ~
