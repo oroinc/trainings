@@ -1,6 +1,9 @@
 imports:
     - { resource: config.yml }
 
+parameters:
+    main_log_channels: []
+
 framework:
     router:   { resource: "%kernel.project_dir%/config/routing_dev.yml" }
     profiler: { only_exceptions: false }
@@ -14,9 +17,10 @@ web_profiler:
 monolog:
     handlers:
         main:
-            type:  stream
-            path:  "%kernel.logs_dir%/%kernel.environment%.log"
-            level: debug
+            type:      stream
+            path:      "%kernel.logs_dir%/%kernel.environment%.log"
+            level:     debug
+            channels:  '%main_log_channels%'
 
         # collect all log records to buffer and write them to log file on CLI command error
         message_queue.consumer.console_error:
@@ -30,4 +34,14 @@ oro_message_queue:
         traceable_producer: true
 
 #swiftmailer:
-#    delivery_address: me@example.com
+#    delivery_addresses: ['me@example.com']
+
+oro_api:
+    settings:
+        web_api:
+            value: true
+
+oro_frontend:
+    settings:
+        web_api:
+            value: true
