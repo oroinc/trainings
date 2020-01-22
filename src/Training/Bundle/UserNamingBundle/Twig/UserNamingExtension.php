@@ -3,8 +3,10 @@
 namespace Training\Bundle\UserNamingBundle\Twig;
 
 use Training\Bundle\UserNamingBundle\Provider\UserFullNameProvider;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFilter;
 
-class UserNamingExtension extends \Twig_Extension
+class UserNamingExtension extends AbstractExtension
 {
     /** @var UserFullNameProvider */
     private $fullNameProvider;
@@ -23,7 +25,7 @@ class UserNamingExtension extends \Twig_Extension
     public function getFilters()
     {
         return [
-            new \Twig_SimpleFilter('full_name_example', [$this->fullNameProvider, 'getFullNameExample'])
+            new TwigFilter('full_name_example', [$this->fullNameProvider, 'getFullNameExample'])
         ];
     }
 }
