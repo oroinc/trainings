@@ -8,7 +8,7 @@ services:
                 name: oro.api.processor
                 action: get
                 group: finalize
-                class: 'Training\Bundle\UserNamingBundle\Entity\UserNamingType'
+                class: Training\Bundle\UserNamingBundle\Entity\UserNamingType
                 priority: -25
 
     Training\Bundle\UserNamingBundle\Api\Processor\GetList\NameExampleGetListProcessor:
@@ -17,5 +17,5 @@ services:
                 name: oro.api.processor
                 action: get_list
                 group: finalize
-                class: 'Training\Bundle\UserNamingBundle\Entity\UserNamingType'
+                class: Training\Bundle\UserNamingBundle\Entity\UserNamingType
                 priority: -25
