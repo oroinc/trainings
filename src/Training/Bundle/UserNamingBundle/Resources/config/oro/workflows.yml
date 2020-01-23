@@ -1,6 +1,6 @@
 workflows:
     user_naming_flow:
-        entity: 'Oro\Bundle\UserBundle\Entity\User'
+        entity: Oro\Bundle\UserBundle\Entity\User
         entity_attribute: user
         start_step: not_initialized
         defaults:
@@ -36,7 +36,7 @@ workflows:
             set_name_parts:
                 step_to: name_parts_set
                 frontend_options:
-                    icon: 'fa-address-card'
+                    icon: fa-address-card
                 transition_definition: set_name_parts_definition
                 form_options:
                     attribute_fields:
@@ -56,19 +56,19 @@ workflows:
             set_naming_type:
                 step_to: naming_types_set
                 frontend_options:
-                    icon: 'fa-check'
+                    icon: fa-check
                 transition_definition: set_naming_type_definition
                 form_options:
                     attribute_fields:
                         namingType:
-                            form_type: 'Symfony\Bridge\Doctrine\Form\Type\EntityType'
+                            form_type: Symfony\Bridge\Doctrine\Form\Type\EntityType
                             options:
                                 choice_label: title
                                 class: Training\Bundle\UserNamingBundle\Entity\UserNamingType
             reinitialize_name:
                 step_to: not_initialized
                 frontend_options:
-                    icon: 'fa-refresh'
+                    icon: fa-refresh
                 transition_definition: reinitialize_name_definition
         transition_definitions:
             set_name_parts_definition: {}

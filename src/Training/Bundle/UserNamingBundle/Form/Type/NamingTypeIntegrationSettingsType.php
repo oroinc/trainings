@@ -36,12 +36,4 @@ class NamingTypeIntegrationSettingsType extends AbstractType
             'data_class' => UserNamingIntegrationSettings::class,
         ]);
     }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getBlockPrefix()
-    {
-        return 'training_naming_type_integration_settings';
-    }
 }

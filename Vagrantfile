@@ -3,7 +3,7 @@
 
 # Use this Vagrant configuration file for local installation of the Oro application.
 # Please, refer to the Oro Applications installation guides for the detailed instructions:
-# https://oroinc.com/b2b-ecommerce/doc/current/install-upgrade/one-step-automated-installation/vagrant
+# https://doc.oroinc.com/backend/setup/dev-environment/vagrant/
 
 # All Vagrant configuration is done below. The "2" in Vagrant.configure
 # configures the configuration version (we support older styles for
@@ -273,7 +273,7 @@ ____DOCTRINECONFIG
 
 		# --- Run the installation command ---
 
-		php ./bin/console oro:install --env=prod --timeout=900 --no-debug --application-url="http://$APP_HOST/" --organization-name="Oro Inc" --user-name="$APP_USER" --user-email="admin@example.com" --user-firstname="Bob" --user-lastname="Dylan" --user-password="$APP_PASSWORD" --sample-data=$APP_LOAD_DEMO_DATA
+		php ./bin/console oro:install --env=prod --timeout=900 --no-debug --application-url="http://$APP_HOST/" --organization-name="Oro Inc" --user-name="$APP_USER" --user-email="admin@example.com" --user-firstname="Bob" --user-lastname="Dylan" --user-password="$APP_PASSWORD" --sample-data=$APP_LOAD_DEMO_DATA --language=en --formatting-code=en_US
 
 		echo "\n~~~~~~~~~~~~~~ Add Required Permissions for the nginx User ~~~~~~~~~~~~~~\n"
 
@@ -296,7 +296,7 @@ ____DOCTRINECONFIG
 
 		cat >> /etc/supervisord.conf <<____SUPERVISORDTEMPLATE
 [program:oro_web_socket]
-command=php ./bin/console clank:server --env=prod
+command=php ./bin/console gos:websocket:server --env=prod
 numprocs=1
 autostart=true
 autorestart=true

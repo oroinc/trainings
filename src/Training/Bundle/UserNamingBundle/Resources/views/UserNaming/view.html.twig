@@ -1,7 +1,7 @@
-{% extends 'OroUIBundle:actions:view.html.twig' %}
+{% extends '@OroUI/actions/view.html.twig' %}
 
-{% import 'OroUIBundle::macros.html.twig' as UI %}
-{% import 'OroDataGridBundle::macros.html.twig' as DataGrid %}
+{% import '@OroUI/macros.html.twig' as UI %}
+{% import '@OroDataGrid/macros.html.twig' as DataGrid %}
 
 {% oro_title_set({params : {"%title%": entity.title }}) %}
 
@@ -49,7 +49,7 @@
         }
     ] %}
 
-    {% if resource_granted('oro_user_user_view') %}
+    {% if is_granted('oro_user_user_view') %}
         {% set dataBlocks = dataBlocks|merge([{
             'title': 'training.usernaming.sections.related_users'|trans,
             'subblocks': [

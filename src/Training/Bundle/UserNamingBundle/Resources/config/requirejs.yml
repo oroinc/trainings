@@ -1,3 +1,0 @@
-config:
-    paths:
-        trainingusernaming/js/app/components/show-hide-component: 'bundles/trainingusernaming/js/app/components/show-hide-component.js'
