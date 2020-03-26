@@ -1,0 +1,15 @@
+oro_behat_extension:
+    elements:
+        Naming Type Attribute Title:
+            selector:
+                type: 'xpath'
+                locator: '//label[contains(@class, "attribute-item__term")][contains(text(),"Title")]/following-sibling::div'
+        Naming Type Attribute Format:
+            selector:
+                type: 'xpath'
+                locator: '//label[contains(@class, "attribute-item__term")][contains(text(),"Naming Format")]/following-sibling::div'
+        Naming Type Attribute Example:
+            selector:
+                type: 'xpath'
+                locator: '//label[contains(@class, "attribute-item__term")][contains(text(),"Formatted Name Example")]/following-sibling::div'
+
