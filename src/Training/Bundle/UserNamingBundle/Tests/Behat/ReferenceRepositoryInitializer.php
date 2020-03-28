@@ -8,6 +8,13 @@ use Oro\Bundle\TestFrameworkBundle\Behat\Isolation\ReferenceRepositoryInitialize
 use Oro\Bundle\TestFrameworkBundle\Test\DataFixtures\Collection;
 use Training\Bundle\UserNamingBundle\Entity\UserNamingType;
 
+/**
+ * Loads Naming Types and creates fixture reference for each in form of:
+ *
+ *  - user_naming_type_official
+ *  - user_naming_type_unofficial
+ *  - user_naming_type_first_name_only
+ */
 class ReferenceRepositoryInitializer implements ReferenceRepositoryInitializerInterface
 {
     private const TYPE_PLACEHOLDER = 'user_naming_type_%s';

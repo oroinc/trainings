@@ -23,4 +23,8 @@ oro_behat_extension:
             selector:
                 type: 'xpath'
                 locator: '//label[contains(@class, "attribute-item__term")][contains(text(),"Formatted Name Example")]/following-sibling::div'
+        Naming Type View Attribute:
+            selector:
+                type: 'xpath'
+                locator: '//label[contains(@class, "attribute-item__term")][contains(text(),"User Naming Type")]/following-sibling::div'
 

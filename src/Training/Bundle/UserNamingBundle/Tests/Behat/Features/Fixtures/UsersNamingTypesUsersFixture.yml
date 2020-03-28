@@ -1,0 +1,25 @@
+Oro\Bundle\UserBundle\Entity\User:
+    firstUser:
+        username: john_doe
+        email: jd@example.com
+        firstName: John
+        lastName: Doe
+        password: john_doe
+        salt: john_doe
+        roles: ['@userRole']
+        owner: '@business_unit'
+        organization: '@organization'
+        businessUnits: ['@business_unit']
+        namingType: '@user_naming_type_official'
+    secondUser:
+        username: mike_boo
+        email: mb@example.com
+        firstName: Mike
+        lastName: Boo
+        password: mike_boo
+        salt: mike_boo
+        roles: ['@userRole']
+        owner: '@business_unit'
+        organization: '@organization'
+        businessUnits: ['@business_unit']
+        namingType: '@user_naming_type_unofficial'
