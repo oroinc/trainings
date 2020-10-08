@@ -23,7 +23,6 @@ behat.yml
 !var/OroRequirements.php
 /build/logs/*
 /vendor
-node_modules/
 /cov
 /public/bundles
 /public/css
@@ -33,6 +32,7 @@ node_modules/
 /public/layout-build
 /public/uploads/users/*
 /public/media/cache
+/public/media/sitemaps
 /public/media/js
 /public/build.js
 /config/parameters.yml
@@ -46,7 +46,8 @@ bin/*
 /public/uploads/behat
 /.web-server-pid
 /.vagrant
-/package.json
+/.php-version
+/docker-compose.override.yml
 
 # DO NOT DO THIS FOR REAL PROJECTS. IT'S HERE JUST FOR TRAINING PURPOSE !!
 !var/oauth_private.key
