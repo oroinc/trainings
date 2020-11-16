@@ -1,0 +1,28 @@
+oro_behat_extension:
+    suites:
+        TrainingUserNamingBundle:
+            contexts:
+                - Oro\Bundle\TestFrameworkBundle\Tests\Behat\Context\OroMainContext
+                - Training\Bundle\UserNamingBundle\Tests\Behat\Context\FeatureGridContext
+                - Oro\Bundle\FormBundle\Tests\Behat\Context\FormContext
+                - Oro\Bundle\TestFrameworkBundle\Tests\Behat\Context\FixturesContext
+            paths:
+                - '@TrainingUserNamingBundle/Tests/Behat/Features'
+    elements:
+        Naming Type Attribute Title:
+            selector:
+                type: 'xpath'
+                locator: '//label[contains(@class, "attribute-item__term")][contains(text(),"Title")]/following-sibling::div'
+        Naming Type Attribute Format:
+            selector:
+                type: 'xpath'
+                locator: '//label[contains(@class, "attribute-item__term")][contains(text(),"Naming Format")]/following-sibling::div'
+        Naming Type Attribute Example:
+            selector:
+                type: 'xpath'
+                locator: '//label[contains(@class, "attribute-item__term")][contains(text(),"Formatted Name Example")]/following-sibling::div'
+        Naming Type View Attribute:
+            selector:
+                type: 'xpath'
+                locator: '//label[contains(@class, "attribute-item__term")][contains(text(),"User Naming Type")]/following-sibling::div'
+
