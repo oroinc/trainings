@@ -114,8 +114,6 @@ Vagrant.configure("2") do |config|
     echo "\n~~~~~~~~~~~~~~ Install MySQL ~~~~~~~~~~~~~~\n"
 
     wget https://dev.mysql.com/get/mysql80-community-release-el7-1.noarch.rpm && rpm -ivh mysql80-community-release-el7-1.noarch.rpm
-    yum-config-manager --disable mysql80-community
-    yum-config-manager --enable mysql57-community
 
     yum install -y mysql-community-server
 
@@ -132,7 +130,6 @@ Vagrant.configure("2") do |config|
     php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" && php composer-setup.php
     php -r "unlink('composer-setup.php');"
     mv composer.phar /usr/bin/composer
-    su - vagrant -c 'composer global require symfony/flex'
 
     echo "\n~~~~~~~~~~~~~~ Enable Installed Services ~~~~~~~~~~~~~~\n"
 
@@ -159,6 +156,7 @@ Vagrant.configure("2") do |config|
     echo "default-character-set = utf8mb4" >> /etc/my.cnf
     echo "" >> /etc/my.cnf
     echo "[mysqld]" >> /etc/my.cnf
+    echo "default-authentication-plugin=mysql_native_password" >> /etc/my.cnf
     echo "innodb_file_per_table = 0" >> /etc/my.cnf
     echo "wait_timeout = 28800" >> /etc/my.cnf
     echo "character-set-server = utf8mb4" >> /etc/my.cnf
@@ -169,12 +167,13 @@ Vagrant.configure("2") do |config|
     # --- Change the Default MySQL Password for Root User ---
 
     MYSQL_INSTALLED_TMP_ROOT_PASSWORD=$(grep 'temporary password' /var/log/mysqld.log | awk '{print $NF}')
-    mysqladmin --user=root --password=$MYSQL_INSTALLED_TMP_ROOT_PASSWORD password $DB_PASSWORD
+    mysqladmin --user=root --password="$MYSQL_INSTALLED_TMP_ROOT_PASSWORD" password "$DB_PASSWORD"
 
     # --- Create a Database for OroPlatform Community Edition Application and a Dedicated Database User ---
 
     mysql -uroot -p$DB_PASSWORD -e "CREATE DATABASE $DB_NAME"
-    mysql -uroot -p$DB_PASSWORD -e "GRANT ALL PRIVILEGES ON $DB_NAME.* to '$DB_USER'@'localhost' identified by '$DB_PASSWORD'"
+    mysql -uroot -p$DB_PASSWORD -e "CREATE USER '$DB_USER'@'localhost' IDENTIFIED BY '$DB_PASSWORD'"
+    mysql -uroot -p$DB_PASSWORD -e "GRANT ALL PRIVILEGES ON $DB_NAME.* to '$DB_USER'@'localhost' WITH GRANT OPTION"
     mysql -uroot -p$DB_PASSWORD -e "FLUSH PRIVILEGES"
 
     echo "\n~~~~~~~~~~~~~~ Configure Web Server ~~~~~~~~~~~~~~\n"
@@ -257,11 +256,11 @@ ____NGINXCONFIGTEMPLATE
 
     # --- Configure config/parameters.yml (to prevent composer interactive dialog) ---
 
-    su - vagrant -c 'composer install --prefer-dist --no-dev --optimize-autoloader -n --working-dir=/var/www/oroapp'
+    su - vagrant -c 'composer install --no-progress --prefer-dist --no-dev --optimize-autoloader -n --working-dir=/var/www/oroapp'
 
-    sed -i "s/database_user:[ ]*root/database_user: $DB_USER/g" ./config/parameters.yml
-    sed -i "s/database_password:[ ]*null/database_password: $DB_PASSWORD/g" ./config/parameters.yml
-    sed -i "s/database_name:[ ]*[a-zA-Z0-9_]*/database_name: $DB_NAME/g" ./config/parameters.yml
+    sed -i "/database_user/s/:[[:space:]].*$/: $DB_USER/g" ./config/parameters.yml
+    sed -i "/database_password/s/:[[:space:]].*$/: '$DB_PASSWORD'/g" ./config/parameters.yml
+    sed -i "/database_name/s/:[[:space:]].*$/: $DB_NAME/g" ./config/parameters.yml
     chown vagrant:vagrant /var/www/oroapp/config/parameters.yml
 
     echo "\n~~~~~~~~~~~~~~ Install OroCommerce Community Edition Application ~~~~~~~~~~~~~~\n"
@@ -289,8 +288,8 @@ ____DOCTRINECONFIG
     cd /var/www/oroapp
     find . -type f -exec chmod 0644 {} \\;
     find . -type d -exec chmod 0755 {} \\;
-    chown -R nginx:nginx ./var/{sessions,attachment,cache,import_export,logs}
-    chown -R nginx:nginx ./public/{media,uploads,js}
+    chown -R nginx:nginx ./var/{sessions,data,cache,logs}
+    chown -R nginx:nginx ./public/{media,js}
 
     echo "\n*********************************************************************************"
     echo "************** Step 4: Post-installation Environment Configuration **************"
