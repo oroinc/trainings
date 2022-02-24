@@ -10,9 +10,14 @@ use Training\Bundle\UserNamingBundle\Model\ExtendUserNamingType;
  * @ORM\Entity()
  * @ORM\Table(name="training_user_naming_type")
  * @Config(
+ *      routeName="training_user_naming_index",
+ *      routeView="training_user_naming_view",
  *      defaultValues={
  *          "entity"={
  *              "icon"="fa-child"
+ *          },
+ *          "grid"={
+ *              "default"="training-user-naming-types-grid"
  *          }
  *      }
  * )
