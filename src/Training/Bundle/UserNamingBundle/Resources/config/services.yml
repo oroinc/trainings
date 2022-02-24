@@ -16,7 +16,5 @@ services:
     Training\Bundle\UserNamingBundle\Provider\UserFullNameProvider: ~
 
     Training\Bundle\UserNamingBundle\Twig\UserNamingExtension:
-        arguments:
-            - '@Training\Bundle\UserNamingBundle\Provider\UserFullNameProvider'
         tags:
             - { name: twig.extension }
