@@ -7,15 +7,11 @@ use Oro\Bundle\UserBundle\Entity\User;
 
 class EntityNameProviderDecorator implements EntityNameProviderInterface
 {
-    /** @var EntityNameProviderInterface */
-    private $originalProvider;
-
     /**
      * @param EntityNameProviderInterface $originalProvider
      */
-    public function __construct(EntityNameProviderInterface $originalProvider)
+    public function __construct(private EntityNameProviderInterface $originalProvider)
     {
-        $this->originalProvider = $originalProvider;
     }
 
     /**
