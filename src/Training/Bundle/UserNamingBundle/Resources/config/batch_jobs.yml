@@ -1,0 +1,16 @@
+connector:
+    name: oro_importexport
+    jobs:
+        training_user_naming_type_import:
+            title: "Sync user naming types from csv files"
+            type: import
+            steps:
+                import:
+                    title: import
+                    class: Oro\Bundle\BatchBundle\Step\ItemStep
+                    services:
+                        reader:    training_user_naming.integration.user_naming_type_connector
+                        processor: oro_importexport.processor.import_delegate
+                        writer:    oro_integration.writer.persistent_batch_writer
+                    parameters:
+                        batch_size: 25

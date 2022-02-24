@@ -26,7 +26,7 @@ class TrainingUserNamingBundleInstaller implements Installation, ExtendExtension
      */
     public function getMigrationVersion(): string
     {
-        return 'v1_1';
+        return 'v1_2';
     }
 
     /**
@@ -39,6 +39,9 @@ class TrainingUserNamingBundleInstaller implements Installation, ExtendExtension
 
         /** Additional relations */
         $this->addRelationFromUser($schema);
+
+        /** Update integration table */
+        $this->updateIntegrationTable($schema);
     }
 
     /**
@@ -72,5 +75,16 @@ class TrainingUserNamingBundleInstaller implements Installation, ExtendExtension
                 'extend' => ['owner' => ExtendScope::OWNER_CUSTOM],
             ]
         );
+    }
+
+    /**
+     * Add required fields to integration table
+     *
+     * @param Schema $schema
+     */
+    protected function updateIntegrationTable(Schema $schema)
+    {
+        $table = $schema->getTable('oro_integration_transport');
+        $table->addColumn('user_naming_url', 'string', ['notnull' => false, 'length' => 255]);
     }
 }
