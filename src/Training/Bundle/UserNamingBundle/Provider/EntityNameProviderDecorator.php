@@ -8,19 +8,14 @@ use Training\Bundle\UserNamingBundle\Entity\UserNamingType;
 
 class EntityNameProviderDecorator implements EntityNameProviderInterface
 {
-    private EntityNameProviderInterface $originalProvider;
-    private UserFullNameProvider $fullNameProvider;
-
     /**
      * @param EntityNameProviderInterface $originalProvider
      * @param UserFullNameProvider $fullNameProvider
      */
     public function __construct(
-        EntityNameProviderInterface $originalProvider,
-        UserFullNameProvider $fullNameProvider
+        private EntityNameProviderInterface $originalProvider,
+        private UserFullNameProvider $fullNameProvider
     ) {
-        $this->originalProvider = $originalProvider;
-        $this->fullNameProvider = $fullNameProvider;
     }
 
     /**
