@@ -4,6 +4,7 @@ namespace Training\Bundle\UserNamingBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Oro\Bundle\EntityConfigBundle\Metadata\Annotation\Config;
+use Oro\Bundle\EntityConfigBundle\Metadata\Annotation\ConfigField;
 use Training\Bundle\UserNamingBundle\Model\ExtendUserNamingType;
 
 /**
@@ -35,6 +36,13 @@ class UserNamingType extends ExtendUserNamingType
      * @ORM\Id
      * @ORM\Column(type="integer", name="id")
      * @ORM\GeneratedValue(strategy="AUTO")
+     * @ConfigField(
+     *      defaultValues={
+     *          "importexport"={
+     *              "order"=10
+     *          }
+     *      }
+     * )
      */
     private $id;
 
@@ -42,6 +50,13 @@ class UserNamingType extends ExtendUserNamingType
      * @var string
      *
      * @ORM\Column(type="string", length=64, nullable=false)
+     * @ConfigField(
+     *      defaultValues={
+     *          "importexport"={
+     *              "order"=20
+     *          }
+     *      }
+     * )
      */
     private $title;
 
@@ -50,6 +65,13 @@ class UserNamingType extends ExtendUserNamingType
      * Allowed placeholders are: PREFIX, FIRST, MIDDLE, LAST, SUFFIX
      *
      * @ORM\Column(type="string", length=255, nullable=false)
+     * @ConfigField(
+     *      defaultValues={
+     *          "importexport"={
+     *              "order"=30
+     *          }
+     *      }
+     * )
      */
     private $format;
 
