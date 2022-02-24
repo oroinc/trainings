@@ -13,7 +13,9 @@ services:
         tags:
             - { name: kernel.event_listener, event: oro_ui.scroll_data.before.userView, method: onUserView }
 
-    Training\Bundle\UserNamingBundle\Provider\UserFullNameProvider: ~
+    Training\Bundle\UserNamingBundle\Provider\UserFullNameProvider:
+        tags:
+            - { name: twig.runtime }
 
     Training\Bundle\UserNamingBundle\Twig\UserNamingExtension:
         tags:
