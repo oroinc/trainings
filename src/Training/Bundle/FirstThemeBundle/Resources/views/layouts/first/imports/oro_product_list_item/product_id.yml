@@ -1,0 +1,9 @@
+layout:
+    actions:
+        - '@setBlockTheme':
+            themes: 'product_id.html.twig'
+        - '@add':
+            id: __product_id
+            blockType: block
+            parentId: __product_specification
+            siblingId: __product_sku

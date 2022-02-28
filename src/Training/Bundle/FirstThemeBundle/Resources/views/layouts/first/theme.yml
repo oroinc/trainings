@@ -1,0 +1,6 @@
+parent: default
+label: First theme
+description: My first theme
+groups: [ commerce ]
+logo: bundles/trainingfirsttheme/first/images/logo.svg
+icon: bundles/trainingfirsttheme/first/images/favicon/favicon.ico

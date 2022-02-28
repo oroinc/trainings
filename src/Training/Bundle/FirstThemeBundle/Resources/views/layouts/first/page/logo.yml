@@ -1,0 +1,9 @@
+layout:
+    actions:
+        - '@setBlockTheme':
+            themes: 'logo.html.twig'
+        - '@add':
+            id: logo_hint
+            parentId: middle_bar_logo
+            siblingId: logo
+            blockType: block
