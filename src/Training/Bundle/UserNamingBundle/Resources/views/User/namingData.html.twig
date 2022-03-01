@@ -8,5 +8,5 @@
 {{ UI.renderProperty('oro.user.name_suffix.label'|trans, entity.nameSuffix) }}
 
 {% if entity.namingType %}
-    {{ UI.renderProperty('training.usernaming.full_formatted_name_example'|trans, entity.namingType.format|full_name_example) }}
+    {{ UI.renderProperty('training.usernaming.full_formatted_name_example'|trans, entity.namingType.example) }}
 {% endif %}
