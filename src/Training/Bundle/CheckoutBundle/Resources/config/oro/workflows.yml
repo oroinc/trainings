@@ -1,0 +1,2 @@
+imports:
+    - { resource: 'workflows/training_b2b_flow_checkout.yml' }

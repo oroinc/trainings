@@ -1,0 +1,11 @@
+workflows:
+    training_b2b_flow_checkout:
+        variable_definitions:
+            variables:
+                test_user_reg_exp:
+                    type: string
+                    value: '~@test.com$~'
+                    options:
+                        form_options:
+                            constraints:
+                                NotBlank: ~

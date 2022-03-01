@@ -1,0 +1,4 @@
+training.checkout:
+    training_b2b_flow_checkout:
+        messages:
+            test_user_is_used: 'Pay attention! You are using test user now!'
