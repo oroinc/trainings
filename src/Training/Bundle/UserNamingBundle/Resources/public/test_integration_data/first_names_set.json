@@ -4,7 +4,7 @@
         "format": "PREFIX FIRST MIDDLE LAST SUFFIX"
     },
     {
-        "title" : "Russian format",
-        "format": "LAST FIRST MIDDLE"
+        "title" : "Polish format",
+        "format": "FIRST MIDDLE LAST"
     }
 ]
