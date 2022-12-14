@@ -4,3 +4,10 @@ services:
     class: 'Training\Bundle\UserNamingBundle\Provider\UserNameProvider'
     arguments:
       - '@.inner'
+
+  on_user_profile_page_listener:
+    class: 'Training\Bundle\UserNamingBundle\EventListener\UserProfileViewListener'
+    arguments:
+      - '@oro_locale.entity_name_provider'
+    tags:
+      - { name: kernel.event_listener, event: oro_ui.scroll_data.before.user-profile, method: onUserProfile }
