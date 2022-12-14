@@ -1,0 +1,6 @@
+services:
+  oro_locale.entity_name_provider.composite:
+    decorates: oro_locale.entity_name_provider
+    class: 'Training\Bundle\UserNamingBundle\Provider\UserNameProvider'
+    arguments:
+      - '@.inner'
