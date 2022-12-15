@@ -1,0 +1,7 @@
+services:
+  _defaults:
+    public: true
+
+  Training\Bundle\UserNamingBundle\Controller\UserNamingTypeController:
+    calls:
+      - [ 'setContainer', [ '@Psr\Container\ContainerInterface' ] ]

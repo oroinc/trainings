@@ -1,0 +1,4 @@
+training_user_naming_bundle:
+  resource:     "@TrainingUserNamingBundle/Controller"
+  type:         annotation
+  prefix:       /user-naming-type

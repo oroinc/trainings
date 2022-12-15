@@ -1,0 +1,62 @@
+datagrids:
+    user-naming-types-grid:
+        extended_entity_name: 'Training\Bundle\UserNamingBundle\Entity\UserNamingType'
+        options:
+            entityHint: training.usernaming.entity_plural_label
+            entity_pagination: true
+        mass_actions:
+            delete:
+                disabled: true
+        source:
+            type: orm
+            query:
+                select:
+                    - u.id
+                    - u.title
+                    - u.format
+                from:
+                    - { table: 'Training\Bundle\UserNamingBundle\Entity\UserNamingType', alias: u }
+            hints:
+                - HINT_TRANSLATABLE
+        inline_editing:
+            enable: true
+        columns:
+            title:
+                label:         training.usernaming.usernamingtype.title.label
+            format:
+                label:         training.usernaming.usernamingtype.format.label
+
+        properties:
+            id: ~
+            update_link:
+                type: url
+                route: oro_user_update
+                params:
+                    - id
+            view_link:
+                type: url
+                route: oro_user_view
+                params:
+                    - id
+            delete_link:
+                type: url
+                route: oro_api_delete_user
+                params:
+                    - id
+            config_link:
+                type: url
+                route: oro_user_config
+                params:
+                    - id
+        sorters:
+            columns:
+                title:
+                    data_name: u.title
+            default:
+                title: ASC
+
+        filters:
+            columns:
+                title:
+                    type: string
+                    data_name: u.title

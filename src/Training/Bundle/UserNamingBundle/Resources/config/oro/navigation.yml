@@ -1,0 +1,19 @@
+navigation:
+  menu_config:
+    items:
+      user_naming_types_list:
+        label: 'training.usernaming.usernamingtype.entity_plural_label'
+        route: 'training_user_naming_type_index'
+        position: 11
+        extras:
+          routes: [ '/^training_user_naming_type_(?!role\w+|group\w+|security\w+|reset\w+)\w+$/' ]
+          description: 'My description'
+
+    tree:
+      application_menu:
+        children:
+          system_tab:
+            children:
+              users_management:
+                children:
+                  user_naming_types_list: ~
