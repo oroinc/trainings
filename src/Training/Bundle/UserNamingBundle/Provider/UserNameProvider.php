@@ -40,7 +40,7 @@ class UserNameProvider implements EntityNameProviderInterface
             return $this->originalEntityNameProvider->getName($format, $locale, $entity);
         }
 
-        return $this->userNameFormatter->format($entity, $entity->getNamingType());
+        return $this->userNameFormatter->format($entity, $entity->getNamingType()->getFormat());
     }
 
     /**

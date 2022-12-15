@@ -25,7 +25,9 @@ datagrids:
                 label:         training.usernaming.usernamingtype.title.label
             format:
                 label:         training.usernaming.usernamingtype.format.label
-
+                type: twig
+                frontend_type: html
+                template: '@TrainingUserNaming/Datagrid/Column/format.html.twig'
         properties:
             id: ~
             update_link:

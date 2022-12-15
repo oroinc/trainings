@@ -4,7 +4,6 @@ namespace Training\Bundle\UserNamingBundle\Formatter;
 
 use Oro\Bundle\UserBundle\Entity\User;
 use Training\Bundle\UserNamingBundle\Container\UserNamePartsContainer;
-use Training\Bundle\UserNamingBundle\Entity\UserNamingType;
 
 /**
  * Replaces placeholder parts with real User fields according to provided format
@@ -20,13 +19,13 @@ class UserNameFormatter
 
     /**
      * @param User $user
-     * @param UserNamingType $format
+     * @param string $format
      * @return string
      */
-    public function format(User $user, UserNamingType $format): string
+    public function format(User $user, string $format): string
     {
         $replacements = $this->userNamePartsContainer->getParts($user);
 
-        return strtr($format->getFormat(), $replacements);
+        return strtr($format, $replacements);
     }
 }

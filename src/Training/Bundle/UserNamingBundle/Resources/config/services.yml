@@ -21,3 +21,11 @@ services:
       - '@oro_locale.entity_name_provider'
     tags:
       - { name: kernel.event_listener, event: oro_ui.scroll_data.before.userView, method: onUserView }
+
+  training_user_name_formatter.twig.extension.name_formatter:
+    class: Training\Bundle\UserNamingBundle\Twig\TrainingFormatExtension
+    public: false
+    arguments:
+      - '@training_user_name_formatter'
+    tags:
+      - { name: twig.extension }
