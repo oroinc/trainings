@@ -11,7 +11,7 @@ use Twig\Error\SyntaxError;
 /**
  * This class listen to BeforeListRenderEvent and some blocks
  */
-class UserProfileViewListener
+class UserViewListener
 {
     /**
      * Adds sub-block to user profile page in admin panel
@@ -24,7 +24,7 @@ class UserProfileViewListener
      *
      * @return void
      */
-    public function onUserProfile(BeforeListRenderEvent $event): void
+    public function onUserView(BeforeListRenderEvent $event): void
     {
         if (!$event->getEntity() instanceof User) {
             return;

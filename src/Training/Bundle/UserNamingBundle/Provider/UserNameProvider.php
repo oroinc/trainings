@@ -4,17 +4,29 @@ namespace Training\Bundle\UserNamingBundle\Provider;
 
 use Oro\Bundle\EntityBundle\Provider\EntityNameProviderInterface;
 use Oro\Bundle\UserBundle\Entity\User;
+use Training\Bundle\UserNamingBundle\Formatter\UserNameFormatter;
 
 /**
  * Provides custom full name representation for Entity User
  */
 class UserNameProvider implements EntityNameProviderInterface
 {
-    private const NAME_FORMAT = '%last_name% %first_name% %middle_name%';
+    /**
+     * @var EntityNameProviderInterface
+     */
+    private EntityNameProviderInterface $originalEntityNameProvider;
+
+    /**
+     * @var UserNameFormatter
+     */
+    private UserNameFormatter $userNameFormatter;
 
     public function __construct(
-        private readonly EntityNameProviderInterface $originalEntityNameProvider
+        EntityNameProviderInterface $originalEntityNameProvider,
+        UserNameFormatter $userNameFormatter
     ) {
+        $this->originalEntityNameProvider = $originalEntityNameProvider;
+        $this->userNameFormatter = $userNameFormatter;
     }
 
     /**
@@ -24,17 +36,11 @@ class UserNameProvider implements EntityNameProviderInterface
      */
     public function getName($format, $locale, $entity): string
     {
-        if (!$entity instanceof User) {
-            return $this->getName($format, $locale, $entity);
+        if (!$entity instanceof User || !$entity->getNamingType()) {
+            return $this->originalEntityNameProvider->getName($format, $locale, $entity);
         }
 
-        $replacements = [
-            '%last_name%' => $entity->getLastName(),
-            '%first_name%' => $entity->getFirstName(),
-            '%middle_name%' => $entity->getMiddleName(),
-        ];
-
-        return str_replace(array_keys($replacements), array_values($replacements), self::NAME_FORMAT);
+        return $this->userNameFormatter->format($entity, $entity->getNamingType());
     }
 
     /**

@@ -2,3 +2,17 @@ training:
   user_naming:
     full_name:
       label: 'Full name'
+  usernaming:
+    usernamingtype:
+      entity_label: 'User Naming'
+      entity_plural_label: 'User Namings'
+      id:
+        label: 'ID'
+      format:
+        label: 'Format'
+      title:
+        label: 'Title'
+oro:
+  user:
+    naming_type:
+      label: 'Naming type'
