@@ -2,6 +2,7 @@ training:
   user_naming:
     full_name:
       label: 'Full name'
+    example: 'Example'
   usernaming:
     usernamingtype:
       entity_label: 'User Naming'

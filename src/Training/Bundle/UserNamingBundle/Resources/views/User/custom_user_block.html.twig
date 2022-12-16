@@ -2,6 +2,9 @@
     {{ 'training.user_naming.full_name.label'|trans ~ ': ' ~ user|oro_format_name }}
 </div>
 <div>
+    {{ 'training.user_naming.example'|trans ~ ': ' ~ user|training_format_user_naming(user.namingType.format) }}
+</div>
+<div>
     {{ 'oro.user.name_prefix.label'|trans ~ ': ' ~ user.namePrefix }}
 </div>
 <div>

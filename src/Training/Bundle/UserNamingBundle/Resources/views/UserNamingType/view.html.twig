@@ -1,0 +1,36 @@
+{% extends '@OroUI/actions/view.html.twig' %}
+{% import '@OroDataGrid/macros.html.twig' as dataGrid %}
+{% import '@OroUI/macros.html.twig' as UI %}
+
+{% block content_data %}
+
+    {% set exampleFormat = app.user|training_format_user_naming(entity.format) %}
+
+    {% set innerData %}
+        {{ UI.renderProperty('training.usernaming.usernamingtype.id.label'|trans, entity.id) }}
+        {{ UI.renderProperty('training.usernaming.usernamingtype.title.label'|trans, entity.title) }}
+        {{ UI.renderProperty('training.usernaming.usernamingtype.format.label'|trans, entity.format) }}
+
+        {{ UI.renderProperty('training.user_naming.example'|trans, exampleFormat) }}
+    {% endset %}
+
+    {% set usersGrid %}
+        {{ dataGrid.renderGrid('training-users-grid', {'namingType_id': entity.id}, {
+            'enableFilters': false
+        }) }}
+    {% endset %}
+
+    {% set dataBlocks = [
+        {
+            'title': 'General Information'|trans,
+            'subblocks': [
+                {'data' : [innerData, usersGrid]}
+            ]
+        }
+    ] %}
+
+    {% set id = 'userNamingTypeView' %}
+    {% set data = { 'dataBlocks': dataBlocks } %}
+
+    {{ parent() }}
+{% endblock %}

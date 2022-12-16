@@ -30,26 +30,21 @@ datagrids:
                 template: '@TrainingUserNaming/Datagrid/Column/format.html.twig'
         properties:
             id: ~
-            update_link:
-                type: url
-                route: oro_user_update
-                params:
-                    - id
+
             view_link:
                 type: url
-                route: oro_user_view
+                route: training_user_naming_type_view
                 params:
                     - id
-            delete_link:
-                type: url
-                route: oro_api_delete_user
-                params:
-                    - id
-            config_link:
-                type: url
-                route: oro_user_config
-                params:
-                    - id
+
+        actions:
+            view:
+                type: navigate
+                label: oro.grid.action.view
+                link: view_link
+                icon: eye
+                rowAction: true
+
         sorters:
             columns:
                 title:
@@ -62,3 +57,13 @@ datagrids:
                 title:
                     type: string
                     data_name: u.title
+
+    training-users-grid:
+        extends: users-grid
+        source:
+            query:
+                where:
+                    and:
+                        - u.namingType = :namingType_id
+            bind_parameters:
+                - namingType_id
