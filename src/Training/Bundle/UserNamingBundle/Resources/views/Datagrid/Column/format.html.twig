@@ -1,5 +1,4 @@
 {% set formatValue = record.getValue('format') %}
-{% set exampleFormat = app.user|training_format_user_naming(formatValue) %}
 
 <div><b>ID={{ record.getValue('id') }}:</b> {{ formatValue }}</div>
-<div><b>Example:</b> {{ exampleFormat }}</div>
+<div><b>Example:</b> {% include '@TrainingUserNaming/User/example_format.html.twig' with {format: formatValue} %}</div>

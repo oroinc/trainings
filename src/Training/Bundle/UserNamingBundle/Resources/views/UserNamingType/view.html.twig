@@ -4,14 +4,15 @@
 
 {% block content_data %}
 
-    {% set exampleFormat = app.user|training_format_user_naming(entity.format) %}
+    {% set example %}
+        {% include '@TrainingUserNaming/User/example_format.html.twig' with {format: entity.format} %}
+    {% endset %}
 
     {% set innerData %}
         {{ UI.renderProperty('training.usernaming.usernamingtype.id.label'|trans, entity.id) }}
         {{ UI.renderProperty('training.usernaming.usernamingtype.title.label'|trans, entity.title) }}
         {{ UI.renderProperty('training.usernaming.usernamingtype.format.label'|trans, entity.format) }}
-
-        {{ UI.renderProperty('training.user_naming.example'|trans, exampleFormat) }}
+        {{ UI.renderProperty('training.user_naming.example'|trans, example) }}
     {% endset %}
 
     {% set usersGrid %}

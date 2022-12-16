@@ -1,21 +1,12 @@
-<div>
-    {{ 'training.user_naming.full_name.label'|trans ~ ': ' ~ user|oro_format_name }}
-</div>
-<div>
-    {{ 'training.user_naming.example'|trans ~ ': ' ~ user|training_format_user_naming(user.namingType.format) }}
-</div>
-<div>
-    {{ 'oro.user.name_prefix.label'|trans ~ ': ' ~ user.namePrefix }}
-</div>
-<div>
-    {{ 'oro.user.first_name.label'|trans ~ ': ' ~ user.firstname }}
-</div>
-<div>
-    {{ 'oro.user.middle_name.label'|trans ~ ': ' ~ user.middlename }}
-</div>
-<div>
-    {{ 'oro.user.last_name.label'|trans ~ ': ' ~ user.lastname }}
-</div>
-<div>
-    {{ 'oro.user.name_suffix.label'|trans ~ ': ' ~ user.nameSuffix }}
-</div>
+{% import '@OroUI/macros.html.twig' as UI %}
+
+{% set example %}
+    {% include '@TrainingUserNaming/User/example_format.html.twig' with {format: user.namingType.format} %}
+{% endset %}
+
+{{ UI.renderProperty('training.user_naming.example'|trans, example) }}
+{{ UI.renderProperty('training.user_naming.full_name.label'|trans, user|oro_format_name) }}
+{{ UI.renderProperty('oro.user.first_name.label'|trans, user.firstname) }}
+{{ UI.renderProperty('oro.user.middle_name.label'|trans, user.middlename) }}
+{{ UI.renderProperty('oro.user.last_name.label'|trans, user.lastname) }}
+{{ UI.renderProperty('oro.user.name_suffix.label'|trans, user.nameSuffix) }}

@@ -19,12 +19,20 @@ class TrainingFormatExtension extends AbstractExtension
     public function getFilters()
     {
         return [
-            new TwigFilter('training_format_user_naming', [$this, 'formatUserNaming']),
+            new TwigFilter('training_example_user_naming', [$this, 'getExampleForUserNaming']),
         ];
     }
 
-    public function formatUserNaming(User $user, string $namingType): string
+    public function getExampleForUserNaming(string $format): string
     {
-        return $this->nameFormatter->format($user, $namingType);
+        $user = new User();
+
+        $user->setNamePrefix('Mr.')
+            ->setFirstName('John')
+            ->setMiddleName('M')
+            ->setLastName('Doe')
+            ->setNameSuffix('Jr.');
+
+        return $this->nameFormatter->format($user, $format);
     }
 }
