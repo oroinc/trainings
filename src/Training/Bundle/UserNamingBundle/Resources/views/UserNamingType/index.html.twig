@@ -5,4 +5,8 @@
 
 {% block navButtons %}
     {% import '@OroUI/macros.html.twig' as UI %}
+
+    {% include '@OroImportExport/ImportExport/buttons_from_configuration.html.twig' with {
+        'alias': 'user_naming'
+    } %}
 {% endblock %}
