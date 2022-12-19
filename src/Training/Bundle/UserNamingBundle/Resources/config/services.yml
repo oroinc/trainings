@@ -1,5 +1,5 @@
 services:
-  oro_locale.entity_name_provider.composite:
+  oro_locale.entity_name_provider.decorator:
     decorates: oro_locale.entity_name_provider
     class: 'Training\Bundle\UserNamingBundle\Provider\UserNameProvider'
     arguments:
