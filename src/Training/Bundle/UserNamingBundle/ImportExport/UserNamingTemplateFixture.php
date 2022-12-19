@@ -8,7 +8,6 @@ use Training\Bundle\UserNamingBundle\Entity\UserNamingType;
 
 class UserNamingTemplateFixture extends AbstractTemplateRepository implements TemplateFixtureInterface
 {
-
     protected function createEntity($key): UserNamingType
     {
         return new UserNamingType();
