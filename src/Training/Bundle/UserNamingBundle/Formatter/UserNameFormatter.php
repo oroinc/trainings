@@ -3,19 +3,19 @@
 namespace Training\Bundle\UserNamingBundle\Formatter;
 
 use Oro\Bundle\UserBundle\Entity\User;
-use Training\Bundle\UserNamingBundle\Container\UserNamePartsContainer;
 use Training\Bundle\UserNamingBundle\Entity\UserNamingType;
+use Training\Bundle\UserNamingBundle\Provider\UserNamePartsProvider;
 
 /**
  * Replaces placeholder parts with real User fields according to provided format
  */
 class UserNameFormatter
 {
-    private UserNamePartsContainer $userNamePartsContainer;
+    private UserNamePartsProvider $userNamePartsProvider;
 
-    public function __construct(UserNamePartsContainer $userNamePartsContainer)
+    public function __construct(UserNamePartsProvider $userNamePartsProvider)
     {
-        $this->userNamePartsContainer = $userNamePartsContainer;
+        $this->userNamePartsProvider = $userNamePartsProvider;
     }
 
     /**
@@ -25,7 +25,7 @@ class UserNameFormatter
      */
     public function format(User $user, UserNamingType $format): string
     {
-        $replacements = $this->userNamePartsContainer->getParts($user);
+        $replacements = $this->userNamePartsProvider->getParts($user);
 
         return strtr($format->getFormat(), $replacements);
     }

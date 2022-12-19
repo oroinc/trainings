@@ -12,6 +12,7 @@ training:
         label: 'Format'
       title:
         label: 'Title'
+
 oro:
   user:
     naming_type:

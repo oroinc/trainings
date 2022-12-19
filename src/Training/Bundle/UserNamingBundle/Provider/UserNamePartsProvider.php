@@ -1,10 +1,10 @@
 <?php
 
-namespace Training\Bundle\UserNamingBundle\Container;
+namespace Training\Bundle\UserNamingBundle\Provider;
 
 use Oro\Bundle\UserBundle\Entity\User;
 
-class UserNamePartsContainer
+class UserNamePartsProvider
 {
     public function getParts(User $user): array
     {

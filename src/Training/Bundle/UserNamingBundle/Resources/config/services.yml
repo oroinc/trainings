@@ -1,14 +1,14 @@
 services:
 
-  training_user_name_formatter_container:
-    class: Training\Bundle\UserNamingBundle\Container\UserNamePartsContainer
+  training_user_name_formatter_provider:
+    class: Training\Bundle\UserNamingBundle\Provider\UserNamePartsProvider
 
   training_user_name_formatter:
     class: Training\Bundle\UserNamingBundle\Formatter\UserNameFormatter
     arguments:
-      - '@training_user_name_formatter_container'
+      - '@training_user_name_formatter_provider'
 
-  oro_locale.entity_name_provider.composite:
+  oro_locale.entity_name_provider.decorator:
     decorates: oro_locale.entity_name_provider
     class: Training\Bundle\UserNamingBundle\Provider\UserNameProvider
     arguments:
