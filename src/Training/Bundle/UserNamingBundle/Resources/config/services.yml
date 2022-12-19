@@ -18,7 +18,7 @@ services:
   on_user_profile_page_listener:
     class: Training\Bundle\UserNamingBundle\EventListener\UserViewListener
     arguments:
-      - '@oro_locale.entity_name_provider'
+      - '@oro_security.authorization_checker'
     tags:
       - { name: kernel.event_listener, event: oro_ui.scroll_data.before.userView, method: onUserView }
 
