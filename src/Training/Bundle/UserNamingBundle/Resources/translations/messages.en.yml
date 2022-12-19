@@ -13,7 +13,12 @@ training:
         label: 'Format'
       title:
         label: 'Title'
+  action:
+    view_naming:
+      label: 'Can user see naming column?'
 oro:
   user:
     naming_type:
       label: 'Naming type'
+
+Related Users: 'Related Users'

@@ -2,6 +2,8 @@
 
 namespace Training\Bundle\UserNamingBundle\Controller;
 
+use Oro\Bundle\SecurityBundle\Annotation\Acl;
+use Oro\Bundle\SecurityBundle\Annotation\AclAncestor;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -21,6 +23,8 @@ class UserNamingTypeController extends AbstractController
      *      requirements={"_format"="html"},
      *      defaults={"_format" = "html"}
      * )
+     * @AclAncestor("training_user_naming_view")
+     *
      * @Template
      *
      * @param Request $request
@@ -42,6 +46,13 @@ class UserNamingTypeController extends AbstractController
      *     requirements={"id"="\d+"}
      * )
      *
+     * @Acl(
+     *      id="training_user_naming_view",
+     *      type="entity",
+     *      permission="VIEW",
+     *      class="TrainingUserNamingBundle:UserNamingType"
+     * )
+     *
      * @Template("@TrainingUserNaming/UserNamingType/view.html.twig")
      *
      * @param UserNamingType $userNamingType
@@ -50,7 +61,7 @@ class UserNamingTypeController extends AbstractController
     public function viewAction(UserNamingType $userNamingType): array
     {
         return [
-            'entity'        => $userNamingType
+            'entity' => $userNamingType
         ];
     }
 }

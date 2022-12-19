@@ -2,7 +2,7 @@ datagrids:
     user-naming-types-grid:
         extended_entity_name: 'Training\Bundle\UserNamingBundle\Entity\UserNamingType'
         options:
-            entityHint: training.usernaming.entity_plural_label
+            entityHint: training.usernaming.usernamingtype.entity_plural_label
             entity_pagination: true
         mass_actions:
             delete:
@@ -60,6 +60,7 @@ datagrids:
 
     training-users-grid:
         extends: users-grid
+        acl_resource: oro_user_user_view
         source:
             query:
                 where:

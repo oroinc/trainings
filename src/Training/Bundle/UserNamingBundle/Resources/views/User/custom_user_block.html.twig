@@ -1,7 +1,9 @@
 {% import '@OroUI/macros.html.twig' as UI %}
 
 {% set example %}
-    {% include '@TrainingUserNaming/User/example_format.html.twig' with {format: user.namingType.format} %}
+    {% include '@TrainingUserNaming/User/example_format.html.twig' with {
+        format: user.namingType.format|default('Naming type is not selected')
+    } %}
 {% endset %}
 
 {{ UI.renderProperty('training.user_naming.example'|trans, example) }}

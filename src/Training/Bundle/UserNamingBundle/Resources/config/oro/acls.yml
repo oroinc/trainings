@@ -1,0 +1,7 @@
+acls:
+  user_naming_view:
+    label: training.action.view_naming.label
+    description: ''
+    type: action
+    group_name: ""
+    category: "application"
