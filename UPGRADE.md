@@ -4,6 +4,33 @@ This file includes only the most important items that should be addressed before
 
 Please also refer to [CHANGELOG.md](CHANGELOG.md) for a list of significant changes in the code that may affect the upgrade of some customizations.
 
+### 5.1.0 RC
+
+Added `.env-app` files support and removed most of the parameters from the config/parameters.yml in favor of environment variables with DSNs. For more details, see [the migration guide](https://doc.oroinc.com/master/backend/setup/dev-environment/env-vars/).
+
+* The supported PHP version is 8.2
+* The supported PostgreSQL version is 15
+* The supported NodeJS version is 18
+* The supported Redis version is 7
+* The supported RabbitMQ version is 3.11
+* The supported PHP MongoDB extension version is 1.15
+* The supported MongoDB version is 6.0
+
+## 5.0.0
+
+The `oro.email.update_visibilities_for_organization` MQ process can take a long time when updating from the old versions
+if the system has many email addresses (in User, Customer user, Lead, Contact, RFP request, Mailbox entities).
+During performance tests with 1M of email addresses, this process  took  approximately 10 minutes.
+
+It is recommended to add these MQ topics to the `oro.index` queue:
+
+- `oro.email.recalculate_email_visibility`
+- `oro.email.update_visibilities`
+- `oro.email.update_visibilities_for_organization`
+- `oro.email.update_email_visibilities_for_organization`
+- `oro.email.update_email_visibilities_for_organization_chunk`
+
+
 ## 5.0.0-rc
 
 The supported NodeJS version is 16.0
