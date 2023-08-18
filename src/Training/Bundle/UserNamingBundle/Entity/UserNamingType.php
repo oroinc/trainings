@@ -55,7 +55,8 @@ class UserNamingType implements ExtendEntityInterface
      * @ConfigField(
      *      defaultValues={
      *          "importexport"={
-     *              "order"=20
+     *              "order"=20,
+     *              "identity"=true
      *          }
      *      }
      * )

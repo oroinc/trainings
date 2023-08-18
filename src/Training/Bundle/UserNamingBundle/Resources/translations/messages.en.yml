@@ -19,5 +19,14 @@ training.usernaming:
             label: 'User naming information'
             description: 'Show full User naming information at User view page'
 
+    integration:
+        label: 'User Naming Integration'
+        settings:
+            label: 'User Naming Integration Settings'
+            url:
+                label: 'Source URL'
+        connector:
+            user_naming_type.label: 'User Naming Type'
+
 oro.user:
     naming_type.label: 'User Naming Type'

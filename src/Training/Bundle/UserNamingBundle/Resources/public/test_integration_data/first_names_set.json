@@ -1,0 +1,10 @@
+[
+    {
+        "title" : "Western format",
+        "format": "PREFIX FIRST MIDDLE LAST SUFFIX"
+    },
+    {
+        "title" : "Polish format",
+        "format": "FIRST MIDDLE LAST"
+    }
+]
