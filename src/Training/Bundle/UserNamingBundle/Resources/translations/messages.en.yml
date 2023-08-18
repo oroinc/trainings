@@ -14,5 +14,10 @@ training.usernaming:
         general: 'General Information'
         related_users: 'Related Users'
 
+    security:
+        training_user_naming_info:
+            label: 'User naming information'
+            description: 'Show full User naming information at User view page'
+
 oro.user:
     naming_type.label: 'User Naming Type'

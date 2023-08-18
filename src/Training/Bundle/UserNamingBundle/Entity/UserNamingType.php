@@ -11,9 +11,19 @@ use Oro\Bundle\EntityExtendBundle\Entity\ExtendEntityTrait;
  * @ORM\Entity()
  * @ORM\Table(name="training_user_naming_type")
  * @Config(
+ *      routeName="training_user_naming_index",
+ *      routeView="training_user_naming_view",
  *      defaultValues={
  *          "entity"={
  *              "icon"="fa-child"
+ *          },
+ *          "grid"={
+ *              "default"="training-user-naming-types-grid"
+ *          },
+ *          "security"={
+ *              "type"="ACL",
+ *              "group_name"="",
+ *              "category"="account_management"
  *          }
  *      }
  * )

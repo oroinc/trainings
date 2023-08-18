@@ -8,6 +8,8 @@ services:
             - { name: oro_entity.name_provider, priority: -60 }
 
     Training\Bundle\UserNamingBundle\EventListener\UserViewNamingListener:
+        arguments:
+            - '@security.authorization_checker'
         tags:
             - { name: kernel.event_listener, event: oro_ui.scroll_data.before.userView, method: onUserView }
 
