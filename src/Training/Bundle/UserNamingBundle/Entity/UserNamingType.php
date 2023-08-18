@@ -79,6 +79,20 @@ class UserNamingType implements ExtendEntityInterface
     private $format;
 
     /**
+     * Auto-generated example of name
+     *
+     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ConfigField(
+     *      defaultValues={
+     *          "importexport"={
+     *              "excluded"=true
+     *          }
+     *      }
+     * )
+     */
+    private $example;
+
+    /**
      * @return int|null
      */
     public function getId()
@@ -120,6 +134,25 @@ class UserNamingType implements ExtendEntityInterface
     public function setFormat(string $format): self
     {
         $this->format = $format;
+
+        return $this;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getExample()
+    {
+        return $this->example;
+    }
+
+    /**
+     * @param string $example
+     * @return $this
+     */
+    public function setExample($example)
+    {
+        $this->example = $example;
 
         return $this;
     }

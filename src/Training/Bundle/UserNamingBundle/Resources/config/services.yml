@@ -14,9 +14,24 @@ services:
             - { name: kernel.event_listener, event: oro_ui.scroll_data.before.userView, method: onUserView }
 
     Training\Bundle\UserNamingBundle\Provider\UserFullNameProvider:
+        public: true
         tags:
             - { name: twig.runtime }
 
     Training\Bundle\UserNamingBundle\Twig\UserNamingExtension:
         tags:
             - { name: twig.extension }
+
+    Training\Bundle\UserNamingBundle\Async\NameExampleGenerationProcessor:
+        arguments:
+            - '@oro_entity.doctrine_helper'
+            - '@Training\Bundle\UserNamingBundle\Provider\UserFullNameProvider'
+        tags:
+            - { name: 'oro_message_queue.client.message_processor' }
+
+    Training\Bundle\UserNamingBundle\EventListener\NamingFormatModificationListener:
+        arguments:
+            - '@oro_message_queue.client.message_producer'
+        tags:
+            - { name: doctrine.orm.entity_listener, entity: 'Training\Bundle\UserNamingBundle\Entity\UserNamingType', event: postPersist }
+            - { name: doctrine.orm.entity_listener, entity: 'Training\Bundle\UserNamingBundle\Entity\UserNamingType', event: preUpdate }
