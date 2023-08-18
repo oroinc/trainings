@@ -7,6 +7,8 @@
 composer.lock
 /behat.yml
 /var/*
+!var/oauth_private.key
+!var/oauth_public.key
 !var/cache/
 /var/cache/*
 !var/cache/.gitkeep
