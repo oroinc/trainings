@@ -13,3 +13,12 @@ api:
                 nameExample:
                     data_type: string
                     meta_property: true
+            actions:
+                create:
+                    fields:
+                        nameExample:
+                            exclude: true
+                update:
+                    fields:
+                        nameExample:
+                            exclude: true
