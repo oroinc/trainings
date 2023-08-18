@@ -1,0 +1,2 @@
+bundles:
+    - { name: Training\Bundle\FirstThemeBundle\TrainingFirstThemeBundle, priority: 1010 }

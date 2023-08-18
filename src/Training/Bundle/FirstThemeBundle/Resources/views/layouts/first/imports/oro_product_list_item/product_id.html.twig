@@ -1,0 +1,7 @@
+{% block __oro_product_list_item__product_id_widget %}
+    <div {{ block('block_attributes') }}>
+        {% apply spaceless %}
+            ID: <span class="product-item__id" itemprop="id">{{- product.id -}}</span>
+        {% endapply %}
+    </div>
+{% endblock %}

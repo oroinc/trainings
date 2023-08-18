@@ -1,0 +1,9 @@
+layout:
+    actions:
+        - '@add':
+            id: weather_info
+            parentId: page_content
+            siblingId: featured_categories_container
+            blockType: text
+            options:
+                text: '=data["training_first_theme_weather"].getWeatherText()'
