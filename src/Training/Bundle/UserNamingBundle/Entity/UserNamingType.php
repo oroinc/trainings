@@ -11,6 +11,7 @@ use Oro\Bundle\EntityExtendBundle\Entity\ExtendEntityTrait;
  * @ORM\Entity()
  * @ORM\Table(name="training_user_naming_type")
  * @Config(
+ *      routeName="training_user_naming_index",
  *      defaultValues={
  *          "entity"={
  *              "icon"="fa-child"
