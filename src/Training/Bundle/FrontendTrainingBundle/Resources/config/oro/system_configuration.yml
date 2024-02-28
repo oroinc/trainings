@@ -1,0 +1,56 @@
+system_configuration:
+    groups:
+        frontend_dashboard:
+            icon: fa-file-text-o
+            title: training.frontend_training.system_configuration.groups.frontend_dashboard.label
+        frontend_dashboard_settings:
+            title: training.frontend_training.system_configuration.groups.frontend_dashboard_settings.label
+    fields:
+        training_frontend_training.dashboard_order_number:
+            data_type: integer
+            type: Symfony\Component\Form\Extension\Core\Type\IntegerType
+            priority: 100
+            options:
+                label: training.frontend_training.system_configuration.fields.dashboard_order_number.label
+                tooltip: training.frontend_training.system_configuration.fields.dashboard_order_number.tooltip
+                required: true
+                constraints:
+                    - GreaterThan:
+                        value: 0
+        training_frontend_training.dashboard_datagrid_refresh_sec:
+            data_type: integer
+            type: Symfony\Component\Form\Extension\Core\Type\IntegerType
+            priority: 90
+            options:
+                label: training.frontend_training.system_configuration.fields.dashboard_datagrid_refresh_sec.label
+                tooltip: training.frontend_training.system_configuration.fields.dashboard_datagrid_refresh_sec.tooltip
+                required: true
+                constraints:
+                    - GreaterThan:
+                        value: 0
+        training_frontend_training.allowed_email_domain:
+            data_type: string
+            type: Symfony\Component\Form\Extension\Core\Type\TextType
+            priority: 80
+            options:
+                label: training.frontend_training.system_configuration.fields.allowed_email_domain.label
+                tooltip: training.frontend_training.system_configuration.fields.allowed_email_domain.tooltip
+                required: false
+                constraints:
+                    - Range:
+                        min: 1
+                        max: 255
+
+    tree:
+        system_configuration:
+            commerce:
+                children:
+                    sales:
+                        children:
+                            frontend_dashboard:
+                                children:
+                                    frontend_dashboard_settings:
+                                        children:
+                                            - training_frontend_training.dashboard_order_number
+                                            - training_frontend_training.dashboard_datagrid_refresh_sec
+                                            - training_frontend_training.allowed_email_domain
