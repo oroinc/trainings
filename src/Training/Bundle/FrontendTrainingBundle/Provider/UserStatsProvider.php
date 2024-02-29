@@ -47,7 +47,7 @@ class UserStatsProvider implements UserStatsProviderInterface
      * @param array $customers
      * @return Customer[]
      */
-    private function getAllCustomers(Customer $customer, &$customers = []): array
+    private function getAllCustomers(Customer $customer, array &$customers = []): array
     {
         $customers[] = $customer;
         foreach ($customer->getChildren() as $childCustomer) {
