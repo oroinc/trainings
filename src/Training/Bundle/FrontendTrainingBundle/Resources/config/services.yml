@@ -1,1 +1,15 @@
-services: ~
+services:
+    _defaults:
+        public: false
+
+    Training\Bundle\FrontendTrainingBundle\Provider\UserStatsProvider:
+        arguments:
+            - '@doctrine'
+
+    Training\Bundle\FrontendTrainingBundle\Provider\UserStatsProviderInterface: '@Training\Bundle\FrontendTrainingBundle\Provider\UserStatsProvider'
+
+    Training\Bundle\FrontendTrainingBundle\Controller\Frontend\DashboardController:
+        public: true
+        calls:
+            - [ 'setContainer', [ '@Psr\Container\ContainerInterface' ] ]
+        tags: [ 'container.service_subscriber' ]

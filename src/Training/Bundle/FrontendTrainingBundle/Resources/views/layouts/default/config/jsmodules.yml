@@ -1,0 +1,5 @@
+dynamic-imports:
+    trainingfrontendtraining:
+        - 'trainingfrontendtraining/js/app/components/dashboards-component'
+        - 'trainingfrontendtraining/js/app/views/dashboards-view'
+        - 'trainingfrontendtraining/js/app/views/users-stats-view'

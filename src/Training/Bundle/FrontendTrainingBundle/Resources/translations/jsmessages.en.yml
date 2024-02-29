@@ -1,0 +1,8 @@
+training:
+    frontend_training:
+        dashboards:
+            user_stats:
+                first_name.label: 'First Name'
+                last_name.label: 'Last Name'
+                email.label: 'Email'
+                orders_count.label: 'Orders no'

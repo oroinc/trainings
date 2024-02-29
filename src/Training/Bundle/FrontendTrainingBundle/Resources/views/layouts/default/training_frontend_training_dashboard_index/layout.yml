@@ -1,0 +1,15 @@
+layout:
+    actions:
+        - '@setBlockTheme':
+            themes: [ 'layout.html.twig' ]
+        - '@add':
+            id: dashboards_container
+            parentId: page_content
+            blockType: container
+            options:
+                vars:
+                    userStats: '=data["userStats"]'
+        - '@add':
+            id: user_stats_container
+            parentId: dashboards_container
+            blockType: container

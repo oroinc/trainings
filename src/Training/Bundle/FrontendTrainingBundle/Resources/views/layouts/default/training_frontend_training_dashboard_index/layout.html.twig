@@ -1,0 +1,20 @@
+{% block _dashboards_container_widget %}
+    <div class="dashboards-container"
+         data-page-component-module="trainingfrontendtraining/js/app/components/dashboards-component"
+         data-page-component-options="{{ {
+             'view': 'trainingfrontendtraining/js/app/views/dashboards-view',
+             'usersOptions': {
+                 '_sourceElement': '.user-stats',
+                 'userStats': userStats,
+                 'autoRender': true
+             },
+             'ordersOptions': {}
+         }|json_encode }}">
+
+        {{ block_widget(block, {attr: attr}) }}
+    </div>
+{% endblock %}
+
+{% block _user_stats_container_widget %}
+    <div class="user-stats"></div>
+{% endblock %}

@@ -16,3 +16,6 @@ training:
                 allowed_email_domain:
                     label: 'Allowed email domain'
                     tooltip: 'After filling in the value, only this domain will be allowed to fill in on the profile page.'
+        navigation:
+            dashboard:
+                index.label: 'Frontend Dashboards'

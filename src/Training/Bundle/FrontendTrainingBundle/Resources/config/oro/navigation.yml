@@ -1,0 +1,15 @@
+navigation:
+    menu_config:
+        items:
+            training_frontend_training_dashboard_index:
+                label: 'training.frontend_training.navigation.dashboard.index.label'
+                route: 'training_frontend_training_dashboard_index'
+                position: 20
+                display_children: false
+
+        tree:
+            oro_customer_menu:
+                children:
+                    training_frontend_training_dashboard_index: ~
+    titles:
+        training_frontend_training_dashboard_index: 'training.frontend_training.navigation.dashboard.index.label'
