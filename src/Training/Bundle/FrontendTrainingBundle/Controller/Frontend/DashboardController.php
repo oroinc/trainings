@@ -17,10 +17,8 @@ class DashboardController extends AbstractController
      * @Route("/", name="training_frontend_training_dashboard_index")
      * @Layout()
      * @AclAncestor("oro_customer_frontend_customer_user_view")
-     *
-     * @return array
      */
-    public function indexAction()
+    public function indexAction(): array
     {
         return [
             'data' => [
@@ -43,10 +41,7 @@ class DashboardController extends AbstractController
         throw new \LogicException('Current Customer not found!');
     }
 
-    /**
-     * @inheritDoc
-     */
-    public static function getSubscribedServices()
+    public static function getSubscribedServices(): array
     {
         return array_merge(parent::getSubscribedServices(), [
             UserStatsProviderInterface::class

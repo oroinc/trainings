@@ -14,9 +14,6 @@ class UserStatsProvider implements UserStatsProviderInterface
     {
     }
 
-    /**
-     * @inheritDoc
-     */
     public function getUserStats(Customer $customer): array
     {
         return array_map(function (array $datum) {
@@ -43,8 +40,6 @@ class UserStatsProvider implements UserStatsProviderInterface
     }
 
     /**
-     * @param Customer $customer
-     * @param array $customers
      * @return Customer[]
      */
     private function getAllCustomers(Customer $customer, array &$customers = []): array
