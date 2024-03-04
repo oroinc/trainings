@@ -1,0 +1,6 @@
+styles:
+    inputs:
+        # here we are including the styles from node module magnific-popup (note ~)
+        - '~magnific-popup/dist/magnific-popup.css'
+        # here we are including styles from the lib folder
+        - 'bundles/trainingfrontendtraining/lib/datatables/dataTables.min.css'
