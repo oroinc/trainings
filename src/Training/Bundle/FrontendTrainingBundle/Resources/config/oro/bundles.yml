@@ -1,0 +1,2 @@
+bundles:
+    - { name: \Training\Bundle\FrontendTrainingBundle\TrainingFrontendTrainingBundle, priority: 500 }

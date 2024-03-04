@@ -1,0 +1,10 @@
+placeholders:
+    placeholders:
+        js_modules_config:
+            items:
+                frontend_training_js_modules_config:
+                    order: 100
+
+    items:
+        frontend_training_js_modules_config:
+            template: '@@TrainingFrontendTraining/js_modules_config.html.twig'
