@@ -1,0 +1,6 @@
+aliases:
+    datatables: trainingfrontendtraining/lib/datatables/dataTables.min.js
+
+dynamic-imports:
+    trainingfrontendtraining:
+        - trainingfrontendtraining/js/app/components/jquery-plugin-component

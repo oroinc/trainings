@@ -62,6 +62,7 @@
         "jquery-validation": "1.19.5",
         "jquery.cookie": "1.4.1",
         "jstree": "3.3.12",
+        "magnific-popup": "1.1.0",
         "moment": "2.29.*",
         "moment-timezone": "0.5.*",
         "numeral": "2.0.6",
