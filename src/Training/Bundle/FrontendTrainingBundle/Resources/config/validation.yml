@@ -1,0 +1,4 @@
+Oro\Bundle\CustomerBundle\Entity\CustomerUser:
+    properties:
+        email:
+            - Training\Bundle\FrontendTrainingBundle\Validator\Constraints\AllowedEmailDomain: ~

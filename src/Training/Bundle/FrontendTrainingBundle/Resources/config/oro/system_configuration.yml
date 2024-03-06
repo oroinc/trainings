@@ -5,6 +5,8 @@ system_configuration:
             title: training.frontend_training.system_configuration.groups.frontend_dashboard.label
         frontend_dashboard_settings:
             title: training.frontend_training.system_configuration.groups.frontend_dashboard_settings.label
+        frontend_customer_settings:
+            title: training.frontend_training.system_configuration.groups.frontend_customer_settings.label
     fields:
         training_frontend_training.dashboard_order_number:
             data_type: integer
@@ -36,10 +38,6 @@ system_configuration:
                 label: training.frontend_training.system_configuration.fields.allowed_email_domain.label
                 tooltip: training.frontend_training.system_configuration.fields.allowed_email_domain.tooltip
                 required: false
-                constraints:
-                    - Range:
-                        min: 1
-                        max: 255
 
     tree:
         system_configuration:
@@ -53,4 +51,6 @@ system_configuration:
                                         children:
                                             - training_frontend_training.dashboard_order_number
                                             - training_frontend_training.dashboard_datagrid_refresh_sec
+                                    frontend_customer_settings:
+                                        children:
                                             - training_frontend_training.allowed_email_domain

@@ -1,0 +1,4 @@
+training:
+    frontend_training:
+        allowed_email_domain:
+            message: 'Only emails from domain {{ allowed_email_domain }} are allowed.'
