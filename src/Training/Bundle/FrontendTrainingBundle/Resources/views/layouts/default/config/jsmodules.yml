@@ -1,5 +1,9 @@
+configs:
+    trainingfrontendtraining/js/app/components/dashboards-component: {}
 dynamic-imports:
     trainingfrontendtraining:
         - 'trainingfrontendtraining/js/app/components/dashboards-component'
         - 'trainingfrontendtraining/js/app/views/dashboards-view'
         - 'trainingfrontendtraining/js/app/views/users-stats-view'
+        - 'trainingfrontendtraining/js/app/views/orders-view'
+        - 'trainingfrontendtraining/js/app/order-list-collection-service'

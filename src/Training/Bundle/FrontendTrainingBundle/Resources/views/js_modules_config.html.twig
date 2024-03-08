@@ -1,6 +1,6 @@
 {% import '@OroAsset/Asset.html.twig' as Asset %}
 {{ Asset.js_modules_config({
-    'trainingfrontendtraining/js/dashboard-settings': {
+    'trainingfrontendtraining/js/app/components/dashboards-component': {
         ordersNumber: oro_config_value('training_frontend_training.dashboard_order_number'),
         datagridRefreshSec: oro_config_value('training_frontend_training.dashboard_datagrid_refresh_sec'),
         allowedEmailDomain: oro_config_value('training_frontend_training.allowed_email_domain')|default(null)

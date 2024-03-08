@@ -22,10 +22,11 @@ define(function(require) {
          */
         initialize: function(options) {
             DashboardView.__super__.initialize.call(this, options);
-            debugger;
+
             this.options = _.defaults(options || {}, this.options);
             options.usersOptions && this.subview('users', new UserStatsSubview(_.extend(options.usersOptions, {
-                el: this.$el.find(options.usersOptions._sourceElement)[0]
+                el: this.$el.find(options.usersOptions._sourceElement)[0],
+                autoRender: true
             })));
         },
 
@@ -38,9 +39,6 @@ define(function(require) {
             }
 
             return DashboardView.__super__.dispose.call(this);
-        },
-
-        render: function() {
         }
     });
 
