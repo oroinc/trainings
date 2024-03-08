@@ -6,9 +6,11 @@ app-modules:
 
 configs:
     trainingfrontendtraining/js/validator/allowed-email-domain: {}
+    trainingfrontendtraining/js/app/components/layout-block-refresh-component: {}
 
 dynamic-imports:
     commons:
         - trainingfrontendtraining/js/validator/allowed-email-domain
     trainingfrontendtraining:
         - trainingfrontendtraining/js/app/components/jquery-plugin-component
+        - trainingfrontendtraining/js/app/components/layout-block-refresh-component
