@@ -2,9 +2,17 @@ layout:
     imports:
         -
             id: oro_customer_page
+        -
+            id: datagrid
+            root: quotes_container
+            namespace: quotes
     actions:
         - '@setBlockTheme':
             themes: [ 'layout.html.twig' ]
+        - '@setOption':
+            id: page_title
+            optionName: defaultValue
+            optionValue: 'training.frontend_training.dashboard.index.title'
         - '@add':
             id: dashboards_container
             parentId: page_content
@@ -20,3 +28,11 @@ layout:
             id: orders_stats_container
             parentId: dashboards_container
             blockType: container
+        - '@add':
+            id: quotes_container
+            parentId: dashboards_container
+            blockType: container
+        - '@setOption':
+            id: quotes_datagrid
+            optionName: grid_name
+            optionValue: frontend-training-quotes-grid

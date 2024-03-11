@@ -1,5 +1,6 @@
 configs:
     trainingfrontendtraining/js/app/components/dashboards-component: {}
+    trainingfrontendtraining/js/app/datagrid/listener/refresh-grid-listener: {}
 dynamic-imports:
     trainingfrontendtraining:
         - 'trainingfrontendtraining/js/app/components/dashboards-component'
@@ -7,3 +8,4 @@ dynamic-imports:
         - 'trainingfrontendtraining/js/app/views/users-stats-view'
         - 'trainingfrontendtraining/js/app/views/orders-view'
         - 'trainingfrontendtraining/js/app/order-list-collection-service'
+        - 'trainingfrontendtraining/js/app/datagrid/listener/refresh-grid-listener'

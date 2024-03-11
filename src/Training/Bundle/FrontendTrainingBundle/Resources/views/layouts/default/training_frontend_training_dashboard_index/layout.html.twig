@@ -17,9 +17,16 @@
 {% endblock %}
 
 {% block _user_stats_container_widget %}
+    <h2>{{ 'training.frontend_training.dashboard.index.user_stats.label'|trans }}</h2>
     <div class="user-stats"></div>
 {% endblock %}
 
 {% block _orders_stats_container_widget %}
+    <h2>{{ 'training.frontend_training.dashboard.index.orders.label'|trans }}</h2>
     <div class="orders-stats"></div>
+{% endblock %}
+
+{% block _quotes_container_widget %}
+    <h2>{{ 'training.frontend_training.dashboard.index.quotes.label'|trans }}</h2>
+    {{ block_widget(block, {attr: attr}) }}
 {% endblock %}

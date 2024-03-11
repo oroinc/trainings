@@ -19,3 +19,12 @@ training:
         navigation:
             dashboard:
                 index.label: 'Frontend Dashboards'
+        dashboard:
+            index:
+                user_stats:
+                    label: 'User Stats'
+                orders:
+                    label: 'Orders'
+                quotes:
+                    label: 'Quotes'
+                title: 'Frontend Dashboards'
