@@ -7,7 +7,9 @@
                  '_sourceElement': '.user-stats',
                  'userStats': userStats
              },
-             'ordersOptions': {}
+             'ordersOptions': {
+                 '_sourceElement': '.orders-stats',
+             }
          }|json_encode }}">
 
         {{ block_widget(block, {attr: attr}) }}
@@ -16,4 +18,8 @@
 
 {% block _user_stats_container_widget %}
     <div class="user-stats"></div>
+{% endblock %}
+
+{% block _orders_stats_container_widget %}
+    <div class="orders-stats"></div>
 {% endblock %}

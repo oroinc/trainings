@@ -6,3 +6,8 @@ training:
                 last_name.label: 'Last Name'
                 email.label: 'Email'
                 orders_count.label: 'Orders no'
+            orders:
+                order_identifier.label: 'Order Identifier'
+                order_date.label: 'Order Date'
+                total.label: 'Total'
+                status.label: 'Status'

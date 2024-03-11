@@ -5,7 +5,6 @@ define(function(require, exports, module) {
     const ViewComponent = require('oroui/js/app/components/view-component');
     const OrderListCollectionService = require('trainingfrontendtraining/js/app/order-list-collection-service');
     const BaseCollection = require('oroui/js/app/models/base/collection');
-    const routing = require('routing');
     const $ = require('jquery');
 
     const DashboardsComponent = ViewComponent.extend({
@@ -23,12 +22,21 @@ define(function(require, exports, module) {
             DashboardsComponent.__super__.initialize.call(this, options);
 
             $.ajax({
-                url: '/api/orders',
+                url: this.getUrl(),
                 type: 'GET',
                 success: function(orders) {
                     OrderListCollectionService.orderListCollection.resolve(new BaseCollection(orders));
                 }
             });
+        },
+
+        getUrl: function() {
+            return [
+                '/api/orders',
+                '?page=1',
+                '&limit=',
+                moduleConfig.ordersNumber
+            ].join('');
         },
 
         /**

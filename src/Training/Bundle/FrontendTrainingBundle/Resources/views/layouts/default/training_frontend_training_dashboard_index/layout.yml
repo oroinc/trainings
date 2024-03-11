@@ -16,3 +16,7 @@ layout:
             id: user_stats_container
             parentId: dashboards_container
             blockType: container
+        - '@add':
+            id: orders_stats_container
+            parentId: dashboards_container
+            blockType: container

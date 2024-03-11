@@ -3,6 +3,9 @@ define(function(require) {
 
     const BaseView = require('oroui/js/app/views/base/view');
     const OrderListCollectionService = require('trainingfrontendtraining/js/app/order-list-collection-service');
+    const template = require('tpl-loader!trainingfrontendtraining/templates/orders-template.html');
+    const dateTimeFormatter = require('orolocale/js/formatter/datetime');
+    const NumberFormatter = require('orolocale/js/formatter/number');
 
     const OrdersView = BaseView.extend({
 
@@ -22,15 +25,24 @@ define(function(require) {
         initialize: function(options) {
             OrdersView.__super__.initialize.call(this, options);
 
-            // Use the new service
             OrderListCollectionService.orderListCollection.done(function(orderListCollection) {
                 this.orderListCollection = orderListCollection;
                 this.render();
-            });
+            }.bind(this));
         },
 
         render: function() {
-
+            this.$el.html(template({
+                orders: this.orderListCollection.toJSON(),
+                formatDate: function(dateString) {
+                    const dateTime = new Date();
+                    dateTime.setTime(Date.parse(dateString));
+                    return dateTimeFormatter.formatDateTime(dateTime);
+                },
+                formatCurrency: function(price, currency) {
+                    return NumberFormatter.formatCurrency(price, currency);
+                }
+            }));
         },
 
         /**

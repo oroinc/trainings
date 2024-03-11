@@ -3,8 +3,8 @@ define(function(require) {
 
     const BaseView = require('oroui/js/app/views/base/view');
     const UserStatsSubview = require('trainingfrontendtraining/js/app/views/users-stats-view');
+    const OrdersView = require('trainingfrontendtraining/js/app/views/orders-view');
     const _ = require('underscore');
-    const $ = require('jquery');
 
     const DashboardView = BaseView.extend({
 
@@ -28,6 +28,10 @@ define(function(require) {
                 el: this.$el.find(options.usersOptions._sourceElement)[0],
                 autoRender: true
             })));
+
+            options.ordersOptions && this.subview('orders', new OrdersView({
+                el: this.$el.find(options.ordersOptions._sourceElement)[0]
+            }));
         },
 
         /**
