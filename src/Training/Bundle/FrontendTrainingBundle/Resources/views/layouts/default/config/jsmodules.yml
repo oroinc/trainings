@@ -9,3 +9,6 @@ dynamic-imports:
         - 'trainingfrontendtraining/js/app/views/orders-view'
         - 'trainingfrontendtraining/js/app/order-list-collection-service'
         - 'trainingfrontendtraining/js/app/datagrid/listener/refresh-grid-listener'
+        - 'trainingfrontendtraining/js/app/components/jquery-plugin-component'
+aliases:
+    datatables: trainingfrontendtraining/lib/datatables/dataTables.min.js

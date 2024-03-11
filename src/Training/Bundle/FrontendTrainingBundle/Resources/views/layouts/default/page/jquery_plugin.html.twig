@@ -1,0 +1,78 @@
+{% block _footer_jquery_plugin_example_widget %}
+    <div data-page-component-module="trainingfrontendtraining/js/app/components/jquery-plugin-component">
+
+        {#  Example of using plugin installed via npm #}
+        <div>
+            <h2 class="center">Image Gallery</h2>
+            <a id="myImage" href="http://farm6.staticflickr.com/5614/15602332537_bae1aaccd8_b.jpg">
+                <img alt="example1" src="http://farm6.staticflickr.com/5614/15602332537_bae1aaccd8_m.jpg"/>
+            </a>
+        </div>
+
+        {#  Example of using plugin installed manually in lib folder #}
+        <div>
+            <h2>Countries</h2>
+            <table id="myTable" class="display">
+                <thead>
+                <tr>
+                    <th>Country</th>
+                    <th>Capital</th>
+                    <th>Population</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>USA</td>
+                    <td>Washington, D.C.</td>
+                    <td>331,449,281</td>
+                </tr>
+                <tr>
+                    <td>Canada</td>
+                    <td>Ottawa</td>
+                    <td>37,364,117</td>
+                </tr>
+                <tr>
+                    <td>United Kingdom</td>
+                    <td>London</td>
+                    <td>66,834,405</td>
+                </tr>
+                <tr>
+                    <td>Germany</td>
+                    <td>Berlin</td>
+                    <td>83,783,942</td>
+                </tr>
+                <tr>
+                    <td>France</td>
+                    <td>Paris</td>
+                    <td>65,273,511</td>
+                </tr>
+                <tr>
+                    <td>Italy</td>
+                    <td>Rome</td>
+                    <td>60,461,826</td>
+                </tr>
+                <tr>
+                    <td>Spain</td>
+                    <td>Madrid</td>
+                    <td>46,754,778</td>
+                </tr>
+                <tr>
+                    <td>Australia</td>
+                    <td>Canberra</td>
+                    <td>25,499,884</td>
+                </tr>
+                <tr>
+                    <td>Brazil</td>
+                    <td>Brasília</td>
+                    <td>212,559,417</td>
+                </tr>
+                <tr>
+                    <td>China</td>
+                    <td>Beijing</td>
+                    <td>1,439,323,776</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

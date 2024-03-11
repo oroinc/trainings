@@ -1,0 +1,9 @@
+layout:
+    actions:
+        - '@setBlockTheme':
+              themes: 'jquery_plugin.html.twig'
+        -   '@add':
+                id: footer_jquery_plugin_example
+                parentId: page_container
+                siblingId: page_main
+                blockType: block
