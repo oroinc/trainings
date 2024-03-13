@@ -10,6 +10,9 @@ const config = {
 const LayoutBlockRefreshComponent = BaseComponent.extend({
     $el: null,
 
+    /** @property {null|number} */
+    intervalId: null,
+
     constructor: function LayoutBlockRefreshComponent(options) {
         LayoutBlockRefreshComponent.__super__.constructor.call(this, options);
     },
@@ -35,7 +38,7 @@ const LayoutBlockRefreshComponent = BaseComponent.extend({
         });
 
         // call mediator trigger to refresh the block every x seconds (from config)
-        setInterval(() => {
+        this.intervalId = setInterval(() => {
             mediator.trigger('training-product-datagrid:refresh');
         }, config.datagridRefreshSec * 1000);
     },
@@ -43,6 +46,10 @@ const LayoutBlockRefreshComponent = BaseComponent.extend({
     dispose: function() {
         if (this.disposed) {
             return;
+        }
+
+        if (this.intervalId) {
+            clearInterval(this.intervalId);
         }
 
         LayoutBlockRefreshComponent.__super__.dispose.call(this);
