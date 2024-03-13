@@ -1,6 +1,14 @@
 aliases:
     datatables: trainingfrontendtraining/lib/datatables/dataTables.min.js
 
+app-modules:
+    - trainingfrontendtraining/js/app/modules/validator-constraints-module
+
+configs:
+    trainingfrontendtraining/js/validator/allowed-email-domain: {}
+
 dynamic-imports:
+    commons:
+        - trainingfrontendtraining/js/validator/allowed-email-domain
     trainingfrontendtraining:
         - trainingfrontendtraining/js/app/components/jquery-plugin-component
