@@ -14,19 +14,27 @@
         </th>
     </thead>
     <tbody class="grid-body">
-        <% for(let i = 0; i < userStats.length; i++) { %>
+        <% if(userStats.length > 0) { %>
+            <% for(let i = 0; i < userStats.length; i++) { %>
+                <tr class="single-row grid-row row-4cells">
+                    <td class="string-cell grid-cell grid-body-cell grid-body-cell-item">
+                        <%- userStats[i].firstName %>
+                    </td>
+                    <td class="string-cell grid-cell grid-body-cell grid-body-cell-item">
+                        <%- userStats[i].lastName %>
+                    </td>
+                    <td class="string-cell grid-cell grid-body-cell grid-body-cell-item">
+                        <%- userStats[i].email %>
+                    </td>
+                    <td class="string-cell grid-cell grid-body-cell grid-body-cell-item">
+                        <%- userStats[i].ordersCount %>
+                    </td>
+                </tr>
+            <% } %>
+        <% else { %>
             <tr class="single-row grid-row row-4cells">
-                <td class="string-cell grid-cell grid-body-cell grid-body-cell-item">
-                    <%- userStats[i].firstName %>
-                </td>
-                <td class="string-cell grid-cell grid-body-cell grid-body-cell-item">
-                    <%- userStats[i].lastName %>
-                </td>
-                <td class="string-cell grid-cell grid-body-cell grid-body-cell-item">
-                    <%- userStats[i].email %>
-                </td>
-                <td class="string-cell grid-cell grid-body-cell grid-body-cell-item">
-                    <%- userStats[i].ordersCount %>
+                <td class="string-cell grid-cell grid-body-cell grid-body-cell-item" colspan="4">
+                    <%- _.__('training.frontend_training.dashboards.user_stats.no_users.label') %>
                 </td>
             </tr>
         <% } %>

@@ -6,6 +6,7 @@ define(function(require) {
     const template = require('tpl-loader!trainingfrontendtraining/templates/orders-template.html');
     const dateTimeFormatter = require('orolocale/js/formatter/datetime');
     const NumberFormatter = require('orolocale/js/formatter/number');
+    const LoadingMaskView = require('oroui/js/app/views/loading-mask-view');
 
     const OrdersView = BaseView.extend({
 
@@ -25,8 +26,14 @@ define(function(require) {
         initialize: function(options) {
             OrdersView.__super__.initialize.call(this, options);
 
+            this.subview('loading', new LoadingMaskView({
+                container: this.$el
+            }));
+            this.subview('loading').show();
+
             OrderListCollectionService.orderListCollection.done(function(orderListCollection) {
                 this.orderListCollection = orderListCollection;
+                this.subview('loading').hide();
                 this.render();
             }.bind(this));
         },
