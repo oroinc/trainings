@@ -1,0 +1,16 @@
+layout:
+    actions:
+        - '@setOption':
+            id: logo
+            optionName: width
+            optionValue: 350
+
+        - '@setOption':
+            id: logo
+            optionName: height
+            optionValue: 64
+
+        # - '@setOption':
+        #     id: body
+        #     optionName: attr.class
+        #     optionValue: 'homepage'

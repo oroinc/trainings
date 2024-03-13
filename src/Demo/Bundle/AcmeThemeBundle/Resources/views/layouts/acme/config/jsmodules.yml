@@ -1,0 +1,9 @@
+dynamic-imports: 
+     commons: []
+#         - demoacmetheme/acme/js/app/views/newjs # example to add NEW (ovveriding is inside in js) 
+        
+# map:
+#     "*":
+#         oroshoppinglist/js/app/components/shoppinglist-widget-view-component: demoacmetheme/acme/js/app/components/overridejs-component # example to replace js (ovveriding is inside in js) 
+#     "demoacmetheme/acme/js/app/components/overridejs-component":
+#         oroshoppinglist/js/app/components/shoppinglist-widget-view-component: oroshoppinglist/js/app/components/shoppinglist-widget-view-component

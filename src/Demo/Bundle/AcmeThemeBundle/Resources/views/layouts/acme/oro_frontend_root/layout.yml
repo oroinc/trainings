@@ -1,0 +1,20 @@
+layout:
+    actions:
+        - '@setBlockTheme':
+            themes: 'layout.html.twig'
+
+        - '@setOption':
+            id: body
+            optionName: attr.class
+            optionValue: 'homepage'
+
+        # Start: Remove after test widget for new theme
+        - '@add':
+            id: homepage_content_static
+            parentId: page_content
+            prepend: true
+            blockType: block
+
+        - '@remove':
+              id: hero_promo
+        # End: Remove after test widget for new theme      

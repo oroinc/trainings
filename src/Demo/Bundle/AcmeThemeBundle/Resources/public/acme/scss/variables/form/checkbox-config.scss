@@ -1,0 +1,64 @@
+/* @theme: acme; */
+
+// Variables for both checkbox and radio
+// $checkbox-background: get-color('additional', 'ultra');
+// $checkbox-size: 16px;
+// $checkbox-size-var: var(--checkbox-size, #{$checkbox-size});
+// $checkbox-appearance: none;
+// $checkbox-vertical-align: middle;
+// $checkbox-margin: 0;
+// $checkbox-border: 1px solid get-color('additional', 'middle');
+// $checkbox-color: get-color('additional', 'ultra');
+// $checkbox-display: inline-grid;
+// $checkbox-border-radius: 3px;
+// $checkbox-flex: none;
+// $checkbox-outline: none;
+
+// $checkbox-icon-size: 10px;
+// $checkbox-icon-line-height: 1;
+// $checkbox-icon-checked: $fa-var-check;
+// $checkbox-icon-indeterminate: $fa-var-minus;
+// $checkbox-icon-place-self: center;
+// $checkbox-icon-opacity: 0;
+// $checkbox-icon-opacity-checked: 1;
+
+// Checked
+// $checkbox-background-checked: get-color('ui', 'normal');
+// $checkbox-border-color-checked: $base-ui-element-border-color-focus;
+
+// Indeterminate
+// $checkbox-background-indeterminate: get-color('ui', 'normal');
+// $checkbox-border-color-indeterminate: $base-ui-element-border-color-focus;
+
+// Hover
+// $checkbox-border-color-hover: get-color('additional', 'dark');
+
+// Focus
+// $checkbox-border-width-focus: 2px;
+// $checkbox-border-color-focus: get-color('ui', 'focus');
+// $checkbox-box-shadow-focus: 0 0 6px get-color('ui', 'normal');
+
+// Disable
+// $checkbox-background-disabled: get-color('additional', 'base');
+// $checkbox-border-color-disabled: get-color('additional', 'light');
+// $checkbox-background-checked-disabled: get-color('additional', 'base');
+// $checkbox-border-color-checked-disabled: get-color('additional', 'light');
+// $checkbox-color-disabled: #{rgba(get-color('ui', 'focus'), .5)};
+// $checkbox-opacity-disabled: null;
+
+// Variables for radio
+// $checkbox-radio-border-radius: 50%;
+
+// $checkbox-radio-icon-content: '';
+// $checkbox-radio-icon-background-checked: get-color('ui', 'focus');
+// $checkbox-radio-icon-size: 10px;
+// $checkbox-radio-icon-border-radius: 50%;
+
+// Focus
+// $checkbox-radio-border-color-focus: transparent;
+// $checkbox-radio-border-color-checked-focus: get-color('ui', 'focus');
+
+// Checkbox round
+// $checkbox-round-size: 24px;
+// $checkbox-round-border-radius: 50%;
+// $checkbox-round-icon-size: 14px;

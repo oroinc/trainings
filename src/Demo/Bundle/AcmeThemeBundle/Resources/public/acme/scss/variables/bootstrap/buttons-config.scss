@@ -1,0 +1,144 @@
+/* @theme: acme; */
+
+// $btn-theme-keys: ();
+
+// $btn-display: inline-block;
+
+// $btn-text-align: center;
+
+// $btn-vertical-align: middle;
+// $btn-user-select: none;
+// $btn-border: $btn-border-width solid transparent;
+// $btn-margin: 0;
+// $btn-text-decoration: none;
+// $btn-disabled-box-shadow: none;
+// $btn-cursor: pointer;
+
+// Share hover and focus styles
+// $btn-hover-focus-text-decoration: $btn-text-decoration;
+// $btn-hover-focus-outline: 0;
+
+// Link button
+// $btn-link-font-weight: $font-weight-normal;
+// $btn-link-color: $link-color;
+// $btn-link-background-color: transparent;
+// $btn-link-border-color: transparent;
+
+// $btn-link-hover-color: get-color('ui', 'focus');
+// $btn-link-hover-text-decoration: $link-hover-decoration;
+// $btn-link-hover-background-color: transparent;
+// $btn-link-hover-border-color: transparent;
+
+// $btn-link-focus-background: transparent;
+// $btn-link-focus-text-decoration: $link-hover-decoration;
+// $btn-link-focus-border-color: transparent;
+// $btn-focus-visible-style: $base-ui-bth-focus-style;
+
+// $btn-link-active-background: transparent;
+// $btn-link-active-color: $btn-link-hover-color;
+// $btn-link-active-border-color: transparent;
+
+// $btn-link-disabled-pointer-events: none;
+// $btn-link-disabled-background: transparent;
+// $btn-link-disabled-border-color: transparent;
+// $btn-link-disabled-text-decoration: none;
+
+// Plain button
+// $btn-plain-inner-offset-y: 0;
+// $btn-plain-inner-offset-x: 3px;
+// $btn-plain-inner-offset: $btn-plain-inner-offset-y $btn-plain-inner-offset-x;
+// $btn-plain-line-height: 1;
+// $btn-plain-border-color: transparent;
+// $btn-plain-background-color: transparent;
+// $btn-plain-border-radius: 0;
+// $btn-plain-color: get-color('additional', 'middle');
+// $btn-plain-cursor: pointer;
+
+// $btn-plain-hover-background-color: transparent;
+// $btn-plain-hover-border-color: transparent;
+// $btn-plain-hover-color: get-color('additional', 'light');
+
+// $btn-plain-focus-background-color: transparent;
+// $btn-plain-focus-border-color: transparent;
+
+// $btn-plain-active-background-color: transparent;
+// $btn-plain-active-border-color: $btn-plain-focus-border-color;
+// $btn-plain-active-color: $btn-plain-hover-color;
+
+// $btn-plain-disabled-background-color: $btn-plain-background-color;
+// $btn-plain-disabled-border-color: $btn-plain-border-color;
+// $btn-plain-disabled-color: get-color('additional', 'light');
+
+// $btn-large-min-width: 200px;
+
+// // Block button
+// $btn-block-display: block;
+// $btn-block-width: 100%;
+// $btn-block-offset-top: $btn-block-spacing-y;
+
+// /* Style for button without theme modificator */
+// $btn-theme: (
+//     'background': color.adjust(get-color('additional', 'middle'), $lightness: -44%),
+//     'border': color.adjust(get-color('additional', 'middle'), $lightness: -44%),
+//     'hover-background': color.adjust(get-color('additional', 'middle'), $lightness: -50%),
+//     'hover-border': color.adjust(get-color('additional', 'middle'), $lightness: -50%),
+//     'active-background': color.adjust(get-color('additional', 'middle'), $lightness: -50%),
+//     'active-border': color.adjust(get-color('additional', 'middle'), $lightness: -50%),
+//     'active-box-shadow': $btn-active-box-shadow,
+//     'focus-border': color.adjust(get-color('additional', 'middle'), $lightness: -50%)
+// );
+
+// $btn-theme-action: (
+//     'background': get-color('additional', 'darker'),
+//     'border': get-color('additional', 'darker'),
+//     'hover-background': color.adjust(get-color('additional', 'darker'), $lightness: 15%),
+//     'hover-border': color.adjust(get-color('additional', 'darker'), $lightness: 15%),
+//     'active-background': color.adjust(get-color('additional', 'darker'), $lightness: 15%),
+//     'active-border': color.adjust(get-color('additional', 'darker'), $lightness: 15%),
+//     'focus-border': color.adjust(get-color('additional', 'darker'), $lightness: 15%)
+// );
+
+// $btn-theme-default: (
+//     'background': get-color('additional', 'ultra'),
+//     'border': get-color('additional', 'light'),
+//     'hover-background': color.adjust(get-color('additional', 'ultra'), $lightness: -3%),
+//     'hover-border': color.adjust(get-color('additional', 'light'), $lightness: -3%),
+//     'active-background': color.adjust(get-color('additional', 'ultra'), $lightness: -3%),
+//     'active-border': color.adjust(get-color('additional', 'light'), $lightness: -3%),
+//     'focus-border': color.adjust(get-color('additional', 'light'), $lightness: -5%)
+// );
+
+// $btn-theme-info: (
+//     'background': get-color('primary', 'base'),
+//     'border': get-color('primary', 'base'),
+//     'hover-background': color.adjust(get-color('primary', 'base'), $lightness: 5%),
+//     'hover-border': color.adjust(get-color('primary', 'base'), $lightness: 5%),
+//     'active-background': color.adjust(get-color('primary', 'base'), $lightness: 5%),
+//     'active-border': color.adjust(get-color('primary', 'base'), $lightness: 5%),
+//     'focus-border': color.adjust(get-color('primary', 'base'), $lightness: 5%),
+//     'divider-style': get-color('additional', 'ultra', 30%)
+// );
+
+// $btn-theme-primary: (
+//     'background': get-color('additional', 'middle'),
+//     'border': get-color('additional', 'middle'),
+//     'color': get-color('additional', 'ultra'),
+//     'hover-background': color.adjust(get-color('additional', 'middle'), $lightness: 5%),
+//     'hover-border': color.adjust(get-color('additional', 'middle'), $lightness: 5%),
+//     'hover-color': get-color('additional', 'ultra'),
+//     'active-background': color.adjust(get-color('additional', 'middle'), $lightness: 5%),
+//     'active-border': color.adjust(get-color('additional', 'middle'), $lightness: 5%),
+//     'active-color': get-color('additional', 'ultra'),
+//     'focus-border': color.adjust(get-color('additional', 'middle'), $lightness: 5%)
+// );
+
+// $btn-theme-keys: ();
+// $btn-theme-keys: map.merge(
+//     (
+//         'action': $btn-theme-action,
+//         'default': $btn-theme-default,
+//         'info': $btn-theme-info,
+//         'primary': $btn-theme-primary
+//     ),
+//     $btn-theme-keys
+// );

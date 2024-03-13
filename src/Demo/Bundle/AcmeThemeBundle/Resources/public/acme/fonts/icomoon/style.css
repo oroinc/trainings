@@ -1,0 +1,126 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?ea6hc3');
+  src:  url('fonts/icomoon.eot?ea6hc3#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.woff2?ea6hc3') format('woff2'),
+    url('fonts/icomoon.ttf?ea6hc3') format('truetype'),
+    url('fonts/icomoon.woff?ea6hc3') format('woff'),
+    url('fonts/icomoon.svg?ea6hc3#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-radio:before {
+  content: "\e91e";
+}
+.icon-Fill-11:before {
+  content: "\e909";
+}
+.icon-Fill2:before {
+  content: "\e91f";
+}
+.icon-minus-copy-3:before {
+  content: "\e920";
+}
+.icon-accountmobile:before {
+  content: "\e900";
+}
+.icon-add-to-list-icon:before {
+  content: "\e901";
+}
+.icon-add:before {
+  content: "\e902";
+}
+.icon-calendar:before {
+  content: "\e903";
+}
+.icon-check-mark-white:before {
+  content: "\e904";
+}
+.icon-close:before {
+  content: "\e905";
+}
+.icon-drop-down-carrot:before {
+  content: "\e906";
+}
+.icon-edit-icon2:before {
+  content: "\e907";
+}
+.icon-facebook:before {
+  content: "\e908";
+}
+.icon-Fill-1:before {
+  content: "\e90a";
+}
+.icon-filter:before {
+  content: "\e90b";
+}
+.icon-gallery-selected:before {
+  content: "\e90c";
+}
+.icon-info-icon32:before {
+  content: "\e90d";
+}
+.icon-info:before {
+  content: "\e90e";
+}
+.icon-linked-in:before {
+  content: "\e90f";
+}
+.icon-list-deselected:before {
+  content: "\e910";
+}
+.icon-menu:before {
+  content: "\e911";
+}
+.icon-phone:before {
+  content: "\e912";
+}
+.icon-refresh-icon:before {
+  content: "\e913";
+}
+.icon-right-arrow:before {
+  content: "\e914";
+}
+.icon-right-chevron:before {
+  content: "\e915";
+}
+.icon-search-mobile:before {
+  content: "\e916";
+}
+.icon-shi2pping:before {
+  content: "\e917";
+}
+.icon-shopping-list2:before {
+  content: "\e918";
+}
+.icon-sorting-icon:before {
+  content: "\e919";
+}
+.icon-twitter:before {
+  content: "\e91a";
+}
+.icon-undo:before {
+  content: "\e91b";
+}
+.icon-warning-icon:before {
+  content: "\e91c";
+}
+.icon-yout-tube:before {
+  content: "\e91d";
+}

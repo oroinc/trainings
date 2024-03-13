@@ -1,0 +1,44 @@
+/* @theme: acme; */
+
+// $use-base-style-for-input: true;
+
+// Default
+// $input-width-short: 64px;
+// $input-padding: 9px $input-padding-y 8px;
+// $input-padding--m: 8px 9px 7px;
+// $input-padding--s: 5px 9px 4px;
+// $input-padding--x-s: 4px 9px 3px;
+// $input-date-height: 40px;
+// $input-date-size-s-height: 32px;
+// $input-date-height: 35px;
+// $input-number-box-shadow: none;
+// $input-font-size: $base-ui-element-font-size;
+// $input-font-family: $base-ui-element-font-family;
+// $input-line-height: $base-ui-element-line-height;
+// $input-border: $base-ui-element-border;
+// $input-border-radius: $base-ui-element-border-radius;
+// $input-background-color: $base-ui-element-bg-color;
+// $input-color: $base-ui-element-color;
+
+// $input-time-placeholder-color: get-color('additional', 'middle');
+
+// Hover
+// $input-border-color-hover-state: get-color('additional', 'dark');
+// $input-box-shadow-hover-state:
+//     inset 0 1px 1px color.scale(get-color('additional', 'ultra'), $alpha: -75%),
+//     0 0 8px color.scale(get-color('ui', 'focus'), $alpha: -60%);
+
+// Focus
+// $input-border-color-focus-state: $base-ui-element-border-color-focus;
+// $input-box-shadow-focus-state: $base-ui-element-focus-style;
+
+// Error
+// $input-border-color-error-state: get-color('ui', 'error-dark');
+// $input-box-shadow-error-state: 0 1px 7px 0 color.scale(get-color('ui', 'error-dark'), $alpha: -60%);
+
+// Disabled
+// $input-border-color-disabled-background: get-color('additional', 'base');
+// $input-border-color-disabled-hover-border-color: get-color('additional', 'light');
+
+// Error
+// $input-border-color-error-state: get-color('ui', 'error-dark');

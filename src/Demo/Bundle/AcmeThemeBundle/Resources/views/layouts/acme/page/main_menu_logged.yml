@@ -1,0 +1,6 @@
+layout:
+    actions:
+        - '@setBlockTheme':
+            themes: 'main_menu_logged.html.twig'
+
+    conditions: 'context["is_logged_in"]'

@@ -1,0 +1,51 @@
+styles:
+    inputs:
+        - 'bundles/demoacmetheme/acme/scss/settings/global-settings.scss'
+
+        - 'bundles/demoacmetheme/acme/scss/variables/bootstrap/buttons-config.scss'
+        - 'bundles/demoacmetheme/acme/scss/variables/bootstrap/modal-config.scss'
+
+        - 'bundles/demoacmetheme/acme/scss/variables/form/focus-visible-config.scss'
+        - 'bundles/demoacmetheme/acme/scss/variables/form/label-config.scss'
+        - 'bundles/demoacmetheme/acme/scss/variables/form/oro-toolbar-config.scss'                
+        - 'bundles/demoacmetheme/acme/scss/variables/form/form-row-config.scss'
+        - 'bundles/demoacmetheme/acme/scss/variables/form/checkbox-config.scss'
+        - 'bundles/demoacmetheme/acme/scss/variables/form/input-config.scss'
+        - 'bundles/demoacmetheme/acme/scss/variables/form/textarea-config.scss'
+        - 'bundles/demoacmetheme/acme/scss/variables/form/select-config.scss'
+        - 'bundles/demoacmetheme/acme/scss/variables/form/datepicker-config.scss'
+        - 'bundles/demoacmetheme/acme/scss/variables/form/validation-config.scss'
+        - 'bundles/demoacmetheme/acme/scss/variables/form/select2/select2-container-config.scss'
+        - 'bundles/demoacmetheme/acme/scss/variables/form/select2/select2-container-multi-config.scss'
+
+        - 'bundles/demoacmetheme/acme/scss/variables/orofrontend/base-config.scss'
+
+        - 'bundles/demoacmetheme/acme/scss/variables/oroui/close-dialog-config.scss'
+        - 'bundles/demoacmetheme/acme/scss/variables/oroui/headings-config.scss'
+        - 'bundles/demoacmetheme/acme/scss/variables/oroui/highlight-text-config.scss'
+        - 'bundles/demoacmetheme/acme/scss/variables/oroui/link-config.scss'
+        - 'bundles/demoacmetheme/acme/scss/variables/oroui/notification-config.scss'
+        - 'bundles/demoacmetheme/acme/scss/variables/oroui/notifications-config.scss'
+        - 'bundles/demoacmetheme/acme/scss/variables/oroui/notification-flash-config.scss'
+        - 'bundles/demoacmetheme/acme/scss/variables/oroui/notification-flash-container-config.scss'                        
+        - 'bundles/demoacmetheme/acme/scss/variables/oroui/logo-config.scss'
+        - 'bundles/demoacmetheme/acme/scss/variables/oroui/breadcrumbs-config.scss'
+
+        - 'bundles/demoacmetheme/acme/scss/variables/header/page-header-config.scss'
+        - 'bundles/demoacmetheme/acme/scss/variables/header/search-widget-config.scss'
+        - 'bundles/demoacmetheme/acme/scss/variables/header/middlebar-config.scss'
+        - 'bundles/demoacmetheme/acme/scss/variables/header/quick-access-config.scss'
+        - 'bundles/demoacmetheme/acme/scss/variables/header/nav-trigger-config.scss'
+        - 'bundles/demoacmetheme/acme/scss/variables/header/top-bar-config.scss'
+        - 'bundles/demoacmetheme/acme/scss/variables/header/dropdown-search-config.scss'
+        - 'bundles/demoacmetheme/acme/scss/variables/header/search-container-config.scss'
+
+        - 'bundles/demoacmetheme/acme/scss/variables/footer/page-footer-config.scss'
+        - 'bundles/demoacmetheme/acme/scss/variables/footer/copyright-config.scss'  
+        - 'bundles/demoacmetheme/acme/scss/variables/footer/page-footer-container-config.scss'    
+
+        - 'bundles/demoacmetheme/acme/scss/variables/main-menu/main-menu-config.scss'
+
+        - 'bundles/demoacmetheme/acme/scss/styles.scss'
+        
+    output: 'css/styles.css'

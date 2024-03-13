@@ -1,0 +1,59 @@
+/* @theme: acme; */
+
+$custom-theme-fonts: (
+        'custom-icon': (
+                'family': 'icomoon',
+                'variants': (
+                        (
+                                'path': '#{$global-url}/demoacmetheme/acme/fonts/icomoon/fonts/icomoon',
+                                'weight': normal,
+                                'style': normal
+                        )
+                ),
+                'formats': ('woff2')
+        ),
+        'main': (
+                'family': 'PTSans',
+                    'variants': (
+                    (
+                        'path': '#{$global-url}/demoacmetheme/acme/fonts/PTSans/PTSans-Regular',
+                        'weight': 400,
+                        'style': normal
+                    ),
+                    (
+                        'path': '#{$global-url}/demoacmetheme/acme/fonts/PTSans/PTSans-Bold',
+                        'weight': 700,
+                        'style': normal
+                    ),
+                    (
+                        'path': '#{$global-url}/demoacmetheme/acme/fonts/PTSans/PTSans-Italic',
+                        'weight': 400,
+                        'style': italic
+                    )
+                ),
+                'formats': ('woff2')
+        )
+);
+
+$theme-fonts: map_merge($theme-fonts, $custom-theme-fonts);
+
+$base-font: get-font-name('main'), sans-serif;
+$secondary-font: get-font-name('secondary'), Arial, sans-serif;
+
+$base-font-icon: get-font-name('custom-icon'); 
+
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: $base-font-icon !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

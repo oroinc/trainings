@@ -1,0 +1,96 @@
+# favicon standart 2018 => https://stackoverflow.com/questions/48956465/favicon-standard-2018-svg-ico-png-and-dimensions
+
+layout:
+    actions:
+      - '@setOption':
+          id: apple_57x57
+          optionName: href
+          optionValue: '=data["asset"].getUrl("bundles/demoacmetheme/acme/images/favicons/apple-touch-icon-57x57.png")'
+
+      - '@setOption':
+          id: apple_60x60
+          optionName: href
+          optionValue: '=data["asset"].getUrl("bundles/demoacmetheme/acme/images/favicons/apple-touch-icon-60x60.png")'
+
+      - '@setOption':
+          id: apple_72x72
+          optionName: href
+          optionValue: '=data["asset"].getUrl("bundles/demoacmetheme/acme/images/favicons/apple-touch-icon-72x72.png")'
+
+      - '@setOption':
+          id: apple_76x76
+          optionName: href
+          optionValue: '=data["asset"].getUrl("bundles/demoacmetheme/acme/images/favicons/apple-touch-icon-76x76.png")'
+
+      - '@setOption':
+          id: apple_144x144
+          optionName: href
+          optionValue: '=data["asset"].getUrl("bundles/demoacmetheme/acme/images/favicons/apple-touch-icon-144x144.png")'
+
+      - '@setOption':
+          id: apple_120x120
+          optionName: href
+          optionValue: '=data["asset"].getUrl("bundles/demoacmetheme/acme/images/favicons/apple-touch-icon-120x120.png")'
+
+      - '@setOption':
+          id: apple_152x152
+          optionName: href
+          optionValue: '=data["asset"].getUrl("bundles/demoacmetheme/acme/images/favicons/apple-touch-icon-152x152.png")'
+
+
+      - '@setOption':
+          id: apple_180x180
+          optionName: href
+          optionValue: '=data["asset"].getUrl("bundles/demoacmetheme/acme/images/favicons/apple-touch-icon-180x180.png")'
+
+      - '@setOption':
+          id: apple_180x180
+          optionName: href
+          optionValue: '=data["asset"].getUrl("bundles/demoacmetheme/acme/images/favicons/apple-touch-icon.png")'
+
+      - '@setOption':
+          id: favicon_32x32
+          optionName: href
+          optionValue: '=data["asset"].getUrl("bundles/acmetheme/acme/images/favicons/favicon-32x32.png")'
+
+      - '@setOption':
+          id: android_chrome_192x192
+          optionName: href
+          optionValue: '=data["asset"].getUrl("bundles/demoacmetheme/acme/images/favicons/android-chrome-192x192.png")'
+
+      - '@setOption':
+          id: favicon_96x96
+          optionName: href
+          optionValue: '=data["asset"].getUrl("bundles/demoacmetheme/acme/images/favicons/android-chrome-96x96")'
+
+      - '@setOption':
+          id: favicon_16x16
+          optionName: href
+          optionValue: '=data["asset"].getUrl("bundles/demoacmetheme/acme/images/favicons/favicon-16x16.png")'
+
+      - '@setOption':
+          id: favicon_manifest
+          optionName: href
+          optionValue: '=data["asset"].getUrl("bundles/demoacmetheme/acme/images/favicons/site.webmanifest")'
+
+      - '@setOption':
+          id: favicon_mask_icon
+          optionName: href
+          optionValue: '=data["asset"].getUrl("bundles/demoacmetheme/acme/images/favicons/safari-pinned-tab.svg")'
+
+      - '@setOption':
+          id: favicon_mask_icon
+          optionName: attr.color
+          optionValue: '#0f4f94'
+
+      - '@setOption':
+          id: favicon_theme_icon
+          optionName: content
+          optionValue: '#0093d2'
+
+      - '@setOption':
+          id: msapplication_tileimage
+          optionName: content
+          optionValue: '=data["asset"].getUrl("bundles/demoacmetheme/acme/images/favicons/mstile-150x150.png")'
+
+

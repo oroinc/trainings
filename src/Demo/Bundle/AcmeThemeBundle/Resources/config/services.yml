@@ -1,0 +1,6 @@
+services:
+    acme_theme.provider.acme_image_placeholder.default:
+        parent: oro_layout.provider.image_placeholder.default.abstract
+        public: false
+        arguments:
+            - '/bundles/acmetheme/acme/images/no_image.svg'

@@ -1,0 +1,39 @@
+/* @theme: petra; */
+
+// @import '../../../fonts/icomoon/variables';
+
+// $icon-keys: (
+//     'menu': $icon-menu,
+//     'close': $icon-close,
+//     'checked': $icon-checked,
+//     'account': $icon-account,
+//     'shopping-list': $icon-shopping-list,
+//     ........
+// );
+
+// @each $icon, $code in $icon-keys {
+//     .icon-#{$icon} {
+//         color: get-color('additional', 'darker');
+
+//         &:hover {
+//             color: get-color('additional', 'medium');
+//         }
+
+//         &:before {
+//             content: $code;
+//         }
+//     }
+// }
+
+//Example of overriding
+
+// .fa-plus:before {
+//     content: $icon-plus;
+//     font-family: $base-font-icon !important;
+// }
+
+// .fa-close:before,
+// .fa-times:before {
+//     content: $icon-close;
+//     font-family: $base-font-icon !important;
+// }

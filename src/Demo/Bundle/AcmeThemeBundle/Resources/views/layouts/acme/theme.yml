@@ -1,0 +1,9 @@
+parent: default
+label: acme theme
+groups: [ commerce ]
+icon: bundles/demoacmetheme/acme/images/favicons/favicon.ico
+logo: bundles/demoacmetheme/acme/images/logo.svg
+rtl_support: true
+image_placeholders:
+    product: '/bundles/demoacmetheme/acme/images/no_image.svg'
+    category: '/bundles/demoacmetheme/acme/images/no_image.svg'

@@ -1,0 +1,24 @@
+# Start: Remove after test widget for new theme
+{% block _homepage_content_static_widget %}
+    <div style="padding: 100px; text-align: center;">
+        <h1> Hello, Theme <strong style="color: green; text-transform:uppercase;"> acme</strong> is turned ON </h1>
+        <ul style="text-align: left; display: inline-block; padding: 40px;">
+            <li>parentTheme: default</li>
+            <li>colorPrimaryMain: <i style="color: black">black</i></li>
+            <li>colorPrimaryBase: <i style="color: green">green</i></li>
+            <li>colorPrimaryLight: <i style="color:lightgreen">lightgreen</i></li>
+            <li>colorPrimaryDark: <i style="color: #006500">#006500</i></li>
+            <li>fontName: PTSans</li>
+            <li>siteWidth: 1440px</li>
+        </ul>
+     </div>
+
+    {% set attr = layout_attr_defaults(attr, {
+        '~class': ' legend-dialog legend-dialog__wrapper',
+        'data-page-component-module': "demoacmetheme/acme/js/app/views/newjs",
+    }) %}
+    <div {{ block('block_attributes') }}>
+        Here is a new js for example.
+    </div>
+{% endblock %}
+# End: Remove after test widget for new theme  

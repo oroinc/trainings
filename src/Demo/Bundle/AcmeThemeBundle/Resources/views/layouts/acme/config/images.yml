@@ -1,0 +1,39 @@
+# dimensions:
+#     product_original:
+#         width: ~
+#         height: ~
+#         options:
+#             applyProductImageWatermark: true
+#     product_gallery_popup:
+#         width: 610
+#         height: 610
+#         options:
+#             applyProductImageWatermark: true
+#     product_gallery_main:
+#         width: 378
+#         height: auto
+#         options:
+#             applyProductImageWatermark: true
+#     product_extra_large:
+#         width: 378
+#         height: 378
+#         options:
+#             applyProductImageWatermark: true
+#     product_large:
+#         width: 316
+#         height: auto
+#         options:
+#             applyProductImageWatermark: true
+#     product_medium:
+#         width: 262
+#         height: auto
+#         options:
+#             applyProductImageWatermark: true
+#     product_small:
+#         width: 82
+#         height: 82
+#         options:
+#             applyProductImageWatermark: true
+#     category_medium:
+#         width: 315
+#         height: 260

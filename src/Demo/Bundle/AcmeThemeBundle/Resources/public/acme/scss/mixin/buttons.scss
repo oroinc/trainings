@@ -1,0 +1,34 @@
+/* @theme: acme; */
+  
+@mixin  btn-bordered {
+    color: get-color('primary', 'holder');
+    border: 2px solid get-color('primary', 'holder');
+    background: get-color('additional', 'ultra');
+    border-radius: 3px;
+    width: 100%;
+    height: 40px;
+    padding: 10px 13px;
+
+    font-size: 16px;
+    line-height: 17px;
+    font-weight: 600;
+    text-align: center;
+    display: inline-block;
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: get-color('additional', 'ultra');
+        background: get-color('primary', 'holder');
+        border-color: get-color('primary', 'holder');
+        text-decoration: none !important;
+    }
+}
+
+@include breakpoint('tablet') {
+
+}
+
+@include breakpoint('mobile') {
+  
+}
