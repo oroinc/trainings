@@ -1,1 +1,6 @@
-services: ~
+services:
+    Training\Bundle\FrontendTrainingBundle\Validator\Constraints\AllowedEmailDomainValidator:
+        arguments:
+            - '@oro_config.manager'
+        tags:
+            - { name: validator.constraint_validator }
