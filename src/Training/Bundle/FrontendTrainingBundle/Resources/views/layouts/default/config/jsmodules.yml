@@ -1,7 +1,13 @@
 configs:
     trainingfrontendtraining/js/app/components/dashboards-component: {}
     trainingfrontendtraining/js/app/datagrid/listener/refresh-grid-listener: {}
+    trainingfrontendtraining/js/validator/allowed-email-domain: {}
+app-modules:
+    - trainingfrontendtraining/js/app/modules/validator-constraints-module
+
 dynamic-imports:
+    commons:
+        - trainingfrontendtraining/js/validator/allowed-email-domain
     trainingfrontendtraining:
         - 'trainingfrontendtraining/js/app/components/dashboards-component'
         - 'trainingfrontendtraining/js/app/views/dashboards-view'

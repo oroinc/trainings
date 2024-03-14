@@ -13,3 +13,5 @@ training:
                 total.label: 'Total'
                 status.label: 'Status'
                 no_orders.label: 'No orders'
+        allowed_email_domain:
+            message: 'Only emails from domain {{ allowed_email_domain }} are allowed.'

@@ -3,9 +3,11 @@ training:
         system_configuration:
             groups:
                 frontend_dashboard:
-                    label: 'Frontend Dashboard'
+                    label: 'Frontend Settings'
                 frontend_dashboard_settings:
-                    label: 'Settings'
+                    label: 'Dashboard Settings'
+                frontend_customer_settings:
+                    label: 'Customer Settings'
             fields:
                 dashboard_order_number:
                     label: 'Number of orders'
@@ -15,7 +17,7 @@ training:
                     tooltip: 'Number of seconds after which quotes datagrid on frontend dashboard will be refreshed'
                 allowed_email_domain:
                     label: 'Allowed email domain'
-                    tooltip: 'After filling in the value, only this domain will be allowed to fill in on the profile page.'
+                    tooltip: 'Customer users email domain that will be allowed to be filled in the profile form (storefront)'
         navigation:
             dashboard:
                 index.label: 'Frontend Dashboards'

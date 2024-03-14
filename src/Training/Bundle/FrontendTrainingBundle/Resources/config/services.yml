@@ -13,3 +13,9 @@ services:
         calls:
             - [ 'setContainer', [ '@Psr\Container\ContainerInterface' ] ]
         tags: [ 'container.service_subscriber' ]
+
+    Training\Bundle\FrontendTrainingBundle\Validator\Constraints\AllowedEmailDomainValidator:
+        arguments:
+            - '@oro_config.manager'
+        tags:
+            - { name: validator.constraint_validator }
