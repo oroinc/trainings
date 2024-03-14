@@ -1,0 +1,5 @@
+training:
+    frontend_training:
+        csr:
+            line_item:
+                message: 'To check the availability of this item, please contact our Customer Support Representative.'
