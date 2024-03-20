@@ -25,7 +25,6 @@ class UserStatsProvider implements UserStatsProviderInterface
     {
         $qb = $this
             ->doctrine
-            ->getManagerForClass(CustomerUser::class)
             ->getRepository(CustomerUser::class)
             ->createQueryBuilder('cu');
 

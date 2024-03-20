@@ -25,7 +25,7 @@ define(function(require, exports, module) {
                 url: this.getUrl(),
                 type: 'GET',
                 success: function(orders) {
-                    OrderListCollectionService.orderListCollection.resolve(new BaseCollection([]));
+                    OrderListCollectionService.orderListCollection.resolve(new BaseCollection(orders));
                 }
             });
         },
