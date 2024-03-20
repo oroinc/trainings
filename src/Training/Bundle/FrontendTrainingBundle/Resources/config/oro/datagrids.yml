@@ -1,0 +1,10 @@
+datagrids:
+    frontend-customer-user-shopping-list-grid:
+        options:
+            jsmodules:
+                - trainingfrontendtraining/js/datagrid/builder/csr-badge-shopping-list-flat-data-builder
+
+    frontend-checkout-line-items-grid:
+        options:
+            jsmodules:
+                - trainingfrontendtraining/js/datagrid/builder/csr-badge-shopping-list-flat-data-builder
