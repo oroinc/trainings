@@ -1,9 +1,14 @@
+aliases:
+    datatables: trainingfrontendtraining/lib/datatables/dataTables.min.js
+
+app-modules:
+    - trainingfrontendtraining/js/app/modules/validator-constraints-module
+
 configs:
     trainingfrontendtraining/js/app/components/dashboards-component: {}
     trainingfrontendtraining/js/app/datagrid/listener/refresh-grid-listener: {}
     trainingfrontendtraining/js/validator/allowed-email-domain: {}
-app-modules:
-    - trainingfrontendtraining/js/app/modules/validator-constraints-module
+    trainingfrontendtraining/js/app/components/layout-block-refresh-component: {}
 
 dynamic-imports:
     commons:
@@ -16,5 +21,4 @@ dynamic-imports:
         - 'trainingfrontendtraining/js/app/order-list-collection-service'
         - 'trainingfrontendtraining/js/app/datagrid/listener/refresh-grid-listener'
         - 'trainingfrontendtraining/js/app/components/jquery-plugin-component'
-aliases:
-    datatables: trainingfrontendtraining/lib/datatables/dataTables.min.js
+        - trainingfrontendtraining/js/app/components/layout-block-refresh-component
