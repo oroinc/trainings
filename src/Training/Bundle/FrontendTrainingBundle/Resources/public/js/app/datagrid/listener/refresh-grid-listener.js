@@ -1,24 +1,25 @@
-define(['module-config', 'module'], function(moduleConfig, module) {
-    'use strict';
+import moduleConfig from 'module-config';
+const config = {
+    ...moduleConfig(module.id)
+};
 
-    const timeout = (sec => {
-        // Value in seconds, need to multiply by 1000 to get milliseconds
-        return (sec || 10) * 1000;
-    })(moduleConfig.default(module.id).datagridRefreshSec);
+const timeout = (sec => {
+    // Value in seconds, need to multiply by 1000 to get milliseconds
+    return (sec || 10) * 1000;
+})(config.datagridRefreshSec);
 
-    function handleInterval(grid) {
-        if (!grid.disposed) {
-            grid.refreshAction.execute();
-            setTimeout(handleInterval, timeout, grid);
-        }
+const handleInterval = grid => {
+    if (!grid.disposed) {
+        grid.refreshAction.execute();
+        setTimeout(handleInterval, timeout, grid);
     }
+};
 
-    return {
-        init: (deferred, options) => {
-            options.gridPromise.done(grid => {
-                setTimeout(handleInterval, timeout, grid);
-                deferred.resolve();
-            });
-        }
-    };
-});
+export default {
+    init: (deferred, options) => {
+        options.gridPromise.done(grid => {
+            setTimeout(handleInterval, timeout, grid);
+            deferred.resolve();
+        });
+    }
+};
