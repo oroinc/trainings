@@ -1,38 +1,34 @@
-import shoppingListFlatDataBuilder from 'oroshoppinglist/js/datagrid/builder/shoppinglist-flat-data-builder';
 import csrBadgeShoppingListRow from 'trainingfrontendtraining/js/datagrid/row/csr-badge-shopping-list-row';
 import addItemsToData from 'trainingfrontendtraining/js/datagrid/processor/csr-badge-data-processor';
-import $ from 'jquery';
-import _ from 'underscore';
 
-const csrBadgeShoppingListFlatDataBuilder = _.extend({}, shoppingListFlatDataBuilder, {
+const csrBadgeShoppingListFlatDataBuilder = {
     processDatagridOptions(deferred, options) {
-        const newDeferred = $.Deferred();
-        newDeferred.promise().done(() => {
-            if (options.metadata.options.parseResponseModels) {
-                const previousParseResponseModelsCallback = options.metadata.options.parseResponseModels;
-                Object.assign(options.metadata.options, {
-                    parseResponseModels: resp => {
-                        return ('data' in resp)
-                            ? addItemsToData(previousParseResponseModelsCallback(resp))
-                            : previousParseResponseModelsCallback(resp);
-                    }
-                });
-            }
+        if (options.metadata.options.parseResponseModels) {
+            const previousParseResponseModelsCallback = options.metadata.options.parseResponseModels;
+            Object.assign(options.metadata.options, {
+                parseResponseModels: resp => {
+                    // original parseResponseModels functionality is preserved, but its output is further processed by addItemsToData
+                    return ('data' in resp)
+                        ? addItemsToData(previousParseResponseModelsCallback(resp))
+                        : previousParseResponseModelsCallback(resp);
+                }
+            });
+        }
 
-            options.data.data = addItemsToData(options.data.data);
+        options.data.data = addItemsToData(options.data.data);
 
-            options.themeOptions = {
-                ...options.themeOptions,
-                rowView: csrBadgeShoppingListRow
-            };
+        // override rowView with csrBadgeShoppingListRow including the logic to render the CSR badge
+        options.themeOptions = {
+            ...options.themeOptions,
+            rowView: csrBadgeShoppingListRow
+        };
 
-            deferred.resolve();
-        });
+        return deferred.resolve();
+    },
 
-        shoppingListFlatDataBuilder.processDatagridOptions(newDeferred, options);
-
-        return deferred;
+    init(deferred, options) {
+        return deferred.resolve();
     }
-});
+};
 
 export default csrBadgeShoppingListFlatDataBuilder;

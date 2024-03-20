@@ -2,6 +2,6 @@ training:
     frontend_training:
         csr:
             line_item:
-                message: 'To check the availability of this item, please contact our Customer Support Representative.'
+                message: 'To check the availability of this item, please contact our Customer Service Representative.'
         allowed_email_domain:
             message: 'Only emails from domain {{ allowed_email_domain }} are allowed.'

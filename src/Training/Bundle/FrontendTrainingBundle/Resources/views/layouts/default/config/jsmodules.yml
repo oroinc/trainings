@@ -16,9 +16,3 @@ dynamic-imports:
         - trainingfrontendtraining/js/app/components/layout-block-refresh-component
         - trainingfrontendtraining/js/datagrid/builder/csr-badge-shopping-list-flat-data-builder
         - tpl-loader!trainingfrontendtraining/templates/datagrid/row/csr-badge-row.html
-
-map:
-    "*":
-        oroshoppinglist/js/datagrid/builder/shoppinglist-flat-data-builder: trainingfrontendtraining/js/datagrid/builder/csr-badge-shopping-list-flat-data-builder
-    trainingfrontendtraining/js/datagrid/builder/csr-badge-shopping-list-flat-data-builder:
-        oroshoppinglist/js/datagrid/builder/shoppinglist-flat-data-builder: oroshoppinglist/js/datagrid/builder/shoppinglist-flat-data-builder
