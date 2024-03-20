@@ -14,11 +14,11 @@ dynamic-imports:
     commons:
         - trainingfrontendtraining/js/validator/allowed-email-domain
     trainingfrontendtraining:
-        - 'trainingfrontendtraining/js/app/components/dashboards-component'
-        - 'trainingfrontendtraining/js/app/views/dashboards-view'
-        - 'trainingfrontendtraining/js/app/views/users-stats-view'
-        - 'trainingfrontendtraining/js/app/views/orders-view'
-        - 'trainingfrontendtraining/js/app/order-list-collection-service'
-        - 'trainingfrontendtraining/js/app/datagrid/listener/refresh-grid-listener'
-        - 'trainingfrontendtraining/js/app/components/jquery-plugin-component'
+        - trainingfrontendtraining/js/app/components/dashboards-component
+        - trainingfrontendtraining/js/app/views/dashboards-view
+        - trainingfrontendtraining/js/app/views/users-stats-view
+        - trainingfrontendtraining/js/app/views/orders-view
+        - trainingfrontendtraining/js/app/order-list-collection-service
+        - trainingfrontendtraining/js/app/datagrid/listener/refresh-grid-listener
+        - trainingfrontendtraining/js/app/components/jquery-plugin-component
         - trainingfrontendtraining/js/app/components/layout-block-refresh-component
