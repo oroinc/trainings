@@ -22,3 +22,5 @@ dynamic-imports:
         - trainingfrontendtraining/js/app/datagrid/listener/refresh-grid-listener
         - trainingfrontendtraining/js/app/components/jquery-plugin-component
         - trainingfrontendtraining/js/app/components/layout-block-refresh-component
+        - trainingfrontendtraining/js/datagrid/builder/csr-badge-shopping-list-flat-data-builder
+        - tpl-loader!trainingfrontendtraining/templates/datagrid/row/csr-badge-row.html
