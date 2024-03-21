@@ -1,0 +1,36 @@
+<table class="table table-bordered">
+    <thead class="grid-header">
+        <th class="grid-cell grid-header-cell shortenable-label string-cell">
+            <%- _.__('training.frontend_training.dashboards.orders.order_identifier.label') %>
+        </th>
+        <th class="grid-cell grid-header-cell shortenable-label string-cell">
+            <%- _.__('training.frontend_training.dashboards.orders.order_date.label') %>
+        </th>
+        <th class="grid-cell grid-header-cell shortenable-label string-cell">
+            <%- _.__('training.frontend_training.dashboards.orders.total.label') %>
+        </th>
+    </thead>
+    <tbody class="grid-body">
+        <% if(orders.length > 0) { %>
+            <% for(let i = 0; i < orders.length; i++) { %>
+                <tr class="single-row grid-row row-3cells">
+                    <td class="string-cell grid-cell grid-body-cell grid-body-cell-item">
+                        <%- orders[i].identifier %>
+                    </td>
+                    <td class="string-cell grid-cell grid-body-cell grid-body-cell-item">
+                        <%- formatDate(orders[i].createdAt) %>
+                    </td>
+                    <td class="string-cell grid-cell grid-body-cell grid-body-cell-item">
+                        <%- formatCurrency(orders[i].totalValue, orders[i].currency) %>
+                    </td>
+                </tr>
+            <% } %>
+        <% } else { %>
+            <tr class="single-row grid-row row-3cells">
+                <td class="string-cell grid-cell grid-body-cell grid-body-cell-item" colspan="3">
+                    <%- _.__('training.frontend_training.dashboards.orders.no_orders.label') %>
+                </td>
+            </tr>
+        <% } %>
+    </tbody>
+</table>

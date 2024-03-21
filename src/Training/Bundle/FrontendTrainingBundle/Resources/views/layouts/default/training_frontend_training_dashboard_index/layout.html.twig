@@ -1,0 +1,32 @@
+{% block _dashboards_container_widget %}
+    <div class="dashboards-container"
+         data-page-component-module="trainingfrontendtraining/js/app/components/dashboards-component"
+         data-page-component-options="{{ {
+             'view': 'trainingfrontendtraining/js/app/views/dashboards-view',
+             'usersOptions': {
+                 '_sourceElement': '.user-stats',
+                 'userStats': userStats
+             },
+             'ordersOptions': {
+                 '_sourceElement': '.orders-stats',
+             }
+         }|json_encode }}">
+
+        {{ block_widget(block, {attr: attr}) }}
+    </div>
+{% endblock %}
+
+{% block _user_stats_container_widget %}
+    <h2 class="page-subtitle">{{ 'training.frontend_training.dashboard.index.user_stats.label'|trans }}</h2>
+    <div class="user-stats"></div>
+{% endblock %}
+
+{% block _orders_stats_container_widget %}
+    <h2 class="page-subtitle">{{ 'training.frontend_training.dashboard.index.orders.label'|trans }}</h2>
+    <div class="orders-stats" style="min-height: 100px;"></div>
+{% endblock %}
+
+{% block _quotes_container_widget %}
+    <h2 class="page-subtitle">{{ 'training.frontend_training.dashboard.index.quotes.label'|trans }}</h2>
+    {{ block_widget(block, {attr: attr}) }}
+{% endblock %}

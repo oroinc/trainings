@@ -1,2 +1,2 @@
 bundles:
-    - { name: \Training\Bundle\FrontendTrainingBundle\TrainingFrontendTrainingBundle, priority: 500 }
+    - { name: Training\Bundle\FrontendTrainingBundle\TrainingFrontendTrainingBundle, priority: 500 }
