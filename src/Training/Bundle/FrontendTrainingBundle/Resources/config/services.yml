@@ -4,3 +4,9 @@ services:
             - '@oro_config.manager'
         tags:
             - { name: validator.constraint_validator }
+
+    Training\Bundle\FrontendTrainingBundle\Controller\Frontend\ShoppingListCleanupController:
+        public: true
+        calls:
+            - [ setContainer, [ '@Psr\Container\ContainerInterface' ] ]
+        tags: [ container.service_subscriber ]
