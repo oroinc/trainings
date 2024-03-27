@@ -18,3 +18,10 @@ training:
                 message: 'To check the availability of this item, please contact our Customer Service Representative.'
         allowed_email_domain:
             message: 'Only emails from domain {{ allowed_email_domain }} are allowed.'
+        product_view:
+            copy_to_clipboard:
+                success: 'Copied to clipboard'
+                error: 'Failed to copy to clipboard'
+        cart_cleanup:
+            success: 'Shopping list has been cleaned up, all Out-of-Stock products have been removed.'
+            error:  'Failed to clean up shopping list.'

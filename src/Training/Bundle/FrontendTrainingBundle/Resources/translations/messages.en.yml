@@ -30,3 +30,6 @@ training:
                 quotes:
                     label: 'Quotes'
                 title: 'Frontend Dashboards'
+        cart:
+            cleanup:
+                button_label: 'Cleanup Shopping List'

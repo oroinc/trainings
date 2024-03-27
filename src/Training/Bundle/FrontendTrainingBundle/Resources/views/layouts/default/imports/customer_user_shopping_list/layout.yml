@@ -1,0 +1,12 @@
+layout:
+    actions:
+        - '@setBlockTheme':
+            themes: 'layout.html.twig'
+        - '@add':
+            id: cleanup_shopping_list
+            parentId: summary_container
+            blockType: block
+            options:
+                vars:
+                    shopping_list_id: '=data["entity"]!=null ? data["entity"].getId()'
+
