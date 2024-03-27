@@ -1,4 +1,13 @@
 services:
+    _defaults:
+        public: false
+
+    Training\Bundle\FrontendTrainingBundle\Provider\UserStatsProvider:
+        arguments:
+            - '@doctrine'
+
+    Training\Bundle\FrontendTrainingBundle\Provider\UserStatsProviderInterface: '@Training\Bundle\FrontendTrainingBundle\Provider\UserStatsProvider'
+
     Training\Bundle\FrontendTrainingBundle\Validator\Constraints\AllowedEmailDomainValidator:
         arguments:
             - '@oro_config.manager'

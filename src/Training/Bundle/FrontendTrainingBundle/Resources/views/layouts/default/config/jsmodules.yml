@@ -5,6 +5,8 @@ app-modules:
     - trainingfrontendtraining/js/app/modules/validator-constraints-module
 
 configs:
+    trainingfrontendtraining/js/app/components/dashboards-component: {}
+    trainingfrontendtraining/js/app/datagrid/listener/refresh-grid-listener: {}
     trainingfrontendtraining/js/validator/allowed-email-domain: {}
     trainingfrontendtraining/js/app/components/layout-block-refresh-component: {}
 
@@ -12,6 +14,12 @@ dynamic-imports:
     commons:
         - trainingfrontendtraining/js/validator/allowed-email-domain
     trainingfrontendtraining:
+        - trainingfrontendtraining/js/app/components/dashboards-component
+        - trainingfrontendtraining/js/app/views/dashboards-view
+        - trainingfrontendtraining/js/app/views/users-stats-view
+        - trainingfrontendtraining/js/app/views/orders-view
+        - trainingfrontendtraining/js/app/order-list-collection-service
+        - trainingfrontendtraining/js/app/datagrid/listener/refresh-grid-listener
         - trainingfrontendtraining/js/app/components/jquery-plugin-component
         - trainingfrontendtraining/js/app/components/layout-block-refresh-component
         - trainingfrontendtraining/js/datagrid/builder/csr-badge-shopping-list-flat-data-builder

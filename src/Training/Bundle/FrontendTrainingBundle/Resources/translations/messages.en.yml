@@ -18,6 +18,18 @@ training:
                 allowed_email_domain:
                     label: 'Allowed email domain'
                     tooltip: 'Customer users email domain that will be allowed to be filled in the profile form (storefront)'
+        navigation:
+            dashboard:
+                index.label: 'Frontend Dashboards'
+        dashboard:
+            index:
+                user_stats:
+                    label: 'User Stats'
+                orders:
+                    label: 'Orders'
+                quotes:
+                    label: 'Quotes'
+                title: 'Frontend Dashboards'
         cart:
             cleanup:
                 button_label: 'Cleanup Shopping List'

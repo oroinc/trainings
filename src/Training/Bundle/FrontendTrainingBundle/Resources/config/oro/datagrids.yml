@@ -1,4 +1,9 @@
 datagrids:
+    frontend-training-quotes-grid:
+        extends: frontend-quotes-grid
+        options:
+            jsmodules:
+                - trainingfrontendtraining/js/app/datagrid/listener/refresh-grid-listener
     frontend-customer-user-shopping-list-grid:
         options:
             jsmodules:
