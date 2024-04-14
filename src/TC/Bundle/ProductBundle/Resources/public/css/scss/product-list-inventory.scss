@@ -1,0 +1,25 @@
+.product-inventory-status {
+  &__in_stock {
+    color: green;
+    font-weight: bold;
+  }
+  &__out_of_stock {
+    color: red;
+    font-weight: bold;
+  }
+}
+
+.product-item {
+  &__inventory-levels {
+    ul {
+      padding-left: 15px;
+    }
+    li {
+      list-style-type: none;
+    }
+
+  }
+  &__inventory-level-value {
+    font-weight: bold;
+  }
+}

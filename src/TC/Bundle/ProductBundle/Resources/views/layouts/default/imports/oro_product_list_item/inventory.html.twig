@@ -1,0 +1,30 @@
+{% block __oro_product_list_item__product_inventory_status_widget %}
+    {% set attr = layout_attr_defaults(attr, {
+        '~class': ' product-item__inventory-status'
+    }) %}
+
+    {% if not is_configurable_product_type(product.type) %}
+        <div {{ block('block_attributes') }}>
+            {{ 'tc.inventory.storefront.inventory_status.label'|trans }}:
+            <span class="product-inventory-status__{{ product.inventoryStatus }}" itemprop="inventory-status">
+                {{ ('tc.inventory.storefront.inventory_status.'~product.inventoryStatus)|trans }}</span>
+        </div>
+    {% endif %}
+{% endblock %}
+
+{% block __oro_product_list_item__product_inventory_levels_widget %}
+    {% set attr = layout_attr_defaults(attr, {
+        '~class': ' product-item__inventory-levels'
+    }) %}
+
+    {% if not is_configurable_product_type(product.type) %}
+        <div {{ block('block_attributes') }}>
+            {{ 'tc.inventory.storefront.inventory_level.plural_label'|trans }}:
+            <ul>
+                {% for unit, qty in product.inventoryLevelByUnit %}
+                    <li>{{ unit }}: <span class="product-item__inventory-level-value">{{ qty|number_format }}</span></li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+{% endblock %}
