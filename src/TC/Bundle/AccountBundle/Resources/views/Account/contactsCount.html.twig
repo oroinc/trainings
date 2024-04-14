@@ -1,0 +1,5 @@
+<li>
+    {{ 'tc.account.contacts.count.label'|trans({
+        '{{ count }}': entity.contacts|length|default(0)
+    })|raw }}
+</li>

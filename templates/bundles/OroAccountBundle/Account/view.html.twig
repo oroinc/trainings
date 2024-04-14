@@ -1,0 +1,14 @@
+{% extends '@!OroAccount/Account/view.html.twig' %}
+
+{% block breadcrumbs %}
+    {% import '@OroUI/macros.html.twig' as UI %}
+
+    {{ parent() }}
+    <span class="page-title__status">
+        {% if (entity.createdAt|date('Y-m-d H:i') == entity.updatedAt|date('Y-m-d H:i')) %}
+            {{ UI.badge('New', 'enabled') }}
+        {% else %}
+            {{ UI.badge('Processing', 'tentatively') }}
+        {% endif %}
+    </span>
+{% endblock breadcrumbs %}
