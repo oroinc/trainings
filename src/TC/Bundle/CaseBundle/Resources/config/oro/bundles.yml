@@ -1,0 +1,2 @@
+bundles:
+    - { name: TC\Bundle\CaseBundle\TCCaseBundle, priority: 1000 }

@@ -1,0 +1,8 @@
+{% set customerId = record.getValue('customerId') %}
+{% if is_granted('oro_customer_customer_view') and customerId %}
+    <a href="{{ path('oro_customer_customer_view', {id: customerId}) }}">
+        {{ value }}
+    </a>
+{% else %}
+    {{ value }}
+{% endif %}

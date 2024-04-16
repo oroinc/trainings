@@ -1,0 +1,10 @@
+{% set roles = record.getValue('roles') %}
+{% if roles %}
+    {% for role in roles %}
+        {% if not loop.last %}
+            {{ role.label ~ ','}}
+        {% else %}
+            {{ role.label}}
+        {% endif %}
+    {% endfor %}
+{% endif %}
