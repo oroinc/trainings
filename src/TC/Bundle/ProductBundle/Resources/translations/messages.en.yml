@@ -1,9 +1,7 @@
 tc:
     inventory:
         storefront:
-            inventory_status:
-                label: Inventory Status
-                in_stock: In Stock
-                out_of_stock: Out of Stock
+            category:
+                label: Category
             inventory_level:
                 plural_label: Inventory Levels

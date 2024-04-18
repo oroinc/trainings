@@ -1,0 +1,11 @@
+{% block __oro_product_list_item__product_category_widget %}
+    {% set attr = layout_attr_defaults(attr, {
+        '~class': ' product-item__category'
+    }) %}
+
+    <div {{ block('block_attributes') }}>
+        {{ 'tc.inventory.storefront.category.label'|trans }}:
+        <span class="product-item__category-value">
+            {{ product.categoryTitle }}</span>
+    </div>
+{% endblock %}

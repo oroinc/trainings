@@ -22,12 +22,12 @@ class FrontendProductGridInventoryListener
     {
         $config = $event->getConfig();
         $config->offsetAddToArrayByPath('[source][query][select]', [
-            'text.inv_status as inventoryStatus'
+            'text.category_title_LOCALIZATION_ID as categoryTitle'
         ]);
         $config->offsetAddToArrayByPath(
             '[properties]',
             [
-                'inventoryStatus' => [
+                'categoryTitle' => [
                     'type'          => 'field',
                     'frontend_type' => PropertyInterface::TYPE_STRING
                 ],

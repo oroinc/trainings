@@ -19,7 +19,7 @@ class ProductListInventoryListener
     public function onBuildQuery(BuildQueryProductListEvent $event): void
     {
         $event->getQuery()
-            ->addSelect('text.inv_status');
+            ->addSelect('text.category_title_LOCALIZATION_ID as categoryTitle');
     }
 
     public function onBuildResult(BuildResultProductListEvent $event): void
@@ -33,7 +33,7 @@ class ProductListInventoryListener
 
         foreach ($event->getProductData() as $productId => $data) {
             $productView = $event->getProductView($productId);
-            $productView->set('inventoryStatus', $data['inv_status']);
+            $productView->set('categoryTitle', $data['categoryTitle']);
             $productView->set('inventoryLevelByUnit', $inventoryLevels[$productId]);
         }
     }
