@@ -34,7 +34,7 @@ class CustomerUserByCustomerGridListener
             [
                 'label' => 'oro.customer.customeruser.roles.label',
                 'type' => 'twig',
-                'template' => '@TCCase/Customer/Datagrid/roles.html.twig',
+                'template' => '@TCCase/CustomerUser/Datagrid/roles.html.twig',
                 'frontend_type' => 'html',
                 'renderable' => true,
             ],
