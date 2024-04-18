@@ -41,7 +41,7 @@
                 {{ form_row(form.region, {'placeholder': 'oro.customer.frontend.address.form.placeholder.region'|trans}) }}
             </div>
             <div class="grid-col-4 grid-col-tablet-12">
-                {{ form_row(form.postalCode, {'attr' : {'placeholder': 'oro.customer.frontend.address.form.placeholder.zip'|trans}}) }}
+                {{ form_row(form.postalCode, {'label': 'Zip', 'attr' : {'placeholder': 'oro.customer.frontend.address.form.placeholder.zip'|trans}}) }}
             </div>
             <div class="hidden">
                 {{ form_widget(form.types) }}
