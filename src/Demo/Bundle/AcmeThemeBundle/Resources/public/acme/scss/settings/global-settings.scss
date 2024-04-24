@@ -1,9 +1,0 @@
-/* @theme: acme; */
-
-@import 'colors';
-@import 'typography';
-@import 'sizes';
-@import 'forms-configs';
-
-// bootstrap variables is using vars from above files. Should be imported after them
-@import 'bootstrap/variables';
