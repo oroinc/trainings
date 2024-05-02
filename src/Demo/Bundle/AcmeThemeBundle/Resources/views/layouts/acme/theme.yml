@@ -1,0 +1,12 @@
+parent: default
+label: acme theme
+description: 'New demo theme'
+groups: [ commerce ]
+icon: bundles/demoacmetheme/acme/images/favicons/favicon.ico
+logo: bundles/demoacmetheme/acme/images/logo.svg
+logo_small: bundles/demoacmetheme/acme/images/logo-small.svg
+rtl_support: true
+
+image_placeholders:
+    product: '/bundles/demoacmetheme/acme/images/no_image.svg'
+    category: '/bundles/demoacmetheme/acme/images/no_image.svg'

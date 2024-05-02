@@ -1,0 +1,36 @@
+oro_frontend:
+    logo:
+        alt:
+            label: ACME inc
+
+oro:
+    copyright: © {{year}}   ACME Inc. All Rights Reserved.
+    account:
+        entity_label:  My Account
+    product:
+        lineitem:
+            quantity:
+                enter: 'Item'
+
+    customer:
+        frontend:
+            menu:
+                customer_user_profile:
+                    label: My Account
+    logo:
+        alt:
+            label: ACME inc
+
+        lineitem:
+            quantity:
+                enter: 'Item'
+
+    website_search:
+        search_field_placeholder: "I am looking for"
+
+acme:
+    product:
+        content_widget_type:
+            video_banner:
+                label: Video Banner
+
