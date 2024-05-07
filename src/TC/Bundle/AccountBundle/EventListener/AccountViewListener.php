@@ -4,16 +4,18 @@ namespace TC\Bundle\AccountBundle\EventListener;
 
 use Oro\Bundle\UIBundle\Event\BeforeListRenderEvent;
 use Oro\Bundle\AccountBundle\Entity\Account;
+use Symfony\Contracts\Translation\TranslatorInterface;
 use TC\Bundle\AccountBundle\Helper\CustomerFinder;
 
 class AccountViewListener
 {
     public function __construct(
-        private CustomerFinder $customerFinder
+        private CustomerFinder $customerFinder,
+        private TranslatorInterface $translator
     ) {
     }
 
-    public function onView(BeforeListRenderEvent $event)
+    public function onView(BeforeListRenderEvent $event): void
     {
         /** @var Account $account */
         $account = $event->getEntity();
@@ -27,9 +29,12 @@ class AccountViewListener
             ['customers' => $customers]
         );
 
-        $blockId = $event->getScrollData()->addBlock('Addresses', 1);
-        $subblockId = $event->getScrollData()->addSubBlock($blockId);
+        $blockId = $event->getScrollData()->addBlock(
+            $this->translator->trans('tc.account.block.addresses'),
+            1
+        );
+        $subBlockId = $event->getScrollData()->addSubBlock($blockId);
 
-        $event->getScrollData()->addSubBlockData($blockId, $subblockId, $template);
+        $event->getScrollData()->addSubBlockData($blockId, $subBlockId, $template);
     }
 }

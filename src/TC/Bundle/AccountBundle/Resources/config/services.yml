@@ -6,5 +6,6 @@ services:
     TC\Bundle\AccountBundle\EventListener\AccountViewListener:
         arguments:
             - '@TC\Bundle\AccountBundle\Helper\CustomerFinder'
+            - '@translator'
         tags:
             - { name: kernel.event_listener, event: oro_ui.scroll_data.before.accountView, method: onView }
