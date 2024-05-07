@@ -1,0 +1,7 @@
+tc:
+    account:
+        block:
+            addresses: 'Addresses'
+        customer_addresses.label: 'Customer addresses'
+        contacts:
+            count.label: 'Contacts count: {{ count }}'

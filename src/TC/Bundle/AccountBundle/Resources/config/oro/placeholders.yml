@@ -1,0 +1,10 @@
+placeholders:
+    placeholders:
+        page_header_stats_after:
+            items:
+                contacts_count:
+                    order: 5
+    items:
+        contacts_count:
+            template: '@@TCAccount/Account/contactsCount.html.twig'
+            applicable: '@oro_ui.placeholder.filter->isInstanceOf($entity$, Oro\Bundle\AccountBundle\Entity\Account)'

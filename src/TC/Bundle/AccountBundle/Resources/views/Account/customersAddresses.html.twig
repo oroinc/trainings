@@ -1,0 +1,16 @@
+<div class="box-type1" data-layout="separate">
+    <div class="title">
+        <span class="widget-title">{{ 'tc.account.customer_addresses.label'|trans }}</span>
+    </div>
+    {% for customer in customers %}
+        <div class="responsive-block account-address-box">
+            <div class="info">
+                <h5>{{ customer.name }}</h5>
+                {% if (customer.primaryAddress) %}
+                    {{ customer.primaryAddress|oro_format_address }}
+                {% endif %}
+            </div>
+        </div>
+    {% endfor %}
+</div>
+

@@ -1,0 +1,11 @@
+services:
+    TC\Bundle\AccountBundle\Helper\CustomerFinder:
+        arguments:
+            - '@oro_entity.doctrine_helper'
+
+    TC\Bundle\AccountBundle\EventListener\AccountViewListener:
+        arguments:
+            - '@TC\Bundle\AccountBundle\Helper\CustomerFinder'
+            - '@translator'
+        tags:
+            - { name: kernel.event_listener, event: oro_ui.scroll_data.before.accountView, method: onView }
