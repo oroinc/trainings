@@ -1,0 +1,45 @@
+@name = order_shipped
+@entityName = Oro\Bundle\OrderBundle\Entity\Order
+@subject = Order shipped.
+@isSystem = 1
+@isEditable = 1
+
+{% extends oro_get_email_template('base_storefront') %}
+
+{% block content %}
+    <div>
+        <p style="{{ styleP }}">Order #{{ entity.identifier }} has been shipped.</p>
+
+        <!--{% if entity.shippingTrackings|length %}-->
+            <!--{% set trackingMessage = entity.shippingTrackings|length > 1 ? 'Your tracking numbers are: ' : 'Your tracking number is: ' %}-->
+            <p style="{{ styleP }}">{{ trackingMessage }}</p>
+
+            <p style="{{ styleP }}">
+                <!--{% for key,tracking in entity.shippingTrackings %}-->
+                    {# part: expose entity variables to email templates #}
+{#                    <!--{% set punctuation = entity.shippingTrackings|length == key+1 ? '.' : ',' %}-->#}
+{#                    <!--{% if key == 0 %}-->#}
+{#                         {{ tracking.number }} ({{ tracking.method }}){{ punctuation }}#}
+{#                    <!--{% else %}-->#}
+{#                        {{ tracking.number }} ({{ tracking.method }}){{ punctuation }}#}
+{#                    <!--{% endif %}-->#}
+
+                    {# part: expose twig functions/filters to email templates #}
+                    <table>
+                        <tr>
+                            <td>{{ oro_order_format_shipping_tracking_method(tracking.method) }}</td>
+                            <td>
+                                {% set link = oro_order_format_shipping_tracking_link(tracking.method, tracking.number) %}
+                                {%- if tracking.number != link -%}
+                                    <a target="_blank" href="{{ link }}">{{ tracking.number }}</a>
+                                {%- else -%}
+                                    {{ tracking.number }}
+                                {%- endif -%}
+                            </td>
+                        </tr>
+                    </table>
+                <!--{% endfor %}-->
+            </p>
+        <!--{% endif %}-->
+    </div>
+{% endblock %}

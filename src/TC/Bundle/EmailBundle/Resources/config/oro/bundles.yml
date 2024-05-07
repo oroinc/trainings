@@ -1,0 +1,2 @@
+bundles:
+    - { name: TC\Bundle\EmailBundle\TCEmailBundle, priority: 1000 }

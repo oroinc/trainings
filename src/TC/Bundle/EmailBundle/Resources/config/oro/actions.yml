@@ -1,0 +1,21 @@
+operations:
+    oro_order_mark_as_shipped:
+        actions:
+            - '@call_service_method':
+                  service: oro_config.manager
+                  method: get
+                  method_parameters: ['oro_notification.email_notification_sender_email']
+                  attribute: $.result.fromEmail
+            - '@call_service_method':
+                  service: oro_config.manager
+                  method: get
+                  method_parameters: ['oro_notification.email_notification_sender_name']
+                  attribute: $.result.fromName
+            - '@send_email_template':
+                  parameters:
+                      from:
+                          email: $.result.fromEmail
+                          name: $.result.fromName
+                      to: $.data.customerUser.email
+                      template: 'order_shipped'
+                      entity: $.data
