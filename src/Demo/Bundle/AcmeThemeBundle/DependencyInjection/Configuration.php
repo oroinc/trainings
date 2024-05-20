@@ -14,20 +14,23 @@ use Oro\Bundle\ConfigBundle\DependencyInjection\SettingsBuilder;
  */
 class Configuration implements ConfigurationInterface
 {
+    public const ROOT_NODE = 'demo_acme_theme';
     /**
      * {@inheritDoc}
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder('oro_crm_partner');
+        $treeBuilder = new TreeBuilder(SELF::ROOT_NODE);
         $rootNode = $treeBuilder->getRootNode();
 
         SettingsBuilder::append(
             $rootNode,
             [
-                'github_api_token'  => ['value' => ''],
-                'github_teams'       => ['value' => ''],
-                'github_organization'  => ['value' => '']
+                'social_facebook'       => ['value' => 'https://www.facebook.com/acmedemo'],
+                'social_instagram'      => ['value' => 'https://www.instagram.com/acmedemo/?hl=en'],
+                'social_twitter'        => ['value' => 'https://twitter.com/acmedemo'],
+                'social_linkedin'       => ['value' => 'https://www.linkedin.com/company/acmedemo'],
+                'social_youtube'        => ['value' => 'https://www.youtube.com/channel/acmedemo']
             ]
         );
         return $treeBuilder;
