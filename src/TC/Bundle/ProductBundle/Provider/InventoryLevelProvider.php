@@ -19,29 +19,8 @@ class InventoryLevelProvider
     public function getProductSellableUnitsInventoryLevels(array $products): array
     {
         return $this->formatProductInventoryLevels(
-            $this->filterNonsellableUnits(
-                $products,
-                $this->doctrine->getRepository(InventoryLevel::class)->getQuantityForProductCollection($products)
-            )
+            $this->doctrine->getRepository(InventoryLevel::class)->getQuantityForProductCollection($products)
         );
-    }
-
-    protected function filterNonsellableUnits(array $products, array $productLevels): array
-    {
-        $productSellableUnits = [];
-        foreach ($products as $product) {
-            $productSellableUnits[$product->getId()] = array_keys($product->getSellUnitsPrecision());
-        }
-
-        $filteredLevels = [];
-        foreach ($productLevels as $item) {
-            if (isset($productSellableUnits[$item['product_id']])
-                && in_array($item['code'], $productSellableUnits[$item['product_id']])) {
-                $filteredLevels[] = $item;
-            }
-        }
-
-        return $filteredLevels;
     }
 
     protected function formatProductInventoryLevels(array $productLevels): array

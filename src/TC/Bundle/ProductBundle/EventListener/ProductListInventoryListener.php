@@ -44,11 +44,6 @@ class ProductListInventoryListener
      */
     protected function getProducts(array $productIds): array
     {
-        return array_map(
-            function (int $productId) {
-                return $this->doctrineHelper->getEntityReference(Product::class, $productId);
-            },
-            $productIds
-        );
+        return $this->doctrineHelper->getEntityRepositoryForClass(Product::class)->findBy(['id' => $productIds]);
     }
 }

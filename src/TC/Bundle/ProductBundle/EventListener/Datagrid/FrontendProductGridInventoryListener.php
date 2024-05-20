@@ -61,11 +61,12 @@ class FrontendProductGridInventoryListener
      */
     protected function getProducts(array $productRecords): array
     {
-        return array_map(
+        $productIds = array_map(
             function (ResultRecordInterface $record) {
-                return $this->doctrineHelper->getEntityReference(Product::class, $record->getValue('id'));
+                return $record->getValue('id');
             },
             $productRecords
         );
+        return $this->doctrineHelper->getEntityRepositoryForClass(Product::class)->findBy(['id' => $productIds]);
     }
 }
