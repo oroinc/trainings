@@ -1,0 +1,6 @@
+{% set styleContent = oro_config_value('demo_acme_theme.custom_backend_css')|striptags %}
+{% if styleContent is not empty %}
+    <style>
+        {{ styleContent }}
+    </style>
+{% endif %}

@@ -26,6 +26,7 @@ class Configuration implements ConfigurationInterface
         SettingsBuilder::append(
             $rootNode,
             [
+                'custom_backend_css'    => ['value' => null],
                 'social_facebook'       => ['value' => 'https://www.facebook.com/acmedemo'],
                 'social_instagram'      => ['value' => 'https://www.instagram.com/acmedemo/?hl=en'],
                 'social_twitter'        => ['value' => 'https://twitter.com/acmedemo'],

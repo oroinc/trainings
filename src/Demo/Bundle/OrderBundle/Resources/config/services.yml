@@ -1,0 +1,7 @@
+services:
+
+    demo_order.placeholder.filter:
+        class: Demo\Bundle\OrderBundle\Placeholder\PlaceholderFilter
+        arguments:
+            - "@request_stack"
+        public: true

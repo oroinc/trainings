@@ -36,6 +36,7 @@ acme:
 
 
     theme:
+
         system_configuration:
             groups:
                 custom_css_settings:
@@ -50,6 +51,7 @@ acme:
             fields:
                 custom_backend_css:
                     tooltip: 'Custom CSS for Management console'
+
                 contact_phone:
                     tooltip: 'Phone'
                 contact_address:
