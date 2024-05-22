@@ -1,7 +1,7 @@
 services:
 
-    demo_order.placeholder.filter:
-        class: Demo\Bundle\OrderBundle\Placeholder\PlaceholderFilter
+    Demo\Bundle\OrderBundle\EventListener\OrderViewEventListener:
         arguments:
-            - "@request_stack"
-        public: true
+            - '@translator'
+        tags:
+            - { name: kernel.event_listener, event: oro_ui.scroll_data.before.order-view, method: onView }

@@ -1,5 +1,9 @@
+
 acme:
     order:
+        additional_information:
+            label: "this is label"
+
         custom:
             title.label: "Custom title legend"
         print:

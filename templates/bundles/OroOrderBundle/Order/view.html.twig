@@ -66,13 +66,13 @@
 
     {% set shippingSubBlocks = [{'data' : [shippingInformation]}] %}
 
-{#    Customization: remove shippingTrackings info from BackOffice #}
+{#    Customization: add shippingTrackings info from BackOffice #}
 
     {% if entity.shippingTrackings is defined %}
         {% set shippingSubBlocks = shippingSubBlocks|merge([{'data' : [
             oro_order_get_template_content('@OroOrder/Order/shipping_tracking.html.twig', {entity: entity})
         ]}]) %}
-        <legend class="custom title">
+        <legend class="custom title" style="color:red;">
             {{ UI.renderProperty('acme.order.custom.title.label'|trans, 'this is custom text'|trans) }}
         </legend>
     {% endif %}
