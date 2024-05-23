@@ -1,0 +1,13 @@
+services:
+    TC\Bundle\CustomerBundle\Form\Extension\FrontendCustomerUserRegistrationTypeExtension:
+        tags:
+            - { name: form.type_extension, extended_type: Oro\Bundle\CustomerBundle\Form\Type\FrontendCustomerUserRegistrationType }
+
+    TC\Bundle\CustomerBundle\Layout\DataProvider\FrontendCustomerUserRegistrationFormProviderDecorator:
+        decorates: oro_customer.provider.frontend_customer_user_registration_form
+        arguments:
+            - "@form.factory"
+            - "@oro_config.manager"
+            - "@oro_website.manager"
+            - "@doctrine"
+            - '@router'
