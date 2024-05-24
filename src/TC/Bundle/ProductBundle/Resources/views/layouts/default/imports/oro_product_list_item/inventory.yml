@@ -1,0 +1,8 @@
+layout:
+    actions:
+        - '@setBlockTheme':
+              themes: 'inventory.html.twig'
+        - '@add':
+              id: __product_inventory_levels
+              parentId: __product_specification
+              blockType: block

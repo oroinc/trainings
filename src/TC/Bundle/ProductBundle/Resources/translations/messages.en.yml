@@ -1,0 +1,7 @@
+tc:
+    inventory:
+        storefront:
+            category:
+                label: Category
+            inventory_level:
+                plural_label: Inventory Levels
