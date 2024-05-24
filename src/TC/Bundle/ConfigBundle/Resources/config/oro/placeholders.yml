@@ -1,0 +1,13 @@
+placeholders:
+    placeholders:
+        pin_tabs_list:
+            items:
+                timezone_indicator:
+                    order: 200
+                environment_indicator:
+                    order: 150
+    items:
+        timezone_indicator:
+            template: '@@TCConfig/Placeholders/timezone_indicator.html.twig'
+        environment_indicator:
+            template: '@@TCConfig/Placeholders/environment_indicator.html.twig'

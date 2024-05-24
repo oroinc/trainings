@@ -1,0 +1,14 @@
+tc:
+    setup:
+        system_configuration:
+            groups:
+                admin_configuration:
+                    title: Admin panel settings
+            fields:
+                timezone_indicator_enabled:
+                    label: 'Show timezone indicator'
+                    tooltip: 'Select to display the timezone indicator in the admin panel'
+    timezone_indicator:
+        label: 'Timezone'
+    environment_indicator:
+        label: 'Environment'

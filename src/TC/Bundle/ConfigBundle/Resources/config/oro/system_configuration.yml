@@ -1,0 +1,34 @@
+system_configuration:
+    groups:
+        admin_configuration:
+            title: tc.setup.system_configuration.groups.admin_configuration.title
+    fields:
+        tc_config.timezone_indicator_enabled:
+            data_type: boolean
+            type: Oro\Bundle\ConfigBundle\Form\Type\ConfigCheckbox
+            options:
+                label: tc.setup.system_configuration.fields.timezone_indicator_enabled.label
+                tooltip: tc.setup.system_configuration.fields.timezone_indicator_enabled.tooltip
+                required: false
+
+    tree:
+        system_configuration:
+            platform:
+                children:
+                    general_setup:
+                        children:
+                            application_settings:
+                                children:
+                                    admin_configuration:
+                                        children:
+                                            - tc_config.timezone_indicator_enabled
+        user_configuration:
+            platform:
+                children:
+                    general_setup:
+                        children:
+                            application_settings:
+                                children:
+                                    admin_configuration:
+                                        children:
+                                            - tc_config.timezone_indicator_enabled

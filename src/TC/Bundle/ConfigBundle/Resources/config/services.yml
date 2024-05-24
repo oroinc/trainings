@@ -1,0 +1,9 @@
+parameters:
+    environment_indicator: '%env(ENVIRONMENT_INDICATOR)%'
+
+services:
+    TC\Bundle\ConfigBundle\Twig\ParamentersExtension:
+        arguments:
+            - '@parameter_bag'
+        tags:
+            - { name: twig.extension }
