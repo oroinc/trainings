@@ -1,0 +1,2 @@
+bundles:
+    - { name: TC\Bundle\UserBundle\TCUserBundle, priority: 1000 }
