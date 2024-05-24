@@ -1,0 +1,11 @@
+services:
+    TC\Bundle\CaseBundle\EventListener\CustomerCaseGridListener:
+        tags:
+            - { name: kernel.event_listener, event: oro_datagrid.datagrid.build.after.customer-cases-grid, method: onBuildAfter }
+
+    TC\Bundle\CaseBundle\EventListener\CustomerUserByCustomerGridListener:
+        arguments:
+            - '@oro_entity.doctrine_helper'
+        tags:
+            - { name: kernel.event_listener, event: oro_datagrid.datagrid.build.before.customer-user-by-customer-grid, method: onBuildBefore }
+            - { name: kernel.event_listener, event: oro_datagrid.orm_datasource.result.after.customer-user-by-customer-grid, method: onResultAfter }

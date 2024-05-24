@@ -1,0 +1,6 @@
+oro:
+    case:
+        caseentity:
+            customer.label: 'Customer'
+            customer_user.label: 'Customer User'
+            ac_contact_count.label: 'Times contacted'

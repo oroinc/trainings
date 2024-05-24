@@ -1,0 +1,58 @@
+datagrids:
+    customer-cases-grid:
+        extends: base-case-grid
+        source:
+            query:
+                select:
+                    - customerUser.id as customerUserId
+                    - CONCAT_WS(' ', customerUser.firstName, customerUser.lastName) as cuName
+                join:
+                    left:
+                        - { join: caseEntity.customer, alias: customer }
+                        - { join: caseEntity.customer_user, alias: customerUser }
+                where:
+                    and:
+                        - customer.id = :id
+            bind_parameters:
+                - id
+        options:
+            entity_pagination: true
+        columns:
+            reportedAt:
+                renderable: false
+            closedAt:
+                renderable: false
+            cuName:
+                label: oro.case.caseentity.customer_user.label
+                type: twig
+                frontend_type: html
+                template: '@TCCase/Case/Datagrid/customerUser.html.twig'
+
+    customer-user-cases-grid:
+        extends: base-case-grid
+        source:
+            query:
+                select:
+                    - customer.id as customerId
+                    - customer.name as cName
+                join:
+                    left:
+                        - { join: caseEntity.customer, alias: customer }
+                        - { join: caseEntity.customer_user, alias: customerUser }
+                where:
+                    and:
+                        - customerUser.id = :id
+            bind_parameters:
+                - id
+        options:
+            entity_pagination: true
+        columns:
+            reportedAt:
+                renderable: false
+            closedAt:
+                renderable: false
+            cName:
+                label: oro.case.caseentity.customer.label
+                type: twig
+                frontend_type: html
+                template: '@TCCase/Case/Datagrid/customer.html.twig'

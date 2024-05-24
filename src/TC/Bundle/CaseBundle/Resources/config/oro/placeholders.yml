@@ -1,0 +1,13 @@
+placeholders:
+    placeholders:
+        view_content_data_additional_information:
+            items:
+                oro_customer_cases_grid: ~
+                oro_customer_user_cases_grid: ~
+    items:
+        oro_customer_cases_grid:
+            template: '@@TCCase/Case/customerUserCases.html.twig'
+            applicable: '@oro_ui.placeholder.filter->isInstanceOf($entity$, Oro\Bundle\CustomerBundle\Entity\CustomerUser)'
+        oro_customer_user_cases_grid:
+            template: '@@TCCase/Case/customerCases.html.twig'
+            applicable: '@oro_ui.placeholder.filter->isInstanceOf($entity$, Oro\Bundle\CustomerBundle\Entity\Customer)'
