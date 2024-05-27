@@ -44,15 +44,17 @@ workflows:
 #                                message: 'tc.sales.opportunity.owner_mismatch.flash_message'
 #                                type: 'warning'
 #
-                    - '@notify_owner':
-                          entity: $opportunity
-                    - '@flash_message':
+                    - '@tree':
                         conditions:
                             '@not':
                                 - '@is_owner_logged_user':
                                     owner: $opportunity.owner
-                        message: 'tc.sales.opportunity.flash_message.owner_mismatch'
-                        type: 'warning'
+                        actions:
+                            - '@notify_owner':
+                                  entity: $opportunity
+                            - '@flash_message':
+                                message: 'tc.sales.opportunity.flash_message.owner_mismatch'
+                                type: 'warning'
 # Customization end
             close_won_definition:
                 conditions:
