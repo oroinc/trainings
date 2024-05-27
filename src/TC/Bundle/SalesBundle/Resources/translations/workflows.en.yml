@@ -1,0 +1,99 @@
+oro:
+    workflow:
+        custom_opportunity_flow:
+            step:
+                open:
+                    label: Open
+                won:
+                    label: Won
+                lost:
+                    label: Lost
+            attribute:
+                close_reason_name:
+                    label: 'Close reason'
+                close_date:
+                    label: 'Expected close date'
+                status:
+                    label: 'Status'
+                budget_amount:
+                    label: 'Budget Amount'
+                close_revenue:
+                    label: 'Close Revenue'
+                close_reason:
+                    label: ''
+                contact:
+                    label: ''
+                customer_need:
+                    label: ''
+                notes:
+                    label: ''
+                opportunity_name:
+                    label: ''
+                probability:
+                    label: 'Probability'
+                proposed_solution:
+                    label: ''
+            transition:
+                __start__:
+                    label: 'Start Opportunity Management Flow'
+                    warning_message: ''
+                    attribute:
+                        probability:
+                            label: 'Probability'
+                        status:
+                            label: 'Status'
+                develop:
+                    label: Develop
+                    warning_message: ''
+                    attribute:
+                        budget_amount:
+                            label: 'Budget Amount'
+                        close_date:
+                            label: 'Expected close date'
+                        contact:
+                            label: 'Contact'
+                        customer_need:
+                            label: 'Customer need'
+                        probability:
+                            label: 'Probability'
+                        proposed_solution:
+                            label: 'Proposed solution'
+                        status:
+                            label: 'Status'
+                close_won:
+                    label: 'Close as Won'
+                    warning_message: ''
+                    attribute:
+                        close_date:
+                            label: 'Expected close date'
+                        close_revenue:
+                            label: 'Close Revenue'
+                close_lost:
+                    label: 'Close as Lost'
+                    warning_message: ''
+                    attribute:
+                        close_date:
+                            label: 'Expected close date'
+                        close_reason_name:
+                            label: 'Close reason'
+                reopen:
+                    label: Reopen
+                    warning_message: ''
+                    attribute:
+                        budget_amount:
+                            label: 'Budget Amount'
+                        close_date:
+                            label: 'Expected close date'
+                        contact:
+                            label: 'Contact'
+                        customer_need:
+                            label: 'Customer need'
+                        notes:
+                            label: 'Additional comments'
+                        probability:
+                            label: 'Probability'
+                        proposed_solution:
+                            label: 'Proposed solution'
+                        status:
+                            label: 'Status'
+            label: 'Custom Opportunity Management Flow'

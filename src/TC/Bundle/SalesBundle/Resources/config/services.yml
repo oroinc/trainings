@@ -1,0 +1,17 @@
+services:
+    TC\Bundle\SalesBundle\Workflow\Condition\IsOwnerLoggedUser:
+        arguments:
+            - '@oro_security.token_accessor'
+        tags:
+            - { name: oro_action.condition, alias: 'is_owner_logged_user' }
+
+    TC\Bundle\SalesBundle\Workflow\Action\NotifyOwner:
+        arguments:
+            - '@oro_action.expression.context_accessor'
+            - '@oro_config.manager'
+            - '@oro_security.owner.entity_owner_accessor'
+            - '@oro_entity.entity_name_resolver'
+            - '@oro_message_queue.message_producer'
+            - '@translator'
+        tags:
+            - { name: oro_action.action, alias: 'notify_owner' }

@@ -1,0 +1,2 @@
+imports:
+    - { resource: 'workflows/custom_opportunity_flow.yml' }
