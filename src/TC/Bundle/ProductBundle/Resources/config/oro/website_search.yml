@@ -1,0 +1,5 @@
+Oro\Bundle\ProductBundle\Entity\Product:
+    fields:
+        -
+            name: totalSold
+            type: integer

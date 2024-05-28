@@ -1,0 +1,26 @@
+services:
+    TC\Bundle\ProductBundle\EventListener\WebsiteSearchProductIndexerListener:
+        arguments:
+            - '@oro_entity.doctrine_helper'
+        tags:
+            - { name: kernel.event_listener, event: oro_website_search.event.index_entity.product, method: onWebsiteSearchIndex }
+
+    TC\Bundle\ProductBundle\EventListener\OrderListener:
+        arguments:
+            - '@oro_product.search.product_reindex_manager'
+        tags:
+            - { name: doctrine.orm.entity_listener, entity: 'Oro\Bundle\OrderBundle\Entity\Order', event: postRemove }
+            - { name: doctrine.orm.entity_listener, entity: 'Oro\Bundle\OrderBundle\Entity\Order', event: postPersist }
+
+    oro_catalog.website_search.repository.product:
+        class: 'TC\Bundle\ProductBundle\Search\ProductRepository'
+        parent: oro_website_search.repository.abstract
+        calls:
+            - [setEntityName, ['Oro\Bundle\ProductBundle\Entity\Product']]
+
+    TC\Bundle\ProductBundle\EventListener\FrontendProductDatagridListener:
+        arguments:
+            - '@oro_catalog.website_search.repository.product'
+        tags:
+            - { name: kernel.event_listener, event: oro_datagrid.search_datasource.result.after.frontend-product-search-grid, method: onResultAfter }
+            - { name: kernel.event_listener, event: oro_datagrid.datagrid.build.before.frontend-product-search-grid, method: onBuildBefore }

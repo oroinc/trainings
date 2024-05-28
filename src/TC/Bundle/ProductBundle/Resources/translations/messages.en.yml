@@ -1,0 +1,6 @@
+tc:
+    product:
+        top_selling:
+            label: Top Selling Product
+        total_sold:
+            label: Total Sold

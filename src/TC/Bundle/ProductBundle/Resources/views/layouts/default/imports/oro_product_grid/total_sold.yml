@@ -1,0 +1,8 @@
+layout:
+    actions:
+        - '@setBlockTheme':
+              themes:
+                    - '@TCProduct/layouts/default/imports/oro_product_grid/total_sold.html.twig'
+        - '@move':
+            id: product_datagrid_cell_totalSold
+            parentId: product_datagrid_row_product_specification
