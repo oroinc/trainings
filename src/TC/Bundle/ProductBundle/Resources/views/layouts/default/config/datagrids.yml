@@ -1,0 +1,10 @@
+datagrids:
+    frontend-product-search-grid:
+        source:
+            query:
+                select:
+                    - integer.totalSold as totalSold
+        columns:
+            totalSold:
+                label: tc.product.total_sold.label
+                frontend_type: integer

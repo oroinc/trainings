@@ -1,0 +1,10 @@
+{% block _product_datagrid_cell_totalSold_widget %}
+    <div>
+        <span class="product-item__sku-value" itemprop="sku">
+            {{ 'tc.product.total_sold.label'|trans }}: {{ product.totalSold }}
+            {% if product.is_top_selling %}
+                <span class="status-label status-label--success">{{ 'tc.product.top_selling.label'|trans }}</span>
+            {% endif %}
+        </span>
+    </div>
+{% endblock %}
