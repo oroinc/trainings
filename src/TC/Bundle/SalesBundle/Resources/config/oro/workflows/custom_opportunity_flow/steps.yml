@@ -1,0 +1,19 @@
+workflows:
+    custom_opportunity_flow:
+        steps:
+            open:
+                order: 10
+                allowed_transitions:
+                    - develop
+                    - close_won
+                    - close_lost
+            won:
+                order: 20
+                allowed_transitions:
+                    - reopen
+                is_final: true
+            lost:
+                order: 30
+                allowed_transitions:
+                    - reopen
+                is_final: true

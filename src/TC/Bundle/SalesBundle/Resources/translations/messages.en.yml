@@ -1,0 +1,9 @@
+tc:
+    sales:
+        opportunity:
+            owner_mismatch:
+                flash_message: "You modified other user's opportunity. We've sent notification to the owner."
+        owner_mismatch:
+            email:
+                subject: "Your Entity has been modified"
+                body: "Entity you own: {{ entityName }} was modified by another user, please review it"
