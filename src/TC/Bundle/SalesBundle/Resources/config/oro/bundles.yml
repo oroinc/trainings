@@ -1,2 +1,2 @@
 bundles:
-    - { name: TC\Bundle\SalesBundle\TcSalesBundle, priority: 1000 }
+    - { name: TC\Bundle\SalesBundle\TCSalesBundle, priority: 1000 }

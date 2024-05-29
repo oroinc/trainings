@@ -53,7 +53,7 @@ workflows:
                             - '@notify_owner':
                                   entity: $opportunity
                             - '@flash_message':
-                                message: 'tc.sales.opportunity.flash_message.owner_mismatch'
+                                message: 'tc.sales.opportunity.owner_mismatch.flash_message'
                                 type: 'warning'
 # Customization end
             close_won_definition:

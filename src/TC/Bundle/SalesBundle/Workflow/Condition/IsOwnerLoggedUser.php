@@ -25,6 +25,7 @@ class IsOwnerLoggedUser extends AbstractCondition implements ContextAccessorAwar
     {
         $loggedUser = $this->tokenAccessor->getUser();
         $owner = $this->resolveValue($context, $this->owner);
+
         return get_class($loggedUser) === get_class($owner) && $loggedUser?->getId() == $owner?->getId();
     }
 

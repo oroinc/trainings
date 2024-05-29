@@ -4,17 +4,13 @@ namespace TC\Bundle\SalesBundle\Workflow\Action;
 
 use Oro\Bundle\ConfigBundle\Config\ConfigManager;
 use Oro\Bundle\EmailBundle\Model\EmailHolderInterface;
-use Oro\Bundle\EmailBundle\Tools\EmailAddressHelper;
 use Oro\Bundle\EntityBundle\Provider\EntityNameResolver;
 use Oro\Bundle\NotificationBundle\Async\Topic\SendEmailNotificationTopic;
 use Oro\Bundle\SecurityBundle\Owner\EntityOwnerAccessor;
 use Oro\Component\Action\Action\AbstractAction;
 use Oro\Component\Action\Exception\InvalidParameterException;
 use Oro\Component\ConfigExpression\ContextAccessor;
-use Oro\Component\ConfigExpression\ContextAccessorAwareInterface;
-use Oro\Component\ConfigExpression\ContextAccessorAwareTrait;
 use Oro\Component\MessageQueue\Client\MessageProducerInterface;
-use Symfony\Component\PropertyAccess\PropertyPath;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
 /**
@@ -46,24 +42,23 @@ class NotifyOwner extends AbstractAction
         return $this;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     protected function executeAction($context): void
     {
         $entity = $this->contextAccessor->getValue($context, $this->options['entity']);
         $owner = $this->entityOwnerAccessor->getOwner($entity);
+
         if (!$owner instanceof EmailHolderInterface) {
             return;
         }
+
         $this->messageProducer->send(
             SendEmailNotificationTopic::getName(),
             [
                 'from' => $this->configManager->get('oro_notification.email_notification_sender_email'),
                 'toEmail' => $owner->getEmail(),
-                'subject' => $this->translator->trans('tc.sales.opportunity.owner_mismatch.email.subject'),
+                'subject' => $this->translator->trans('tc.sales.owner_mismatch.email.subject'),
                 'body' => $this->translator->trans(
-                    'tc.sales.opportunity.owner_mismatch.email.body',
+                    'tc.sales.owner_mismatch.email.body',
                     [
                         '{{ entityName }}' => $this->entityNameResolver->getName($entity),
                     ]
