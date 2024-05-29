@@ -9,15 +9,12 @@ use Oro\Bundle\WebsiteSearchBundle\Event\IndexEntityEvent;
 
 class WebsiteSearchProductIndexerListener
 {
-    public const TOTAL_SOLD_FIELD_NAME = 'totalSold';
+    public const string TOTAL_SOLD_FIELD_NAME = 'totalSold';
 
     public function __construct(private DoctrineHelper $doctrineHelper)
     {
     }
 
-    /**
-     * @param IndexEntityEvent $event
-     */
     public function onWebsiteSearchIndex(IndexEntityEvent $event): void
     {
         /** @var Product[] $products */

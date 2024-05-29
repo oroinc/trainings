@@ -5,7 +5,6 @@ namespace TC\Bundle\ProductBundle\EventListener;
 use Oro\Bundle\CatalogBundle\Search\ProductRepository;
 use Oro\Bundle\DataGridBundle\Datasource\ResultRecordInterface;
 use Oro\Bundle\DataGridBundle\Event\BuildBefore;
-use Oro\Bundle\EntityBundle\ORM\DoctrineHelper;
 use Oro\Bundle\SearchBundle\Datagrid\Event\SearchResultAfter;
 
 class FrontendProductDatagridListener
@@ -15,9 +14,6 @@ class FrontendProductDatagridListener
     ) {
     }
 
-    /**
-     * @param SearchResultAfter $event
-     */
     public function onResultAfter(SearchResultAfter $event): void
     {
         $records = $event->getRecords();
@@ -26,13 +22,10 @@ class FrontendProductDatagridListener
         foreach ($records as $record) {
             $this->setIsTopSelling($record, $topSelling);
         }
-//
+
         $event->setRecords($records);
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function onBuildBefore(BuildBefore $event)
     {
         $config = $event->getConfig();
