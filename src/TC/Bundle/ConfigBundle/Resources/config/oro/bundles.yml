@@ -1,0 +1,2 @@
+bundles:
+    - { name: TC\Bundle\ConfigBundle\TCConfigBundle, priority: 1000 }

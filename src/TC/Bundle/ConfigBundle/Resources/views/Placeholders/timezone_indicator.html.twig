@@ -1,0 +1,6 @@
+{% if oro_config_value('tc_config.timezone_indicator_enabled') %}
+<div class="timezone-indicator-wrapper">
+    <span class="timezone-indicator__label">{{ 'tc.timezone_indicator.label'|trans }}: </span>
+    <span class="timezone-indicator__value">{{ oro_timezone() }}</span>
+</div>
+{% endif %}

@@ -1,0 +1,13 @@
+.environment-indicator {
+  margin-right: 15px;
+  .environment-indicator-wrapper {
+    padding: 5px 10px;
+    background-color: $success;
+    color: white;
+    border-radius: 15px;
+
+    &.env-prod {
+      background-color: $danger-darken;
+    }
+  }
+}
