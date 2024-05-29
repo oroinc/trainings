@@ -1,11 +1,6 @@
 services:
     TC\Bundle\UserBundle\Helper\UserNameHelper: ~
 
-    # MQ
-    TC\Bundle\UserBundle\Async\Topics\GenerateUserFullNameExtendedTopic:
-        tags:
-            - { name: oro_message_queue.topic }
-
     TC\Bundle\UserBundle\Async\UserFullNameExtendedProcessor:
         arguments:
             - '@oro_entity.doctrine_helper'
@@ -13,7 +8,6 @@ services:
         tags:
             - { name: 'oro_message_queue.client.message_processor' }
 
-    # Listeners
     TC\Bundle\UserBundle\EventListener\UserListener:
         arguments:
             - '@oro_message_queue.client.message_producer'

@@ -10,6 +10,14 @@ use TC\Bundle\UserBundle\Async\Topics\GenerateUserFullNameExtendedTopic;
 
 class UserListener
 {
+    public const FIELDS_TO_MONITOR = [
+        'namePrefix',
+        'firstName',
+        'middleName',
+        'lastName',
+        'nameSuffix',
+    ];
+
     public function __construct(private MessageProducerInterface $messageProducer)
     {
     }
@@ -21,10 +29,11 @@ class UserListener
 
     public function preUpdate(User $user, PreUpdateEventArgs $event)
     {
-        if ($event->hasChangedField('namePrefix') || $event->hasChangedField('firstName')
-            || $event->hasChangedField('lastName') || $event->hasChangedField('middleName')
-            || $event->hasChangedField('nameSuffix')) {
-            $this->sendGenerateFullNameExtMessage($user);
+        foreach (self::FIELDS_TO_MONITOR as $field) {
+            if ($event->hasChangedField($field)) {
+                $this->sendGenerateFullNameExtMessage($user);
+                break;
+            }
         }
     }
 
