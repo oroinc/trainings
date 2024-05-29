@@ -1,8 +1,6 @@
-{% if oro_config_value('tc_config.timezone_indicator_enabled') %}
 <div class="environment-indicator">
     <span class="environment-indicator-wrapper env-{{ get_parameter_value('environment_indicator') }}">
         <span class="environment-indicator__label">{{ 'tc.environment_indicator.label'|trans }}: </span>
         <span class="environment-indicator__value">{{ get_parameter_value('environment_indicator') }}</span>
     </span>
 </div>
-{% endif %}
