@@ -16,7 +16,7 @@ class OrderListener
         $this->reindexProducts($order);
     }
 
-    public function postRemove(Order $order,): void
+    public function postRemove(Order $order): void
     {
         $this->reindexProducts($order);
     }
