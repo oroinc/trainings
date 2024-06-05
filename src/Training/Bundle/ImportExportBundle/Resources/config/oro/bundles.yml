@@ -1,0 +1,2 @@
+bundles:
+    - { name: Training\Bundle\ImportExportBundle\TrainingImportExportBundle, priority: 1000 }

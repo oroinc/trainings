@@ -1,0 +1,2 @@
+bundles:
+    - { name: Training\Bundle\MessageQueueBundle\TrainingMessageQueueBundle, priority: 1050 }

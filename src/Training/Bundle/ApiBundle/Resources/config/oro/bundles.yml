@@ -1,0 +1,2 @@
+bundles:
+    - { name: Training\Bundle\ApiBundle\TrainingApiBundle, priority: 1030 }

@@ -1,0 +1,2 @@
+bundles:
+    - { name: Training\Bundle\BundleExtensionBundle\TrainingBundleExtensionBundle, priority: 990 }

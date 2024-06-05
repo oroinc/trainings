@@ -1,0 +1,2 @@
+bundles:
+    - { name: Training\Bundle\WorkflowBundle\TrainingWorkflowBundle, priority: 1020 }
