@@ -27,7 +27,18 @@ oro:
 
     website_search:
         search_field_placeholder: "I am looking for"
+training:
+    theme:
+        system_configuration:
+            groups:
+                store_media_settings:
+                    title: "Store Info"
 
+            store_media_settings:
+                store_phone:
+                    label: "Store phone"
+                store_email:
+                    label: "Store email"
 new:
     product:
         content_widget_type:
@@ -35,46 +46,4 @@ new:
                 label: Video Banner
 
 
-    theme:
 
-        system_configuration:
-            groups:
-                custom_css_settings:
-                    title: 'Custom CSS Settings'
-                contact_information_settings:
-                    title: 'Contact Information'
-                social_media_settings:
-                    title: 'Social Media'
-                banner_image_settings:
-                    title: 'Banner Images'
-
-            fields:
-                custom_backend_css:
-                    tooltip: 'Custom CSS for Management console'
-
-                contact_phone:
-                    tooltip: 'Phone'
-                contact_address:
-                    tooltip: 'Address'
-                contact_email:
-                    tooltip: 'Email'
-                social_facebook:
-                    tooltip: 'Facebook'
-                social_instagram:
-                    tooltip: 'Instagram'
-                social_twitter:
-                    tooltip: 'Twitter'
-                social_linkedin:
-                    tooltip: 'LinkedIn'
-                social_youtube:
-                    tooltip: 'Youtube'
-                home_page_banner:
-                    tooltip: 'Home Page Banner'
-                login_page_top_left_banner:
-                    tooltip: 'Login Top Left Banner'
-                login_page_top_right_banner:
-                    tooltip: 'Login Top Right Banner'
-                login_page_bottom_left_banner:
-                    tooltip: 'Login Bottom Left Banner'
-                login_page_bottom_right_banner:
-                    tooltip: 'Login Bottom Right Banner'

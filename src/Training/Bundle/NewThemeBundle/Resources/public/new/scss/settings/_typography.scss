@@ -1,11 +1,11 @@
-/* @theme: acme; */
+/* @theme: new; */
 
 $custom-theme-fonts: (
         'custom-icon': (
                 'family': 'icomoon',
                 'variants': (
                         (
-                            'path': '#{$global-url}/demoacmetheme/acme/fonts/icomoon/fonts/icomoon',
+                            'path': '#{$global-url}/trainingnewtheme/new/fonts/icomoon/fonts/icomoon',
                             'weight': normal,
                             'style': normal
                         )
@@ -16,17 +16,17 @@ $custom-theme-fonts: (
                 'family': 'PTSans',
                     'variants': (
                     (
-                        'path': '#{$global-url}/demoacmetheme/acme/fonts/PTSans/PTSans-Regular',
+                        'path': '#{$global-url}/trainingnewtheme/new/fonts/PTSans/PTSans-Regular',
                         'weight': 400,
                         'style': normal
                     ),
                     (
-                        'path': '#{$global-url}/demoacmetheme/acme/fonts/PTSans/PTSans-Bold',
+                        'path': '#{$global-url}/trainingnewtheme/new/fonts/PTSans/PTSans-Bold',
                         'weight': 700,
                         'style': normal
                     ),
                     (
-                        'path': '#{$global-url}/demoacmetheme/acme/fonts/PTSans/PTSans-Italic',
+                        'path': '#{$global-url}/trainingnewtheme/new/fonts/PTSans/PTSans-Italic',
                         'weight': 400,
                         'style': italic
                     )

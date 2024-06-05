@@ -2,9 +2,9 @@
 
 $custom-color-palette: (
         'primary': (
-                'main': yellow,
-                'hover': blue,
-                'active': #05444d,
+                'main': #006769,
+                'hover': #40A578,
+                'active': #9DDE8B,
                 'disabled': #7d999e,
                 'light': #e8fcff
         ),
@@ -16,8 +16,8 @@ $custom-color-palette: (
                 'light': #ffefe8
         ),
         'secondary': (
-                'c1': #ffc221,
-                'c2': #f7941d,
+                'c1': #DBB5B5,
+                'c2': #987070,
                 'c3': #6e98dc,
                 'c4': #7ea6a4,
                 'c5': #197b30,
@@ -35,7 +35,7 @@ $custom-color-palette: (
                 'focus': #1a69fe
         ),
         'text': (
-                'primary': #002434,
+                'primary': #5A72A0,
                 'secondary': #45606e,
                 'disabled': #819299,
                 'inverse': #fff,

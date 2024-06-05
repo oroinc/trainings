@@ -1,0 +1,11 @@
+layout:
+    actions:
+
+        - '@add':
+            id: footer_social
+            parentId: page_footer_side
+            blockType: content_block
+            options:
+                alias: footer-social
+                vars:
+                    hideTitle: true

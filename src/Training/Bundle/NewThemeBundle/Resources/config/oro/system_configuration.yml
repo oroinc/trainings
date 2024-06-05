@@ -1,0 +1,41 @@
+system_configuration:
+    groups:
+        store_media_settings:
+            title: training.theme.system_configuration.groups.store_media_settings.title
+
+    fields:
+        training_new_theme.store_phone:
+            data_type: string
+            type: Symfony\Component\Form\Extension\Core\Type\TextType
+            search_type: text
+            priority: 100
+            options:
+                label: training.theme.system_configuration.store_media_settings.store_phone.label
+                required: false
+                constraints:
+                    - Url: ~
+
+        training_new_theme.store_support_email:
+            data_type: string
+            type: Symfony\Component\Form\Extension\Core\Type\TextType
+            search_type: text
+            priority: 90
+            options:
+                label: training.theme.system_configuration.store_media_settings.store_email.label
+                required: false
+                constraints:
+                    - Url: ~
+
+    tree:
+        system_configuration:
+            commerce:
+                children:
+                    design:
+                        children:
+                            theme:
+                                children:
+                                    store_media_settings:
+                                        priority: -200
+                                        children:
+                                            - training_new_theme.store_phone
+                                            - training_new_theme.store_support_email
