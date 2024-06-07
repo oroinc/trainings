@@ -1,1 +1,2 @@
 services:
+    Training\Bundle\UserNamingBundle\Provider\UserFullNameProvider: ~
