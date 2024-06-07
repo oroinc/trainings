@@ -1,4 +1,4 @@
-#Consider this workflow is reused in standart and single page checkout workflows
+#There is no customization in this file
 workflows:
     custom_b2b_flow_checkout:
         transition_definitions:
