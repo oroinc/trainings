@@ -1,0 +1,87 @@
+{% block _checkout_additional_options_widget %}
+    {% set attr = layout_attr_defaults(attr, {
+        '~class': " order-review-options__wrapper"
+    }) %}
+    <div {{ block('block_attributes') }}>
+        <h4 class="heading-bottom-offset">{{ "oro.checkout.workflow.order_options.label"|trans }}</h4>
+        <div class="order-review-options grid">
+            {% set shippingDateId= 'shipping-date-uid-'|uniqid %}
+            <div class="grid-col-6 grid-col-mobile-landscape-12" role="group">
+                <div class="datepicker-box datepicker-box--form-mode">
+                    <span class="datepicker-box__icon" aria-hidden="true"><span class="fa-calendar"></span></span>
+                    <label class="label label--full" for="{{ shippingDateId }}">{{ "oro.checkout.order_review.shipping_date"|trans }}</label>
+                    {{ form_widget(form.ship_until, {id: shippingDateId}) }}
+                </div>
+            </div>
+            <div class="grid-col-6 grid-col-mobile-landscape-12">
+                {% set poNumberId = 'oro_workflow_transition_po_number-uid-'|uniqid %}
+                <label class=" label label--full" for="{{ poNumberId }}">{{ "oro.checkout.order_review.po_number"|trans }}</label>
+                {{ form_widget(form.po_number, { 'id': poNumberId, 'attr': {
+                    'placeholder': 'oro.checkout.order_review.po_number_placeholder'|trans,
+                    'data-validation': { Length: {max: 255} }|json_encode
+                }}) }}
+            </div>
+{# CUSTOMIZATION START #}
+            <div class="grid-col-6 grid-col-mobile-landscape-12">
+                {% set contactNameId = 'contact-name-uid-'|uniqid %}
+                <label class=" label label--full" for="{{ contactNameId }}">{{ "tc.checkout.order_review.contact_name"|trans }}</label>
+                {{ form_widget(form.contact_name, { 'id': contactNameId, 'attr': {
+                    'data-validation': { Length: {max: 255} }|json_encode
+                }}) }}
+            </div>
+            <div class="grid-col-6 grid-col-mobile-landscape-12">
+                {% set contactPhoneId = 'contact-phone-uid-'|uniqid %}
+                <label class=" label label--full" for="{{ contactPhoneId }}">{{ "tc.checkout.order_review.contact_phone"|trans }}</label>
+                {{ form_widget(form.contact_phone, { 'id': contactPhoneId, 'attr': {
+                    'data-validation': { Length: {max: 255} }|json_encode
+                }}) }}
+            </div>
+{# CUSTOMIZATION END #}
+            <div class="grid-col-12">
+                {% set noteId = 'oro_workflow_transition_customer_notes-uid-'|uniqid %}
+                <label class=" label label--full" for="{{ noteId }}">{{ "oro.checkout.order_review.note"|trans }}</label>
+                {{ form_widget(form.customer_notes, { 'id': noteId, 'attr': {
+                    'placeholder': 'oro.checkout.order_review.note_placeholder'|trans,
+                    'data-page-component-elastic-area': ''
+                }}) }}
+            </div>
+
+            {% if workflowItem.data.get('allow_manual_source_remove') %}
+                {% set removeElementOptions = {} %}
+                {% set removeLabel = workflowItem.data.get('source_remove_label')|trans %}
+                {% if removeLabel %}
+                    {% set removeElementOptions = removeElementOptions|merge({label: removeLabel}) %}
+                {% endif %}
+                <div class="grid-col-6 grid-col-mobile-landscape-12">
+                    {{ form_row(form.remove_source, removeElementOptions) }}
+                </div>
+            {% endif %}
+            {% if form.state_token is defined %}
+                {{ form_row(form.state_token) }}
+            {% endif %}
+
+            {% if feature_enabled('checkout_customer_users_registration') and
+                checkout.registeredCustomerUser == null and
+                checkout.customerUser.isGuest
+            %}
+                <div class="grid-col-6 grid-col-mobile-landscape-12 grid"
+                  data-page-component-module="oroui/js/app/components/view-component"
+                  data-page-component-options="{{ {
+                      view: 'orocheckout/js/app/views/late-checkout-registration-view',
+                      selectors: {
+                          switcher: '#' ~ form.late_registration.offsetGet('is_late_registration_enabled').vars.id,
+                          fieldsContainer: '#checkout-late-registration-fields'
+                      }
+                  }|json_encode }}">
+                    <div id="checkout-late-registration-toggler" class="grid-col-12">
+                        {{ form_row(form.late_registration.offsetGet('is_late_registration_enabled')) }}
+                    </div>
+                    <div id="checkout-late-registration-fields" class="grid-col-12">
+                        {{ form_widget(form.late_registration, {'attr': {'class': 'grid'}}) }}
+                    </div>
+                </div>
+
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
