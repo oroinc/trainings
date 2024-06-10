@@ -14,7 +14,8 @@ use Oro\Bundle\EntityExtendBundle\Entity\ExtendEntityTrait;
     routeName: 'training_user_naming_index',
     routeView: 'training_user_naming_view',
     defaultValues: [
-        'entity' => ['icon' => 'fa-child']
+        'entity' => ['icon' => 'fa-child'],
+        'security' => ['type' => 'ACL', 'group_name' => '', 'category' => 'account_management']
     ]
 )]
 class UserNamingType implements ExtendEntityInterface
