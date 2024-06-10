@@ -28,10 +28,6 @@
         </div>
     {% endset %}
 
-    {% set relatedUsers %}
-        {{ DataGrid.renderGrid('training-related-users-by-naming-type', {namingTypeId: entity.id}) }}
-    {% endset %}
-
     {% set dataBlocks = [
         {
             'title': 'training.usernaming.sections.general'|trans,
@@ -39,14 +35,21 @@
             'subblocks': [
                 {'data' : [generalIinformation]}
             ]
-        },
-        {
+        }
+    ] %}
+
+    {% if is_granted('oro_user_user_view') %}
+        {% set relatedUsers %}
+            {{ DataGrid.renderGrid('training-related-users-by-naming-type', {namingTypeId: entity.id}) }}
+        {% endset %}
+
+        {% set dataBlocks = dataBlocks|merge( [{
             'title': 'training.usernaming.sections.related_users'|trans,
             'subblocks': [
                 {'data' : [relatedUsers]}
             ]
-        }
-    ] %}
+        }] ) %}
+    {% endif %}
 
     {% set id = 'user-naming-type' %}
     {% set data = { 'dataBlocks': dataBlocks } %}
