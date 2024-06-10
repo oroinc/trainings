@@ -22,7 +22,7 @@ class EntityNameProviderDecorator implements EntityNameProviderInterface
     /**
      * {@inheritdoc}
      */
-    public function getName($format, $locale, $entity): string
+    public function getName($format, $locale, $entity)
     {
         if ($entity instanceof User) {
             /** @var UserNamingType|null $namingType */

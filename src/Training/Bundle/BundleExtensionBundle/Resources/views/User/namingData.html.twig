@@ -6,3 +6,7 @@
 {{ UI.renderProperty('oro.user.middle_name.label'|trans, entity.middleName) }}
 {{ UI.renderProperty('oro.user.last_name.label'|trans, entity.lastName) }}
 {{ UI.renderProperty('oro.user.name_suffix.label'|trans, entity.nameSuffix) }}
+
+{% if entity.namingType %}
+    {{ UI.renderProperty('training.usernaming.full_formatted_name_example'|trans, entity.namingType.format|full_name_example) }}
+{% endif %}

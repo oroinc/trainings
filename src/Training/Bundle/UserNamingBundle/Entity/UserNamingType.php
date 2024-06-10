@@ -11,6 +11,8 @@ use Oro\Bundle\EntityExtendBundle\Entity\ExtendEntityTrait;
 #[ORM\Entity]
 #[ORM\Table(name: 'training_user_naming_type')]
 #[Config(
+    routeName: 'training_user_naming_index',
+    routeView: 'training_user_naming_view',
     defaultValues: [
         'entity' => ['icon' => 'fa-child']
     ]
@@ -77,5 +79,10 @@ class UserNamingType implements ExtendEntityInterface
         $this->format = $format;
 
         return $this;
+    }
+
+    public function __toString(): string
+    {
+        return $this->title;
     }
 }
