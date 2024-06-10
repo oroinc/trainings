@@ -1,0 +1,2 @@
+bundles:
+    - '@AcmeTheme/Form/fields.html.twig'

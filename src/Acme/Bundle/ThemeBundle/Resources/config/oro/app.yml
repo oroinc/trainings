@@ -1,0 +1,10 @@
+oro_theme:
+    themes:
+        oro:
+            logo: bundles/acmetheme/oro/images/logo.svg
+            icon: bundles/acmetheme/oro/images/favicons/favicon.ico
+
+oro_layout:
+    active_theme: acme
+    enabled_themes:
+        - acme

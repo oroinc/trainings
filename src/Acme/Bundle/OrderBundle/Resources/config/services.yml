@@ -1,0 +1,7 @@
+services:
+
+    Acme\Bundle\OrderBundle\EventListener\OrderViewEventListener:
+        arguments:
+            - '@translator'
+        tags:
+            - { name: kernel.event_listener, event: oro_ui.scroll_data.before.order-view, method: onView }

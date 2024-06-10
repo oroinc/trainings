@@ -19,3 +19,5 @@ This is technical description for practice task
 * Create new content block
   * show this block before footer
 
+ after install please load all migrations
+``php bin/concole oro:migration:data:load``

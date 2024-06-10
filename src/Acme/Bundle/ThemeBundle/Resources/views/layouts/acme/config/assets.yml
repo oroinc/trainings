@@ -1,0 +1,7 @@
+styles:
+    inputs:
+        - 'bundles/acmetheme/acme/scss/settings/global-settings.scss'
+
+        - 'bundles/acmetheme/acme/scss/styles.scss'
+
+    output: 'css/styles.css'

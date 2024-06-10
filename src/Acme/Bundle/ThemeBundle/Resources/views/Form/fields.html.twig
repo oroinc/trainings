@@ -1,0 +1,10 @@
+{% block _social_media_settings_acme_theme___social_media_settings_row %}
+    {% set attr = layout_attr_defaults(attr, {
+        '~class': ' login-holder'
+    }) %}
+
+    <div {{ block('block_attributes') }}>
+        test
+        {{ form_widget(form) }}
+    </div>
+{% endblock %}

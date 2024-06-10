@@ -1,0 +1,2 @@
+bundles:
+    - { name: Acme\Bundle\OrderBundle\AcmeOrderBundle, priority: 1000 }
