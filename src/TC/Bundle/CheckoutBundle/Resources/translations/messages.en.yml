@@ -1,0 +1,12 @@
+tc:
+    checkout:
+        order_review:
+            contact_name: Contact name
+            contact_phone: Contact phone
+
+oro:
+    order:
+        contact_name:
+            label: Contact name
+        contact_phone:
+            label: Contact phone

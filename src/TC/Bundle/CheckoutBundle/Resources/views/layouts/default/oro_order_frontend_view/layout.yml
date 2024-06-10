@@ -1,0 +1,22 @@
+layout:
+    actions:
+        - '@add':
+            id: order_contact_name
+            parentId: order_body_column_right
+            blockType: text
+            siblingId: order_payment_status
+            prepend: false
+            options:
+                text: '=data["order"].getContactName()'
+                label: 'oro.order.contact_name.label'
+                additional_block_prefixes: [ 'order_body_column_element' ]
+        - '@add':
+              id: order_contact_phone
+              parentId: order_body_column_right
+              blockType: text
+              siblingId: order_contact_name
+              prepend: false
+              options:
+                  text: '=data["order"].getContactPhone()'
+                  label: 'oro.order.contact_phone.label'
+                  additional_block_prefixes: [ 'order_body_column_element' ]
