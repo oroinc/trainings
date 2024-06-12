@@ -15,19 +15,18 @@ class CustomerFinder
     }
 
     /**
-     * @param Account[] $accounts
+     * @param Account $account
      * @return Customer[]
      */
-    public function getRelatedToAccounts(array $accounts)
+    public function getRelatedToAccount(Account $account)
     {
         $customers = [];
-        foreach ($accounts as $account) {
-            foreach ($this->getSalesCustomerRepository()->findBy(['account' => $account]) as $salesCustomer) {
-                if ($salesCustomer->getCustomerTarget() instanceof Customer) {
-                    $customers[] = $salesCustomer->getCustomerTarget();
-                }
+        foreach ($this->getSalesCustomerRepository()->findBy(['account' => $account]) as $salesCustomer) {
+            if ($salesCustomer->getCustomerTarget() instanceof Customer) {
+                $customers[] = $salesCustomer->getCustomerTarget();
             }
         }
+
         return $customers;
     }
 

@@ -23,7 +23,7 @@ class AccountViewListener
             return;
         }
 
-        $customers = $this->customerFinder->getRelatedToAccounts([$account]);
+        $customers = $this->customerFinder->getRelatedToAccount($account);
         $template = $event->getEnvironment()->render(
             '@TCAccount/Account/customersAddresses.html.twig',
             ['customers' => $customers]
