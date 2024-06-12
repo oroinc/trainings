@@ -1,0 +1,76 @@
+workflows:
+    user_naming_flow:
+        entity: Oro\Bundle\UserBundle\Entity\User
+        entity_attribute: user
+        start_step: not_initialized
+        defaults:
+            active: true
+        attributes:
+            namePrefix:
+                property_path: user.namePrefix
+            firstName:
+                property_path: user.firstName
+            middleName:
+                property_path: user.middleName
+            lastName:
+                property_path: user.lastName
+            nameSuffix:
+                property_path: user.nameSuffix
+            namingType:
+                property_path: user.namingType
+        steps:
+            not_initialized:
+                order: 10
+                allowed_transitions:
+                    - set_name_parts
+            name_parts_set:
+                order: 20
+                allowed_transitions:
+                    - set_naming_type
+                    - reinitialize_name
+            naming_types_set:
+                order: 30
+                allowed_transitions:
+                    - reinitialize_name
+        transitions:
+            set_name_parts:
+                step_to: name_parts_set
+                frontend_options:
+                    icon: fa-address-card
+                transition_definition: set_name_parts_definition
+                form_options:
+                    attribute_fields:
+                        namePrefix: ~
+                        firstName:
+                            options:
+                                required: true
+                                constraints:
+                                    - NotBlank: ~
+                        middleName: ~
+                        lastName:
+                            options:
+                                required: true
+                                constraints:
+                                    - NotBlank: ~
+                        nameSuffix: ~
+            set_naming_type:
+                step_to: naming_types_set
+                frontend_options:
+                    icon: fa-check
+                transition_definition: set_naming_type_definition
+                form_options:
+                    attribute_fields:
+                        namingType:
+                            form_type: Symfony\Bridge\Doctrine\Form\Type\EntityType
+                            options:
+                                choice_label: title
+                                class: Training\Bundle\UserNamingBundle\Entity\UserNamingType
+            reinitialize_name:
+                step_to: not_initialized
+                frontend_options:
+                    icon: fa-refresh
+                transition_definition: reinitialize_name_definition
+        transition_definitions:
+            set_name_parts_definition: {}
+            set_naming_type_definition: {}
+            reinitialize_name_definition: {}

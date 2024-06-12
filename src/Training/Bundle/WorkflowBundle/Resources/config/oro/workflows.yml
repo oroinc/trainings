@@ -1,0 +1,2 @@
+imports:
+    - { resource: 'workflows/user_naming_flow.yml' }
