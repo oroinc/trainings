@@ -1,0 +1,94 @@
+system_configuration:
+    groups:
+        custom_css_settings:
+            title: acme.theme.system_configuration.groups.custom_css_settings.title
+        social_media_settings:
+            title: acme.theme.system_configuration.groups.social_media_settings.title
+
+    fields:
+        acme_theme.custom_backend_css:
+            data_type: string
+            type: Symfony\Component\Form\Extension\Core\Type\TextareaType
+            search_type: text
+            priority: 10
+            options:
+                label: acme.theme.system_configuration.fields.custom_backend_css.tooltip
+                required: false
+
+        acme_theme.social_facebook:
+            data_type: string
+            type: Symfony\Component\Form\Extension\Core\Type\TextType
+            search_type: text
+            priority: 100
+            options:
+                label: acme.theme.system_configuration.fields.social_facebook.tooltip
+                required: false
+                constraints:
+                    - Url: ~
+        acme_theme.social_instagram:
+            data_type: string
+            type: Symfony\Component\Form\Extension\Core\Type\TextType
+            search_type: text
+            priority: 90
+            options:
+                label: acme.theme.system_configuration.fields.social_instagram.tooltip
+                required: false
+                constraints:
+                    - Url: ~
+        acme_theme.social_twitter:
+            data_type: string
+            type: Symfony\Component\Form\Extension\Core\Type\TextType
+            search_type: text
+            priority: 80
+            options:
+                label: acme.theme.system_configuration.fields.social_twitter.tooltip
+                required: false
+                constraints:
+                    - Url: ~
+        acme_theme.social_linkedin:
+            data_type: string
+            type: Symfony\Component\Form\Extension\Core\Type\TextType
+            search_type: text
+            priority: 70
+            options:
+                label: acme.theme.system_configuration.fields.social_linkedin.tooltip
+                required: false
+                constraints:
+                    - Url: ~
+        acme_theme.social_youtube:
+            data_type: string
+            type: Symfony\Component\Form\Extension\Core\Type\TextType
+            search_type: text
+            priority: 60
+            options:
+                label: acme.theme.system_configuration.fields.social_youtube.tooltip
+                required: false
+                constraints:
+                    - Url: ~
+
+    tree:
+        system_configuration:
+            platform:
+                children:
+                    general_setup:
+                        children:
+                            look_and_feel:
+                                children:
+                                    custom_css_settings:
+                                        priority: -200
+                                        children:
+                                            - acme_theme.custom_backend_css
+            commerce:
+                children:
+                    design:
+                        children:
+                            theme:
+                                children:
+                                    social_media_settings:
+                                        priority: -200
+                                        children:
+                                            - acme_theme.social_facebook
+                                            - acme_theme.social_instagram
+                                            - acme_theme.social_twitter
+                                            - acme_theme.social_linkedin
+                                            - acme_theme.social_youtube

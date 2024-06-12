@@ -1,0 +1,18 @@
+placeholders:
+    placeholders:
+        index_navButtons_before:
+            items:
+                actions_buttons: ~
+                order_import_button: ~
+        view_navButtons_after:
+            items:
+                print_order_buttons:
+                    order: 10
+    items:
+        order_import_button:
+            template: '@@AcmeOrder/order_import_button.html.twig'
+            acl: oro_order_create
+
+        print_order_buttons:
+            template: '@@AcmeOrder/Placeholders/printbuttons.html.twig'
+

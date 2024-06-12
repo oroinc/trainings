@@ -1,0 +1,6 @@
+layout:
+    actions:
+        - '@setOption':
+            id: body
+            optionName: attr.class
+            optionValue: 'plp-page'
