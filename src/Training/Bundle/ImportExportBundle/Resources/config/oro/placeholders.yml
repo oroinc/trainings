@@ -1,0 +1,9 @@
+placeholders:
+    placeholders:
+        index_navButtons_before:
+              items:
+                  training_import_export_buttons: ~
+
+    items:
+        training_import_export_buttons:
+            template: '@@TrainingImportExport/UserNaming/importExportButtons.html.twig'

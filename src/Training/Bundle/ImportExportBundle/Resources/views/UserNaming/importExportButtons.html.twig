@@ -1,0 +1,3 @@
+{% if app.request.get('_route') == 'training_user_naming_index' %}
+    {% include '@OroImportExport/ImportExport/buttons_from_configuration.html.twig' with {'alias': 'training_user_naming'} %}
+{% endif %}
