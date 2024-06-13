@@ -1,0 +1,5 @@
+oro_entity:
+    entity_aliases:
+        Training\Bundle\UserNamingBundle\Entity\UserNamingType:
+            alias:        usernaming
+            plural_alias: usernamings
