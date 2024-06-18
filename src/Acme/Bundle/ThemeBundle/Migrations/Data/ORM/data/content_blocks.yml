@@ -4,9 +4,20 @@ footer-social:
         <div class="footer__social">
             <span class="footer__social-title">Follow ORO:</span>
             <div class="footer__social-items">
-                <a href="https://www.facebook.com/OroCommerce-333319140210515/" target="_blank" class="footer__social-link"><img alt="Oro facebook"  src="/bundles/trainingnewtheme/new/images/facebook.svg"></a>
-                <a href="https://www.linkedin.com/company/oro-inc-" target="_blank" class="footer__social-link"><img alt="Oro linkedin"  class=" lazyloaded" src="/bundles/trainingnewtheme/new/images/linkedin.svg"></a>
-                <a href="https://twitter.com/OroCommerce " target="_blank" class="footer__social-link"><img alt="Oro twitter"  class=" lazyloaded" src="/bundles/trainingnewtheme/new/images/twitter.svg"></a>
-                <a href="https://www.youtube.com/channel/UClxsA8HS9KGEEsvFRn7JkvQ" target="_blank" class="footer__social-link"><img alt="Oro Youtube" class=" lazyloaded" src="/bundles/trainingnewtheme/new/images/youtube.svg"></a>
+                <a href="https://www.facebook.com/OroCommerce-333319140210515/" target="_blank" class="footer__social-link"><img alt="Oro facebook"  src="/bundles/acmetheme/acme/images/social/facebook.svg"></a>
+                <a href="https://www.linkedin.com/company/oro-inc-" target="_blank" class="footer__social-link"><img alt="Oro linkedin"  class=" lazyloaded" src="/bundles/acmetheme/acme/images/social/linkedin.svg"></a>
+                <a href="https://twitter.com/OroCommerce " target="_blank" class="footer__social-link"><img alt="Oro twitter"  class=" lazyloaded" src="/bundles/acmetheme/acme/images/social/twitter.svg"></a>
+                <a href="https://www.youtube.com/channel/UClxsA8HS9KGEEsvFRn7JkvQ" target="_blank" class="footer__social-link"><img alt="Oro Youtube" class=" lazyloaded" src="/bundles/acmetheme/acme/images/social/youtube.svg"></a>
             </div>
         </div>
+        
+
+contact-info:
+    title: Contact Us Info
+    content: >
+        <div class="boc">
+            <h2> This is title for Contact Us Info</h2>
+            <p>this is content for Contact us info section</p>   
+        </div>
+        
+

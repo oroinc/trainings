@@ -20,4 +20,4 @@ This is technical description for practice task
   * show this block before footer
 
  after install please load all migrations
-``php bin/concole oro:migration:data:load``
+``php bin/console oro:migration:data:load``
