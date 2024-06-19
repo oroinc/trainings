@@ -1,0 +1,19 @@
+layout:
+    actions:
+        - '@setBlockTheme':
+            themes:
+                - 'grid_theme_gallery-view.html.twig'
+
+        - '@move':
+            id: product_datagrid_row_product_shopping_lists
+            prepend: false
+            parentId: product_datagrid_row_product_content
+            siblingId: product_datagrid_row_product_image_holder
+
+        - '@add':
+            id: product_short_description
+            parentId: product_datagrid_row_product_secondary_content_container
+            blockType: container
+            prepend: true
+
+    conditions: 'context.has("theme_name") && context["theme_name"] == "gallery-view"'
