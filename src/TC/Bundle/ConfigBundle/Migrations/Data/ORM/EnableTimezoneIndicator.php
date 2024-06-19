@@ -18,18 +18,20 @@ class EnableTimezoneIndicator extends AbstractFixture implements ContainerAwareI
     {
         $configManager = $this->container->get('oro_config.global');
 
-        $configManager->set(Configuration::getConfigKey(Configuration::CONFIG_TIMEZONE_INDICATOR_ENABLED), true);
+        $configManager->set(
+            Configuration::getConfigKey(Configuration::CONFIG_TIMEZONE_INDICATOR_ENABLED),
+            true
+        );
         $configManager->flush();
 
         // per user
         $user = $this->getFirstUser($manager);
 
         $userConfigManager = $this->container->get('oro_config.user');
-        $userConfigManager->setScopeId($user->getId());
 
         $userConfigManager->set(
             Configuration::getConfigKey(Configuration::CONFIG_TIMEZONE_INDICATOR_ENABLED),
-            true,
+            false,
             $user->getId()
         );
         $userConfigManager->flush();
