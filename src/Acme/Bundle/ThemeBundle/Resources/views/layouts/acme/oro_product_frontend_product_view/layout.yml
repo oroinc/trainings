@@ -16,3 +16,9 @@ layout:
             options:
                 vars:
                     shortDescription: '=data["locale"].getLocalizedValue(data["product"].getShortDescriptions())'
+
+        - '@move':
+            id: product_view_attribute_group_general_attribute_text_sku
+            parentId: page_content
+            siblingId: page_title_container
+            prepend: false
