@@ -17,7 +17,6 @@ class CustomerUserByCustomerGridListener
     public function onBuildBefore(BuildBefore $event)
     {
         $config = $event->getDatagrid()->getConfig();
-
         $this->addRolesColumn($config);
     }
 
