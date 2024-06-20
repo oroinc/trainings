@@ -1,0 +1,6 @@
+{% import '@OroAsset/Asset.html.twig' as Asset %}
+{{ Asset.js_modules_config({
+    'acmecustomvalidation/js/validator/allowed-email-domain': {
+        allowedEmailDomain: oro_config_value('acme_custom_validation.allowed_email_domain')|default(null)
+    }
+}) }}

@@ -1,0 +1,7 @@
+acme:
+    custom_validation:
+        system_configuration:
+            fields:
+                allowed_email_domain:
+                    label: 'Allowed email domain'
+                    tooltip: 'Customer users email domain that will be allowed to be filled in the profile form (storefront)'

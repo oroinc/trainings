@@ -1,0 +1,22 @@
+system_configuration:
+    fields:
+        acme_custom_validation.allowed_email_domain:
+            data_type: string
+            type: Symfony\Component\Form\Extension\Core\Type\TextType
+            priority: 80
+            options:
+                label: acme.custom_validation.system_configuration.fields.allowed_email_domain.label
+                tooltip: acme.custom_validation.system_configuration.fields.allowed_email_domain.tooltip
+                required: false
+
+    tree:
+        system_configuration:
+            commerce:
+                children:
+                    sales:
+                        children:
+                            frontend_dashboard:
+                                children:
+                                    frontend_customer_settings:
+                                        children:
+                                            - acme_custom_validation.allowed_email_domain
