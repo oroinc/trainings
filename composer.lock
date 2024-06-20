@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1d9738878bd529b1d7b8cfc1364780c5",
+    "content-hash": "8c96d062f13734ed807e591a53567ffb",
     "packages": [
         {
             "name": "ass/xmlsecurity",
@@ -69,49 +69,6 @@
                 "source": "https://github.com/aschamberger/XmlSecurity"
             },
             "time": "2015-05-31T10:10:35+00:00"
-        },
-        {
-            "name": "authorizenet/authorizenet",
-            "version": "2.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/AuthorizeNet/sdk-php.git",
-                "reference": "a3e76f96f674d16e892f87c58bedb99dada4b067"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/AuthorizeNet/sdk-php/zipball/a3e76f96f674d16e892f87c58bedb99dada4b067",
-                "reference": "a3e76f96f674d16e892f87c58bedb99dada4b067",
-                "shasum": ""
-            },
-            "require": {
-                "ext-curl": "*",
-                "ext-json": "*",
-                "php": ">=5.6"
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "lib"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "description": "Official PHP SDK for Authorize.Net",
-            "homepage": "http://developer.authorize.net",
-            "keywords": [
-                "authorize.net",
-                "authorizenet",
-                "ecommerce",
-                "payment"
-            ],
-            "support": {
-                "issues": "https://github.com/AuthorizeNet/sdk-php/issues",
-                "source": "https://github.com/AuthorizeNet/sdk-php/tree/2.0.2"
-            },
-            "time": "2021-03-31T18:22:14+00:00"
         },
         {
             "name": "behat/transliterator",
@@ -2074,23 +2031,26 @@
         },
         {
             "name": "doctrine/sql-formatter",
-            "version": "1.2.0",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/sql-formatter.git",
-                "reference": "a321d114e0a18e6497f8a2cd6f890e000cc17ecc"
+                "reference": "d1ac84aef745c69ea034929eb6d65a6908b675cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/sql-formatter/zipball/a321d114e0a18e6497f8a2cd6f890e000cc17ecc",
-                "reference": "a321d114e0a18e6497f8a2cd6f890e000cc17ecc",
+                "url": "https://api.github.com/repos/doctrine/sql-formatter/zipball/d1ac84aef745c69ea034929eb6d65a6908b675cc",
+                "reference": "d1ac84aef745c69ea034929eb6d65a6908b675cc",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1 || ^8.0"
+                "php": "^8.1"
             },
             "require-dev": {
-                "bamarni/composer-bin-plugin": "^1.4"
+                "doctrine/coding-standard": "^12",
+                "phpstan/phpstan": "^1.10",
+                "phpunit/phpunit": "^10.5",
+                "vimeo/psalm": "^5.24"
             },
             "bin": [
                 "bin/sql-formatter"
@@ -2120,9 +2080,9 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/sql-formatter/issues",
-                "source": "https://github.com/doctrine/sql-formatter/tree/1.2.0"
+                "source": "https://github.com/doctrine/sql-formatter/tree/1.4.0"
             },
-            "time": "2023-08-16T21:49:04+00:00"
+            "time": "2024-05-08T08:12:09+00:00"
         },
         {
             "name": "dragonmantank/cron-expression",
@@ -2184,54 +2144,6 @@
                 }
             ],
             "time": "2023-08-10T19:36:49+00:00"
-        },
-        {
-            "name": "drewm/mailchimp-api",
-            "version": "v2.5.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/drewm/mailchimp-api.git",
-                "reference": "c6cdfab4ca6ddbc3b260913470bd0a4a5cb84c7a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/drewm/mailchimp-api/zipball/c6cdfab4ca6ddbc3b260913470bd0a4a5cb84c7a",
-                "reference": "c6cdfab4ca6ddbc3b260913470bd0a4a5cb84c7a",
-                "shasum": ""
-            },
-            "require": {
-                "ext-curl": "*",
-                "ext-json": "*",
-                "php": ">=5.3"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "7.0.*",
-                "vlucas/phpdotenv": "^2.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "DrewM\\MailChimp\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Drew McLellan",
-                    "email": "drew.mclellan@gmail.com",
-                    "homepage": "http://allinthehead.com/"
-                }
-            ],
-            "description": "Super-simple, minimum abstraction MailChimp API v3 wrapper",
-            "homepage": "https://github.com/drewm/mailchimp-api",
-            "support": {
-                "issues": "https://github.com/drewm/mailchimp-api/issues",
-                "source": "https://github.com/drewm/mailchimp-api/tree/master"
-            },
-            "time": "2019-08-06T09:24:58+00:00"
         },
         {
             "name": "egulias/email-validator",
@@ -3574,226 +3486,6 @@
             "time": "2023-06-07T14:49:52+00:00"
         },
         {
-            "name": "jean85/pretty-package-versions",
-            "version": "2.0.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Jean85/pretty-package-versions.git",
-                "reference": "f9fdd29ad8e6d024f52678b570e5593759b550b4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Jean85/pretty-package-versions/zipball/f9fdd29ad8e6d024f52678b570e5593759b550b4",
-                "reference": "f9fdd29ad8e6d024f52678b570e5593759b550b4",
-                "shasum": ""
-            },
-            "require": {
-                "composer-runtime-api": "^2.0.0",
-                "php": "^7.1|^8.0"
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3.2",
-                "jean85/composer-provided-replaced-stub-package": "^1.0",
-                "phpstan/phpstan": "^1.4",
-                "phpunit/phpunit": "^7.5|^8.5|^9.4",
-                "vimeo/psalm": "^4.3"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Jean85\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Alessandro Lai",
-                    "email": "alessandro.lai85@gmail.com"
-                }
-            ],
-            "description": "A library to get pretty versions strings of installed dependencies",
-            "keywords": [
-                "composer",
-                "package",
-                "release",
-                "versions"
-            ],
-            "support": {
-                "issues": "https://github.com/Jean85/pretty-package-versions/issues",
-                "source": "https://github.com/Jean85/pretty-package-versions/tree/2.0.6"
-            },
-            "time": "2024-03-08T09:58:59+00:00"
-        },
-        {
-            "name": "jms/metadata",
-            "version": "2.8.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/schmittjoh/metadata.git",
-                "reference": "7ca240dcac0c655eb15933ee55736ccd2ea0d7a6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/metadata/zipball/7ca240dcac0c655eb15933ee55736ccd2ea0d7a6",
-                "reference": "7ca240dcac0c655eb15933ee55736ccd2ea0d7a6",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.2|^8.0"
-            },
-            "require-dev": {
-                "doctrine/cache": "^1.0",
-                "doctrine/coding-standard": "^8.0",
-                "mikey179/vfsstream": "^1.6.7",
-                "phpunit/phpunit": "^8.5|^9.0",
-                "psr/container": "^1.0|^2.0",
-                "symfony/cache": "^3.1|^4.0|^5.0",
-                "symfony/dependency-injection": "^3.1|^4.0|^5.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Metadata\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Johannes M. Schmitt",
-                    "email": "schmittjoh@gmail.com"
-                },
-                {
-                    "name": "Asmir Mustafic",
-                    "email": "goetas@gmail.com"
-                }
-            ],
-            "description": "Class/method/property metadata management in PHP",
-            "keywords": [
-                "annotations",
-                "metadata",
-                "xml",
-                "yaml"
-            ],
-            "support": {
-                "issues": "https://github.com/schmittjoh/metadata/issues",
-                "source": "https://github.com/schmittjoh/metadata/tree/2.8.0"
-            },
-            "time": "2023-02-15T13:44:18+00:00"
-        },
-        {
-            "name": "jms/serializer",
-            "version": "3.30.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/schmittjoh/serializer.git",
-                "reference": "bf1105358123d7c02ee6cad08ea33ab535a09d5e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/serializer/zipball/bf1105358123d7c02ee6cad08ea33ab535a09d5e",
-                "reference": "bf1105358123d7c02ee6cad08ea33ab535a09d5e",
-                "shasum": ""
-            },
-            "require": {
-                "doctrine/instantiator": "^1.3.1 || ^2.0",
-                "doctrine/lexer": "^2.0 || ^3.0",
-                "jms/metadata": "^2.6",
-                "php": "^7.4 || ^8.0",
-                "phpstan/phpdoc-parser": "^1.20"
-            },
-            "require-dev": {
-                "doctrine/annotations": "^1.14 || ^2.0",
-                "doctrine/coding-standard": "^12.0",
-                "doctrine/orm": "^2.14 || ^3.0",
-                "doctrine/persistence": "^2.5.2 || ^3.0",
-                "doctrine/phpcr-odm": "^1.5.2 || ^2.0",
-                "ext-pdo_sqlite": "*",
-                "jackalope/jackalope-doctrine-dbal": "^1.3",
-                "ocramius/proxy-manager": "^1.0 || ^2.0",
-                "phpbench/phpbench": "^1.0",
-                "phpstan/phpstan": "^1.0.2",
-                "phpunit/phpunit": "^9.0 || ^10.0",
-                "psr/container": "^1.0 || ^2.0",
-                "rector/rector": "^0.19.0",
-                "symfony/dependency-injection": "^5.4 || ^6.0 || ^7.0",
-                "symfony/expression-language": "^5.4 || ^6.0 || ^7.0",
-                "symfony/filesystem": "^5.4 || ^6.0 || ^7.0",
-                "symfony/form": "^5.4 || ^6.0 || ^7.0",
-                "symfony/translation": "^5.4 || ^6.0 || ^7.0",
-                "symfony/uid": "^5.4 || ^6.0 || ^7.0",
-                "symfony/validator": "^5.4 || ^6.0 || ^7.0",
-                "symfony/yaml": "^5.4 || ^6.0 || ^7.0",
-                "twig/twig": "^1.34 || ^2.4 || ^3.0"
-            },
-            "suggest": {
-                "doctrine/collections": "Required if you like to use doctrine collection types as ArrayCollection.",
-                "symfony/cache": "Required if you like to use cache functionality.",
-                "symfony/uid": "Required if you'd like to serialize UID objects.",
-                "symfony/yaml": "Required if you'd like to use the YAML metadata format."
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "JMS\\Serializer\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Johannes M. Schmitt",
-                    "email": "schmittjoh@gmail.com"
-                },
-                {
-                    "name": "Asmir Mustafic",
-                    "email": "goetas@gmail.com"
-                }
-            ],
-            "description": "Library for (de-)serializing data of any complexity; supports XML, and JSON.",
-            "homepage": "http://jmsyst.com/libs/serializer",
-            "keywords": [
-                "deserialization",
-                "jaxb",
-                "json",
-                "serialization",
-                "xml"
-            ],
-            "support": {
-                "issues": "https://github.com/schmittjoh/serializer/issues",
-                "source": "https://github.com/schmittjoh/serializer/tree/3.30.0"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/goetas",
-                    "type": "github"
-                }
-            ],
-            "time": "2024-02-24T14:12:14+00:00"
-        },
-        {
             "name": "knplabs/gaufrette",
             "version": "v0.11.1",
             "source": {
@@ -4541,16 +4233,16 @@
         },
         {
             "name": "laminas/laminas-validator",
-            "version": "2.53.0",
+            "version": "2.54.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-validator.git",
-                "reference": "dbcfc19cb7f2e3eb3a27ba5d059c200e8404d72c"
+                "reference": "43b84efd642d55188dc0a8ffee4de187c1dc2314"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-validator/zipball/dbcfc19cb7f2e3eb3a27ba5d059c200e8404d72c",
-                "reference": "dbcfc19cb7f2e3eb3a27ba5d059c200e8404d72c",
+                "url": "https://api.github.com/repos/laminas/laminas-validator/zipball/43b84efd642d55188dc0a8ffee4de187c1dc2314",
+                "reference": "43b84efd642d55188dc0a8ffee4de187c1dc2314",
                 "shasum": ""
             },
             "require": {
@@ -4564,16 +4256,16 @@
             },
             "require-dev": {
                 "laminas/laminas-coding-standard": "^2.5",
-                "laminas/laminas-db": "^2.19",
-                "laminas/laminas-filter": "^2.34",
+                "laminas/laminas-db": "^2.20",
+                "laminas/laminas-filter": "^2.35.2",
                 "laminas/laminas-i18n": "^2.26.0",
                 "laminas/laminas-session": "^2.20",
                 "laminas/laminas-uri": "^2.11.0",
-                "phpunit/phpunit": "^10.5.15",
+                "phpunit/phpunit": "^10.5.20",
                 "psalm/plugin-phpunit": "^0.19.0",
                 "psr/http-client": "^1.0.3",
-                "psr/http-factory": "^1.0.2",
-                "vimeo/psalm": "^5.23.1"
+                "psr/http-factory": "^1.1.0",
+                "vimeo/psalm": "^5.24.0"
             },
             "suggest": {
                 "laminas/laminas-db": "Laminas\\Db component, required by the (No)RecordExists validator",
@@ -4621,7 +4313,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2024-04-01T09:26:32+00:00"
+            "time": "2024-05-16T12:03:20+00:00"
         },
         {
             "name": "lcobucci/clock",
@@ -5302,76 +4994,6 @@
             "time": "2021-11-24T02:52:38+00:00"
         },
         {
-            "name": "mongodb/mongodb",
-            "version": "1.15.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mongodb/mongo-php-library.git",
-                "reference": "3a681a3b2f2c0ebac227a3b86bb9057d0e6eb8f8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mongodb/mongo-php-library/zipball/3a681a3b2f2c0ebac227a3b86bb9057d0e6eb8f8",
-                "reference": "3a681a3b2f2c0ebac227a3b86bb9057d0e6eb8f8",
-                "shasum": ""
-            },
-            "require": {
-                "ext-hash": "*",
-                "ext-json": "*",
-                "ext-mongodb": "^1.15.0",
-                "jean85/pretty-package-versions": "^1.2 || ^2.0.1",
-                "php": "^7.2 || ^8.0",
-                "symfony/polyfill-php80": "^1.19"
-            },
-            "require-dev": {
-                "doctrine/coding-standard": "^9.0",
-                "squizlabs/php_codesniffer": "^3.6",
-                "symfony/phpunit-bridge": "^5.2",
-                "vimeo/psalm": "^4.28"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.15.x-dev"
-                }
-            },
-            "autoload": {
-                "files": [
-                    "src/functions.php"
-                ],
-                "psr-4": {
-                    "MongoDB\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Andreas Braun",
-                    "email": "andreas.braun@mongodb.com"
-                },
-                {
-                    "name": "Jeremy Mikola",
-                    "email": "jmikola@gmail.com"
-                }
-            ],
-            "description": "MongoDB driver library",
-            "homepage": "https://jira.mongodb.org/browse/PHPLIB",
-            "keywords": [
-                "database",
-                "driver",
-                "mongodb",
-                "persistence"
-            ],
-            "support": {
-                "issues": "https://github.com/mongodb/mongo-php-library/issues",
-                "source": "https://github.com/mongodb/mongo-php-library/tree/1.15.0"
-            },
-            "time": "2022-11-23T04:45:35+00:00"
-        },
-        {
             "name": "monolog/monolog",
             "version": "2.8.0",
             "source": {
@@ -5763,16 +5385,16 @@
         },
         {
             "name": "nette/php-generator",
-            "version": "v4.1.4",
+            "version": "v4.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/php-generator.git",
-                "reference": "b135071d8da108445e4df2fc6a75522b23c0237d"
+                "reference": "690b00d81d42d5633e4457c43ef9754573b6f9d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/php-generator/zipball/b135071d8da108445e4df2fc6a75522b23c0237d",
-                "reference": "b135071d8da108445e4df2fc6a75522b23c0237d",
+                "url": "https://api.github.com/repos/nette/php-generator/zipball/690b00d81d42d5633e4457c43ef9754573b6f9d6",
+                "reference": "690b00d81d42d5633e4457c43ef9754573b6f9d6",
                 "shasum": ""
             },
             "require": {
@@ -5826,9 +5448,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/php-generator/issues",
-                "source": "https://github.com/nette/php-generator/tree/v4.1.4"
+                "source": "https://github.com/nette/php-generator/tree/v4.1.5"
             },
-            "time": "2024-03-07T23:06:26+00:00"
+            "time": "2024-05-12T17:31:02+00:00"
         },
         {
             "name": "nette/utils",
@@ -5992,11 +5614,17 @@
         },
         {
             "name": "oro/calendar-bundle",
-            "version": "dev-master",
+            "version": "6.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oroinc/OroCalendarBundle.git",
+                "reference": "6d46f06180041a5dbc09304b2ed7bad7f4fd873d"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../package/calendar",
-                "reference": "678754ea8401cbca5d637b9f4d02101709d83d15"
+                "type": "zip",
+                "url": "https://api.github.com/repos/oroinc/OroCalendarBundle/zipball/6d46f06180041a5dbc09304b2ed7bad7f4fd873d",
+                "reference": "6d46f06180041a5dbc09304b2ed7bad7f4fd873d",
+                "shasum": ""
             },
             "require": {
                 "oro/platform": "6.0.*"
@@ -6018,6 +5646,7 @@
                     "/Tests/"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -6027,25 +5656,33 @@
                     "homepage": "http://www.orocrm.com"
                 }
             ],
-            "description": "Calendar bundle for OroPlatform-based applications.\nSee https://doc.oroinc.com/user/back-office/activities/calendar-events/ for more information.",
+            "description": "Calendar bundle for OroPlatform-based applications.See https://doc.oroinc.com/user/back-office/activities/calendar-events/ for more information.",
             "homepage": "https://github.com/oroinc/OroCalendarBundle.git",
             "keywords": [
-                "Calendar",
-                "Oro",
-                "OroCRM",
-                "OroPlatform"
+                "ORO",
+                "OroCrm",
+                "OroPlatform",
+                "calendar"
             ],
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "issues": "https://github.com/oroinc/OroCalendarBundle/issues",
+                "source": "https://github.com/oroinc/OroCalendarBundle/tree/6.0.1"
+            },
+            "time": "2024-04-02T13:51:37+00:00"
         },
         {
             "name": "oro/commerce",
-            "version": "dev-master",
+            "version": "6.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oroinc/orocommerce.git",
+                "reference": "ab247265c7d13a175739e6b9a89991c8a4d2bf5d"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../package/commerce",
-                "reference": "99b84c77c12d4732dc67209011f9e81c8f189f8e"
+                "type": "zip",
+                "url": "https://api.github.com/repos/oroinc/orocommerce/zipball/ab247265c7d13a175739e6b9a89991c8a4d2bf5d",
+                "reference": "ab247265c7d13a175739e6b9a89991c8a4d2bf5d",
+                "shasum": ""
             },
             "require": {
                 "besimple/soap-client": "^0.2.6",
@@ -6099,57 +5736,58 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Oro\\Bridge\\CalendarCommerce\\": "src/Oro/Bridge/CalendarCommerce",
-                    "Oro\\Bridge\\MarketingCommerce\\": "src/Oro/Bridge/MarketingCommerce",
-                    "Oro\\Bundle\\AlternativeCheckoutBundle\\": "src/Oro/Bundle/AlternativeCheckoutBundle",
-                    "Oro\\Bundle\\ApplicationBundle\\": "src/Oro/Bundle/ApplicationBundle",
-                    "Oro\\Bundle\\CatalogBundle\\": "src/Oro/Bundle/CatalogBundle",
-                    "Oro\\Bundle\\CheckoutBundle\\": "src/Oro/Bundle/CheckoutBundle",
+                    "Oro\\Component\\SEO\\": "src/Oro/Component/SEO",
+                    "Oro\\Component\\Tree\\": "src/Oro/Component/Tree",
                     "Oro\\Bundle\\CMSBundle\\": "src/Oro/Bundle/CMSBundle",
-                    "Oro\\Bundle\\CommerceBundle\\": "src/Oro/Bundle/CommerceBundle",
-                    "Oro\\Bundle\\CommerceEntityBundle\\": "src/Oro/Bundle/CommerceEntityBundle",
-                    "Oro\\Bundle\\ConsentBundle\\": "src/Oro/Bundle/ConsentBundle",
-                    "Oro\\Bundle\\FallbackBundle\\": "src/Oro/Bundle/FallbackBundle",
-                    "Oro\\Bundle\\FedexShippingBundle\\": "src/Oro/Bundle/FedexShippingBundle",
-                    "Oro\\Bundle\\FlatRateShippingBundle\\": "src/Oro/Bundle/FlatRateShippingBundle",
-                    "Oro\\Bundle\\FixedProductShippingBundle\\": "src/Oro/Bundle/FixedProductShippingBundle",
-                    "Oro\\Bundle\\FrontendLocalizationBundle\\": "src/Oro/Bundle/FrontendLocalizationBundle",
-                    "Oro\\Bundle\\FrontendTestFrameworkBundle\\": "src/Oro/Bundle/FrontendTestFrameworkBundle",
-                    "Oro\\Bundle\\InventoryBundle\\": "src/Oro/Bundle/InventoryBundle",
-                    "Oro\\Bundle\\MoneyOrderBundle\\": "src/Oro/Bundle/MoneyOrderBundle",
-                    "Oro\\Bundle\\OrderBundle\\": "src/Oro/Bundle/OrderBundle",
-                    "Oro\\Bundle\\PaymentBundle\\": "src/Oro/Bundle/PaymentBundle",
-                    "Oro\\Bundle\\PaymentTermBundle\\": "src/Oro/Bundle/PaymentTermBundle",
-                    "Oro\\Bundle\\PayPalBundle\\": "src/Oro/Bundle/PayPalBundle",
-                    "Oro\\Bundle\\PricingBundle\\": "src/Oro/Bundle/PricingBundle",
-                    "Oro\\Bundle\\ProductBundle\\": "src/Oro/Bundle/ProductBundle",
-                    "Oro\\Bundle\\PromotionBundle\\": "src/Oro/Bundle/PromotionBundle",
-                    "Oro\\Bundle\\RedirectBundle\\": "src/Oro/Bundle/RedirectBundle",
                     "Oro\\Bundle\\RFPBundle\\": "src/Oro/Bundle/RFPBundle",
-                    "Oro\\Bundle\\RuleBundle\\": "src/Oro/Bundle/RuleBundle",
-                    "Oro\\Bundle\\SaleBundle\\": "src/Oro/Bundle/SaleBundle",
                     "Oro\\Bundle\\SEOBundle\\": "src/Oro/Bundle/SEOBundle",
-                    "Oro\\Bundle\\ShippingBundle\\": "src/Oro/Bundle/ShippingBundle",
-                    "Oro\\Bundle\\ShoppingListBundle\\": "src/Oro/Bundle/ShoppingListBundle",
                     "Oro\\Bundle\\TaxBundle\\": "src/Oro/Bundle/TaxBundle",
                     "Oro\\Bundle\\UPSBundle\\": "src/Oro/Bundle/UPSBundle",
+                    "Oro\\Bundle\\RuleBundle\\": "src/Oro/Bundle/RuleBundle",
+                    "Oro\\Bundle\\SaleBundle\\": "src/Oro/Bundle/SaleBundle",
+                    "Oro\\Component\\Testing\\": "src/Oro/Component/Testing",
+                    "Oro\\Component\\Website\\": "src/Oro/Component/Website",
+                    "Oro\\Bundle\\OrderBundle\\": "src/Oro/Bundle/OrderBundle",
+                    "Oro\\Component\\Checkout\\": "src/Oro/Component/Checkout",
+                    "Oro\\Bundle\\PayPalBundle\\": "src/Oro/Bundle/PayPalBundle",
+                    "Oro\\Bundle\\CatalogBundle\\": "src/Oro/Bundle/CatalogBundle",
+                    "Oro\\Bundle\\ConsentBundle\\": "src/Oro/Bundle/ConsentBundle",
+                    "Oro\\Bundle\\PaymentBundle\\": "src/Oro/Bundle/PaymentBundle",
+                    "Oro\\Bundle\\PricingBundle\\": "src/Oro/Bundle/PricingBundle",
+                    "Oro\\Bundle\\ProductBundle\\": "src/Oro/Bundle/ProductBundle",
+                    "Oro\\Component\\Expression\\": "src/Oro/Component/Expression",
+                    "Oro\\Component\\WebCatalog\\": "src/Oro/Component/WebCatalog",
+                    "Oro\\Bundle\\CheckoutBundle\\": "src/Oro/Bundle/CheckoutBundle",
+                    "Oro\\Bundle\\CommerceBundle\\": "src/Oro/Bundle/CommerceBundle",
+                    "Oro\\Bundle\\FallbackBundle\\": "src/Oro/Bundle/FallbackBundle",
+                    "Oro\\Bundle\\RedirectBundle\\": "src/Oro/Bundle/RedirectBundle",
+                    "Oro\\Bundle\\ShippingBundle\\": "src/Oro/Bundle/ShippingBundle",
+                    "Oro\\Bundle\\InventoryBundle\\": "src/Oro/Bundle/InventoryBundle",
+                    "Oro\\Bundle\\PromotionBundle\\": "src/Oro/Bundle/PromotionBundle",
+                    "Oro\\Bridge\\CalendarCommerce\\": "src/Oro/Bridge/CalendarCommerce",
+                    "Oro\\Bundle\\MoneyOrderBundle\\": "src/Oro/Bundle/MoneyOrderBundle",
                     "Oro\\Bundle\\ValidationBundle\\": "src/Oro/Bundle/ValidationBundle",
                     "Oro\\Bundle\\VisibilityBundle\\": "src/Oro/Bundle/VisibilityBundle",
                     "Oro\\Bundle\\WebCatalogBundle\\": "src/Oro/Bundle/WebCatalogBundle",
+                    "Oro\\Bridge\\MarketingCommerce\\": "src/Oro/Bridge/MarketingCommerce",
+                    "Oro\\Bundle\\ApplicationBundle\\": "src/Oro/Bundle/ApplicationBundle",
+                    "Oro\\Bundle\\PaymentTermBundle\\": "src/Oro/Bundle/PaymentTermBundle",
+                    "Oro\\Bundle\\ShoppingListBundle\\": "src/Oro/Bundle/ShoppingListBundle",
+                    "Oro\\Bundle\\FedexShippingBundle\\": "src/Oro/Bundle/FedexShippingBundle",
                     "Oro\\Bundle\\WebsiteSearchBundle\\": "src/Oro/Bundle/WebsiteSearchBundle",
-                    "Oro\\Bundle\\WebsiteSearchSuggestionBundle\\": "src/Oro/Bundle/WebsiteSearchSuggestionBundle",
-                    "Oro\\Component\\Checkout\\": "src/Oro/Component/Checkout",
-                    "Oro\\Component\\Expression\\": "src/Oro/Component/Expression",
-                    "Oro\\Component\\SEO\\": "src/Oro/Component/SEO",
-                    "Oro\\Component\\Testing\\": "src/Oro/Component/Testing",
-                    "Oro\\Component\\Tree\\": "src/Oro/Component/Tree",
-                    "Oro\\Component\\WebCatalog\\": "src/Oro/Component/WebCatalog",
-                    "Oro\\Component\\Website\\": "src/Oro/Component/Website"
+                    "Oro\\Bundle\\CommerceEntityBundle\\": "src/Oro/Bundle/CommerceEntityBundle",
+                    "Oro\\Bundle\\FlatRateShippingBundle\\": "src/Oro/Bundle/FlatRateShippingBundle",
+                    "Oro\\Bundle\\AlternativeCheckoutBundle\\": "src/Oro/Bundle/AlternativeCheckoutBundle",
+                    "Oro\\Bundle\\FixedProductShippingBundle\\": "src/Oro/Bundle/FixedProductShippingBundle",
+                    "Oro\\Bundle\\FrontendLocalizationBundle\\": "src/Oro/Bundle/FrontendLocalizationBundle",
+                    "Oro\\Bundle\\FrontendTestFrameworkBundle\\": "src/Oro/Bundle/FrontendTestFrameworkBundle",
+                    "Oro\\Bundle\\WebsiteSearchSuggestionBundle\\": "src/Oro/Bundle/WebsiteSearchSuggestionBundle"
                 },
                 "exclude-from-classmap": [
                     "/Tests/"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "OSL-3.0"
             ],
@@ -6161,59 +5799,25 @@
             ],
             "description": "OroCommerce - an open-source Business to Business Commerce application. \\nThis package contains bundles and needs to be added as a dependency in an OroCommerce application.",
             "homepage": "https://github.com/orocommerce/orocommerce",
-            "transport-options": {
-                "relative": true
-            }
-        },
-        {
-            "name": "oro/commerce-authorizenet",
-            "version": "dev-master",
-            "dist": {
-                "type": "path",
-                "url": "../../package/authorizenet",
-                "reference": "21e9ad453fc3b3f97a9ff80d521eeaea2e8fae65"
+            "support": {
+                "issues": "https://github.com/oroinc/orocommerce/issues",
+                "source": "https://github.com/oroinc/orocommerce/tree/6.0.1"
             },
-            "require": {
-                "authorizenet/authorizenet": "~2.0.2",
-                "jms/serializer": "^1.2|^2.0|^3.0",
-                "oro/commerce": "6.0.*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "6.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Oro\\Bundle\\AuthorizeNetBundle\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "license": [
-                "OSL-3.0"
-            ],
-            "authors": [
-                {
-                    "name": "Oro, Inc",
-                    "homepage": "https://www.orocommerce.com"
-                }
-            ],
-            "description": "OroCommerce Authorize.Net integration",
-            "homepage": "https://github.com/orocommerce/OroAuthorizeNetBundle.git",
-            "transport-options": {
-                "relative": true
-            }
+            "time": "2024-05-06T22:17:23+00:00"
         },
         {
             "name": "oro/commerce-crm",
-            "version": "dev-master",
+            "version": "6.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oroinc/orocommerce-orocrm.git",
+                "reference": "b8c4482ba752d7e03e60177edb61466c43064b35"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../package/commerce-crm",
-                "reference": "719ed4da18e4d28997c6098aa972be5656bda4b1"
+                "type": "zip",
+                "url": "https://api.github.com/repos/oroinc/orocommerce-orocrm/zipball/b8c4482ba752d7e03e60177edb61466c43064b35",
+                "reference": "b8c4482ba752d7e03e60177edb61466c43064b35",
+                "shasum": ""
             },
             "require": {
                 "oro/commerce": "6.0.*",
@@ -6228,9 +5832,9 @@
             "autoload": {
                 "psr-4": {
                     "Oro\\Bridge\\ContactUs\\": "src/Oro/Bridge/ContactUs",
-                    "Oro\\Bridge\\CustomerAccount\\": "src/Oro/Bridge/CustomerAccount",
-                    "Oro\\Bridge\\CustomerSales\\": "src/Oro/Bridge/CustomerSales",
                     "Oro\\Bridge\\QuoteSales\\": "src/Oro/Bridge/QuoteSales",
+                    "Oro\\Bridge\\CustomerSales\\": "src/Oro/Bridge/CustomerSales",
+                    "Oro\\Bridge\\CustomerAccount\\": "src/Oro/Bridge/CustomerAccount",
                     "Oro\\Bridge\\SaleActivityContact\\": "src/Oro/Bridge/SaleActivityContact",
                     "Oro\\Bundle\\DemoDataCommerceCRMBundle\\": "src/Oro/Bundle/DemoDataCommerceCRMBundle"
                 },
@@ -6238,6 +5842,7 @@
                     "/Tests/"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "OSL-3.0"
             ],
@@ -6249,103 +5854,24 @@
             ],
             "description": "OroCRM integration for OroCommerce",
             "homepage": "https://github.com/orocommerce/orocommerce-orocrm",
-            "transport-options": {
-                "relative": true
-            }
-        },
-        {
-            "name": "oro/commerce-demo-checkouts",
-            "version": "dev-master",
-            "dist": {
-                "type": "path",
-                "url": "../../package/commerce-demo-checkouts",
-                "reference": "0d161d796814e6e7fc0f77126681f9f3e9e07435"
+            "support": {
+                "source": "https://github.com/oroinc/orocommerce-orocrm/tree/6.0.1"
             },
-            "require": {
-                "oro/commerce": "6.0.*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "6.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Oro\\Bundle\\AlternativeCheckoutBundle\\": "src/Oro/Bundle/AlternativeCheckoutBundle"
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "license": [
-                "OSL-3.0"
-            ],
-            "authors": [
-                {
-                    "name": "Oro, Inc",
-                    "homepage": "https://www.orocommerce.com"
-                }
-            ],
-            "description": "OroCommerce checkout customization examples",
-            "homepage": "https://github.com/oroinc/commerce-demo-checkouts",
-            "transport-options": {
-                "relative": true
-            }
-        },
-        {
-            "name": "oro/commerce-infinitepay",
-            "version": "dev-master",
-            "dist": {
-                "type": "path",
-                "url": "../../package/infinitepay",
-                "reference": "1323971d55374d0b1d74106ab8b3d68b93f3a94c"
-            },
-            "require": {
-                "besimple/soap-client": "^0.2.6",
-                "oro/commerce": "6.0.*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "6.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Oro\\Bundle\\InfinitePayBundle\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "license": [
-                "OSL-3.0"
-            ],
-            "authors": [
-                {
-                    "name": "Oro, Inc",
-                    "homepage": "http://www.orocommerce.com"
-                }
-            ],
-            "description": "OroCommerce InfinitePay Integration",
-            "homepage": "https://github.com/orocommerce/OroInfinitePayBundle.git",
-            "keywords": [
-                "InfinitePay",
-                "Integration",
-                "Oro"
-            ],
-            "transport-options": {
-                "relative": true
-            }
+            "time": "2024-05-01T09:53:16+00:00"
         },
         {
             "name": "oro/cookie-consent",
-            "version": "dev-master",
+            "version": "6.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oroinc/cookie-consent.git",
+                "reference": "749db29373890324f489e6cae805b6f04b513f96"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../package/cookie-consent",
-                "reference": "aa0c35cc4be2eacf4e55644e5d348aa8327e0421"
+                "type": "zip",
+                "url": "https://api.github.com/repos/oroinc/cookie-consent/zipball/749db29373890324f489e6cae805b6f04b513f96",
+                "reference": "749db29373890324f489e6cae805b6f04b513f96",
+                "shasum": ""
             },
             "require": {
                 "oro/commerce": "6.0.*"
@@ -6364,6 +5890,7 @@
                     "/Tests/"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "OSL-3.0"
             ],
@@ -6376,22 +5903,30 @@
             "description": "Oro Commerce Cookie Consent",
             "homepage": "https://github.com/laboro/OroCookieConsentBundle.git",
             "keywords": [
-                "Commerce",
-                "Consent",
-                "Cookie",
-                "Oro"
+                "ORO",
+                "commerce",
+                "consent",
+                "cookie"
             ],
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "issues": "https://github.com/oroinc/cookie-consent/issues",
+                "source": "https://github.com/oroinc/cookie-consent/tree/6.0.0"
+            },
+            "time": "2024-03-27T20:58:31+00:00"
         },
         {
             "name": "oro/crm",
-            "version": "dev-master",
+            "version": "6.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oroinc/crm.git",
+                "reference": "fd296f0475090a3d5063567f2909aa67979d43c6"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../package/crm",
-                "reference": "e108d409cf8af59adbe586f62363055698b1297b"
+                "type": "zip",
+                "url": "https://api.github.com/repos/oroinc/crm/zipball/fd296f0475090a3d5063567f2909aa67979d43c6",
+                "reference": "fd296f0475090a3d5063567f2909aa67979d43c6",
+                "shasum": ""
             },
             "require": {
                 "oro/calendar-bundle": "6.0.*",
@@ -6434,27 +5969,28 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Oro\\Bridge\\CalendarCRM\\": "src/Oro/Bridge/CalendarCRM",
                     "Oro\\Bridge\\CallCRM\\": "src/Oro/Bridge/CallCRM",
-                    "Oro\\Bridge\\CustomerPortalCRM\\": "src/Oro/Bridge/CustomerPortalCRM",
                     "Oro\\Bridge\\TaskCRM\\": "src/Oro/Bridge/TaskCRM",
-                    "Oro\\Bundle\\AccountBundle\\": "src/Oro/Bundle/AccountBundle",
-                    "Oro\\Bundle\\ActivityContactBundle\\": "src/Oro/Bundle/ActivityContactBundle",
-                    "Oro\\Bundle\\AnalyticsBundle\\": "src/Oro/Bundle/AnalyticsBundle",
+                    "Oro\\Bundle\\CRMBundle\\": "src/Oro/Bundle/CRMBundle",
                     "Oro\\Bundle\\CaseBundle\\": "src/Oro/Bundle/CaseBundle",
+                    "Oro\\Bridge\\CalendarCRM\\": "src/Oro/Bridge/CalendarCRM",
+                    "Oro\\Bundle\\SalesBundle\\": "src/Oro/Bundle/SalesBundle",
+                    "Oro\\Bundle\\AccountBundle\\": "src/Oro/Bundle/AccountBundle",
                     "Oro\\Bundle\\ChannelBundle\\": "src/Oro/Bundle/ChannelBundle",
                     "Oro\\Bundle\\ContactBundle\\": "src/Oro/Bundle/ContactBundle",
-                    "Oro\\Bundle\\ContactUsBundle\\": "src/Oro/Bundle/ContactUsBundle",
-                    "Oro\\Bundle\\CRMBundle\\": "src/Oro/Bundle/CRMBundle",
                     "Oro\\Bundle\\DemoDataBundle\\": "src/Oro/Bundle/DemoDataBundle",
+                    "Oro\\Bundle\\AnalyticsBundle\\": "src/Oro/Bundle/AnalyticsBundle",
+                    "Oro\\Bundle\\ContactUsBundle\\": "src/Oro/Bundle/ContactUsBundle",
                     "Oro\\Bundle\\ReportCRMBundle\\": "src/Oro/Bundle/ReportCRMBundle",
-                    "Oro\\Bundle\\SalesBundle\\": "src/Oro/Bundle/SalesBundle",
+                    "Oro\\Bridge\\CustomerPortalCRM\\": "src/Oro/Bridge/CustomerPortalCRM",
+                    "Oro\\Bundle\\ActivityContactBundle\\": "src/Oro/Bundle/ActivityContactBundle",
                     "Oro\\Bundle\\TestFrameworkCRMBundle\\": "src/Oro/Bundle/TestFrameworkCRMBundle"
                 },
                 "exclude-from-classmap": [
                     "/Tests/"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "OSL-3.0"
             ],
@@ -6466,17 +6002,25 @@
             ],
             "description": "OroCRM",
             "homepage": "https://github.com/oroinc/crm.git",
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "issues": "https://github.com/oroinc/crm/issues",
+                "source": "https://github.com/oroinc/crm/tree/6.0.1"
+            },
+            "time": "2024-05-01T09:53:16+00:00"
         },
         {
             "name": "oro/crm-call-bundle",
-            "version": "dev-master",
+            "version": "6.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oroinc/OroCRMCallBundle.git",
+                "reference": "df83b671a88d89ab1f77876e0914091fc09e53de"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../package/call",
-                "reference": "dad9636d7f80836917e9ab78c1ee6da79345e4f3"
+                "type": "zip",
+                "url": "https://api.github.com/repos/oroinc/OroCRMCallBundle/zipball/df83b671a88d89ab1f77876e0914091fc09e53de",
+                "reference": "df83b671a88d89ab1f77876e0914091fc09e53de",
+                "shasum": ""
             },
             "require": {
                 "oro/platform": "6.0.*"
@@ -6495,6 +6039,7 @@
                     "/Tests/"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "OSL-3.0"
             ],
@@ -6507,20 +6052,28 @@
             "description": "Oro Call Bundle",
             "homepage": "https://github.com/oroinc/OroCRMCallBundle.git",
             "keywords": [
-                "Call",
-                "Oro"
+                "ORO",
+                "call"
             ],
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "issues": "https://github.com/oroinc/OroCRMCallBundle/issues",
+                "source": "https://github.com/oroinc/OroCRMCallBundle/tree/6.0.0"
+            },
+            "time": "2024-03-30T09:34:29+00:00"
         },
         {
             "name": "oro/crm-dotmailer",
-            "version": "dev-master",
+            "version": "6.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oroinc/OroCRMDotmailerBundle.git",
+                "reference": "04c0628804e3bbdfba9dc191706e6520301236b0"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../package/dotmailer",
-                "reference": "40f2f8a98828b17481624f04b27a4303d34fafd3"
+                "type": "zip",
+                "url": "https://api.github.com/repos/oroinc/OroCRMDotmailerBundle/zipball/04c0628804e3bbdfba9dc191706e6520301236b0",
+                "reference": "04c0628804e3bbdfba9dc191706e6520301236b0",
+                "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
@@ -6542,6 +6095,7 @@
                     "/Tests/"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "OSL-3.0"
             ],
@@ -6553,17 +6107,25 @@
             ],
             "description": "Oro dotdigital integration",
             "homepage": "https://github.com/oroinc/OroCRMDotmailerBundle.git",
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "issues": "https://github.com/oroinc/OroCRMDotmailerBundle/issues",
+                "source": "https://github.com/oroinc/OroCRMDotmailerBundle/tree/6.0.0"
+            },
+            "time": "2024-03-30T09:34:29+00:00"
         },
         {
             "name": "oro/crm-task-bundle",
-            "version": "dev-master",
+            "version": "6.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oroinc/OroCRMTaskBundle.git",
+                "reference": "2cc36552751f7bf13c8dc2faf18442855733a717"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../package/task",
-                "reference": "7072cc091dbbd190efefa5ed69a1ceb28d21e081"
+                "type": "zip",
+                "url": "https://api.github.com/repos/oroinc/OroCRMTaskBundle/zipball/2cc36552751f7bf13c8dc2faf18442855733a717",
+                "reference": "2cc36552751f7bf13c8dc2faf18442855733a717",
+                "shasum": ""
             },
             "require": {
                 "oro/platform": "6.0.*"
@@ -6582,6 +6144,7 @@
                     "/Tests/"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "OSL-3.0"
             ],
@@ -6594,20 +6157,28 @@
             "description": "Oro Task Bundle",
             "homepage": "https://github.com/oroinc/OroCRMTaskBundle.git",
             "keywords": [
-                "Oro",
-                "Task"
+                "ORO",
+                "task"
             ],
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "issues": "https://github.com/oroinc/OroCRMTaskBundle/issues",
+                "source": "https://github.com/oroinc/OroCRMTaskBundle/tree/6.0.1"
+            },
+            "time": "2024-04-30T10:14:29+00:00"
         },
         {
             "name": "oro/crm-zendesk",
-            "version": "dev-master",
+            "version": "6.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oroinc/OroCRMZendeskBundle.git",
+                "reference": "f184ed91c652c07e0f6c53e76c9edeac3d150fb4"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../package/zendesk",
-                "reference": "7858ae0003aa9ef8aa357846745dc7e04ee22547"
+                "type": "zip",
+                "url": "https://api.github.com/repos/oroinc/OroCRMZendeskBundle/zipball/f184ed91c652c07e0f6c53e76c9edeac3d150fb4",
+                "reference": "f184ed91c652c07e0f6c53e76c9edeac3d150fb4",
+                "shasum": ""
             },
             "require": {
                 "oro/crm": "6.0.*"
@@ -6626,6 +6197,7 @@
                     "/Tests/"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "OSL-3.0"
             ],
@@ -6638,21 +6210,29 @@
             "description": "OroCRM Zendesk Integration",
             "homepage": "https://github.com/oroinc/OroCRMZendeskBundle.git",
             "keywords": [
-                "Integration",
-                "Oro",
-                "Zendesk"
+                "ORO",
+                "Zendesk",
+                "integration"
             ],
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "issues": "https://github.com/oroinc/OroCRMZendeskBundle/issues",
+                "source": "https://github.com/oroinc/OroCRMZendeskBundle/tree/6.0.0"
+            },
+            "time": "2024-03-30T09:34:29+00:00"
         },
         {
             "name": "oro/customer-portal",
-            "version": "dev-master",
+            "version": "6.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oroinc/customer-portal.git",
+                "reference": "96f0df89a88094a33da4c3d9c433446d04b99a0a"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../package/customer-portal",
-                "reference": "0f06f79c056711f17c469df289b29a0af2f5084e"
+                "type": "zip",
+                "url": "https://api.github.com/repos/oroinc/customer-portal/zipball/96f0df89a88094a33da4c3d9c433446d04b99a0a",
+                "reference": "96f0df89a88094a33da4c3d9c433446d04b99a0a",
+                "shasum": ""
             },
             "require": {
                 "oro/calendar-bundle": "6.0.*",
@@ -6672,19 +6252,20 @@
             },
             "autoload": {
                 "psr-4": {
+                    "Oro\\Bundle\\WebsiteBundle\\": "src/Oro/Bundle/WebsiteBundle",
+                    "Oro\\Bundle\\CustomerBundle\\": "src/Oro/Bundle/CustomerBundle",
+                    "Oro\\Bundle\\FrontendBundle\\": "src/Oro/Bundle/FrontendBundle",
+                    "Oro\\Bundle\\StyleBookBundle\\": "src/Oro/Bundle/StyleBookBundle",
                     "Oro\\Bridge\\CRMCustomerPortal\\": "src/Oro/Bridge/CRMCustomerPortal",
                     "Oro\\Bundle\\CommerceMenuBundle\\": "src/Oro/Bundle/CommerceMenuBundle",
-                    "Oro\\Bundle\\CustomerBundle\\": "src/Oro/Bundle/CustomerBundle",
                     "Oro\\Bundle\\FrontendAttachmentBundle\\": "src/Oro/Bundle/FrontendAttachmentBundle",
-                    "Oro\\Bundle\\FrontendBundle\\": "src/Oro/Bundle/FrontendBundle",
-                    "Oro\\Bundle\\FrontendImportExportBundle\\": "src/Oro/Bundle/FrontendImportExportBundle",
-                    "Oro\\Bundle\\StyleBookBundle\\": "src/Oro/Bundle/StyleBookBundle",
-                    "Oro\\Bundle\\WebsiteBundle\\": "src/Oro/Bundle/WebsiteBundle"
+                    "Oro\\Bundle\\FrontendImportExportBundle\\": "src/Oro/Bundle/FrontendImportExportBundle"
                 },
                 "exclude-from-classmap": [
                     "/Tests/"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "OSL-3.0"
             ],
@@ -6695,9 +6276,11 @@
                 }
             ],
             "homepage": "https://github.com/oroinc/customer-portal",
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "issues": "https://github.com/oroinc/customer-portal/issues",
+                "source": "https://github.com/oroinc/customer-portal/tree/6.0.1"
+            },
+            "time": "2024-05-07T02:44:51+00:00"
         },
         {
             "name": "oro/doctrine-extensions",
@@ -6762,156 +6345,18 @@
             "time": "2024-02-09T16:27:49+00:00"
         },
         {
-            "name": "oro/google-tag-manager-bundle",
-            "version": "dev-master",
-            "dist": {
-                "type": "path",
-                "url": "../../package/google-tag-manager",
-                "reference": "822ccd3c359397f14c6f1bfec91f937cf26c8860"
-            },
-            "require": {
-                "oro/commerce": "6.0.*"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "6.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Oro\\Bundle\\GoogleTagManagerBundle\\": "src/Oro/Bundle/GoogleTagManagerBundle"
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "license": [
-                "OSL-3.0"
-            ],
-            "authors": [
-                {
-                    "name": "Oro, Inc",
-                    "homepage": "http://www.oroinc.com"
-                }
-            ],
-            "description": "Oro Google Tag Manager integration",
-            "homepage": "https://github.com/oroinc/google-tag-manager-bundle",
-            "keywords": [
-                "Google",
-                "Integration",
-                "Manager",
-                "Oro",
-                "Tag"
-            ],
-            "transport-options": {
-                "relative": true
-            }
-        },
-        {
-            "name": "oro/gridfs-config",
-            "version": "dev-master",
-            "dist": {
-                "type": "path",
-                "url": "../../package/gridfs-config",
-                "reference": "9499d30a60ca6c9af80851b4baa930d5069b8b06"
-            },
-            "require": {
-                "knplabs/knp-gaufrette-bundle": "~0.8.0",
-                "mongodb/mongodb": "1.15.*",
-                "oro/platform": "6.0.*"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "9.5.13"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "6.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Oro\\Bundle\\GridFSConfigBundle\\": "src/Oro/Bundle/GridFSConfigBundle"
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Oro, Inc",
-                    "homepage": "http://oroinc.com"
-                }
-            ],
-            "description": "GridFS adapter configuration for Gaufrette",
-            "homepage": "https://github.com/oroinc/gridfs-config",
-            "keywords": [
-                "GridFS",
-                "Mongo",
-                "MongoDB",
-                "Oro",
-                "OroPlatform"
-            ],
-            "transport-options": {
-                "relative": true
-            }
-        },
-        {
-            "name": "oro/mailchimp",
-            "version": "dev-master",
-            "dist": {
-                "type": "path",
-                "url": "../../package/mailchimp",
-                "reference": "bbf496acb717a7ed722b5c173f612781d0d643e7"
-            },
-            "require": {
-                "drewm/mailchimp-api": "^2.5",
-                "oro/crm": "6.0.*",
-                "oro/marketing": "6.0.*"
-            },
-            "conflict": {
-                "oro/crm-mail-chimp": "*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "6.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Oro\\Bundle\\MailChimpBundle\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "license": [
-                "OSL-3.0"
-            ],
-            "authors": [
-                {
-                    "name": "Oro, Inc",
-                    "homepage": "http://www.oroinc.com"
-                }
-            ],
-            "description": "Oro MailChimp integration",
-            "homepage": "https://github.com/oroinc/OroMailChimpBundle.git",
-            "transport-options": {
-                "relative": true
-            }
-        },
-        {
             "name": "oro/marketing",
-            "version": "dev-master",
+            "version": "6.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oroinc/OroCRMMarketingBundle.git",
+                "reference": "dc1b21a538bfea348aac6d68f5b7bfe25603e301"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../package/marketing",
-                "reference": "dd478e6680964fbae33338f8909ab10995e4ec02"
+                "type": "zip",
+                "url": "https://api.github.com/repos/oroinc/OroCRMMarketingBundle/zipball/dc1b21a538bfea348aac6d68f5b7bfe25603e301",
+                "reference": "dc1b21a538bfea348aac6d68f5b7bfe25603e301",
+                "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
@@ -6926,14 +6371,15 @@
             "autoload": {
                 "psr-4": {
                     "Oro\\Bundle\\CampaignBundle\\": "src/Oro/Bundle/CampaignBundle",
-                    "Oro\\Bundle\\MarketingActivityBundle\\": "src/Oro/Bundle/MarketingActivityBundle",
+                    "Oro\\Bundle\\TrackingBundle\\": "src/Oro/Bundle/TrackingBundle",
                     "Oro\\Bundle\\MarketingListBundle\\": "src/Oro/Bundle/MarketingListBundle",
-                    "Oro\\Bundle\\TrackingBundle\\": "src/Oro/Bundle/TrackingBundle"
+                    "Oro\\Bundle\\MarketingActivityBundle\\": "src/Oro/Bundle/MarketingActivityBundle"
                 },
                 "exclude-from-classmap": [
                     "/Tests/"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "OSL-3.0"
             ],
@@ -6946,22 +6392,29 @@
             "description": "Oro Marketing Bundles",
             "homepage": "https://github.com/oroinc/OroCRMMarketingBundle.git",
             "keywords": [
-                "Campaign",
-                "Marketing",
-                "Oro",
-                "Tracking"
+                "ORO",
+                "campaign",
+                "marketing",
+                "tracking"
             ],
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "source": "https://github.com/oroinc/OroCRMMarketingBundle/tree/6.0.0"
+            },
+            "time": "2024-03-30T09:34:29+00:00"
         },
         {
             "name": "oro/oauth2-server",
-            "version": "dev-master",
+            "version": "6.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oroinc/oauth2-server.git",
+                "reference": "2ec9a401d81169c508f07bf7970f0250d11d573a"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../package/oauth2-server",
-                "reference": "d8b17ec8b056588a4b2bf331e1243ce557f6735d"
+                "type": "zip",
+                "url": "https://api.github.com/repos/oroinc/oauth2-server/zipball/2ec9a401d81169c508f07bf7970f0250d11d573a",
+                "reference": "2ec9a401d81169c508f07bf7970f0250d11d573a",
+                "shasum": ""
             },
             "require": {
                 "ext-sodium": "*",
@@ -6983,6 +6436,7 @@
                     "/Tests/"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -6995,21 +6449,29 @@
             "description": "Oro OAuth 2.0 authorization and resource server for BAP",
             "homepage": "https://github.com/oroinc/oauth2-server",
             "keywords": [
-                "OAuth",
-                "OAuth2",
-                "ORO"
+                "ORO",
+                "oauth",
+                "oauth2"
             ],
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "issues": "https://github.com/oroinc/oauth2-server/issues",
+                "source": "https://github.com/oroinc/oauth2-server/tree/6.0.1"
+            },
+            "time": "2024-04-30T10:14:29+00:00"
         },
         {
             "name": "oro/platform",
-            "version": "dev-master",
+            "version": "6.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oroinc/platform.git",
+                "reference": "a2728039196ba92eb8258fdf7dab070819891148"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../package/platform",
-                "reference": "7359ed8411da155f9c231b44e564dd9fa80a8eb1"
+                "type": "zip",
+                "url": "https://api.github.com/repos/oroinc/platform/zipball/a2728039196ba92eb8258fdf7dab070819891148",
+                "reference": "a2728039196ba92eb8258fdf7dab070819891148",
+                "shasum": ""
             },
             "require": {
                 "ass/xmlsecurity": "1.1.1",
@@ -7224,104 +6686,105 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Oro\\Bundle\\ActionBundle\\": "src/Oro/Bundle/ActionBundle",
-                    "Oro\\Bundle\\ActivityBundle\\": "src/Oro/Bundle/ActivityBundle",
-                    "Oro\\Bundle\\ActivityListBundle\\": "src/Oro/Bundle/ActivityListBundle",
-                    "Oro\\Bundle\\AddressBundle\\": "src/Oro/Bundle/AddressBundle",
+                    "Oro\\Component\\Log\\": "src/Oro/Component/Log",
+                    "Oro\\Component\\Math\\": "src/Oro/Component/Math",
+                    "Oro\\Bundle\\UIBundle\\": "src/Oro/Bundle/UIBundle",
                     "Oro\\Bundle\\ApiBundle\\": "src/Oro/Bundle/ApiBundle",
-                    "Oro\\Bundle\\AssetBundle\\": "src/Oro/Bundle/AssetBundle",
-                    "Oro\\Bundle\\AttachmentBundle\\": "src/Oro/Bundle/AttachmentBundle",
-                    "Oro\\Bundle\\BatchBundle\\": "src/Oro/Bundle/BatchBundle",
-                    "Oro\\Bundle\\BusinessEntitiesBundle\\": "src/Oro/Bundle/BusinessEntitiesBundle",
-                    "Oro\\Bundle\\CacheBundle\\": "src/Oro/Bundle/CacheBundle",
-                    "Oro\\Bundle\\ChartBundle\\": "src/Oro/Bundle/ChartBundle",
-                    "Oro\\Bundle\\CommentBundle\\": "src/Oro/Bundle/CommentBundle",
-                    "Oro\\Bundle\\ConfigBundle\\": "src/Oro/Bundle/ConfigBundle",
+                    "Oro\\Bundle\\SSOBundle\\": "src/Oro/Bundle/SSOBundle",
+                    "Oro\\Bundle\\TagBundle\\": "src/Oro/Bundle/TagBundle",
+                    "Oro\\Component\\Action\\": "src/Oro/Component/Action",
+                    "Oro\\Component\\Config\\": "src/Oro/Component/Config",
+                    "Oro\\Component\\Layout\\": "src/Oro/Component/Layout",
                     "Oro\\Bundle\\CronBundle\\": "src/Oro/Bundle/CronBundle",
-                    "Oro\\Bundle\\CurrencyBundle\\": "src/Oro/Bundle/CurrencyBundle",
-                    "Oro\\Bundle\\DashboardBundle\\": "src/Oro/Bundle/DashboardBundle",
-                    "Oro\\Bundle\\DataAuditBundle\\": "src/Oro/Bundle/DataAuditBundle",
-                    "Oro\\Bundle\\DataGridBundle\\": "src/Oro/Bundle/DataGridBundle",
-                    "Oro\\Bundle\\DigitalAssetBundle\\": "src/Oro/Bundle/DigitalAssetBundle",
-                    "Oro\\Bundle\\DistributionBundle\\": "src/Oro/Bundle/DistributionBundle",
-                    "Oro\\Bundle\\DraftBundle\\": "src/Oro/Bundle/DraftBundle",
-                    "Oro\\Bundle\\EmailBundle\\": "src/Oro/Bundle/EmailBundle",
-                    "Oro\\Bundle\\EmbeddedFormBundle\\": "src/Oro/Bundle/EmbeddedFormBundle",
-                    "Oro\\Bundle\\EntityBundle\\": "src/Oro/Bundle/EntityBundle",
-                    "Oro\\Bundle\\EntityConfigBundle\\": "src/Oro/Bundle/EntityConfigBundle",
-                    "Oro\\Bundle\\EntityExtendBundle\\": "src/Oro/Bundle/EntityExtendBundle",
-                    "Oro\\Bundle\\EntityMergeBundle\\": "src/Oro/Bundle/EntityMergeBundle",
-                    "Oro\\Bundle\\EntityPaginationBundle\\": "src/Oro/Bundle/EntityPaginationBundle",
-                    "Oro\\Bundle\\ExpressionLanguageBundle\\": "src/Oro/Bundle/ExpressionLanguageBundle",
-                    "Oro\\Bundle\\FeatureToggleBundle\\": "src/Oro/Bundle/FeatureToggleBundle",
-                    "Oro\\Bundle\\FilterBundle\\": "src/Oro/Bundle/FilterBundle",
                     "Oro\\Bundle\\FormBundle\\": "src/Oro/Bundle/FormBundle",
-                    "Oro\\Bundle\\GaufretteBundle\\": "src/Oro/Bundle/GaufretteBundle",
-                    "Oro\\Bundle\\GoogleIntegrationBundle\\": "src/Oro/Bundle/GoogleIntegrationBundle",
                     "Oro\\Bundle\\HelpBundle\\": "src/Oro/Bundle/HelpBundle",
                     "Oro\\Bundle\\ImapBundle\\": "src/Oro/Bundle/ImapBundle",
-                    "Oro\\Bundle\\ImportExportBundle\\": "src/Oro/Bundle/ImportExportBundle",
-                    "Oro\\Bundle\\InstallerBundle\\": "src/Oro/Bundle/InstallerBundle",
-                    "Oro\\Bundle\\IntegrationBundle\\": "src/Oro/Bundle/IntegrationBundle",
+                    "Oro\\Bundle\\NoteBundle\\": "src/Oro/Bundle/NoteBundle",
+                    "Oro\\Bundle\\SoapBundle\\": "src/Oro/Bundle/SoapBundle",
+                    "Oro\\Bundle\\SyncBundle\\": "src/Oro/Bundle/SyncBundle",
+                    "Oro\\Bundle\\UserBundle\\": "src/Oro/Bundle/UserBundle",
+                    "Oro\\Component\\Routing\\": "src/Oro/Component/Routing",
+                    "Oro\\Component\\Testing\\": "src/Oro/Component/Testing",
+                    "Oro\\Bundle\\AssetBundle\\": "src/Oro/Bundle/AssetBundle",
+                    "Oro\\Bundle\\BatchBundle\\": "src/Oro/Bundle/BatchBundle",
+                    "Oro\\Bundle\\CacheBundle\\": "src/Oro/Bundle/CacheBundle",
+                    "Oro\\Bundle\\ChartBundle\\": "src/Oro/Bundle/ChartBundle",
+                    "Oro\\Bundle\\DraftBundle\\": "src/Oro/Bundle/DraftBundle",
+                    "Oro\\Bundle\\EmailBundle\\": "src/Oro/Bundle/EmailBundle",
+                    "Oro\\Bundle\\ScopeBundle\\": "src/Oro/Bundle/ScopeBundle",
+                    "Oro\\Bundle\\ThemeBundle\\": "src/Oro/Bundle/ThemeBundle",
+                    "Oro\\Component\\PhpUtils\\": "src/Oro/Component/PhpUtils",
+                    "Oro\\Bundle\\ActionBundle\\": "src/Oro/Bundle/ActionBundle",
+                    "Oro\\Bundle\\ConfigBundle\\": "src/Oro/Bundle/ConfigBundle",
+                    "Oro\\Bundle\\EntityBundle\\": "src/Oro/Bundle/EntityBundle",
+                    "Oro\\Bundle\\FilterBundle\\": "src/Oro/Bundle/FilterBundle",
                     "Oro\\Bundle\\LayoutBundle\\": "src/Oro/Bundle/LayoutBundle",
                     "Oro\\Bundle\\LocaleBundle\\": "src/Oro/Bundle/LocaleBundle",
                     "Oro\\Bundle\\LoggerBundle\\": "src/Oro/Bundle/LoggerBundle",
-                    "Oro\\Bundle\\MaintenanceBundle\\": "src/Oro/Bundle/MaintenanceBundle",
-                    "Oro\\Bundle\\MessageQueueBundle\\": "src/Oro/Bundle/MessageQueueBundle",
-                    "Oro\\Bundle\\MicrosoftIntegrationBundle\\": "src/Oro/Bundle/MicrosoftIntegrationBundle",
-                    "Oro\\Bundle\\MigrationBundle\\": "src/Oro/Bundle/MigrationBundle",
-                    "Oro\\Bundle\\NavigationBundle\\": "src/Oro/Bundle/NavigationBundle",
-                    "Oro\\Bundle\\NoteBundle\\": "src/Oro/Bundle/NoteBundle",
-                    "Oro\\Bundle\\NotificationBundle\\": "src/Oro/Bundle/NotificationBundle",
-                    "Oro\\Bundle\\OrganizationBundle\\": "src/Oro/Bundle/OrganizationBundle",
-                    "Oro\\Bundle\\PlatformBundle\\": "src/Oro/Bundle/PlatformBundle",
-                    "Oro\\Bundle\\QueryDesignerBundle\\": "src/Oro/Bundle/QueryDesignerBundle",
-                    "Oro\\Bundle\\RedisConfigBundle\\": "src/Oro/Bundle/RedisConfigBundle",
-                    "Oro\\Bundle\\ReminderBundle\\": "src/Oro/Bundle/ReminderBundle",
                     "Oro\\Bundle\\ReportBundle\\": "src/Oro/Bundle/ReportBundle",
-                    "Oro\\Bundle\\ScopeBundle\\": "src/Oro/Bundle/ScopeBundle",
                     "Oro\\Bundle\\SearchBundle\\": "src/Oro/Bundle/SearchBundle",
-                    "Oro\\Bundle\\SecurityBundle\\": "src/Oro/Bundle/SecurityBundle",
+                    "Oro\\Component\\Exception\\": "src/Oro/Component/Exception",
+                    "Oro\\Component\\TestUtils\\": "src/Oro/Component/TestUtils",
+                    "Oro\\Bundle\\AddressBundle\\": "src/Oro/Bundle/AddressBundle",
+                    "Oro\\Bundle\\CommentBundle\\": "src/Oro/Bundle/CommentBundle",
                     "Oro\\Bundle\\SegmentBundle\\": "src/Oro/Bundle/SegmentBundle",
                     "Oro\\Bundle\\SidebarBundle\\": "src/Oro/Bundle/SidebarBundle",
-                    "Oro\\Bundle\\SanitizeBundle\\": "src/Oro/Bundle/SanitizeBundle",
-                    "Oro\\Bundle\\SoapBundle\\": "src/Oro/Bundle/SoapBundle",
-                    "Oro\\Bundle\\SSOBundle\\": "src/Oro/Bundle/SSOBundle",
-                    "Oro\\Bundle\\SyncBundle\\": "src/Oro/Bundle/SyncBundle",
-                    "Oro\\Bundle\\TagBundle\\": "src/Oro/Bundle/TagBundle",
-                    "Oro\\Bundle\\TestFrameworkBundle\\": "src/Oro/Bundle/TestFrameworkBundle",
-                    "Oro\\Bundle\\ThemeBundle\\": "src/Oro/Bundle/ThemeBundle",
-                    "Oro\\Bundle\\TranslationBundle\\": "src/Oro/Bundle/TranslationBundle",
-                    "Oro\\Bundle\\UIBundle\\": "src/Oro/Bundle/UIBundle",
-                    "Oro\\Bundle\\UserBundle\\": "src/Oro/Bundle/UserBundle",
-                    "Oro\\Bundle\\ViewSwitcherBundle\\": "src/Oro/Bundle/ViewSwitcherBundle",
                     "Oro\\Bundle\\WindowsBundle\\": "src/Oro/Bundle/WindowsBundle",
-                    "Oro\\Bundle\\WorkflowBundle\\": "src/Oro/Bundle/WorkflowBundle",
-                    "Oro\\Bundle\\WsseAuthenticationBundle\\": "src/Oro/Bundle/WsseAuthenticationBundle",
-                    "Oro\\Component\\Action\\": "src/Oro/Component/Action",
-                    "Oro\\Component\\ChainProcessor\\": "src/Oro/Component/ChainProcessor",
-                    "Oro\\Component\\Config\\": "src/Oro/Component/Config",
-                    "Oro\\Component\\ConfigExpression\\": "src/Oro/Component/ConfigExpression",
-                    "Oro\\Component\\DependencyInjection\\": "src/Oro/Component/DependencyInjection",
-                    "Oro\\Component\\DoctrineUtils\\": "src/Oro/Component/DoctrineUtils",
                     "Oro\\Component\\Duplicator\\": "src/Oro/Component/Duplicator",
-                    "Oro\\Component\\EntitySerializer\\": "src/Oro/Component/EntitySerializer",
-                    "Oro\\Component\\Exception\\": "src/Oro/Component/Exception",
-                    "Oro\\Component\\ExpressionLanguage\\": "src/Oro/Component/ExpressionLanguage",
-                    "Oro\\Component\\Layout\\": "src/Oro/Component/Layout",
-                    "Oro\\Component\\Log\\": "src/Oro/Component/Log",
-                    "Oro\\Component\\Math\\": "src/Oro/Component/Math",
+                    "Oro\\Bundle\\ActivityBundle\\": "src/Oro/Bundle/ActivityBundle",
+                    "Oro\\Bundle\\CurrencyBundle\\": "src/Oro/Bundle/CurrencyBundle",
+                    "Oro\\Bundle\\DataGridBundle\\": "src/Oro/Bundle/DataGridBundle",
+                    "Oro\\Bundle\\PlatformBundle\\": "src/Oro/Bundle/PlatformBundle",
+                    "Oro\\Bundle\\ReminderBundle\\": "src/Oro/Bundle/ReminderBundle",
+                    "Oro\\Bundle\\SanitizeBundle\\": "src/Oro/Bundle/SanitizeBundle",
+                    "Oro\\Bundle\\SecurityBundle\\": "src/Oro/Bundle/SecurityBundle",
+                    "Oro\\Bundle\\WorkflowBundle\\": "src/Oro/Bundle/WorkflowBundle",
+                    "Oro\\Bundle\\DashboardBundle\\": "src/Oro/Bundle/DashboardBundle",
+                    "Oro\\Bundle\\DataAuditBundle\\": "src/Oro/Bundle/DataAuditBundle",
+                    "Oro\\Bundle\\GaufretteBundle\\": "src/Oro/Bundle/GaufretteBundle",
+                    "Oro\\Bundle\\InstallerBundle\\": "src/Oro/Bundle/InstallerBundle",
+                    "Oro\\Bundle\\MigrationBundle\\": "src/Oro/Bundle/MigrationBundle",
                     "Oro\\Component\\MessageQueue\\": "src/Oro/Component/MessageQueue",
+                    "Oro\\Bundle\\AttachmentBundle\\": "src/Oro/Bundle/AttachmentBundle",
+                    "Oro\\Bundle\\NavigationBundle\\": "src/Oro/Bundle/NavigationBundle",
+                    "Oro\\Component\\DoctrineUtils\\": "src/Oro/Component/DoctrineUtils",
+                    "Oro\\Bundle\\EntityMergeBundle\\": "src/Oro/Bundle/EntityMergeBundle",
+                    "Oro\\Bundle\\IntegrationBundle\\": "src/Oro/Bundle/IntegrationBundle",
+                    "Oro\\Bundle\\MaintenanceBundle\\": "src/Oro/Bundle/MaintenanceBundle",
+                    "Oro\\Bundle\\RedisConfigBundle\\": "src/Oro/Bundle/RedisConfigBundle",
+                    "Oro\\Bundle\\TranslationBundle\\": "src/Oro/Bundle/TranslationBundle",
+                    "Oro\\Component\\ChainProcessor\\": "src/Oro/Component/ChainProcessor",
                     "Oro\\Component\\PropertyAccess\\": "src/Oro/Component/PropertyAccess",
-                    "Oro\\Component\\PhpUtils\\": "src/Oro/Component/PhpUtils",
-                    "Oro\\Component\\Routing\\": "src/Oro/Component/Routing",
-                    "Oro\\Component\\Testing\\": "src/Oro/Component/Testing",
-                    "Oro\\Component\\TestUtils\\": "src/Oro/Component/TestUtils"
+                    "Oro\\Bundle\\ActivityListBundle\\": "src/Oro/Bundle/ActivityListBundle",
+                    "Oro\\Bundle\\DigitalAssetBundle\\": "src/Oro/Bundle/DigitalAssetBundle",
+                    "Oro\\Bundle\\DistributionBundle\\": "src/Oro/Bundle/DistributionBundle",
+                    "Oro\\Bundle\\EmbeddedFormBundle\\": "src/Oro/Bundle/EmbeddedFormBundle",
+                    "Oro\\Bundle\\EntityConfigBundle\\": "src/Oro/Bundle/EntityConfigBundle",
+                    "Oro\\Bundle\\EntityExtendBundle\\": "src/Oro/Bundle/EntityExtendBundle",
+                    "Oro\\Bundle\\ImportExportBundle\\": "src/Oro/Bundle/ImportExportBundle",
+                    "Oro\\Bundle\\MessageQueueBundle\\": "src/Oro/Bundle/MessageQueueBundle",
+                    "Oro\\Bundle\\NotificationBundle\\": "src/Oro/Bundle/NotificationBundle",
+                    "Oro\\Bundle\\OrganizationBundle\\": "src/Oro/Bundle/OrganizationBundle",
+                    "Oro\\Bundle\\ViewSwitcherBundle\\": "src/Oro/Bundle/ViewSwitcherBundle",
+                    "Oro\\Bundle\\FeatureToggleBundle\\": "src/Oro/Bundle/FeatureToggleBundle",
+                    "Oro\\Bundle\\QueryDesignerBundle\\": "src/Oro/Bundle/QueryDesignerBundle",
+                    "Oro\\Bundle\\TestFrameworkBundle\\": "src/Oro/Bundle/TestFrameworkBundle",
+                    "Oro\\Component\\ConfigExpression\\": "src/Oro/Component/ConfigExpression",
+                    "Oro\\Component\\EntitySerializer\\": "src/Oro/Component/EntitySerializer",
+                    "Oro\\Component\\ExpressionLanguage\\": "src/Oro/Component/ExpressionLanguage",
+                    "Oro\\Bundle\\BusinessEntitiesBundle\\": "src/Oro/Bundle/BusinessEntitiesBundle",
+                    "Oro\\Bundle\\EntityPaginationBundle\\": "src/Oro/Bundle/EntityPaginationBundle",
+                    "Oro\\Component\\DependencyInjection\\": "src/Oro/Component/DependencyInjection",
+                    "Oro\\Bundle\\GoogleIntegrationBundle\\": "src/Oro/Bundle/GoogleIntegrationBundle",
+                    "Oro\\Bundle\\ExpressionLanguageBundle\\": "src/Oro/Bundle/ExpressionLanguageBundle",
+                    "Oro\\Bundle\\WsseAuthenticationBundle\\": "src/Oro/Bundle/WsseAuthenticationBundle",
+                    "Oro\\Bundle\\MicrosoftIntegrationBundle\\": "src/Oro/Bundle/MicrosoftIntegrationBundle"
                 },
                 "exclude-from-classmap": [
                     "/Tests/"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -7333,17 +6796,25 @@
             ],
             "description": "Business Application Platform (BAP)",
             "homepage": "https://github.com/oroinc/platform.git",
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "issues": "https://github.com/oroinc/platform/issues",
+                "source": "https://github.com/oroinc/platform/tree/6.0.1"
+            },
+            "time": "2024-05-07T02:44:51+00:00"
         },
         {
             "name": "oro/platform-serialised-fields",
-            "version": "dev-master",
+            "version": "6.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oroinc/OroEntitySerializedFieldsBundle.git",
+                "reference": "6ac07c20d0749e50798d89620f311bb8e67ffb27"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../package/serialized-fields",
-                "reference": "26995f4e406e22c5a026bac13550ffe15b284389"
+                "type": "zip",
+                "url": "https://api.github.com/repos/oroinc/OroEntitySerializedFieldsBundle/zipball/6ac07c20d0749e50798d89620f311bb8e67ffb27",
+                "reference": "6ac07c20d0749e50798d89620f311bb8e67ffb27",
+                "shasum": ""
             },
             "require": {
                 "oro/platform": "6.0.*"
@@ -7362,6 +6833,7 @@
                     "/Tests/"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "OSL-3.0"
             ],
@@ -7374,14 +6846,16 @@
             "description": "OroPlatform Serialized Fields",
             "homepage": "https://github.com/oroinc/OroEntitySerializedFieldsBundle",
             "keywords": [
-                "Oro",
-                "Platform",
+                "ORO",
                 "entity",
-                "fields"
+                "fields",
+                "platform"
             ],
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "issues": "https://github.com/oroinc/OroEntitySerializedFieldsBundle/issues",
+                "source": "https://github.com/oroinc/OroEntitySerializedFieldsBundle/tree/6.0.1"
+            },
+            "time": "2024-04-05T14:16:56+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -8202,16 +7676,16 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "1.28.0",
+            "version": "1.29.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "cd06d6b1a1b3c75b0b83f97577869fd85a3cd4fb"
+                "reference": "536889f2b340489d328f5ffb7b02bb6b183ddedc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/cd06d6b1a1b3c75b0b83f97577869fd85a3cd4fb",
-                "reference": "cd06d6b1a1b3c75b0b83f97577869fd85a3cd4fb",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/536889f2b340489d328f5ffb7b02bb6b183ddedc",
+                "reference": "536889f2b340489d328f5ffb7b02bb6b183ddedc",
                 "shasum": ""
             },
             "require": {
@@ -8243,9 +7717,9 @@
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
             "support": {
                 "issues": "https://github.com/phpstan/phpdoc-parser/issues",
-                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.28.0"
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.29.0"
             },
-            "time": "2024-04-03T18:51:33+00:00"
+            "time": "2024-05-06T12:04:23+00:00"
         },
         {
             "name": "predis/predis",
@@ -8562,20 +8036,20 @@
         },
         {
             "name": "psr/http-factory",
-            "version": "1.0.2",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/http-factory.git",
-                "reference": "e616d01114759c4c489f93b099585439f795fe35"
+                "reference": "2b4765fddfe3b508ac62f829e852b1501d3f6e8a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-factory/zipball/e616d01114759c4c489f93b099585439f795fe35",
-                "reference": "e616d01114759c4c489f93b099585439f795fe35",
+                "url": "https://api.github.com/repos/php-fig/http-factory/zipball/2b4765fddfe3b508ac62f829e852b1501d3f6e8a",
+                "reference": "2b4765fddfe3b508ac62f829e852b1501d3f6e8a",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.0.0",
+                "php": ">=7.1",
                 "psr/http-message": "^1.0 || ^2.0"
             },
             "type": "library",
@@ -8599,7 +8073,7 @@
                     "homepage": "https://www.php-fig.org/"
                 }
             ],
-            "description": "Common interfaces for PSR-7 HTTP message factories",
+            "description": "PSR-17: Common interfaces for PSR-7 HTTP message factories",
             "keywords": [
                 "factory",
                 "http",
@@ -8611,9 +8085,9 @@
                 "response"
             ],
             "support": {
-                "source": "https://github.com/php-fig/http-factory/tree/1.0.2"
+                "source": "https://github.com/php-fig/http-factory"
             },
-            "time": "2023-04-10T20:10:41+00:00"
+            "time": "2024-04-15T12:06:14+00:00"
         },
         {
             "name": "psr/http-message",
@@ -11432,16 +10906,16 @@
         },
         {
             "name": "symfony/http-client-contracts",
-            "version": "v3.4.2",
+            "version": "v3.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-client-contracts.git",
-                "reference": "b6b5c876b3a4ed74460e2c5ac53bbce2f12e2a7e"
+                "reference": "20414d96f391677bf80078aa55baece78b82647d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-client-contracts/zipball/b6b5c876b3a4ed74460e2c5ac53bbce2f12e2a7e",
-                "reference": "b6b5c876b3a4ed74460e2c5ac53bbce2f12e2a7e",
+                "url": "https://api.github.com/repos/symfony/http-client-contracts/zipball/20414d96f391677bf80078aa55baece78b82647d",
+                "reference": "20414d96f391677bf80078aa55baece78b82647d",
                 "shasum": ""
             },
             "require": {
@@ -11450,7 +10924,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "3.4-dev"
+                    "dev-main": "3.5-dev"
                 },
                 "thanks": {
                     "name": "symfony/contracts",
@@ -11490,7 +10964,7 @@
                 "standards"
             ],
             "support": {
-                "source": "https://github.com/symfony/http-client-contracts/tree/v3.4.2"
+                "source": "https://github.com/symfony/http-client-contracts/tree/v3.5.0"
             },
             "funding": [
                 {
@@ -11506,7 +10980,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-04-01T18:51:09+00:00"
+            "time": "2024-04-18T09:32:20+00:00"
         },
         {
             "name": "symfony/http-foundation",
@@ -16189,16 +15663,16 @@
         },
         {
             "name": "composer/xdebug-handler",
-            "version": "3.0.4",
+            "version": "3.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/xdebug-handler.git",
-                "reference": "4f988f8fdf580d53bdb2d1278fe93d1ed5462255"
+                "reference": "6c1925561632e83d60a44492e0b344cf48ab85ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/xdebug-handler/zipball/4f988f8fdf580d53bdb2d1278fe93d1ed5462255",
-                "reference": "4f988f8fdf580d53bdb2d1278fe93d1ed5462255",
+                "url": "https://api.github.com/repos/composer/xdebug-handler/zipball/6c1925561632e83d60a44492e0b344cf48ab85ef",
+                "reference": "6c1925561632e83d60a44492e0b344cf48ab85ef",
                 "shasum": ""
             },
             "require": {
@@ -16235,7 +15709,7 @@
             "support": {
                 "irc": "ircs://irc.libera.chat:6697/composer",
                 "issues": "https://github.com/composer/xdebug-handler/issues",
-                "source": "https://github.com/composer/xdebug-handler/tree/3.0.4"
+                "source": "https://github.com/composer/xdebug-handler/tree/3.0.5"
             },
             "funding": [
                 {
@@ -16251,7 +15725,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-03-26T18:29:49+00:00"
+            "time": "2024-05-06T16:37:16+00:00"
         },
         {
             "name": "fakerphp/faker",
@@ -16875,59 +16349,25 @@
             "time": "2024-03-05T20:51:40+00:00"
         },
         {
-            "name": "oro/maker",
-            "version": "dev-master",
-            "dist": {
-                "type": "path",
-                "url": "../../package/maker",
-                "reference": "9990a2ce534401294d36a33a1d662882ca79330e"
-            },
-            "require": {
-                "oro/platform": "6.0.*",
-                "symfony/maker-bundle": "^v1.52.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "6.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Oro\\Bundle\\MakerBundle\\": "src/Oro/Bundle/MakerBundle"
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "license": [
-                "OSL-3.0"
-            ],
-            "authors": [
-                {
-                    "name": "Oro, Inc",
-                    "homepage": "https://www.orocommerce.com"
-                }
-            ],
-            "description": "Code generation/makers for Oro platform",
-            "transport-options": {
-                "relative": true
-            }
-        },
-        {
             "name": "oro/twig-inspector",
-            "version": "dev-master",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oroinc/twig-inspector.git",
+                "reference": "1d17b5590be7939b94d80658193f8418c3c248bc"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../package/twig-inspector",
-                "reference": "6ec311c40e5cc491957e9f59b36d31009e58304a"
+                "type": "zip",
+                "url": "https://api.github.com/repos/oroinc/twig-inspector/zipball/1d17b5590be7939b94d80658193f8418c3c248bc",
+                "reference": "1d17b5590be7939b94d80658193f8418c3c248bc",
+                "shasum": ""
             },
             "require": {
                 "php": ">=7.4",
                 "symfony/config": "^4.4.1 | ^5.0 | ^6.0",
                 "symfony/dependency-injection": "^4.4.1 | ^5.0 | ^6.0",
                 "symfony/http-foundation": "^4.4.1 | ^5.0 | ^6.0",
-                "symfony/http-kernel": "^4.4.13 | ^5.1.5 | ^6.0",
+                "symfony/http-kernel": "^4.4.1 | ^5.0 | ^6.0",
                 "symfony/routing": "^4.4.1 | ^5.0 | ^6.0",
                 "symfony/web-profiler-bundle": "^4.4.1 | ^5.0 | ^6.0",
                 "twig/twig": "^1.38 | ^2.7 | ^3.0"
@@ -16943,6 +16383,7 @@
                     "Oro\\TwigInspector\\": ""
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -16963,9 +16404,11 @@
                 "toolbar-extension",
                 "twig"
             ],
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "issues": "https://github.com/oroinc/twig-inspector/issues",
+                "source": "https://github.com/oroinc/twig-inspector/tree/1.1.0"
+            },
+            "time": "2022-01-08T13:54:33+00:00"
         },
         {
             "name": "pdepend/pdepend",
@@ -19023,98 +18466,6 @@
             "time": "2024-04-18T09:22:46+00:00"
         },
         {
-            "name": "symfony/maker-bundle",
-            "version": "v1.53.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/maker-bundle.git",
-                "reference": "8d2f3f96704766837548d177fe3ae39ae94822d9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/maker-bundle/zipball/8d2f3f96704766837548d177fe3ae39ae94822d9",
-                "reference": "8d2f3f96704766837548d177fe3ae39ae94822d9",
-                "shasum": ""
-            },
-            "require": {
-                "doctrine/inflector": "^2.0",
-                "nikic/php-parser": "^4.18|^5.0",
-                "php": ">=8.1",
-                "symfony/config": "^6.3|^7.0",
-                "symfony/console": "^6.3|^7.0",
-                "symfony/dependency-injection": "^6.3|^7.0",
-                "symfony/deprecation-contracts": "^2.2|^3",
-                "symfony/filesystem": "^6.3|^7.0",
-                "symfony/finder": "^6.3|^7.0",
-                "symfony/framework-bundle": "^6.3|^7.0",
-                "symfony/http-kernel": "^6.3|^7.0",
-                "symfony/process": "^6.3|^7.0"
-            },
-            "conflict": {
-                "doctrine/doctrine-bundle": "<2.4",
-                "doctrine/orm": "<2.10"
-            },
-            "require-dev": {
-                "composer/semver": "^3.0",
-                "doctrine/doctrine-bundle": "^2.5.0",
-                "doctrine/orm": "^2.10.0",
-                "symfony/http-client": "^6.3|^7.0",
-                "symfony/phpunit-bridge": "^6.3|^7.0",
-                "symfony/security-core": "^6.3|^7.0",
-                "symfony/yaml": "^6.3|^7.0",
-                "twig/twig": "^3.0|^4.x-dev"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-main": "1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Bundle\\MakerBundle\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony Maker helps you create empty commands, controllers, form classes, tests and more so you can forget about writing boilerplate code.",
-            "homepage": "https://symfony.com/doc/current/bundles/SymfonyMakerBundle/index.html",
-            "keywords": [
-                "code generator",
-                "dev",
-                "generator",
-                "scaffold",
-                "scaffolding"
-            ],
-            "support": {
-                "issues": "https://github.com/symfony/maker-bundle/issues",
-                "source": "https://github.com/symfony/maker-bundle/tree/v1.53.0"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2024-02-01T10:05:38+00:00"
-        },
-        {
             "name": "symfony/phpunit-bridge",
             "version": "v6.4.7",
             "source": {
@@ -19500,29 +18851,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "oro/commerce": 20,
-        "oro/commerce-authorizenet": 20,
-        "oro/platform": 20,
-        "oro/platform-serialised-fields": 20,
-        "oro/oauth2-server": 20,
-        "oro/calendar-bundle": 20,
-        "oro/marketing": 20,
-        "oro/customer-portal": 20,
-        "oro/crm": 20,
-        "oro/crm-task-bundle": 20,
-        "oro/crm-call-bundle": 20,
-        "oro/commerce-crm": 20,
-        "oro/crm-dotmailer": 20,
-        "oro/crm-zendesk": 20,
-        "oro/commerce-infinitepay": 20,
-        "oro/google-tag-manager-bundle": 20,
-        "oro/mailchimp": 20,
-        "oro/cookie-consent": 20,
-        "oro/gridfs-config": 20,
-        "oro/commerce-demo-checkouts": 20,
-        "oro/maker": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
