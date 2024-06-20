@@ -1,0 +1,9 @@
+services:
+    _defaults:
+        public: false
+
+    Acme\Bundle\FrontendDashboardsBundle\Provider\UserStatsProvider:
+        arguments:
+            - '@doctrine'
+
+    Acme\Bundle\FrontendDashboardsBundle\Provider\UserStatsProviderInterface: '@Acme\Bundle\FrontendDashboardsBundle\Provider\UserStatsProvider'

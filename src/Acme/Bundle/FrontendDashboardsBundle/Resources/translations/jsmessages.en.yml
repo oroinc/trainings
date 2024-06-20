@@ -1,0 +1,15 @@
+acme:
+    frontend_dashboards:
+        dashboards:
+            user_stats:
+                first_name.label: 'First Name'
+                last_name.label: 'Last Name'
+                email.label: 'Email'
+                orders_count.label: 'Orders no'
+                no_users.label: 'No users'
+            orders:
+                order_identifier.label: 'Order Identifier'
+                order_date.label: 'Order Date'
+                total.label: 'Total'
+                status.label: 'Status'
+                no_orders.label: 'No orders'

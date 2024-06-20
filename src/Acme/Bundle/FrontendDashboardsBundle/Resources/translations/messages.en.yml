@@ -1,0 +1,27 @@
+acme:
+    frontend_dashboards:
+        system_configuration:
+            groups:
+                frontend_dashboard:
+                    label: 'Frontend Settings'
+                frontend_dashboard_settings:
+                    label: 'Dashboard Settings'
+            fields:
+                dashboard_order_number:
+                    label: 'Number of orders'
+                    tooltip: 'Number of orders that will be displayed on the orders widget on frontend dashboard'
+                dashboard_datagrid_refresh_sec:
+                    label: 'Datagrid Refresh Interval'
+                    tooltip: 'Number of seconds after which quotes datagrid on frontend dashboard will be refreshed'
+        navigation:
+            dashboard:
+                index.label: 'Frontend Dashboards'
+        dashboard:
+            index:
+                user_stats:
+                    label: 'User Stats'
+                orders:
+                    label: 'Orders'
+                quotes:
+                    label: 'Quotes'
+                title: 'Frontend Dashboards'
