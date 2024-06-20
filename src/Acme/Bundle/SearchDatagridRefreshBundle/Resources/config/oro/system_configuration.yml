@@ -1,0 +1,25 @@
+system_configuration:
+    fields:
+        acme_search_datagrid_refresh.dashboard_datagrid_refresh_sec:
+            data_type: integer
+            type: Symfony\Component\Form\Extension\Core\Type\IntegerType
+            priority: 90
+            options:
+                label: acme.search_datagrid_refresh.system_configuration.fields.dashboard_datagrid_refresh_sec.label
+                tooltip: acme.search_datagrid_refresh.system_configuration.fields.dashboard_datagrid_refresh_sec.tooltip
+                required: true
+                constraints:
+                    - GreaterThan:
+                        value: 0
+
+    tree:
+        system_configuration:
+            commerce:
+                children:
+                    sales:
+                        children:
+                            frontend_dashboard:
+                                children:
+                                    frontend_dashboard_settings:
+                                        children:
+                                            - acme_search_datagrid_refresh.dashboard_datagrid_refresh_sec

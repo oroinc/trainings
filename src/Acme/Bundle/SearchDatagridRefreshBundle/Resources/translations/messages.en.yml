@@ -1,0 +1,7 @@
+acme:
+    search_datagrid_refresh:
+        system_configuration:
+            fields:
+                dashboard_datagrid_refresh_sec:
+                    label: 'Search Datagrid Refresh Interval'
+                    tooltip: 'Number of seconds after which Search datagrid will be refreshed'
