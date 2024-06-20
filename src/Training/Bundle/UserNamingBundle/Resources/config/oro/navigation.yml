@@ -4,7 +4,7 @@ navigation:
             user_namings_list:
                 label: 'training.usernaming.usernamingtype.entity_plural_label'
                 route: 'training_user_naming_index'
-                position: 20
+                position: 15 # render after 'user_list' menu item
         tree:
             application_menu:
                 children:
@@ -13,6 +13,3 @@ navigation:
                             users_management:
                                 children:
                                     user_namings_list: ~
-    titles:
-        training_user_naming_index: ~
-        training_user_naming_view: '%title% - oro.ui.view'
