@@ -1,0 +1,8 @@
+training.integration:
+    label: 'User Naming Integration'
+    settings:
+        label: 'User Naming Integration Settings'
+        url:
+            label: 'Source URL'
+    connector:
+        user_naming_type.label: 'User Naming Type'

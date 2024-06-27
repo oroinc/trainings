@@ -1,0 +1,10 @@
+[
+    {
+        "title" : "Arabic format",
+        "format": "PREFIX FIRST MIDDLE LAST"
+    },
+    {
+        "title" : "Malay format",
+        "format": "FIRST bin MIDDLE"
+    }
+]
