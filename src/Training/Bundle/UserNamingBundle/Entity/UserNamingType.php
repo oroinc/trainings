@@ -5,6 +5,7 @@ namespace Training\Bundle\UserNamingBundle\Entity;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Oro\Bundle\EntityConfigBundle\Metadata\Attribute\Config;
+use Oro\Bundle\EntityConfigBundle\Metadata\Attribute\ConfigField;
 use Oro\Bundle\EntityExtendBundle\Entity\ExtendEntityInterface;
 use Oro\Bundle\EntityExtendBundle\Entity\ExtendEntityTrait;
 
@@ -25,15 +26,30 @@ class UserNamingType implements ExtendEntityInterface
     #[ORM\Id]
     #[ORM\Column(type: Types::INTEGER)]
     #[ORM\GeneratedValue(strategy: 'AUTO')]
+    #[ConfigField(
+        defaultValues: [
+            'importexport' => ['order' => 10],
+        ]
+    )]
     private ?int $id = null;
 
     #[ORM\Column(name: 'title', type: Types::STRING, length: 64, nullable: false)]
+    #[ConfigField(
+        defaultValues: [
+            'importexport' => ['order' => 20, 'identity' => true],
+        ]
+    )]
     private ?string $title = null;
 
     /**
      * Allowed placeholders are: PREFIX, FIRST, MIDDLE, LAST, SUFFIX
      */
     #[ORM\Column(name: 'format', type: Types::STRING, length: 255, nullable: false)]
+    #[ConfigField(
+        defaultValues: [
+            'importexport' => ['order' => 30],
+        ]
+    )]
     private ?string $format = null;
 
     /**
