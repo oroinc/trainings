@@ -1,0 +1,9 @@
+app-modules:
+    - acmecustomvalidation/js/app/modules/validator-constraints-module
+
+configs:
+    acmecustomvalidation/js/validator/allowed-email-domain: {}
+
+dynamic-imports:
+    commons:
+        - acmecustomvalidation/js/validator/allowed-email-domain

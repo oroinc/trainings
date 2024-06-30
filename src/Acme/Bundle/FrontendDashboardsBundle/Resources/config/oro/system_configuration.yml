@@ -1,0 +1,45 @@
+system_configuration:
+    groups:
+        frontend_dashboard:
+            icon: fa-file-text-o
+            title: acme.frontend_dashboards.system_configuration.groups.frontend_dashboard.label
+        frontend_dashboard_settings:
+            title: acme.frontend_dashboards.system_configuration.groups.frontend_dashboard_settings.label
+        frontend_customer_settings:
+            title: acme.frontend_dashboards.system_configuration.groups.frontend_customer_settings.label
+    fields:
+        acme_frontend_dashboards.dashboard_order_number:
+            data_type: integer
+            type: Symfony\Component\Form\Extension\Core\Type\IntegerType
+            priority: 100
+            options:
+                label: acme.frontend_dashboards.system_configuration.fields.dashboard_order_number.label
+                tooltip: acme.frontend_dashboards.system_configuration.fields.dashboard_order_number.tooltip
+                required: true
+                constraints:
+                    - GreaterThan:
+                        value: 0
+        acme_frontend_dashboards.dashboard_datagrid_refresh_sec:
+            data_type: integer
+            type: Symfony\Component\Form\Extension\Core\Type\IntegerType
+            priority: 90
+            options:
+                label: acme.frontend_dashboards.system_configuration.fields.dashboard_datagrid_refresh_sec.label
+                tooltip: acme.frontend_dashboards.system_configuration.fields.dashboard_datagrid_refresh_sec.tooltip
+                required: true
+                constraints:
+                    - GreaterThan:
+                        value: 0
+
+    tree:
+        system_configuration:
+            commerce:
+                children:
+                    sales:
+                        children:
+                            frontend_dashboard:
+                                children:
+                                    frontend_dashboard_settings:
+                                        children:
+                                            - acme_frontend_dashboards.dashboard_order_number
+                                            - acme_frontend_dashboards.dashboard_datagrid_refresh_sec

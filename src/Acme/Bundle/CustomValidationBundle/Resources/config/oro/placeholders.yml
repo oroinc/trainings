@@ -1,0 +1,10 @@
+placeholders:
+    placeholders:
+        js_modules_config:
+            items:
+                custom_validation_js_modules_config:
+                    order: 100
+
+    items:
+        custom_validation_js_modules_config:
+            template: '@@AcmeCustomValidation/js_modules_config.html.twig'

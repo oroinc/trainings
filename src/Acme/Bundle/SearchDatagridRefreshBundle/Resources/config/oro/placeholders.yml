@@ -1,0 +1,10 @@
+placeholders:
+    placeholders:
+        js_modules_config:
+            items:
+                acme_search_datagrid_js_modules_config:
+                    order: 100
+
+    items:
+        acme_search_datagrid_js_modules_config:
+            template: '@@AcmeSearchDatagridRefresh/js_modules_config.html.twig'

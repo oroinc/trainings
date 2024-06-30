@@ -1,0 +1,15 @@
+navigation:
+    menu_config:
+        items:
+            acme_frontend_dashboards_dashboard_index:
+                label: 'acme.frontend_dashboards.navigation.dashboard.index.label'
+                route: 'acme_frontend_dashboards_dashboard_index'
+                position: 20
+                display_children: false
+
+        tree:
+            oro_customer_menu_refreshing_teal:
+                children:
+                    acme_frontend_dashboards_dashboard_index: ~
+    titles:
+        acme_frontend_dashboards_dashboard_index: 'acme.frontend_dashboards.navigation.dashboard.index.label'

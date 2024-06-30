@@ -6,4 +6,19 @@ layout:
         - '@appendOption':
               id: body
               optionName: attr.class
-              optionValue: ' pdp-page'
+              optionValue: ' pdp-new-page'
+
+        - '@add':
+            id: product_new_short_description
+            parentId: product_view_container
+            blockType: container
+            prepend: true
+            options:
+                vars:
+                    shortDescription: '=data["locale"].getLocalizedValue(data["product"].getShortDescriptions())'
+
+        - '@move':
+            id: product_view_attribute_group_general_attribute_text_sku
+            parentId: page_content
+            siblingId: page_title_container
+            prepend: false

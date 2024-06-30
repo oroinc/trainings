@@ -1,0 +1,4 @@
+dynamic-imports:
+    orodatagrid:
+        - acmeshoppinglistbadge/js/datagrid/builder/csr-badge-shopping-list-flat-data-builder
+        - tpl-loader!acmeshoppinglistbadge/templates/datagrid/row/csr-badge-row.html

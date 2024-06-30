@@ -1,0 +1,9 @@
+{% block _product_new_short_description_widget %}
+    {% set attr = layout_attr_defaults(attr, {
+        '~class': " product_short_description"
+    }) %}
+    <div {{ block('block_attributes') }}>
+        this is me
+        {{ shortDescription|raw|oro_html_sanitize }}
+    </div>
+{% endblock %}`
