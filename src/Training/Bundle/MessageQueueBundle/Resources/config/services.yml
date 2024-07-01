@@ -1,1 +1,18 @@
 services:
+    Training\Bundle\MessageQueueBundle\EventListener\NamingFormatModificationListener:
+        arguments:
+            - '@oro_message_queue.client.message_producer'
+        tags:
+            - { name: doctrine.orm.entity_listener, entity: 'Training\Bundle\UserNamingBundle\Entity\UserNamingType', event: postPersist }
+            - { name: doctrine.orm.entity_listener, entity: 'Training\Bundle\UserNamingBundle\Entity\UserNamingType', event: preUpdate }
+
+    Training\Bundle\MessageQueueBundle\Async\Topics\GenerateNameExampleTopic:
+        tags:
+            - { name: oro_message_queue.topic }
+
+    Training\Bundle\MessageQueueBundle\Async\NameExampleGenerationProcessor:
+        arguments:
+            - '@oro_entity.doctrine_helper'
+            - '@Training\Bundle\UserNamingBundle\Provider\UserFullNameProvider'
+        tags:
+            - { name: 'oro_message_queue.client.message_processor' }

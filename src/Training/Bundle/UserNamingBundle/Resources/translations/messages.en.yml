@@ -6,8 +6,7 @@ training.usernaming:
         id.label: 'ID'
         title.label: 'Title'
         format.label: 'Naming Format'
-
-    full_formatted_name_example: 'Formatted Name Example'
+        example.label: 'Formatted Name Example'
 
     sections:
         general: 'General Information'
