@@ -2,6 +2,7 @@
 
 namespace Training\Bundle\FrontendTrainingBundle\Controller\Frontend;
 
+use Doctrine\Persistence\ManagerRegistry;
 use Oro\Bundle\ProductBundle\Entity\Product;
 use Oro\Bundle\SecurityBundle\Attribute\AclAncestor;
 use Oro\Bundle\ShoppingListBundle\Entity\ShoppingList;
@@ -50,6 +51,7 @@ class ShoppingListCleanupController extends AbstractController
     {
         return array_merge(parent::getSubscribedServices(), [
             'oro_shopping_list.manager.shopping_list' => ShoppingListManager::class,
+            'doctrine' => ManagerRegistry::class
         ]);
     }
 }
