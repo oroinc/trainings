@@ -1,6 +1,7 @@
 dynamic-imports:
     trainingfrontendtraining:
         - trainingfrontendtraining/js/app/views/custom-product-view
+        - trainingfrontendtraining/js/app/components/cart-cleanup-component
 
 map:
     '*':

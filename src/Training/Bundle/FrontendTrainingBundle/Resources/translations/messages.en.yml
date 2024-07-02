@@ -1,0 +1,5 @@
+training:
+    frontend_training:
+        cart:
+            cleanup:
+                button_label: 'Cleanup Shopping List'
