@@ -1,0 +1,9 @@
+dynamic-imports:
+    trainingfrontendtraining:
+        - trainingfrontendtraining/js/app/views/custom-product-view
+
+map:
+    '*':
+        'oroproduct/js/app/views/base-product-view': 'trainingfrontendtraining/js/app/views/custom-product-view'
+    'trainingfrontendtraining/js/app/views/custom-product-view':
+        'oroproduct/js/app/views/base-product-view': 'oroproduct/js/app/views/base-product-view'

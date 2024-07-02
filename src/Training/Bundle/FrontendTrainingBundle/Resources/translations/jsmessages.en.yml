@@ -1,0 +1,6 @@
+training:
+    frontend_training:
+        product_view:
+            copy_to_clipboard:
+                success: 'Copied to clipboard'
+                error: 'Failed to copy to clipboard'
