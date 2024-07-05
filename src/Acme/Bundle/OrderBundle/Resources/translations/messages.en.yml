@@ -1,7 +1,7 @@
 acme:
     order:
         additional_information:
-            label: this is label
+            label: Additional Data
         print:
             no_price:
                 label: Print With No Price
