@@ -2,14 +2,14 @@
 
 namespace Acme\Bundle\FrontendDashboardsBundle\Controller\Frontend;
 
-use Oro\Bundle\CustomerBundle\Entity\Customer;
-use Oro\Bundle\CustomerBundle\Entity\CustomerUser;
-use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Oro\Bundle\LayoutBundle\Attribute\Layout;
-use Oro\Bundle\SecurityBundle\Attribute\AclAncestor;
 use Acme\Bundle\FrontendDashboardsBundle\Provider\DTO\UserStat;
 use Acme\Bundle\FrontendDashboardsBundle\Provider\UserStatsProviderInterface;
+use Oro\Bundle\CustomerBundle\Entity\Customer;
+use Oro\Bundle\CustomerBundle\Entity\CustomerUser;
+use Oro\Bundle\LayoutBundle\Attribute\Layout;
+use Oro\Bundle\SecurityBundle\Attribute\AclAncestor;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Routing\Annotation\Route;
 
 class DashboardController extends AbstractController
 {

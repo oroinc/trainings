@@ -10,7 +10,6 @@ footer-social:
                 <a href="https://www.youtube.com/channel/UClxsA8HS9KGEEsvFRn7JkvQ" target="_blank" class="footer__social-link"><img alt="Oro Youtube" class=" lazyloaded" src="/bundles/acmetheme/acme/images/social/youtube.svg"></a>
             </div>
         </div>
-        
 
 contact-info:
     title: Contact Us Info

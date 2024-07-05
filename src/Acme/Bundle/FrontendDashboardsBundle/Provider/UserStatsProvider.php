@@ -2,11 +2,11 @@
 
 namespace Acme\Bundle\FrontendDashboardsBundle\Provider;
 
+use Acme\Bundle\FrontendDashboardsBundle\Provider\DTO\UserStat;
 use Doctrine\Persistence\ManagerRegistry;
 use Oro\Bundle\CustomerBundle\Entity\Customer;
 use Oro\Bundle\CustomerBundle\Entity\CustomerUser;
 use Oro\Bundle\OrderBundle\Entity\Order;
-use Acme\Bundle\FrontendDashboardsBundle\Provider\DTO\UserStat;
 
 class UserStatsProvider implements UserStatsProviderInterface
 {
