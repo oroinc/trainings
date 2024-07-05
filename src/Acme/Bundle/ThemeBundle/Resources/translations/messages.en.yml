@@ -34,13 +34,9 @@ acme:
             video_banner:
                 label: Video Banner
 
-
     theme:
-
         system_configuration:
             groups:
-                custom_css_settings:
-                    title: 'Custom CSS Settings'
                 contact_information_settings:
                     title: 'Contact Information'
                 social_media_settings:
@@ -49,9 +45,6 @@ acme:
                     title: 'Banner Images'
 
             fields:
-                custom_backend_css:
-                    tooltip: 'Custom CSS for Management console'
-
                 contact_phone:
                     tooltip: 'Phone'
                 contact_address:
