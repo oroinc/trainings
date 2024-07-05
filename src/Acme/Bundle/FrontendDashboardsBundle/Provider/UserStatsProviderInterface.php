@@ -2,8 +2,8 @@
 
 namespace Acme\Bundle\FrontendDashboardsBundle\Provider;
 
-use Oro\Bundle\CustomerBundle\Entity\Customer;
 use Acme\Bundle\FrontendDashboardsBundle\Provider\DTO\UserStat;
+use Oro\Bundle\CustomerBundle\Entity\Customer;
 
 interface UserStatsProviderInterface
 {
