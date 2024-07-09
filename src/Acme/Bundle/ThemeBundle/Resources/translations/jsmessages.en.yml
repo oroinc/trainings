@@ -1,4 +1,6 @@
-acme:
-    shoppinglist:
-        actions:
-            add_to_shopping_list: 'Add'
+oro:
+    calendar:
+        flash_message:
+            calendar_adding: "Adding calendar ..."
+            calendar_removing: "Removing calendar ..."
+            calendar_updating: "Updating calendar ..."
