@@ -1,0 +1,7 @@
+navigation:
+    menu_config:
+        tree:
+            frontend_order_menu:
+                scope_type: menu_frontend_visibility
+                max_nesting_level: 1
+                children: []
