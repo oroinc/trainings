@@ -13,7 +13,7 @@ use Symfony\Component\DependencyInjection\ContainerAwareTrait;
 /**
  * Loads the menu items to "frontend_order_menu" storefront menu
  */
-class LoadFeaturedMenuData extends AbstractFixture implements ContainerAwareInterface
+class LoadFrontendOrderMenuData extends AbstractFixture implements ContainerAwareInterface
 {
     use ContainerAwareTrait;
 
