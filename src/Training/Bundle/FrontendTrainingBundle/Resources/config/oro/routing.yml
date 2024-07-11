@@ -1,4 +1,4 @@
-training_bundle_frontendtraining_frontend_shoppinglistcleanup:
+training_frontendtraining_frontend_shoppinglistcleanup:
     resource:     "@TrainingFrontendTrainingBundle/Controller/Frontend/ShoppingListCleanupController.php"
     type:         annotation
     prefix:       /shoppinglist
