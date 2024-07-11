@@ -1,4 +1,0 @@
-new:
-    shoppinglist:
-        actions:
-            add_to_shopping_list: 'Add'

@@ -1,6 +1,9 @@
 acme:
     search_datagrid_refresh:
         system_configuration:
+            groups:
+                frontend_datagrid_settings:
+                    label: Datagrid Settings
             fields:
                 dashboard_datagrid_refresh_sec:
                     label: 'Search Datagrid Refresh Interval'

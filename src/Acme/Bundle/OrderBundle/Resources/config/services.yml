@@ -1,5 +1,4 @@
 services:
-
     Acme\Bundle\OrderBundle\EventListener\OrderViewEventListener:
         arguments:
             - '@translator'

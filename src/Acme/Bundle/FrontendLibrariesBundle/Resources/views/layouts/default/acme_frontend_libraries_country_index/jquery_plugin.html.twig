@@ -1,9 +1,9 @@
-{% block _footer_jquery_plugin_example_widget %}
+{% block _jquery_plugin_example_widget %}
     <div data-page-component-module="acmefrontendlibraries/js/app/components/jquery-plugin-component">
 
         {#  Example of using plugin installed via npm #}
         <div>
-            <h2 class="center">Image Gallery</h2>
+            <h2 class="center">{{ 'acme.frontend_libraries.section.image_gallery.label'|trans }}</h2>
             <a id="myImage" href="http://farm6.staticflickr.com/5614/15602332537_bae1aaccd8_b.jpg">
                 <img alt="example1" src="http://farm6.staticflickr.com/5614/15602332537_bae1aaccd8_m.jpg"/>
             </a>
@@ -11,7 +11,7 @@
 
         {#  Example of using plugin installed manually in lib folder #}
         <div>
-            <h2>Countries</h2>
+            <h2>{{ 'acme.frontend_libraries.section.country.label'|trans }}</h2>
             <table id="myTable" class="display">
                 <thead>
                 <tr>

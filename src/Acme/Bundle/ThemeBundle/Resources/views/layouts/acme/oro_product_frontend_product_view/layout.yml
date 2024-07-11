@@ -4,9 +4,9 @@ layout:
             themes: 'layout.html.twig'
 
         - '@appendOption':
-              id: body
-              optionName: attr.class
-              optionValue: ' pdp-new-page'
+            id: body
+            optionName: attr.class
+            optionValue: ' pdp-new-page'
 
         - '@add':
             id: product_new_short_description

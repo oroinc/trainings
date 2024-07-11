@@ -1,12 +1,10 @@
 system_configuration:
     groups:
-        frontend_dashboard:
+        frontend_settings:
             icon: fa-file-text-o
-            title: acme.frontend_dashboards.system_configuration.groups.frontend_dashboard.label
+            title: acme.frontend_dashboards.system_configuration.groups.frontend_settings.label
         frontend_dashboard_settings:
             title: acme.frontend_dashboards.system_configuration.groups.frontend_dashboard_settings.label
-        frontend_customer_settings:
-            title: acme.frontend_dashboards.system_configuration.groups.frontend_customer_settings.label
     fields:
         acme_frontend_dashboards.dashboard_order_number:
             data_type: integer
@@ -37,7 +35,7 @@ system_configuration:
                 children:
                     sales:
                         children:
-                            frontend_dashboard:
+                            frontend_settings:
                                 children:
                                     frontend_dashboard_settings:
                                         children:
