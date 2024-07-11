@@ -1,0 +1,6 @@
+acme_frontend_libraries_country_frontend:
+    resource:     "@AcmeFrontendLibrariesBundle/Controller/Frontend/CountryController.php"
+    type:         annotation
+    prefix:       /country
+    options:
+        frontend: true
