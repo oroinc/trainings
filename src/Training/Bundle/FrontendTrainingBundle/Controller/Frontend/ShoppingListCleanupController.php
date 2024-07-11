@@ -20,7 +20,7 @@ class ShoppingListCleanupController extends AbstractController
 {
     #[Route(
         path: '/cleanup/{id}',
-        name: 'training_bundle_frontendtraining_frontend_shoppinglistcleanup_cleanup',
+        name: 'training_frontendtraining_frontend_shoppinglistcleanup_cleanup',
         requirements: ['id' => '\d+'],
         methods: ['POST'],
         options: ['expose' => true]
