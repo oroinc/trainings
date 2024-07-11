@@ -9,20 +9,15 @@ use Oro\Bundle\ShoppingListBundle\Entity\ShoppingList;
 use Oro\Bundle\ShoppingListBundle\Manager\ShoppingListManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
  * Cleanup controller consists of single action cleanupAction that takes
  * shopping list by ID, iterates over its line items and removes those that
- * are not in stock - their status is set to "out of stock".
+ * have "out of stock" status.
  */
 class ShoppingListCleanupController extends AbstractController
 {
-    /**
-     * @param ShoppingList $shoppingList
-     * @return JsonResponse
-     */
     #[Route(
         path: '/cleanup/{id}',
         name: 'training_bundle_frontendtraining_frontend_shoppinglistcleanup_cleanup',
@@ -41,7 +36,7 @@ class ShoppingListCleanupController extends AbstractController
 
         $this->container->get('doctrine')->getManagerForClass(ShoppingList::class)->flush();
 
-        return new JsonResponse(['success' => true], Response::HTTP_OK);
+        return new JsonResponse(['success' => true]);
     }
 
     /**
