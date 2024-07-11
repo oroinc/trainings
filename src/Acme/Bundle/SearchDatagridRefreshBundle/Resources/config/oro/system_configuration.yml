@@ -18,7 +18,7 @@ system_configuration:
                 children:
                     sales:
                         children:
-                            frontend_dashboard:
+                            frontend_settings:
                                 children:
                                     frontend_dashboard_settings:
                                         children:

@@ -2,6 +2,7 @@
 
 namespace Acme\Bundle\CustomValidationBundle\Validator\Constraints;
 
+use Acme\Bundle\CustomValidationBundle\DependencyInjection\Configuration;
 use Oro\Bundle\ConfigBundle\Config\ConfigManager;
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\ConstraintValidator;
@@ -14,7 +15,9 @@ class AllowedEmailDomainValidator extends ConstraintValidator
 
     public function validate($value, Constraint $constraint): void
     {
-        $allowedDomain = $this->configManager->get('acme_custom_validation.allowed_email_domain');
+        $allowedDomain = $this->configManager->get(
+            Configuration::getConfigKeyByName(Configuration::CNF_ALLOWED_EMAIL_DOMAIN)
+        );
 
         if ($allowedDomain === null) {
             return;

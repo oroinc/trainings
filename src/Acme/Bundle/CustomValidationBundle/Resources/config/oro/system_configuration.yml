@@ -1,4 +1,7 @@
 system_configuration:
+    groups:
+        frontend_customer_settings:
+            title: acme.custom_validation.system_configuration.groups.frontend_customer_settings.label
     fields:
         acme_custom_validation.allowed_email_domain:
             data_type: string
@@ -15,7 +18,7 @@ system_configuration:
                 children:
                     sales:
                         children:
-                            frontend_dashboard:
+                            frontend_settings:
                                 children:
                                     frontend_customer_settings:
                                         children:
