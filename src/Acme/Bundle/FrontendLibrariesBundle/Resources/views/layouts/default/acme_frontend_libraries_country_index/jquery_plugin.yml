@@ -1,4 +1,7 @@
 layout:
+    imports:
+        -   id: oro_customer_page
+
     actions:
         -   '@setBlockTheme':
                 themes: 'jquery_plugin.html.twig'
@@ -8,6 +11,5 @@ layout:
                 optionValue: 'acme.frontend_libraries.navigation.country.index.label'
         -   '@add':
                 id: jquery_plugin_example
-                parentId: page_container
-                siblingId: page_main
+                parentId: page_content
                 blockType: block
