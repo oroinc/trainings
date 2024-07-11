@@ -1,4 +1,7 @@
 system_configuration:
+    groups:
+        frontend_datagrid_settings:
+            title: acme.search_datagrid_refresh.system_configuration.groups.frontend_datagrid_settings.label
     fields:
         acme_search_datagrid_refresh.dashboard_datagrid_refresh_sec:
             data_type: integer
@@ -11,7 +14,6 @@ system_configuration:
                 constraints:
                     - GreaterThan:
                         value: 0
-
     tree:
         system_configuration:
             commerce:
@@ -20,6 +22,6 @@ system_configuration:
                         children:
                             frontend_settings:
                                 children:
-                                    frontend_dashboard_settings:
+                                    frontend_datagrid_settings:
                                         children:
                                             - acme_search_datagrid_refresh.dashboard_datagrid_refresh_sec

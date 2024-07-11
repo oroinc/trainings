@@ -3,7 +3,7 @@ acme:
         system_configuration:
             groups:
                 frontend_customer_settings:
-                    label: Frontend Customer Settings
+                    label: Customer Settings
             fields:
                 allowed_email_domain:
                     label: 'Allowed email domain'
