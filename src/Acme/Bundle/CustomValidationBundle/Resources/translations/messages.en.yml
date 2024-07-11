@@ -1,6 +1,9 @@
 acme:
     custom_validation:
         system_configuration:
+            groups:
+                frontend_customer_settings:
+                    label: Customer Settings
             fields:
                 allowed_email_domain:
                     label: 'Allowed email domain'

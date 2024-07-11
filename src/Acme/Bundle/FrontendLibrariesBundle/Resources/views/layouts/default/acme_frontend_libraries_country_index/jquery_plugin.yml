@@ -1,0 +1,15 @@
+layout:
+    imports:
+        -   id: oro_customer_page
+
+    actions:
+        -   '@setBlockTheme':
+                themes: 'jquery_plugin.html.twig'
+        -   '@setOption':
+                id: page_title
+                optionName: defaultValue
+                optionValue: 'acme.frontend_libraries.navigation.country.index.label'
+        -   '@add':
+                id: jquery_plugin_example
+                parentId: page_content
+                blockType: block
