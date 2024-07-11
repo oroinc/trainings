@@ -2,7 +2,7 @@ acme:
     frontend_dashboards:
         system_configuration:
             groups:
-                frontend_dashboard:
+                frontend_settings:
                     label: 'Frontend Settings'
                 frontend_dashboard_settings:
                     label: 'Dashboard Settings'

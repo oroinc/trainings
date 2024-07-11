@@ -83,23 +83,23 @@ class LoadContentBlocksData extends AbstractFixture implements
 
     private function createNewBlock(string $blockName, array $blockData, ObjectManager $manager, User $user): void
     {
-            $title = new LocalizedFallbackValue();
-            $title->setString($blockData['title']);
-            $manager->persist($title);
+        $title = new LocalizedFallbackValue();
+        $title->setString($blockData['title']);
+        $manager->persist($title);
 
-            $variant = new TextContentVariant();
-            $variant->setDefault(true);
-            $variant->setContent($blockData['content']);
+        $variant = new TextContentVariant();
+        $variant->setDefault(true);
+        $variant->setContent($blockData['content']);
 
-            $manager->persist($variant);
+        $manager->persist($variant);
 
-            $contentBlock = new ContentBlock();
-            $contentBlock->setOrganization($user->getOrganization());
-            $contentBlock->setOwner($user->getOwner());
-            $contentBlock->setAlias($blockName);
-            $contentBlock->addTitle($title);
-            $contentBlock->addContentVariant($variant);
-            $manager->persist($contentBlock);
+        $contentBlock = new ContentBlock();
+        $contentBlock->setOrganization($user->getOrganization());
+        $contentBlock->setOwner($user->getOwner());
+        $contentBlock->setAlias($blockName);
+        $contentBlock->addTitle($title);
+        $contentBlock->addContentVariant($variant);
+        $manager->persist($contentBlock);
     }
 
     protected function getFilePathsFromLocator(string $path): array|string
@@ -108,14 +108,6 @@ class LoadContentBlocksData extends AbstractFixture implements
         return $locator->locate($path);
     }
 
-    /**
-     * @param ObjectManager $manager
-     * @param User $user
-     * @param string $fileRoot
-     * @param string $filename
-     * @param string $fileExtension
-     * @return AttachmentFile
-     */
     protected function createImage(
         ObjectManager $manager,
         User $user,
@@ -155,14 +147,6 @@ class LoadContentBlocksData extends AbstractFixture implements
         return $image;
     }
 
-    /**
-     * @param AttachmentFile $file
-     * @param FileLocator $locator
-     * @param string $fileRoot
-     * @param string $filename
-     * @param string $fileExtension
-     * @param string $filter
-     */
     protected function writeDigitalAssets(
         AttachmentFile $file,
         FileLocator $locator,
