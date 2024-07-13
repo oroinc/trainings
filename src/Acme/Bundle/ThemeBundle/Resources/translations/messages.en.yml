@@ -33,7 +33,10 @@ acme:
         content_widget_type:
             video_banner:
                 label: Video Banner
-
+    copyright:
+        text:
+            default: 'ACME (c) %year%. All rights reserved'
+            short: 'ACME(c) %year%'
     theme:
         system_configuration:
             groups:
