@@ -2,22 +2,18 @@
   .page-title {
     font-size: 40px;
     line-height: 44px;
-    /*font-family: $secondary-font;*/
     font-weight: 700;
     display: block;
     margin-bottom: 24px;
     .page-title__text {
-      //@include RegularTitle();
       font-size: 72px;
-      line-height: 34px;
+      line-height: 370px;
       display: block;
       margin-bottom: 14px;
-    }
-    .page-title__subtext {
-      text-transform: none;
-      display: block;
-      padding-top: 6px;
-      font-style: normal;
+      background: #121FCF;
+      background: linear-gradient(to right, #121FCF 0%, #CF1512 60%, #CF1512 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
   }
   .exception-page__content {

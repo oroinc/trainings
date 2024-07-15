@@ -4,10 +4,7 @@
     }) %}
     <div {{ block('block_attributes') }}>
         <h1 class=" page-title">
-            <span class="page-title__text">
-                {{ status_code }}
-            </span>
-            <span class="page-title__subtext">{{ status_text }}</span>
+            <span class="page-title__text"> {{ status_code }} {{ status_text }}</span>
         </h1>
         <div class="exception-page__content">
             <p>
