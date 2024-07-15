@@ -8,8 +8,8 @@ logo_small: bundles/trainingnewtheme/new/images/logo-small.svg
 rtl_support: true
 
 image_placeholders:
-    product: '/bundles/trainingnewtheme/acme/images/no_image.svg'
-    category: '/bundles/trainingnewtheme/acme/images/no_image.svg'
+    product: '/bundles/trainingnewtheme/new/images/no_image.svg'
+    category: '/bundles/trainingnewtheme/new/images/no_image.svg'
 
 configuration:
     sections:
