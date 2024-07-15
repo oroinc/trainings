@@ -1,9 +1,0 @@
-services:
-    _defaults:
-        public: false
-
-    Training\Bundle\FrontendTrainingBundle\Controller\Frontend\ShoppingListCleanupController:
-        public: true
-        calls:
-            - [ setContainer, [ '@Psr\Container\ContainerInterface' ] ]
-        tags: [ container.service_subscriber ]
