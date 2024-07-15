@@ -133,6 +133,8 @@ oro_layout:
         - custom
         - new
         - acme
+    active_theme: new
+
 oro_locale:
     formatting_code: en
     language: en

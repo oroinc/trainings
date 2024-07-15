@@ -39,6 +39,8 @@ training:
                     label: "Store phone"
                 store_email:
                     label: "Store email"
+                store_youtube_chanel:
+                    label: "Store Youtube Chanel"
 new:
     product:
         content_widget_type:

@@ -22,7 +22,8 @@ class Configuration implements ConfigurationInterface
             $rootNode,
             [
                 'store_phone'         => ['value' => '+19012345678'],
-                'store_support_email' => ['value' => 'mail@example.com']
+                'store_support_email' => ['value' => 'mail@example.com'],
+                'store_youtube_chanel' => ['value' => 'https://www.youtube.com/']
             ]
         );
 
