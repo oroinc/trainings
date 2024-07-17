@@ -1,0 +1,8 @@
+{% block _footer_sidebar_wrapper_right_widget %}
+    {% set attr = layout_attr_defaults(attr, {
+        '~class': " footer_sidebar_wrapper_right"
+    }) %}
+    <div {{ block('block_attributes') }}>
+        {{ block_widget(block) }}
+    </div>
+{% endblock %}
