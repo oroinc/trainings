@@ -1,0 +1,9 @@
+layout:
+    actions:
+        - '@setBlockTheme':
+              themes: 'exception.html.twig'
+
+        - '@setOption':
+            id: page_main
+            optionName: attr.class
+            optionValue: ' exception-page-wrapper'
