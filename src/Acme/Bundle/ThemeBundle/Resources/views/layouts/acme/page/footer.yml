@@ -1,11 +1,22 @@
 layout:
     actions:
+        - '@setBlockTheme':
+            themes: 'footer.html.twig'
 
-        - '@add':
-            id: footer_social
-            parentId: page_footer_side
-            blockType: content_block
-            options:
-                alias: footer-social
-                vars:
-                    hideTitle: true
+        - '@addTree':
+            items:
+                footer_sidebar_wrapper_right:
+                    blockType: container
+
+                footer_social:
+                    blockType: content_block
+                    options:
+                        alias: footer-social
+                        vars:
+                            hideTitle: true
+
+            tree:
+                page_footer_side:
+                    footer_sidebar_wrapper_right:
+                        footer_social: ~
+
