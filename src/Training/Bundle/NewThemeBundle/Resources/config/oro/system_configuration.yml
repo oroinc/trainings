@@ -22,13 +22,13 @@ system_configuration:
                 label: training.theme.system_configuration.store_media_settings.store_email.label
                 required: false
 
-        training_new_theme.store_youtube_chanel:
+        training_new_theme.store_youtube_channel:
             data_type: string
             type: Symfony\Component\Form\Extension\Core\Type\TextType
             search_type: text
             priority: 90
             options:
-                label: training.theme.system_configuration.store_media_settings.store_youtube_chanel.label
+                label: training.theme.system_configuration.store_media_settings.store_youtube_channel.label
                 required: false
                 constraints:
                     - Url: ~
@@ -46,4 +46,4 @@ system_configuration:
                                         children:
                                             - training_new_theme.store_phone
                                             - training_new_theme.store_support_email
-                                            - training_new_theme.store_youtube_chanel
+                                            - training_new_theme.store_youtube_channel

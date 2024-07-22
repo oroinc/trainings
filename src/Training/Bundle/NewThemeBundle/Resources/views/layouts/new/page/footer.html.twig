@@ -5,7 +5,7 @@
 
     {% set  website_phone = oro_config_value('training_new_theme.store_phone') %}
     {% set  website_support_email = oro_config_value('training_new_theme.store_support_email') %}
-    {% set  website_youtube_chanel = oro_config_value('training_new_theme.store_youtube_chanel') %}
+    {% set  website_youtube_chanel = oro_config_value('training_new_theme.store_youtube_channel') %}
 
     <div {{ block('block_attributes') }} >
         {{ block_widget(block) }}
@@ -13,7 +13,7 @@
             {% if website_phone %}
                 <li>
                     <span class="footer-text">
-                        {{ 'training.theme.system_configuration.store_media_settings.store_phone.label'|trans }}
+                        {{ 'training.theme.storefront.store_phone.label'|trans }}
                     </span>
                     <a class="facebook" href="tell:{{ website_phone }}">
                         <span class="fa-phone"></span>
@@ -26,7 +26,7 @@
             {% endif %}
             {% if website_support_email %}
                 <li>
-                    <span class="footer-text">{{ 'training.theme.system_configuration.store_media_settings.store_email.label'|trans }}</span>
+                    <span class="footer-text">{{ 'training.theme.storefront.store_email.label'|trans }}</span>
                     <a class="email" href="mailto:{{ website_support_email}}">
                         <span class="fa-mail"></span>
                         <span class="footer-text">{{ website_support_email}}</span>
@@ -35,7 +35,7 @@
             {% endif %}
             {% if website_youtube_chanel %}
                 <li>
-                    <span class="footer-text">{{ 'training.theme.system_configuration.store_media_settings.store_youtube_chanel.label'|trans }}</span>
+                    <span class="footer-text">{{ 'training.theme.storefront.store_youtube_channel.label'|trans }}</span>
                     <a class="youtube" href="{{ website_youtube_chanel }}">
                         <span class="fa-youtube"></span>
                     </a>
