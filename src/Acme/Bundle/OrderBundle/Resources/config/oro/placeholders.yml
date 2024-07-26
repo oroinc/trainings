@@ -2,9 +2,16 @@ placeholders:
     items:
         print_order_buttons:
             template: '@@AcmeOrder/Placeholders/printButtons.html.twig'
+            applicable: '@oro_ui.placeholder.filter->isInstanceOf($entity$, Oro\Bundle\OrderBundle\Entity\Order)'
 
     placeholders:
         view_navButtons_after:
             items:
                 print_order_buttons:
                     order: 10
+        view_general_section_after:
+            items:
+                payment_method:
+                    order: 15 # display Payment Method on Order view page after Payment Status
+                payment_info:
+                    order: 10 # display Payment Status on Order view page after Payment Method

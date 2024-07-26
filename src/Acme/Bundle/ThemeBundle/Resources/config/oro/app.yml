@@ -3,7 +3,3 @@ oro_theme:
         oro:
             logo: bundles/acmetheme/oro/images/logo.svg
             icon: bundles/acmetheme/oro/images/favicons/favicon.ico
-
-oro_layout:
-    enabled_themes:
-        - acme
