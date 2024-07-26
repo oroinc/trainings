@@ -130,9 +130,9 @@ oro_theme:
 oro_layout:
     enabled_themes:
         - default
-        - custom
-        - new
         - acme
+        - new
+
 oro_locale:
     formatting_code: en
     language: en
