@@ -1,6 +1,6 @@
 parent: default
-label: acme theme
-description: 'New demo theme'
+label: Acme theme
+description: 'Acme theme for demonstration purposes'
 groups: [ commerce ]
 icon: bundles/acmetheme/acme/images/favicons/favicon.ico
 logo: bundles/acmetheme/acme/images/logo.svg
