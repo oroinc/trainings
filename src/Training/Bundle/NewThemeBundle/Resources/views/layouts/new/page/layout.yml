@@ -1,8 +1,5 @@
 layout:
     actions:
-        - '@setBlockTheme':
-            themes: 'layout.html.twig'
-
         - '@add':
             id: footer_social
             parentId: footer_container

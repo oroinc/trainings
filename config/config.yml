@@ -130,7 +130,6 @@ oro_theme:
 oro_layout:
     enabled_themes:
         - default
-        - custom
         - new
         - acme
     active_theme: new
