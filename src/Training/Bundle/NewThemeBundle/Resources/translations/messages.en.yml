@@ -1,49 +1,33 @@
 oro_frontend:
     logo:
         alt:
-            label: ACME inc
+            label: New theme
 
 oro:
-    copyright: © {{year}}   ACME Inc. All Rights Reserved.
-    account:
-        entity_label:  My Account
-    product:
-        lineitem:
-            quantity:
-                enter: 'Item'
+    copyright: © {{year}}   New Inc. All Rights Reserved.
 
-    customer:
-        frontend:
-            menu:
-                customer_user_profile:
-                    label: My Account
     logo:
         alt:
-            label: ACME inc
+            label: New theme
 
-        lineitem:
-            quantity:
-                enter: 'Item'
-
-    website_search:
-        search_field_placeholder: "I am looking for"
 training:
     theme:
         system_configuration:
             groups:
                 store_media_settings:
-                    title: "Store Info"
+                    title: Store Info
 
             store_media_settings:
                 store_phone:
-                    label: "Store phone"
+                    label: Store phone
                 store_email:
-                    label: "Store email"
-new:
-    product:
-        content_widget_type:
-            video_banner:
-                label: Video Banner
-
-
-
+                    label: Store email
+                store_youtube_channel:
+                    label: Store Youtube Channel
+        storefront:
+            store_phone:
+                label: Store phone
+            store_email:
+                label: Store email
+            store_youtube_channel:
+                label: Store Youtube Channel

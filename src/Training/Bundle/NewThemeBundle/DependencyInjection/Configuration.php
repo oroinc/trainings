@@ -21,8 +21,9 @@ class Configuration implements ConfigurationInterface
         SettingsBuilder::append(
             $rootNode,
             [
-                'store_phone'         => ['value' => '+19012345678'],
-                'store_support_email' => ['value' => 'mail@example.com']
+                'store_phone'           => ['value' => '+19012345678'],
+                'store_support_email'   => ['value' => 'mail@example.com'],
+                'store_youtube_channel' => ['value' => 'https://www.youtube.com/']
             ]
         );
 

@@ -1,9 +1,0 @@
-layout:
-    actions:
-        - '@setBlockTheme':
-            themes: 'layout.html.twig'
-
-        - '@appendOption':
-              id: body
-              optionName: attr.class
-              optionValue: ' pdp-page'

@@ -8,3 +8,5 @@ oro_layout:
     active_theme: new
     enabled_themes:
         - new
+        - default
+        - acme

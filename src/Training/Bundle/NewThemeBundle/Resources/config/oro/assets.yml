@@ -1,0 +1,4 @@
+css:
+    inputs:
+        # Styles
+        - 'bundles/trainingnewtheme/oro/css/scss/main.scss'
