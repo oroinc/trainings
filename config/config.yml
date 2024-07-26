@@ -127,6 +127,11 @@ oro_maintenance:
 oro_theme:
     active_theme: oro
 
+oro_layout:
+    enabled_themes:
+        - default
+        - acme
+
 oro_locale:
     formatting_code: en
     language: en
