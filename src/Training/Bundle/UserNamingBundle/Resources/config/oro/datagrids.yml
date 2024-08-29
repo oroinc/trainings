@@ -22,7 +22,6 @@ datagrids:
                 template: '@TrainingUserNaming/UserNaming/Datagrid/formatColumn.html.twig'
         properties:
             id: ~
-            example: ~
             view_link:
                 type: url
                 route: training_user_naming_view
