@@ -2,20 +2,17 @@
 
 namespace Training\Bundle\IntegrationBundle\Entity;
 
+use Doctrine\DBAL\Types\Types;
 use Symfony\Component\HttpFoundation\ParameterBag;
 use Doctrine\ORM\Mapping as ORM;
 use Oro\Bundle\IntegrationBundle\Entity\Transport;
 
-/**
- * @ORM\Entity()
- */
+#[ORM\Entity]
 class UserNamingIntegrationSettings extends Transport
 {
     const DATA_URL = 'url';
 
-    /**
-     * @ORM\Column(name="user_naming_url", type="string", length=255)
-     */
+    #[ORM\Column(name: 'user_naming_url', type: Types::STRING, length: 255)]
     private $url;
 
     /**
@@ -37,6 +34,7 @@ class UserNamingIntegrationSettings extends Transport
     public function setUrl($url)
     {
         $this->url = $url;
+        return $this;
     }
 
     /**
@@ -45,7 +43,11 @@ class UserNamingIntegrationSettings extends Transport
     public function getSettingsBag()
     {
         if (null === $this->settings) {
-            $this->settings = new ParameterBag([self::DATA_URL => $this->getUrl()]);
+            $this->settings = new ParameterBag(
+                [
+                    self::DATA_URL => $this->getUrl()
+                ]
+            );
         }
 
         return $this->settings;
