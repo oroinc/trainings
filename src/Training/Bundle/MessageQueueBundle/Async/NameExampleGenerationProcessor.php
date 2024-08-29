@@ -13,10 +13,6 @@ use Training\Bundle\UserNamingBundle\Entity\UserNamingType;
 
 class NameExampleGenerationProcessor implements MessageProcessorInterface, TopicSubscriberInterface
 {
-    /**
-     * @param DoctrineHelper $doctrineHelper
-     * @param UserFullNameProvider $nameProvider
-     */
     public function __construct(private DoctrineHelper $doctrineHelper, private UserFullNameProvider $nameProvider)
     {
     }

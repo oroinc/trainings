@@ -2,7 +2,7 @@
 
 namespace Training\Bundle\MessageQueueBundle\EventListener;
 
-use Doctrine\ORM\Event\LifecycleEventArgs;
+use Doctrine\ORM\Event\PostPersistEventArgs;
 use Doctrine\ORM\Event\PreUpdateEventArgs;
 use Oro\Component\MessageQueue\Client\MessageProducerInterface;
 use Training\Bundle\MessageQueueBundle\Async\Topics\GenerateNameExampleTopic;
@@ -10,18 +10,15 @@ use Training\Bundle\UserNamingBundle\Entity\UserNamingType;
 
 class NamingFormatModificationListener
 {
-    /**
-     * @param MessageProducerInterface $messageProducer
-     */
     public function __construct(private MessageProducerInterface $messageProducer)
     {
     }
 
     /**
      * @param UserNamingType $namingType
-     * @param LifecycleEventArgs $event
+     * @param PostPersistEventArgs $event
      */
-    public function postPersist(UserNamingType $namingType, LifecycleEventArgs $event)
+    public function postPersist(UserNamingType $namingType, PostPersistEventArgs $event)
     {
         $this->sendNameExampleGenerationMessage($namingType);
     }
