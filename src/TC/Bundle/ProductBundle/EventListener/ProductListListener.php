@@ -8,7 +8,7 @@ use Oro\Bundle\ProductBundle\Event\BuildQueryProductListEvent;
 use Oro\Bundle\ProductBundle\Event\BuildResultProductListEvent;
 use TC\Bundle\ProductBundle\Provider\InventoryLevelProvider;
 
-class ProductListInventoryListener
+class ProductListListener
 {
     public function __construct(
         private InventoryLevelProvider $inventoryLevelProvider,

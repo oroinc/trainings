@@ -1,5 +1,5 @@
 services:
-    TC\Bundle\ProductBundle\EventListener\Datagrid\FrontendProductGridInventoryListener:
+    TC\Bundle\ProductBundle\EventListener\Datagrid\FrontendProductGridListener:
         arguments:
             - '@TC\Bundle\ProductBundle\Provider\InventoryLevelProvider'
             - '@oro_entity.doctrine_helper'
@@ -7,7 +7,7 @@ services:
             - { name: kernel.event_listener, event: oro_datagrid.datagrid.build.before.frontend-product-search-grid, method: onBuildBefore }
             - { name: kernel.event_listener, event: oro_datagrid.search_datasource.result.after.frontend-product-search-grid, method: onResultAfter }}
 
-    TC\Bundle\ProductBundle\EventListener\ProductListInventoryListener:
+    TC\Bundle\ProductBundle\EventListener\ProductListListener:
         arguments:
             - '@TC\Bundle\ProductBundle\Provider\InventoryLevelProvider'
             - '@oro_entity.doctrine_helper'

@@ -10,7 +10,7 @@ use Oro\Bundle\ProductBundle\Entity\Product;
 use Oro\Bundle\SearchBundle\Datagrid\Event\SearchResultAfter;
 use TC\Bundle\ProductBundle\Provider\InventoryLevelProvider;
 
-class FrontendProductGridInventoryListener
+class FrontendProductGridListener
 {
     public function __construct(
         private InventoryLevelProvider $inventoryLevelProvider,
