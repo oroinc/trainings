@@ -23,7 +23,7 @@ class FrontendCustomerUserRegistrationTypeExtension extends AbstractTypeExtensio
     protected function addBillingAddressField(): void
     {
         $this->builder->add(
-            'billingAddress',
+            'registrationAddress',
             FrontendCustomerUserTypedAddressType::class,
             [
                 'label' => 'tc.customer.registration.address.label',

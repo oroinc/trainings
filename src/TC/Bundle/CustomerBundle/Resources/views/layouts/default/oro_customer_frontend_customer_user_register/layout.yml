@@ -2,3 +2,8 @@ layout:
     actions:
         - '@setFormTheme':
               themes: 'form_theme.html.twig'
+
+        - '@setOption':
+            id: registration_all_required_label
+            optionName: vars.showAllRequiredLabel
+            optionValue: false
