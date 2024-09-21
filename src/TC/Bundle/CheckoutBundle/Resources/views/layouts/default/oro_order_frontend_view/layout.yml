@@ -3,9 +3,9 @@ layout:
         - '@add':
             id: order_contact_name
             parentId: order_body_column_right
-            blockType: text
             siblingId: order_payment_status
             prepend: false
+            blockType: text
             options:
                 text: '=data["order"].getContactName()'
                 label: 'oro.order.contact_name.label'
@@ -13,9 +13,9 @@ layout:
         - '@add':
               id: order_contact_phone
               parentId: order_body_column_right
-              blockType: text
               siblingId: order_contact_name
               prepend: false
+              blockType: text
               options:
                   text: '=data["order"].getContactPhone()'
                   label: 'oro.order.contact_phone.label'
