@@ -14,18 +14,6 @@ class FrontendProductDatagridListener
     ) {
     }
 
-    public function onResultAfter(SearchResultAfter $event): void
-    {
-        $records = $event->getRecords();
-        $topSelling = $this->searchRepository->getTopSellingProducts();
-
-        foreach ($records as $record) {
-            $this->setIsTopSelling($record, $topSelling);
-        }
-
-        $event->setRecords($records);
-    }
-
     public function onBuildBefore(BuildBefore $event)
     {
         $config = $event->getConfig();
@@ -37,6 +25,18 @@ class FrontendProductDatagridListener
                 ],
             ]
         );
+    }
+
+    public function onResultAfter(SearchResultAfter $event): void
+    {
+        $records = $event->getRecords();
+        $topSelling = $this->searchRepository->getTopSellingProducts();
+
+        foreach ($records as $record) {
+            $this->setIsTopSelling($record, $topSelling);
+        }
+
+        $event->setRecords($records);
     }
 
     protected function setIsTopSelling(ResultRecordInterface $record, array $topSelling): void
