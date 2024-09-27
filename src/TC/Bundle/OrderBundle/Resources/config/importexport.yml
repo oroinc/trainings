@@ -1,0 +1,26 @@
+services:
+    tc_order.importexport.processor.import.add:
+        class: TC\Bundle\OrderBundle\ImportExport\Processor\OrderImportProcessor
+        parent: oro_importexport.processor.import_abstract
+        arguments:
+            - '@doctrine'
+            - '@oro_order.order.total.total_helper'
+            - '@oro_importexport.strategy.import.helper'
+            - '@validator'
+            - '@translator'
+            - '@logger'
+        tags:
+            - { name: oro_importexport.processor, type: import, entity: Oro\Bundle\OrderBundle\Entity\Order, alias: tc_order.add }
+            - { name: oro_importexport.processor, type: import_validation, entity: Oro\Bundle\OrderBundle\Entity\Order, alias: tc_order.add }
+
+    tc_order.importexport.processor.export.template:
+        parent: oro_importexport.processor.export_abstract
+        tags:
+            - { name: oro_importexport.processor, type: export_template, entity: Oro\Bundle\OrderBundle\Entity\Order, alias: tc_order.template }
+
+    tc_order.importexport.configuration_provider.order:
+        class: TC\Bundle\OrderBundle\ImportExport\Configuration\OrderImportConfigurationProvider
+        arguments:
+            - '@translator'
+        tags:
+            - { name: oro_importexport.configuration, alias: tc_order }
