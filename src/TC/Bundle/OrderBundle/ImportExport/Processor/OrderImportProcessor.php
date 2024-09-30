@@ -226,10 +226,6 @@ class OrderImportProcessor extends ImportProcessor
                 ->setPrice($price)
             ;
 
-            if (isset($lineItemData['Msrp'])) {
-                $lineItem->setMsrp($lineItemData['Msrp']);
-            }
-
             $order->addLineItem($lineItem);
         }
     }
