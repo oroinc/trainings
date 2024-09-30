@@ -1,0 +1,9 @@
+dynamic-imports:
+    commons:
+        - tcorder/js/app/views/export-template-button-view
+
+map:
+    "*":
+        oroimportexport/js/app/views/export-template-button-view: tcorder/js/app/views/export-template-button-view
+    "tcorder/js/app/views/export-template-button-view":
+        oroimportexport/js/app/views/export-template-button-view: oroimportexport/js/app/views/export-template-button-view

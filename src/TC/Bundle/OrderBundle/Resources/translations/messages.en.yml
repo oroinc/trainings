@@ -1,0 +1,5 @@
+tc:
+    order:
+        import:
+            strategy:
+                tooltip: '<b>Add strategy</b> adds new Orders from the imported file together with related Order Line Items. <br> <b>Add strategy</b> does not change existing records. Attempting to load Orders with duplicating Identifier causes a validation error.'

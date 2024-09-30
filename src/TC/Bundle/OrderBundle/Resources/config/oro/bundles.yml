@@ -1,0 +1,2 @@
+bundles:
+    - { name: TC\Bundle\OrderBundle\TCOrderBundle, priority: 1000 }

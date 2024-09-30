@@ -1,0 +1,5 @@
+tc:
+    order:
+        import:
+            validation_errors: 'Order number %identifier% not imported. Validation messages: %messages%'
+            exception: 'Exception occurred while importing Order number %identifier%. See the log for more details.'
