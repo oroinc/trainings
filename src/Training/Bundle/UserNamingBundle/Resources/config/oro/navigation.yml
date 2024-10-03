@@ -15,4 +15,3 @@ navigation:
                                     user_namings_list: ~
     titles:
         training_user_naming_index: ~
-        training_user_naming_view: '%title% - oro.ui.view'
