@@ -3,5 +3,5 @@ acls:
         label: 'training.usernaming.security.training_user_naming_info.label'
         description: 'training.usernaming.security.training_user_naming_info.description'
         type: action
-        group_name: ""
-        category: "account_management"
+        group_name: ''
+        category: 'account_management'
