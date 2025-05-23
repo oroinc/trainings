@@ -3,6 +3,7 @@
 // Need to trace all kind of errors
 error_reporting(-1);
 ini_set('display_errors', 'On');
+$_SERVER['ORO_DEBUG'] = true;
 
 // if you don't want to set up permissions the proper way, just uncomment the following PHP line
 // read http://symfony.com/doc/current/book/installation.html#configuration-and-setup for more information
@@ -20,4 +21,4 @@ if (isset($_SERVER['HTTP_CLIENT_IP'])
 
 require_once dirname(__DIR__).'/vendor/autoload_runtime.php';
 
-return fn() => new AppKernel('dev', true);
+return fn () => new AppKernel('dev', true);
