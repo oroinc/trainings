@@ -4,7 +4,7 @@ layout:
             themes: 'layout.html.twig'
         - '@add':
             id: cleanup_shopping_list
-            parentId: summary_container
+            parentId: summary_summary
             blockType: block
             options:
                 vars:
