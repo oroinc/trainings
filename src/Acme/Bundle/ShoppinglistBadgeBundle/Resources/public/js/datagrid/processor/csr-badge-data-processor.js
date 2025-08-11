@@ -20,7 +20,7 @@ export const addItemsToData = data => {
         flatData.push(item);
 
         // Add CSR badge for out of stock items
-        if (item.inventoryStatus === 'out_of_stock' && !isNaN(Number(item.id))) { // Avoid duplicate badge for existing notification item
+        if (item.inventoryStatus === 'prod_inventory_status.out_of_stock' && !isNaN(Number(item.id))) { // Avoid duplicate badge for existing notification item
             flatData.push(csrBadgeModel(item));
         }
 
