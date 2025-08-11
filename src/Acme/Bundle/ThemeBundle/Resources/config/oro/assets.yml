@@ -1,4 +1,0 @@
-css:
-    inputs:
-        # Styles
-        - 'bundles/acmetheme/oro/css/scss/main.scss'
