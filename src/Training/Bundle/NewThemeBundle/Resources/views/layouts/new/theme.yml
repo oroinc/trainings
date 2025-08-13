@@ -16,14 +16,6 @@ configuration:
         header:
             label: 'oro_frontend.theme.default.configuration.header.label'
             options:
-                promotional_content:
-                    label: 'oro_frontend.theme.default.configuration.header.promotional_content.label'
-                    type: content_block_selector
-                    options:
-                        required: false
-                        tooltip: 'oro_frontend.theme.default.configuration.header.promotional_content.tooltip'
-                    previews:
-                        promotional-content: 'bundles/orofrontend/images/previews/promotional-content.png'
                 top_navigation_menu:
                     label: 'oro_frontend.theme.default.configuration.header.top_navigation_menu.label'
                     type: menu_selector
@@ -35,35 +27,6 @@ configuration:
                         configs:
                             allowClear: true
                             placeholder: 'oro_frontend.theme.default.configuration.header.top_navigation_menu.placeholder'
-                quick_links:
-                    label: 'oro_frontend.theme.default.configuration.header.quick_links.label'
-                    type: menu_selector
-                    default: commerce_quick_access_refreshing_teal
-                    previews:
-                        _default: 'bundles/orofrontend/images/previews/quick-links.png'
-                    options:
-                        required: false
-                        scope_type: 'menu_frontend_visibility'
-                        configs:
-                            allowClear: true
-                            placeholder: 'oro_frontend.theme.default.configuration.header.quick_links.placeholder'
-                quick_access_button:
-                    label: 'oro_frontend.theme.default.configuration.header.quick_access_button.label'
-                    type: quick_access_button_config
-                    previews:
-                        _default: 'bundles/orofrontend/images/previews/quick-access-button.png'
-                    options:
-                        required: false
-                language_and_currency_switchers:
-                    label: 'oro_frontend.theme.default.configuration.header.language_and_currency_switchers.label'
-                    type: select
-                    default: always_in_hamburger_menu
-                    values:
-                        above_header: 'oro_frontend.theme.default.configuration.header.language_and_currency_switchers.choices.above_the_header'
-                        always_in_hamburger_menu: 'oro_frontend.theme.default.configuration.header.language_and_currency_switchers.choices.hamburger'
-                    previews:
-                        above_header: 'bundles/orofrontend/images/previews/lang-crnc-switchers-header.png'
-                        always_in_hamburger_menu: 'bundles/orofrontend/images/previews/lang-crnc-switchers-hamburger.png'
                 standalone_main_menu:
                     label: 'oro_frontend.theme.default.configuration.header.standalone_main_menu.label'
                     type: checkbox
@@ -80,15 +43,6 @@ configuration:
                         standalone: 'oro_frontend.theme.default.configuration.header.search_on_smaller_screens.choices.standalone'
                     previews:
                         _default: 'bundles/orofrontend/images/previews/search-smaller-screens.png'
-        datagrid:
-            label: oro_frontend.theme.default.configuration.datagrid.label
-            options:
-                pagination_threshold:
-                    label: oro_frontend.theme.default.configuration.datagrid.pagination_threshold.label
-                    type: integer
-                    default: 100
-                    previews:
-                        _default: 'bundles/orofrontend/images/previews/default_pagination_with_input_field.png'
         product_listing:
             label: 'oro.product.theme.default.configuration.product_listing.label'
             options:
