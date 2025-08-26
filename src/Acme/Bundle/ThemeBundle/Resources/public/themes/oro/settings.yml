@@ -5,5 +5,5 @@ rtl_support: true
 styles:
     css:
         inputs:
-            - bundles/acmetheme/themes/demo/css/scss/settings/primary-settings
+            - bundles/acmetheme/themes/oro/css/scss/settings/primary-settings
         output: css/oro.css
