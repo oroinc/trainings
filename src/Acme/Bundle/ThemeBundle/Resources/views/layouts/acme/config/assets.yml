@@ -1,7 +1,18 @@
-styles:
+critical_css:
     inputs:
         - 'bundles/acmetheme/acme/scss/settings/global-settings.scss'
 
-        - 'bundles/acmetheme/acme/scss/styles.scss'
+    output: 'css/critical.css'
 
+styles:
+    inputs:
+        - 'bundles/acmetheme/acme/scss/settings/global-settings.scss'
+        - 'bundles/acmetheme/acme/scss/styles.scss'
     output: 'css/styles.css'
+    auto_rtl_inputs:
+        - 'bundles/oro*/**'
+
+stylebook_styles:
+    inputs:
+        - 'bundles/acmetheme/acme/scss/settings/global-settings.scss'
+    output: 'css/stylebook.css'
