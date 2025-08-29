@@ -1,0 +1,6 @@
+layout:
+    actions: []
+    imports:
+        -
+            id: product_tag
+            root: product_datagrid_row_product_primary_content_container
