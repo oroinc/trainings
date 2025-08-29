@@ -98,7 +98,7 @@
 
         {% if entity.shippingCost is not null %}
             {{ UI.renderProperty('oro.order.shipping_cost.label'|trans,
-                    entity.shippingCost.value|oro_format_currency({'currency': entity.shippingCost.currency})) }}
+                entity.shippingCost.value|oro_format_currency({'currency': entity.shippingCost.currency})) }}
         {% else %}
             {{ UI.renderProperty('oro.order.shipping_cost.label'|trans, 'N/A'|trans) }}
         {% endif %}
