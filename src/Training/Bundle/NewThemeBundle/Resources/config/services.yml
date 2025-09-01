@@ -1,6 +1,0 @@
-services:
-    new_theme.provider.new_image_placeholder.default:
-        parent: oro_layout.provider.image_placeholder.default.abstract
-        public: false
-        arguments:
-            - '/bundles/trainingnewtheme/new/images/no_image.svg'
