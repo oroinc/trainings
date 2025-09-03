@@ -2,9 +2,9 @@
     {% if product.inventory_status is defined %}
         {% set inventoryStatus = oro_inventory_status_code(product) %}
         {% set statusesMap = {
-            'in_stock': 'success',
-            'out_of_stock': 'destructive',
-            'discontinued': 'destructive'
+            'prod_inventory_status.in_stock': 'success',
+            'prod_inventory_status.out_of_stock': 'destructive',
+            'prod_inventory_status.discontinued': 'destructive'
         } %}
         {% import '@OroUI/layouts/renderIcon.html.twig' as renderIcon %}
 
