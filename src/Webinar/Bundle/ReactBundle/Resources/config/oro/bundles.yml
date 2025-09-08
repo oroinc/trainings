@@ -1,0 +1,2 @@
+bundles:
+    - { name: Webinar\Bundle\ReactBundle\WebinarReactBundle, priority: 300 }

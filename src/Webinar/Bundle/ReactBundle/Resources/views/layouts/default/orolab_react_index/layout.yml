@@ -1,0 +1,12 @@
+layout:
+    actions:
+        - '@setBlockTheme':
+              themes: 'layout.html.twig'
+
+        - '@remove':
+              id: page_container
+        - '@add':
+              id: react_app
+              parentId: wrapper
+              prepend: true
+              blockType: block

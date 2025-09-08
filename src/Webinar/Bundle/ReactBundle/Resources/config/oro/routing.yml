@@ -1,0 +1,6 @@
+orolab_react_frontend:
+    resource: "@WebinarReactBundle/Controller/Frontend/ReactController.php"
+    type: annotation
+    prefix: /react
+    options:
+        frontend: true

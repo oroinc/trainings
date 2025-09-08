@@ -1,0 +1,12 @@
+{% block _react_app_widget %}
+    <h1>test</h1>
+    {% set attr = layout_attr_defaults(attr, {
+        'data-page-component-react-app': {
+            reactApp: 'webinarreact/js/react/components/App',
+        }
+    }) %}
+
+    <div {{ block('block_attributes') }}>
+        {{ block_widget(block) }}
+    </div>
+{% endblock %}

@@ -1,0 +1,20 @@
+navigation:
+    menu_config:
+        items:
+            frontend_try_react:
+                label: 'webinar.react.navigation.try_react.label'
+                route: 'orolab_react_index'
+
+        tree:
+            commerce_main_menu:
+                children:
+                    frontend_try_react: ~
+
+            commerce_footer_links:
+                children:
+                    information:
+                        children:
+                            frontend_try_react: ~
+
+    titles:
+        frontend_try_react: 'webinar.react.navigation.try_react.label'

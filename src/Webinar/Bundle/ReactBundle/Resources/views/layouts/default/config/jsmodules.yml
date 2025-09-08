@@ -1,0 +1,6 @@
+app-modules:
+    - oroui/js/app/modules/react-module
+dynamic-imports:
+    commons:
+        - oroui/js/app/components/react-app-component
+        - webinarreact/js/react/components/App

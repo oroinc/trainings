@@ -1,0 +1,9 @@
+services:
+    _defaults:
+        public: true
+
+    Webinar\Bundle\ReactBundle\Controller\Frontend\ReactController:
+        calls:
+            - ['setContainer', ['@Psr\Container\ContainerInterface']]
+        tags:
+            - { name: container.service_subscriber }
