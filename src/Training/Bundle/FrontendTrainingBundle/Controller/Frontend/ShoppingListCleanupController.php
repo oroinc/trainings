@@ -3,6 +3,7 @@
 namespace Training\Bundle\FrontendTrainingBundle\Controller\Frontend;
 
 use Doctrine\Persistence\ManagerRegistry;
+use Oro\Bundle\EntityExtendBundle\Tools\ExtendHelper;
 use Oro\Bundle\ProductBundle\Entity\Product;
 use Oro\Bundle\SecurityBundle\Attribute\AclAncestor;
 use Oro\Bundle\ShoppingListBundle\Entity\ShoppingList;
@@ -29,7 +30,12 @@ class ShoppingListCleanupController extends AbstractController
     public function cleanupAction(ShoppingList $shoppingList): JsonResponse
     {
         foreach ($shoppingList->getLineItems() as $lineItem) {
-            if ($lineItem->getProduct()?->getInventoryStatus()?->getId() === Product::INVENTORY_STATUS_OUT_OF_STOCK) {
+            $inventoryStatusId = $lineItem->getProduct()?->getInventoryStatus()?->getId();
+            $oosStatusId = ExtendHelper::buildEnumOptionId(
+                Product::INVENTORY_STATUS_ENUM_CODE,
+                Product::INVENTORY_STATUS_OUT_OF_STOCK
+            );
+            if ($inventoryStatusId === $oosStatusId) {
                 $this->container->get('oro_shopping_list.manager.shopping_list')->removeLineItem($lineItem);
             }
         }
