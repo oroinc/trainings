@@ -29,6 +29,9 @@ oro:
         search_field_placeholder: "I am looking for"
 
 acme:
+    order:
+        customer:
+            label: Order Customer
     product:
         content_widget_type:
             video_banner:
