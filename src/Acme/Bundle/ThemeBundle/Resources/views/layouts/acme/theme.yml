@@ -3,7 +3,7 @@ label: Acme theme
 description: 'Acme theme for demonstration purposes'
 groups: [ commerce ]
 icon: bundles/acmetheme/acme/images/favicons/favicon.ico
-favicons_path: bundles/acmetheme/acme/favicons/
+favicons_path: bundles/acmetheme/acme/images/favicons/
 logo: bundles/acmetheme/acme/images/logo.svg
 logo_small: bundles/acmetheme/acme/images/logo-small.svg
 rtl_support: true
