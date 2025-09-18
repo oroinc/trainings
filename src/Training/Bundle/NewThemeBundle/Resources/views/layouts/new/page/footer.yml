@@ -2,6 +2,7 @@ layout:
     actions:
         - '@setBlockTheme':
             themes: 'footer.html.twig'
+
         - '@add':
             id: footer_social
             parentId: page_footer_side
