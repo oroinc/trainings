@@ -1,6 +1,0 @@
-aliases:
-    datatables: acmefrontendlibraries/lib/datatables/dataTables.min.js
-
-dynamic-imports:
-    acmefrontendlibraries:
-        - acmefrontendlibraries/js/app/components/jquery-plugin-component

@@ -1,9 +1,0 @@
-services:
-    _defaults:
-        public: false
-
-    Acme\Bundle\CustomValidationBundle\Validator\Constraints\AllowedEmailDomainValidator:
-        arguments:
-            - '@oro_config.manager'
-        tags:
-            - { name: validator.constraint_validator }

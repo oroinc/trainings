@@ -1,6 +1,0 @@
-configs:
-    acmesearchdatagridrefresh/js/app/components/layout-block-refresh-component: {}
-
-dynamic-imports:
-    acmesearchdatagridrefresh:
-        - acmesearchdatagridrefresh/js/app/components/layout-block-refresh-component
