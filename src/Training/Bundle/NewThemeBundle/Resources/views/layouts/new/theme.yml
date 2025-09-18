@@ -3,6 +3,7 @@ label: New theme
 description: 'New theme for training purposes'
 groups: [ commerce ]
 icon: bundles/trainingnewtheme/new/images/favicons/favicon.ico
+favicons_path: bundles/trainingnewtheme/new/images/favicons/
 logo: bundles/trainingnewtheme/new/images/logo.svg
 logo_small: bundles/trainingnewtheme/new/images/logo-small.svg
 rtl_support: true

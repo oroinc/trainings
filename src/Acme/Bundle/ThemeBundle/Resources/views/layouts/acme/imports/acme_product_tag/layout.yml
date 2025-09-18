@@ -1,0 +1,15 @@
+layout:
+    actions:
+        - '@setBlockTheme':
+            themes: 'layout.html.twig'
+
+        - '@addTree':
+              items:
+                  tag_container:
+                      blockType: container
+                  tag_inner:
+                      blockType: block
+              tree:
+                  __root:
+                      tag_container:
+                          tag_inner: ~

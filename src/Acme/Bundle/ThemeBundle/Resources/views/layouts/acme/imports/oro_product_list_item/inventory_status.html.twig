@@ -9,7 +9,7 @@
         {% import '@OroUI/layouts/renderIcon.html.twig' as renderIcon %}
 
         {% set status = attribute(statusesMap, inventoryStatus) is defined ? ' status-label--' ~ statusesMap[inventoryStatus] : '' %}
-         {{ renderIcon.icon({name: 'truck'}) }}
-         <span class="status-label{{ status }}"> {{- oro_inventory_status_label(product) -}}</span>
+        {{ renderIcon.icon({name: 'truck'}) }}
+        <span class="status-label{{ status }}"> {{- oro_inventory_status_label(product) -}}</span>
     {% endif %}
 {% endblock %}

@@ -1,0 +1,21 @@
+{% block _tag_container_widget %}
+    {% set attr = layout_attr_defaults(attr, {
+        '~class': ' tag_container'
+    }) %}
+    <div {{ block('block_attributes') }}>
+        {{ block_widget(block) }}
+    </div>
+{% endblock %}
+
+{% block _tag_inner_widget %}
+    {% set attr = layout_attr_defaults(attr, {
+        '~class': ' tag_inner'
+    }) %}
+    <div {{ block('block_attributes') }}>
+        {# Provide tags dynamically, depending on product #}
+        <ul>
+            <li>Tag A</li>
+            <li>Tag B</li>
+        </ul>
+    </div>
+{% endblock %}
