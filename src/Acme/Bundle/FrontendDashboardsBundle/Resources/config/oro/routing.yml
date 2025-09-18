@@ -1,6 +1,0 @@
-acme_frontend_dashboards_dashboard:
-    resource:     "@AcmeFrontendDashboardsBundle/Controller/Frontend/DashboardController.php"
-    type:         annotation
-    prefix:       /frontend-dashboard
-    options:
-        frontend: true

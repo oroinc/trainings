@@ -1,4 +1,0 @@
-Oro\Bundle\CustomerBundle\Entity\CustomerUser:
-    properties:
-        email:
-            - Acme\Bundle\CustomValidationBundle\Validator\Constraints\AllowedEmailDomain: ~

@@ -1,6 +1,0 @@
-datagrids:
-    frontend-dashboards-quotes-grid:
-        extends: frontend-quotes-grid
-        options:
-            jsmodules:
-                - acmefrontenddashboards/js/app/datagrid/listener/refresh-grid-listener

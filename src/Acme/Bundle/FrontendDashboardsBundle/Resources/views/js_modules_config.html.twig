@@ -1,9 +1,0 @@
-{% import '@OroAsset/Asset.html.twig' as Asset %}
-{{ Asset.js_modules_config({
-    'acmefrontenddashboards/js/app/components/dashboards-component': {
-        ordersNumber: oro_config_value('acme_frontend_dashboards.dashboard_order_number'),
-    },
-    'acmefrontenddashboards/js/app/datagrid/listener/refresh-grid-listener': {
-        datagridRefreshSec: oro_config_value('acme_frontend_dashboards.dashboard_datagrid_refresh_sec'),
-    }
-}) }}

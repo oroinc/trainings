@@ -1,2 +1,0 @@
-bundles:
-    - { name: Acme\Bundle\FrontendLibrariesBundle\AcmeFrontendLibrariesBundle, priority: 510 }
