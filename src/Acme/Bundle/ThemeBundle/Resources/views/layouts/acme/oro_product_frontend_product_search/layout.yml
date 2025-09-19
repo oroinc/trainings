@@ -1,0 +1,6 @@
+layout:
+    imports:
+        -
+            id: acme_product_tag
+            root: product_datagrid_row_product_primary_content_container
+    actions: []
