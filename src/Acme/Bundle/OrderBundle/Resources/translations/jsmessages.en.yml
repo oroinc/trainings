@@ -1,0 +1,5 @@
+acme:
+    order:
+        methods_table:
+            info:
+                label: Info

@@ -1,0 +1,11 @@
+dynamic-imports:
+    orosale:
+        - acmeorder/js/app/views/custom-shipping-cost-view
+
+map:
+    '*':
+        'oroorder/js/app/views/shipping-cost-view': 'acmeorder/js/app/views/custom-shipping-cost-view'
+        './../templates/possible-shipping-methods-template.html': 'acmeorder/js/app/templates/possible-shipping-methods-template.html'
+
+    'acmeorder/js/app/views/custom-shipping-cost-view':
+        'oroorder/js/app/views/shipping-cost-view': 'oroorder/js/app/views/shipping-cost-view'
