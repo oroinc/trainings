@@ -9,3 +9,7 @@ acme:
                 label: Print With Net Price
             msrp:
                 label: Print With MSRP
+oro:
+    order:
+        sections:
+            order_totals: Order Totals
