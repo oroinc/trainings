@@ -17,3 +17,10 @@ allowedDeprecatedVersions:
 minimumReleaseAge: 1440
 minimumReleaseAgeExclude:
   - "@oroinc/*"
+allowBuilds:
+  '@oroinc/codemirror-expression-editor': true
+  '@parcel/watcher': true
+  '@swc/core': true
+  core-js: true
+  core-js-pure: true
+  esbuild: true
