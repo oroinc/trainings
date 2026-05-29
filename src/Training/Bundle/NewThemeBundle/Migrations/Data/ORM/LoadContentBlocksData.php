@@ -1,6 +1,6 @@
 <?php
 
-namespace Acme\Bundle\ThemeBundle\Migrations\Data\ORM;
+namespace Training\Bundle\NewThemeBundle\Migrations\Data\ORM;
 
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
@@ -32,7 +32,7 @@ class LoadContentBlocksData extends AbstractFixture implements
     use ContainerAwareTrait;
     use UserUtilityTrait;
 
-    protected string $blocksConfigPath = '@AcmeThemeBundle/Migrations/Data/ORM/data/content_blocks.yml';
+    protected string $blocksConfigPath = '@TrainingNewThemeBundle/Migrations/Data/ORM/data/content_blocks.yml';
 
     public function getDependencies()
     {

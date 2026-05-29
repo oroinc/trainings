@@ -1,0 +1,6 @@
+styles:
+    inputs:
+        - 'bundles/trainingnewtheme/new/scss/settings/global-settings.scss'
+        - 'bundles/trainingnewtheme/new/scss/styles.scss'
+
+    output: 'css/styles.css'

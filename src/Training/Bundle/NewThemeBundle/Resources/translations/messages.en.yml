@@ -1,0 +1,33 @@
+oro_frontend:
+    logo:
+        alt:
+            label: New theme
+
+oro:
+    copyright: © {{year}}   New Inc. All Rights Reserved.
+
+    logo:
+        alt:
+            label: New theme
+
+training:
+    theme:
+        system_configuration:
+            groups:
+                store_media_settings:
+                    title: Store Info
+
+            store_media_settings:
+                store_phone:
+                    label: Store phone
+                store_email:
+                    label: Store email
+                store_youtube_channel:
+                    label: Store Youtube Channel
+        storefront:
+            store_phone:
+                label: Store phone
+            store_email:
+                label: Store email
+            store_youtube_channel:
+                label: Store Youtube Channel
