@@ -5,6 +5,7 @@
 /node_modules
 /composer.phar
 composer.lock
+/documentation/*
 /behat.yml
 /var/*
 !var/cache/
@@ -26,6 +27,7 @@ composer.lock
 /build/logs/*
 /vendor
 /cov
+/.pnpm-store/*
 !public/bundles/
 /public/bundles/*
 !public/bundles/.gitkeep

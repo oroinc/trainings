@@ -1,0 +1,9 @@
+layout:
+    actions:
+        - '@setBlockTheme':
+            themes: '@AcmeTheme/layouts/acme/page/custom_assets.html.twig'
+
+        - '@add':
+            id: acme_custom_assets
+            parentId: head
+            blockType: block
