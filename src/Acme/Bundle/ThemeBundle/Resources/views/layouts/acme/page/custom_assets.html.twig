@@ -1,0 +1,12 @@
+{# Inject Acme custom CSS/JS into <head> with Subresource Integrity (SRI) hashes. #}
+{% block _acme_custom_assets_widget %}
+    {% import '@OroAsset/Asset.html.twig' as Asset %}
+
+    {% set layoutContext = get_layout_context() %}
+    {% set acme_custom_css = '/build/' ~ layoutContext.theme ~ '/css/custom.css' %}
+    {% set acme_custom_js  = '/build/' ~ layoutContext.theme ~ '/acme-custom.js' %}
+
+    {{ Asset.css(acme_custom_css) }}
+    {{ Asset.js(acme_custom_js) }}
+{% endblock %}
+

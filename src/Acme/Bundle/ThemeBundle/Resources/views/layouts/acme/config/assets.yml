@@ -16,3 +16,8 @@ stylebook_styles:
     inputs:
         - 'bundles/acmetheme/acme/scss/settings/global-settings.scss'
     output: 'css/stylebook.css'
+
+custom_styles:
+    inputs:
+        - 'bundles/acmetheme/acme/scss/custom.scss'
+    output: 'css/custom.css'
