@@ -1,0 +1,26 @@
+packages:
+  - 'npm-package/codemirror-expression-editor'
+  - 'npm-package/webpack-config-builder'
+  - 'npm-package/stylelint-config'
+
+publicHoistPattern:
+  - 'stylelint**'
+  - 'webpack**'
+  - '**loader**'
+  - 'glob'
+  - 'minimist'
+
+allowedDeprecatedVersions:
+  eslint: '^8.57'
+  popper.js: '^1.16'
+
+minimumReleaseAge: 1440
+minimumReleaseAgeExclude:
+  - "@oroinc/*"
+allowBuilds:
+  '@oroinc/codemirror-expression-editor': true
+  '@parcel/watcher': true
+  '@swc/core': true
+  core-js: true
+  core-js-pure: true
+  esbuild: true
