@@ -131,6 +131,7 @@ oro_layout:
     enabled_themes:
         - default
         - acme
+        - new
 
 oro_locale:
     formatting_code: en

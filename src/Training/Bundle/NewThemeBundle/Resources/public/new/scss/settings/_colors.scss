@@ -1,0 +1,72 @@
+/* @theme: new-theme; */
+
+$custom-color-palette: (
+        'primary': (
+                'main': #006769,
+                'hover': #40A578,
+                'active': #9DDE8B,
+                'disabled': #7d999e,
+                'light': #e8fcff
+        ),
+        'alternative': (
+                'main': #c45420,
+                'hover': #ad4524,
+                'active': #993d20,
+                'disabled': #c78465,
+                'light': #ffefe8
+        ),
+        'secondary': (
+                'c1': #DBB5B5,
+                'c2': #987070,
+                'c3': #6e98dc,
+                'c4': #7ea6a4,
+                'c5': #197b30,
+                'sale': #9c0067
+        ),
+        'neutral': (
+                'white-100': #fff,
+                'white-50': rgb(255 255 255 / .5),
+                'white-30': rgb(255 255 255 / .3),
+                'white-15': rgb(255 255 255 / .15),
+                'grey1': #f0f3f5,
+                'grey2': #d4dcdd,
+                'grey3': #c3cfcf,
+                'dark': #002434,
+                'focus': #1a69fe
+        ),
+        'text': (
+                'primary': #5A72A0,
+                'secondary': #45606e,
+                'disabled': #819299,
+                'inverse': #fff,
+                'inverse-70': rgb(255 255 255 / .7),
+                'link': #1642e4,
+                'link-hover': #0d77d6,
+                'link-hover-on-dark': #4cb4fe
+        ),
+        'destructive': (
+                'light': #ffebed,
+                'light-on-dark': rgb(255 107 107 / .3),
+                'base': #de0b07,
+                'main': #b50400,
+                'main-on-dark': #ff6b6b,
+                'dark': #9c0000,
+                'disabled': #d17573
+        ),
+        'success': (
+                'light': #e2fbe9,
+                'dark': #005e1f
+        ),
+        'warning': (
+                'light': #fff7d1,
+                'base': #f19500,
+                'dark': #8f3700
+        ),
+        'info': (
+                'light': #edf5ff,
+                'dark': #143dd4
+        )
+) ;
+
+
+$color-palette: map_merge($color-palette, $custom-color-palette);

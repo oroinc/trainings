@@ -1,0 +1,47 @@
+{% block _footer_contact_info_box_widget %}
+     {% set attr = layout_attr_defaults(attr, {
+         '~class': ' contact-info-holder page-area-container page-footer-container'
+     }) %}
+
+    {% set website_phone = oro_config_value('training_new_theme.store_phone') %}
+    {% set website_support_email = oro_config_value('training_new_theme.store_support_email') %}
+    {% set website_youtube_chanel = oro_config_value('training_new_theme.store_youtube_channel') %}
+
+    <div {{ block('block_attributes') }} >
+        {{ block_widget(block) }}
+        <ul class="social-links">
+            {% if website_phone %}
+                <li>
+                    <span class="footer-text">
+                        {{ 'training.theme.storefront.store_phone.label'|trans }}
+                    </span>
+                    <a class="facebook" href="tell:{{ website_phone }}">
+                        {% import '@OroUI/layouts/renderIcon.html.twig' as renderIcon %}
+                        {{ renderIcon.icon({name: 'phone'}) }}
+                        <span class="footer-text">
+                            {{ website_phone }}
+                        </span>
+                    </a>
+                </li>
+            {% endif %}
+            {% if website_support_email %}
+                <li>
+                    <span class="footer-text">{{ 'training.theme.storefront.store_email.label'|trans }}</span>
+                    <a class="email" href="mailto:{{ website_support_email}}">
+                        {{ renderIcon.icon({name: 'envelope'}) }}
+                        <span class="footer-text">{{ website_support_email}}</span>
+                    </a>
+                </li>
+            {% endif %}
+            {% if website_youtube_chanel %}
+                <li>
+                    <span class="footer-text">{{ 'training.theme.storefront.store_youtube_channel.label'|trans }}</span>
+                    <a class="youtube" href="{{ website_youtube_chanel }}">
+                        {{ renderIcon.icon({name: 'youtube'}) }}
+                        <span class="fa-youtube"></span>
+                    </a>
+                </li>
+            {% endif %}
+        </ul>
+    </div>
+{% endblock %}

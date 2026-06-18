@@ -1,0 +1,11 @@
+oro_theme:
+    themes:
+        oro:
+            logo: bundles/trainingnewtheme/oro/images/logo.svg
+            icon: bundles/trainingnewtheme/oro/images/favicons/favicon.ico
+
+oro_layout:
+    active_theme: new
+    enabled_themes:
+        - new
+        - default

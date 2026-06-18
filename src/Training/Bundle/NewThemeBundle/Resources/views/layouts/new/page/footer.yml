@@ -1,0 +1,19 @@
+layout:
+    actions:
+        - '@setBlockTheme':
+            themes: 'footer.html.twig'
+
+        - '@add':
+            id: footer_social
+            parentId: page_footer_side
+            blockType: content_block
+            options:
+                alias: footer-social
+                vars:
+                    hideTitle: true
+
+        - '@add':
+            id: footer_contact_info_box
+            parentId: page_footer
+            prepend: true
+            blockType: container
