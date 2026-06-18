@@ -1,17 +1,6 @@
-/* @theme: new; */
+/* @theme: new-theme; */
 
 $custom-theme-fonts: (
-        'custom-icon': (
-                'family': 'icomoon',
-                'variants': (
-                        (
-                            'path': '#{$global-url}/trainingnewtheme/new/fonts/icomoon/fonts/icomoon',
-                            'weight': normal,
-                            'style': normal
-                        )
-                ),
-                'formats': ('woff2')
-        ),
         'main': (
                 'family': 'PTSans',
                     'variants': (

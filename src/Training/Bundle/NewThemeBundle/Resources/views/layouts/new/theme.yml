@@ -11,12 +11,166 @@ rtl_support: true
 image_placeholders:
     product: '/bundles/trainingnewtheme/new/images/no_image.svg'
     category: '/bundles/trainingnewtheme/new/images/no_image.svg'
+fonts:
+    extra:
+        preload: true
+        family: 'PTSans'
+        variants:
+            - path: '/bundles/trainingnewtheme/new/fonts/PTSans/PTSans-Regular'
+              weight: 'normal'
+              style: 'normal'
 
+            - path: '/bundles/trainingnewtheme/new/fonts/PTSans/PTSans-Bold'
+              weight: '600'
+              style: 'normal'
+
+            - path: '/bundles/trainingnewtheme/new/fonts/PTSans/PTSans-Italic'
+              weight: '400'
+              style: 'italic'
+        formats:
+            - 'woff2'
 configuration:
     sections:
+        customer_user_dashboard:
+            label: 'oro.customer.frontend.theme.default.configuration.customer_user_dashboard.label'
+            options:
+                show_dashboard_quick_access_menu:
+                    label: 'oro.customer.frontend.theme.default.configuration.customer_user_dashboard.show_dashboard_quick_access_menu.label'
+                    type: checkbox
+                    default: checked
+                    options:
+                        tooltip: 'oro.customer.frontend.theme.default.configuration.customer_user_dashboard.show_dashboard_quick_access_menu.tooltip'
+
+                show_purchase_volume_chart:
+                    label: 'oro.customer.frontend.theme.default.configuration.customer_user_dashboard.show_purchase_volume_chart.label'
+                    type: checkbox
+                    default: checked
+                    options:
+                        tooltip: 'oro.customer.frontend.theme.default.configuration.customer_user_dashboard.show_purchase_volume_chart.tooltip'
+
+                content_widget:
+                    label: 'oro.customer.frontend.theme.default.configuration.customer_user_dashboard.content_widget.label'
+                    type: content_widget_selector
+                    options:
+                        required: false
+                        widgetTypes:
+                            - customer_dashboard_datagrid
+
+                content_widget_2:
+                    label: 'oro.customer.frontend.theme.default.configuration.customer_user_dashboard.content_widget_2.label'
+                    type: content_widget_selector
+                    options:
+                        required: false
+                        widgetTypes:
+                            - customer_dashboard_datagrid
+
+                content_widget_3:
+                    label: 'oro.customer.frontend.theme.default.configuration.customer_user_dashboard.content_widget_3.label'
+                    type: content_widget_selector
+                    options:
+                        required: false
+                        widgetTypes:
+                            - customer_dashboard_datagrid
+
+                content_widget_4:
+                    label: 'oro.customer.frontend.theme.default.configuration.customer_user_dashboard.content_widget_4.label'
+                    type: content_widget_selector
+                    options:
+                        required: false
+                        widgetTypes:
+                            - customer_dashboard_datagrid
+
+                content_widget_5:
+                    label: 'oro.customer.frontend.theme.default.configuration.customer_user_dashboard.content_widget_5.label'
+                    type: content_widget_selector
+                    options:
+                        required: false
+                        widgetTypes:
+                            - customer_dashboard_datagrid
+
+                content_widget_6:
+                    label: 'oro.customer.frontend.theme.default.configuration.customer_user_dashboard.content_widget_6.label'
+                    type: content_widget_selector
+                    options:
+                        required: false
+                        widgetTypes:
+                            - customer_dashboard_datagrid
+
+                recommended_products:
+                    label: 'oro.customer.frontend.theme.default.configuration.customer_user_dashboard.recommended_products.label'
+                    type: content_widget_selector
+                    options:
+                        tooltip: 'oro.customer.frontend.theme.default.configuration.customer_user_dashboard.content_widget.tooltip'
+                        required: false
+                        widgetTypes:
+                            - product_segment
+
+                recommended_products_2:
+                    label: 'oro.customer.frontend.theme.default.configuration.customer_user_dashboard.recommended_products_2.label'
+                    type: content_widget_selector
+                    options:
+                        tooltip: 'oro.customer.frontend.theme.default.configuration.customer_user_dashboard.content_widget.tooltip'
+                        required: false
+                        widgetTypes:
+                            - product_segment
+
+                promotional_content_block:
+                    label: 'oro.customer.frontend.theme.default.configuration.customer_user_dashboard.promotional_content_block.label'
+                    type: content_block_selector
+                    options:
+                        tooltip: 'oro.customer.frontend.theme.default.configuration.customer_user_dashboard.content_block.tooltip'
+                        required: false
+
+                promotional_content_block_2:
+                    label: 'oro.customer.frontend.theme.default.configuration.customer_user_dashboard.promotional_content_block_2.label'
+                    type: content_block_selector
+                    options:
+                        tooltip: 'oro.customer.frontend.theme.default.configuration.customer_user_dashboard.content_block.tooltip'
+                        required: false
+
+                scorecard_widget:
+                    label: 'oro.customer.frontend.theme.default.configuration.customer_user_dashboard.scorecard_widget.label'
+                    type: content_widget_selector
+                    options:
+                        required: false
+                        widgetTypes:
+                            - scorecard
+
+                scorecard_widget_2:
+                    label: 'oro.customer.frontend.theme.default.configuration.customer_user_dashboard.scorecard_widget_2.label'
+                    type: content_widget_selector
+                    options:
+                        required: false
+                        widgetTypes:
+                            - scorecard
+
+                scorecard_widget_3:
+                    label: 'oro.customer.frontend.theme.default.configuration.customer_user_dashboard.scorecard_widget_3.label'
+                    type: content_widget_selector
+                    options:
+                        required: false
+                        widgetTypes:
+                            - scorecard
+
+                scorecard_widget_4:
+                    label: 'oro.customer.frontend.theme.default.configuration.customer_user_dashboard.scorecard_widget_4.label'
+                    type: content_widget_selector
+                    options:
+                        required: false
+                        widgetTypes:
+                            - scorecard
+
         header:
             label: 'oro_frontend.theme.default.configuration.header.label'
             options:
+                promotional_content:
+                    label: 'oro_frontend.theme.default.configuration.header.promotional_content.label'
+                    type: content_block_selector
+                    options:
+                        required: false
+                        tooltip: 'oro_frontend.theme.default.configuration.header.promotional_content.tooltip'
+                    previews:
+                        promotional-content: 'bundles/orofrontend/images/previews/promotional-content.png'
                 top_navigation_menu:
                     label: 'oro_frontend.theme.default.configuration.header.top_navigation_menu.label'
                     type: menu_selector
@@ -28,6 +182,35 @@ configuration:
                         configs:
                             allowClear: true
                             placeholder: 'oro_frontend.theme.default.configuration.header.top_navigation_menu.placeholder'
+                quick_links:
+                    label: 'oro_frontend.theme.default.configuration.header.quick_links.label'
+                    type: menu_selector
+                    default: commerce_quick_access_refreshing_teal
+                    previews:
+                        _default: 'bundles/orofrontend/images/previews/quick-links.png'
+                    options:
+                        required: false
+                        scope_type: 'menu_frontend_visibility'
+                        configs:
+                            allowClear: true
+                            placeholder: 'oro_frontend.theme.default.configuration.header.quick_links.placeholder'
+                quick_access_button:
+                    label: 'oro_frontend.theme.default.configuration.header.quick_access_button.label'
+                    type: quick_access_button_config
+                    previews:
+                        _default: 'bundles/orofrontend/images/previews/quick-access-button.png'
+                    options:
+                        required: false
+                language_and_currency_switchers:
+                    label: 'oro_frontend.theme.default.configuration.header.language_and_currency_switchers.label'
+                    type: select
+                    default: always_in_hamburger_menu
+                    values:
+                        above_header: 'oro_frontend.theme.default.configuration.header.language_and_currency_switchers.choices.above_the_header'
+                        always_in_hamburger_menu: 'oro_frontend.theme.default.configuration.header.language_and_currency_switchers.choices.hamburger'
+                    previews:
+                        above_header: 'bundles/orofrontend/images/previews/lang-crnc-switchers-header.png'
+                        always_in_hamburger_menu: 'bundles/orofrontend/images/previews/lang-crnc-switchers-hamburger.png'
                 standalone_main_menu:
                     label: 'oro_frontend.theme.default.configuration.header.standalone_main_menu.label'
                     type: checkbox
@@ -44,6 +227,15 @@ configuration:
                         standalone: 'oro_frontend.theme.default.configuration.header.search_on_smaller_screens.choices.standalone'
                     previews:
                         _default: 'bundles/orofrontend/images/previews/search-smaller-screens.png'
+        datagrid:
+            label: oro_frontend.theme.default.configuration.datagrid.label
+            options:
+                pagination_threshold:
+                    label: oro_frontend.theme.default.configuration.datagrid.pagination_threshold.label
+                    type: integer
+                    default: 100
+                    previews:
+                        _default: 'bundles/orofrontend/images/previews/default_pagination_with_input_field.png'
         product_listing:
             label: 'oro.product.theme.default.configuration.product_listing.label'
             options:
@@ -54,9 +246,116 @@ configuration:
                     values:
                         top: 'oro.product.theme.default.configuration.product_listing.filters_position.values.top'
                         sidebar: 'oro.product.theme.default.configuration.product_listing.filters_position.values.sidebar'
+                        overlay: 'oro.product.theme.default.configuration.product_listing.filters_position.values.overlay'
                     previews:
                         top: 'bundles/oroproduct/images/previews/filter-panel-top.png'
                         sidebar: 'bundles/oroproduct/images/previews/filter-panel-sidebar.png'
+                        overlay: 'bundles/oroproduct/images/previews/filter-panel-overlay.png'
+
+        shopping_list:
+            label: 'oro.frontend.shoppinglist.configuration.shopping_list.label'
+            options:
+                quantity_inputs:
+                    label: 'oro.frontend.shoppinglist.configuration.shopping_list.quantity_inputs.label'
+                    type: select
+                    default: with_stepper_buttons
+                    values:
+                        with_stepper_buttons: 'oro.frontend.shoppinglist.configuration.shopping_list.quantity_inputs.values.with_stepper_buttons'
+                        plain: 'oro.frontend.shoppinglist.configuration.shopping_list.quantity_inputs.values.plain'
+                    previews:
+                        _default: 'bundles/oroshoppinglist/images/previews/quantity-inputs.png'
+        contact_us:
+            label: 'oro.contact_us_bridge.frontend.theme.default.configuration.contact_us.label'
+            options:
+                contact_us_form:
+                    label: 'oro.contact_us_bridge.frontend.theme.default.configuration.contact_us.contact_us_form.label'
+                    type: content_widget_selector
+                    options:
+                        tooltip: 'oro.contact_us_bridge.frontend.theme.default.configuration.contact_us.contact_us_form.tooltip'
+                        widgetTypes:
+                            - contact_us_form
+
+        page_styles:
+            label: 'oro_frontend.theme.default.configuration.page_styles.label'
+            options:
+                base_font_size:
+                    label: 'oro_frontend.theme.default.configuration.page_styles.base_font_size.label'
+                    type: css_font_size
+                base_line_height:
+                    label: 'oro_frontend.theme.default.configuration.page_styles.base_line_height.label'
+                    type: css_line_height
+                body_background_color:
+                    label: 'oro_frontend.theme.default.configuration.page_styles.body_background_color.label'
+                    type: css_color
+                body_color:
+                    label: 'oro_frontend.theme.default.configuration.page_styles.body_color.label'
+                    type: css_color
+                footer_background:
+                    label: 'oro_frontend.theme.default.configuration.page_styles.footer_background.label'
+                    type: css_background
+                page_header_background_color:
+                    label: 'oro_frontend.theme.default.configuration.page_styles.page_header_background_color.label'
+                    type: css_color
+        product_details:
+            label: 'oro.product.theme.default.configuration.product_details.label'
+            options:
+                template:
+                    label: 'oro.product.theme.default.configuration.product_details.template.label'
+                    type: product_page_template
+                    values:
+                        tabs: 'oro.product.theme.default.configuration.product_details.template.values.tabs'
+                        wide: 'oro.product.theme.default.configuration.product_details.template.values.wide'
+                    previews:
+                        _default: 'bundles/oroproduct/images/previews/page-templates-default.png'
+                        tabs: 'bundles/oroproduct/images/previews/page-templates-tabs.png'
+                        wide: 'bundles/oroproduct/images/previews/page-templates-wide.png'
+                display_price_tiers_as:
+                    label: 'oro.product.theme.default.configuration.product_details.display_price_tiers_as.label'
+                    type: select
+                    default: multi-unit-table
+                    options:
+                        required: true
+                        tooltip: 'oro.product.theme.default.configuration.product_details.display_price_tiers_as.tooltip'
+                    values:
+                        multi-unit-table: oro.product.theme.default.configuration.product_details.display_price_tiers_as.choice.multi-unit-table.label
+                        single-unit-table: oro.product.theme.default.configuration.product_details.display_price_tiers_as.choice.single-unit-table.label
+                    previews:
+                        multi-unit-table: 'bundles/oroproduct/images/previews/price-tiers-multi-unit.png'
+                        single-unit-table: 'bundles/oroproduct/images/previews/price-tiers-single-unit.png'
+                image_zoom_type:
+                    label: 'oro.product.theme.default.configuration.product_details.image_zoom_type.label'
+                    type: select
+                    default: window
+                    options:
+                        tooltip: 'oro.product.theme.default.configuration.product_details.image_zoom_type.tooltip'
+                    values:
+                        window: oro.product.theme.default.configuration.product_details.image_zoom_type.choice.window.label
+                        inner: oro.product.theme.default.configuration.product_details.image_zoom_type.choice.inner.label
+                        lens: oro.product.theme.default.configuration.product_details.image_zoom_type.choice.lens.label
+                        disabled: oro.product.theme.default.configuration.product_details.image_zoom_type.choice.lens.disabled
+                image_zoom_tint:
+                    label: 'oro.product.theme.default.configuration.product_details.image_zoom_tint.label'
+                    type: checkbox
+                    default: unchecked
+                    options:
+                        tooltip: 'oro.product.theme.default.configuration.product_details.image_zoom_tint.tooltip'
+                image_zoom_scroll:
+                    label: 'oro.product.theme.default.configuration.product_details.image_zoom_scroll.label'
+                    type: checkbox
+                    default: checked
+                    options:
+                        tooltip: 'oro.product.theme.default.configuration.product_details.image_zoom_scroll.tooltip'
+
+                images_display_mode:
+                    label: 'oro.product.theme.default.configuration.product_details.display_image_group_position.label'
+                    type: select
+                    default: horizontal
+                    values:
+                        horizontal: oro.product.theme.default.configuration.product_details.display_image_group_position.choice.horizontal
+                        vertical: oro.product.theme.default.configuration.product_details.display_image_group_position.choice.vertical
+                    previews:
+                        horizontal: 'bundles/oroproduct/images/previews/images-display-mode-horizontal.png'
+                        vertical: 'bundles/oroproduct/images/previews/images-display-mode-vertical.png'
 
 
         color_palette:
@@ -202,28 +501,6 @@ configuration:
                     type: css_color
                 info_dark:
                     label: 'oro_frontend.theme.default.configuration.color_palette.info_dark.label'
-                    type: css_color
-
-        page_styles:
-            label: 'oro_frontend.theme.default.configuration.page_styles.label'
-            options:
-                base_font_size:
-                    label: 'oro_frontend.theme.default.configuration.page_styles.base_font_size.label'
-                    type: css_font_size
-                base_line_height:
-                    label: 'oro_frontend.theme.default.configuration.page_styles.base_line_height.label'
-                    type: css_line_height
-                body_background_color:
-                    label: 'oro_frontend.theme.default.configuration.page_styles.body_background_color.label'
-                    type: css_color
-                body_color:
-                    label: 'oro_frontend.theme.default.configuration.page_styles.body_color.label'
-                    type: css_color
-                footer_background:
-                    label: 'oro_frontend.theme.default.configuration.page_styles.footer_background.label'
-                    type: css_background
-                page_header_background_color:
-                    label: 'oro_frontend.theme.default.configuration.page_styles.page_header_background_color.label'
                     type: css_color
 
         button_styles:

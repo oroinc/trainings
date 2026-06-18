@@ -16,8 +16,8 @@
                         {{ 'training.theme.storefront.store_phone.label'|trans }}
                     </span>
                     <a class="facebook" href="tell:{{ website_phone }}">
-                        <span class="fa-phone"></span>
-
+                        {% import '@OroUI/layouts/renderIcon.html.twig' as renderIcon %}
+                        {{ renderIcon.icon({name: 'phone'}) }}
                         <span class="footer-text">
                             {{ website_phone }}
                         </span>
@@ -28,7 +28,7 @@
                 <li>
                     <span class="footer-text">{{ 'training.theme.storefront.store_email.label'|trans }}</span>
                     <a class="email" href="mailto:{{ website_support_email}}">
-                        <span class="fa-mail"></span>
+                        {{ renderIcon.icon({name: 'envelope'}) }}
                         <span class="footer-text">{{ website_support_email}}</span>
                     </a>
                 </li>
@@ -37,6 +37,7 @@
                 <li>
                     <span class="footer-text">{{ 'training.theme.storefront.store_youtube_channel.label'|trans }}</span>
                     <a class="youtube" href="{{ website_youtube_chanel }}">
+                        {{ renderIcon.icon({name: 'youtube'}) }}
                         <span class="fa-youtube"></span>
                     </a>
                 </li>
